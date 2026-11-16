@@ -1,0 +1,16 @@
+/* Modal zum Einfuegen: Hintergrund wird abgedunkelt */
+dialog.snippet-panel{width:min(760px,calc(100vw - 32px));max-height:calc(100vh - 48px);margin:auto;overflow:auto;padding:var(--padding);color:var(--text)}
+dialog.snippet-panel:not([open]){display:none}
+dialog.snippet-panel::backdrop{background:rgba(4,6,14,.72);backdrop-filter:blur(2px)}
+dialog.snippet-panel[open]{animation:modal-in .14s steps(4)}
+@keyframes modal-in{from{transform:translateY(10px);opacity:0}to{transform:none;opacity:1}}
+.modal-close{width:32px;height:32px;border:var(--border-width) solid var(--border-color);border-radius:var(--radius);background:var(--bg);color:var(--text);font:700 14px var(--font-body);cursor:pointer}
+.modal-close:hover{background:var(--primary);color:var(--surface)}
+.new-tile{display:grid;place-content:center;justify-items:center;gap:6px;min-height:190px;padding:var(--padding);background:transparent;border:2px dashed var(--border-color);border-radius:var(--radius);color:var(--text);font:inherit;cursor:pointer;opacity:.75}
+.new-tile span{font-size:34px;color:var(--primary);line-height:1}.new-tile small{opacity:.65}
+.new-tile:hover,.new-tile:focus-visible{opacity:1;border-style:solid;border-color:var(--primary)}
+
+.info-desc{margin:0 0 18px;opacity:.8}.info-list{display:grid;grid-template-columns:auto 1fr;gap:10px 18px;margin:0 0 22px}
+.info-list dt{font-size:12px;font-weight:700;opacity:.7}.info-list dd{margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}.chips li{padding:3px 9px;background:var(--primary);color:var(--surface);font-size:12px;font-weight:700}.chips li.none{background:var(--border-color);color:var(--text)}
+.info-go{display:inline-flex;text-decoration:none}

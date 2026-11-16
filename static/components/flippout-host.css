@@ -1,0 +1,12 @@
+/* L4UNCHAPP-Adapter fuer Flipp-Out: Layout/Theme-Anbindung der Host-Anwendung (nicht Teil des Spiels) */
+body.theme-aqua .amiga-bar .tl{display:flex;gap:8px;margin-right:12px;flex:none}
+body.theme-aqua .amiga-bar .tl b{width:12px;height:12px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff8,#0000 45%),#ff5f57}
+body.theme-aqua .amiga-bar .tl b:nth-child(2){background-color:#febc2e}
+body.theme-aqua .amiga-bar .tl .tl-g{background-color:#28c840;cursor:pointer}
+body.theme-aqua .amiga-bar .tl .tl-g:hover{box-shadow:0 0 0 2px #28c84088}
+body.theme-aqua .amiga-bar .amiga-bare{display:none}  /* im Aqua-Theme ist die gruene Kugel der Vollbild-Button */
+body.theme-aqua .amiga-bare{border-color:#8e8e8e;color:#222;background:#fff6}
+body.theme-aqua .amiga-fab{top:6px;left:50px;width:14px;height:14px;padding:0;font-size:0;border:1px solid #1e9a33;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff8,#0000 45%),#28c840}  /* sitzt wo die gruene Kugel war */
+body.golf-bare aside{display:none!important}
+body.golf-bare main:has(.amiga),body.golf-bare .workspace:has(.amiga){padding:0!important}
+main:has(.amiga),.workspace:has(.amiga){max-width:none;margin:0;padding:8px}

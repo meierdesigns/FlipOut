@@ -1,24 +1,46 @@
-# Flipp-Out
+# L4UNCHAPP
 
-Breakout im Flipper-Stil: Ein biegsamer Balken lädt, spannt und schlägt den Ball; durch 10 Welten (Western, Vaporwave, Dungeon, Golfplatz …) mit eigenem Look, Bossen und Shop. Auch als Minigolf-Variante spielbar.
+A tiny Markdown-native application runtime for mini-apps.
 
-Eigenstaendiges Spiel Keine Abhaengigkeiten, kein Build, kennt die Host-App nicht.
+## Run
 
-## Standalone
-`index.html` im Browser oeffnen (oder `python3 -m http.server` im Ordner).
-
-## Einbinden
-```html
-<div data-flippout data-mode="breakout" data-label="Flipp-Out"></div>
-<link rel="stylesheet" href="flippout.css">
-<script src="flippout.js"></script>
+```bash
+python3 app.py
 ```
-`data-mode`: `breakout` | `golf`. Oder per Code: `Flippout.mount(el, {mode, label})`.
 
-## Host-Hooks (optional)
-- `body.golf-bare` (F2) blendet den Rahmen aus; die Host-App kann darauf reagieren (z.B. Sidebar ausblenden).
-- Speicherstand/Einstellungen: `localStorage` (`golf*`) / `sessionStorage`.
+Then open http://127.0.0.1:8000
 
+## Structure
+
+- `app.py` — Einstieg
+- `backend/` — Daten, Routen (paths, content, theme, server)
+- `frontend/` — shell, workspace, components/
+- `pages/` — Routen/Seiten (Markdown)
+- `modules/` — wiederverwendbare Snippets; `golf.md` bindet das Spiel ein
+- `apps/` — eigenständige Spiele/Apps, unabhängig von L4UNCHAPP (z.B. `apps/flippout/`, Standalone-fähig, siehe dessen README)
+- `apps/gamestyle/` — Grafikstil-Bibliothek für Spiele
+- `static/` — Basis-CSS, `components/` pro Komponente (inkl. `flippout-host.css`)
+- `themes/`, `theme.md` — Theme-Presets / Auswahl
+- `tools/server-sidebar/` — VS-Code-Extension
+- `framework.md` — Framework-Vertrag
+
+## Mini-app from MD
+
+```md
+---
+title: Ingolf
+app: golf
+---
+
+# Ingolf
+
+Ein minimalistisches Golfspiel.
+```
+
+The runtime reads `app: golf` and embeds the Flipp-Out game via `modules/golf.md`.
+The MD file stays declarative; HTML and JavaScript are not needed in the page.
+
+This prototype intentionally avoids React, build tooling, a database and a large component framework.
 
 ## Lizenz
 MIT, siehe `LICENSE`.

@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+/* Flipp-Out-Look: App-Kachel wie eine Shop-Kachel des Spiels (Amiga-Palette, Pixelschrift, blinkender Fokusrahmen) */
+.app-tile,body.theme-aqua .app-tile{--fo-bg:#444;--fo-hi:#888;--fo-lo:#222200;--fo-gold:#ffdd00;--fo-blue:#0055aa;--fo-sky:#00aaff;
+  position:relative;display:flex;flex-direction:column;min-height:0;padding:0 0 14px;cursor:pointer;color:var(--fo-gold);font-family:Silkscreen,ui-monospace,"Courier New",monospace;
+  background:var(--fo-bg);border:0;border-radius:0;outline:2px solid #000;outline-offset:0;image-rendering:pixelated;transition:none;
+  box-shadow:inset 2px 2px 0 var(--fo-hi),inset -2px -2px 0 var(--fo-lo),5px 5px 0 #000}
+body.theme-aqua .app-tile::before,.app-tile::before{content:"FLIPP-OUT";display:flex;align-items:center;height:18px;margin:0 0 16px;padding:0 10px;border:0;border-radius:0;
+  background:linear-gradient(90deg,var(--fo-blue) 0 38%,#0003 38% 100%);color:#fff;font:700 10px/18px Silkscreen,ui-monospace,monospace;letter-spacing:.2em;box-shadow:inset 0 -2px 0 #0004,inset 0 2px 0 #fff3}
+.app-tile .tile-mark,body.theme-aqua .app-tile .tile-mark{width:44px;height:44px;margin:0 14px 14px;border-radius:0;display:grid;place-items:center;background:#000;color:var(--fo-gold);font:700 22px Silkscreen,monospace;
+  box-shadow:inset 2px 2px 0 var(--fo-hi),inset -2px -2px 0 var(--fo-lo);text-shadow:2px 2px 0 #aa0000}
+.app-tile .tile-copy{margin:0 14px}
+.app-tile h2{margin:0 0 8px;font:700 15px/1.25 Silkscreen,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--fo-gold);text-shadow:2px 2px 0 #000}
+.app-tile p{margin:0;font:400 11px/1.5 Silkscreen,monospace;letter-spacing:.04em;text-transform:uppercase;color:#bbb;opacity:1}
+body .app-tile .tile-launch,body.theme-aqua .app-tile .tile-launch{align-self:flex-start;display:inline-flex;gap:8px;margin:18px 14px 0;padding:5px 9px;border:0;border-radius:0;background:#000;color:#ddd;text-shadow:none;
+  font:700 11px/1 Silkscreen,monospace;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;box-shadow:inset 2px 2px 0 var(--fo-hi),inset -2px -2px 0 var(--fo-lo)}
+.app-tile .tile-launch span{display:inline-block;color:#dd0000}
+.app-tile:hover,.app-tile:focus-within{background:var(--fo-blue);box-shadow:inset 2px 2px 0 var(--fo-sky),inset -2px -2px 0 var(--fo-lo),5px 5px 0 #000;outline:2px solid #000;animation:fo-blink .5s steps(1) infinite}
+.app-tile:hover .tile-launch,.app-tile:focus-within .tile-launch{color:var(--fo-gold)}
+.app-tile:hover .tile-launch span{animation:fo-arrow .5s steps(2) infinite}
+.app-tile:active{transform:translate(5px,5px);box-shadow:inset 2px 2px 0 var(--fo-sky),inset -2px -2px 0 var(--fo-lo),0 0 0 #000;animation:none}
+@keyframes fo-blink{0%{outline-color:#000;box-shadow:inset 2px 2px 0 var(--fo-sky),inset -2px -2px 0 var(--fo-lo),0 0 0 2px var(--fo-gold),5px 5px 0 #000}50%{box-shadow:inset 2px 2px 0 var(--fo-sky),inset -2px -2px 0 var(--fo-lo),5px 5px 0 #000}}
+@keyframes fo-arrow{0%{transform:translate(0,0)}100%{transform:translate(3px,0)}}
+@media (prefers-reduced-motion:reduce){.app-tile:hover,.app-tile:focus-within,.app-tile:hover .tile-launch span{animation:none}.app-tile:active{transform:none}}
+
+/* Kachel als ein zusammenhaengender Knopf: oben Bloecke, Ball in der Mitte, unten der Balken */
+.app-tile::before,body.theme-aqua .app-tile::before{display:none}
+.app-tile .tile-mark{display:none}
+.tile-art{position:relative;height:96px;margin:6px 6px 14px;overflow:hidden;background:#000;
+  background-image:radial-gradient(#fff 1px,#0000 1.5px),radial-gradient(#ffdd0099 1px,#0000 1.5px);background-size:37px 29px,53px 41px;background-position:6px 20px,20px 50px;
+  box-shadow:inset 2px 2px 0 #222200,inset -2px -2px 0 #666}
+.tile-art i{position:absolute;display:block}
+.t-bricks{left:8px;right:8px;top:8px;height:24px;
+  background:linear-gradient(90deg,#000 0 2px,#0000 2px) 0 0/22px 12px,
+    linear-gradient(#dd0000 0 6px,#ff8800 6px 12px,#ffdd00 12px 18px,#00aa00 18px 24px) 0 0/100% 100%;
+  -webkit-mask:linear-gradient(90deg,#000 0 calc(100% - 2px),#0000 0) 0 0/22px 100%,linear-gradient(#000,#000);mask:none}
+.t-bricks{background:
+    repeating-linear-gradient(90deg,#0000 0 20px,#000 20px 22px),
+    repeating-linear-gradient(0deg,#0000 0 10px,#000 10px 12px),
+    linear-gradient(#dd0000 0 12px,#ff8800 12px 24px)}
+.t-ball{left:50%;top:56px;width:8px;height:8px;margin-left:-4px;background:#fff;box-shadow:0 0 0 2px #000,0 0 8px 3px #ffdd00aa}
+.t-bar{left:50%;bottom:8px;width:56px;height:6px;margin-left:-28px;background:#ff8800;box-shadow:0 0 0 2px #000,inset 0 2px 0 #ffdd00,inset 0 -2px 0 #aa6622;border-left:4px solid #ffdd00;border-right:4px solid #ffdd00;box-sizing:border-box}
+.app-tile:hover .t-ball{animation:fo-ball 1.2s steps(12) infinite}
+.app-tile:hover .t-bar{animation:fo-bar 1.2s steps(12) infinite}
+.app-tile:hover .t-bricks{animation:fo-bricks .6s steps(1) infinite}
+@keyframes fo-ball{0%{transform:translate(0,0)}25%{transform:translate(36px,-20px)}50%{transform:translate(72px,0)}75%{transform:translate(36px,-20px)}100%{transform:translate(0,0)}}
+@keyframes fo-bar{0%{transform:translateX(-4px)}50%{transform:translateX(60px)}100%{transform:translateX(-4px)}}
+@keyframes fo-bricks{0%{filter:none}50%{filter:brightness(1.35)}}
+@media (prefers-reduced-motion:reduce){.app-tile:hover .t-ball,.app-tile:hover .t-bar,.app-tile:hover .t-bricks{animation:none}}
+
+/* Perspektive: Spielfeld kippt nach hinten, Bloecke stehen hinten als Waende, Ball wirft Schatten auf den Boden */
+.tile-art{perspective:240px;perspective-origin:50% 0%;height:110px}
+.t-stage{position:absolute;left:0;right:0;top:0;height:170px;transform-origin:50% 0;transform:rotateX(48deg);transform-style:preserve-3d;
+  background:repeating-linear-gradient(90deg,#0000 0 27px,#0055aa88 27px 28px),repeating-linear-gradient(0deg,#0000 0 19px,#0055aa88 19px 20px),linear-gradient(#001a33,#002a55)}
+.t-bricks{top:0;height:30px;box-shadow:0 5px 0 #660000,0 -2px 0 #ffdd00}
+.t-shadow{left:50%;top:84px;width:18px;height:8px;margin-left:-9px;border-radius:50%;background:#000a}
+.t-ball{top:78px;transform:translateZ(14px)}
+.t-bar{bottom:auto;top:132px;transform:none}
+.app-tile:hover .t-shadow{animation:fo-ball 1.2s steps(12) infinite}
+.app-tile:hover .t-ball{animation:fo-ball3 1.2s steps(12) infinite}
+@keyframes fo-ball3{0%{transform:translate3d(0,0,14px)}25%{transform:translate3d(36px,-40px,30px)}50%{transform:translate3d(72px,0,14px)}75%{transform:translate3d(36px,-40px,30px)}100%{transform:translate3d(0,0,14px)}}
+
+
+/* Info-Knopf: nur bei Hover/Fokus sichtbar, oeffnet das Info-Modal */
+.info-btn{position:absolute;top:12px;right:12px;z-index:3;width:24px;height:24px;padding:0;background:#000;color:#ffdd00;border:0;font:700 12px Silkscreen,monospace;cursor:pointer;
+  box-shadow:inset 2px 2px 0 #888,inset -2px -2px 0 #222200,2px 2px 0 #000;opacity:0;pointer-events:none}
+.app-tile:hover .info-btn,.app-tile:focus-within .info-btn,.info-btn:focus-visible{opacity:1;pointer-events:auto}
+@media (hover:none){.info-btn{opacity:1;pointer-events:auto}}
+.info-btn:hover,.info-btn:focus-visible{background:#dd0000;color:#fff}

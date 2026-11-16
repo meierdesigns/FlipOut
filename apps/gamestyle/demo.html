@@ -1,0 +1,18 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>gamestyle demo</title>
+<link rel="stylesheet" href="themes/amiga.css"><link rel="stylesheet" href="gamestyle.css"></head>
+<body class="theme-amiga" style="padding:24px">
+<div class="gs-panel" style="max-width:900px;margin:auto">
+  <div class="gs-hud"><h2 style="margin:0">Demo</h2><strong id="info"></strong></div>
+  <div class="gs-screen" id="scr" style="margin-top:16px"><canvas class="gs-stage"></canvas></div>
+  <p class="gs-message">Klick ins Bild: Position in logischen Pixeln.</p>
+</div>
+<script src="gamestyle.js"></script>
+<script>
+const s = GameStyle.screen(document.getElementById('scr'), {maxHeight: 600});
+const c = getComputedStyle(document.body);
+s.ctx.fillStyle = c.getPropertyValue('--primary'); s.ctx.fillRect(10,10,40,40);
+s.ctx.fillStyle = c.getPropertyValue('--text'); s.ctx.fillRect(60,30,8,8);
+info.textContent = s.width+'x'+s.height;
+s.el.onclick = e => { const p = s.toLogical(e); info.textContent = Math.round(p.x)+','+Math.round(p.y); };
+</script></body></html>

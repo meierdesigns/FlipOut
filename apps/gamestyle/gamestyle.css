@@ -1,0 +1,45 @@
+/* gamestyle – wiederverwendbarer Grafikstil. Zuerst ein themes/<name>.css laden, dann diese Datei.
+   Benoetigt keine Runtime. Klasse theme-<name> auf <body> (optional fx-scanlines, fx-glow). */
+:root{
+  --font-body:system-ui,sans-serif;--font-heading:var(--font-body);
+  --bg:#f6f7f9;--surface:#fff;--text:#20242a;--primary:#16804a;--accent:#fc0;--border-color:#d7dbe0;
+  --radius:12px;--border-width:1px;--gap:16px;--padding:22px;--shadow:0 8px 24px #00000014;
+  /* Aufloesung: logische Spielflaeche, wird ganzzahlig hochskaliert (siehe gamestyle.js) */
+  --res-w:320;--res-h:240;--pixelated:auto;--scale:1;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 var(--font-body)}
+h1,h2,h3{font-family:var(--font-heading);line-height:1.15}
+body.fx-scanlines::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9;opacity:0;
+  background:repeating-linear-gradient(0deg,#0000 0 3px,#0002 4px)}
+
+/* Komponenten */
+.gs-panel,.gs-card{padding:var(--padding);background:var(--surface);border:var(--border-width) solid var(--border-color);border-radius:var(--radius);box-shadow:var(--shadow)}
+.gs-button{padding:11px 16px;border:var(--border-width) solid var(--primary);border-radius:var(--radius);background:var(--primary);color:var(--surface);font:700 14px var(--font-body);cursor:pointer}
+.gs-button:hover{filter:brightness(1.12)}
+.gs-hud{display:flex;justify-content:space-between;gap:var(--gap);font-family:var(--font-heading);color:var(--primary)}
+.gs-hud strong{font-size:1.6em}
+.gs-message{color:var(--primary);font-weight:700}
+
+/* Spielflaeche: feste logische Aufloesung, skaliert per transform (Layout-Groesse = Pixel*Scale) */
+.gs-screen{position:relative;margin:0 auto;overflow:hidden;background:var(--bg);
+  width:calc(var(--res-w) * var(--scale) * 1px);height:calc(var(--res-h) * var(--scale) * 1px);
+  border:var(--border-width) solid var(--border-color);border-radius:var(--radius);box-shadow:var(--shadow)}
+.gs-screen>.gs-stage{position:absolute;left:0;top:0;width:calc(var(--res-w) * 1px);height:calc(var(--res-h) * 1px);
+  transform:scale(var(--scale));transform-origin:0 0}
+.gs-screen canvas,.gs-screen img,.gs-stage canvas{image-rendering:var(--pixelated)}
+.gs-screen.gs-crisp,.gs-screen.gs-crisp *{image-rendering:pixelated}
+.gs-screen.gs-smooth,.gs-screen.gs-smooth *{image-rendering:auto}
+
+/* Status-Effekt: Icon in quadratisch-rundem Ladering. <div class="gs-status" style="--p:.6;--c:var(--primary)"><svg class="gs-icon">…</svg></div>
+   --p = Restanteil 0..1, laedt im Uhrzeigersinn ab oben-Mitte. Icon = beliebiges SVG/img/Emoji (kein Buchstabe). */
+.gs-status{--p:1;--c:var(--primary);--size:40px;position:relative;display:inline-grid;place-items:center;width:var(--size);height:var(--size);
+  border-radius:calc(var(--size) * .28);background:var(--surface);color:var(--text)}
+.gs-status::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:var(--border-width,2px);
+  background:conic-gradient(from 0deg,var(--c) calc(var(--p) * 360deg),var(--border-color) 0);
+  -webkit-mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);
+  mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
+.gs-status .gs-icon{width:58%;height:58%;fill:currentColor}
+.gs-status.gs-low{animation:gs-blink .5s steps(2) infinite}
+@keyframes gs-blink{50%{opacity:.4}}
+.gs-statusbar{display:flex;gap:calc(var(--gap) / 2)}

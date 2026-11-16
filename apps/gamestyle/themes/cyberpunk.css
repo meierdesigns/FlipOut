@@ -1,0 +1,2 @@
+.theme-cyberpunk{--font-body:'Courier New', monospace;--font-heading:'Courier New', monospace;--bg:#12091e;--surface:#21113a;--text:#f2e8ff;--primary:#ff2bd6;--accent:#b7ff2a;--border-color:#ff2bd6;--radius:2px;--border-width:2px;--gap:14px;--padding:18px;--shadow:4px 4px 0 var(--text);--res-w:480;--res-h:270;--pixelated:pixelated}
+.theme-cyberpunk.fx-glow h1,.theme-cyberpunk.fx-glow .gs-hud strong{text-shadow:0 0 12px var(--primary)}

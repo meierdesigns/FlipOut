@@ -1,4 +1,4 @@
-/* Modal-Logik: [data-modal-open=ID] oeffnet <dialog id=ID data-modal>; Esc, X und Klick auf Backdrop schliessen. */
+/* Modal logic: [data-modal-open=ID] opens <dialog id=ID data-modal>; Esc, X and a click on the backdrop close it. */
 (function(){
   document.querySelectorAll('[data-modal-open]').forEach(function(b){
     b.addEventListener('click',function(){var d=document.getElementById(b.dataset.modalOpen);if(!d)return;d.showModal();var i=d.querySelector('input,textarea');if(i)i.focus();});

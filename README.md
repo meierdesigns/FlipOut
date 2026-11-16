@@ -1,103 +1,103 @@
 # MD•APP
 
-Eine winzige Markdown-native Runtime für Mini-Apps – plus **Flipp-Out**, ein Breakout-/Minigolf-Spiel im Flipper-Stil, das als eigenständiges Modul darin läuft.
+A tiny Markdown-native application runtime for mini-apps – plus **Flipp-Out**, a pinball-style breakout / mini-golf game that runs inside it as a standalone module.
 
-Bewusst ohne React, Build-Tooling, Datenbank oder Komponenten-Framework: Python-Standardbibliothek im Backend, Vanilla-JS/CSS im Browser.
+Deliberately no React, no build tooling, no database, no component framework: Python standard library on the backend, vanilla JS/CSS in the browser.
 
-## Starten
+## Run
 
 ```bash
 python3 app.py          # http://127.0.0.1:8000
-python3 app.py 9000     # anderer Port (oder PORT=9000)
+python3 app.py 9000     # another port (or PORT=9000)
 ```
 
-Voraussetzung: Python 3. `requirements.txt` ist leer – es gibt keine Abhängigkeiten.
+Requires Python 3. `requirements.txt` is empty – there are no dependencies.
 
-Das Spiel läuft auch ganz ohne Runtime: `games/flippout/index.html` im Browser öffnen.
+The game also runs without the runtime: open `games/flippout/index.html` in a browser.
 
-## Grundidee
+## Core idea
 
-> Anwendungslogik gehört in die Runtime, Inhalt und Zusammenstellung in Markdown.
+> Keep application logic in the runtime, content and composition in Markdown.
 
-Eine Seite ist nur eine `.md`-Datei:
+A page is just a `.md` file:
 
 ```md
 ---
 title: Flipp-Out Breakout
 app: golf
 mode: breakout
-desc: Kurzbeschreibung für die Kachel
+desc: Short description for the tile
 ---
 ```
 
-Die Runtime liest das Frontmatter, rendert den Markdown-Text und hängt bei `app: golf` das Spiel an. Die Seite bleibt deklarativ – kein HTML, kein JavaScript nötig.
+The runtime reads the frontmatter, renders the Markdown text and, for `app: golf`, attaches the game. The page stays declarative – no HTML, no JavaScript needed.
 
-## Projektstruktur
+## Project structure
 
 ```
-app.py                  Einstieg (startet src/backend/server.py)
-src/                    die Runtime (Code)
-  backend/              Daten & Routen – kein HTML-Markup außer Markdown-Render
-    paths.py            zentrale Pfade und URL-Präfixe (/static, /games)
-    content.py          Frontmatter, Markdown-Renderer, @module-Expansion, Seiten laden/speichern
-    theme.py            Theme-MD -> CSS-Variablen
-    server.py           http.server, Routing, statische Dateien, POST /apps
-  frontend/             Darstellung in Python-Funktionen (Strings in, HTML-String raus)
-    shell.py            Seitenrahmen (Head, Sidebar, Main)
-    workspace.py        Startseite (Kachelraster)
-    components/         je Komponente eine .py (nur Markup): tile, modal, new_app_form
-  static/               Basis-CSS und pro Komponente CSS/JS (tile, modal, flippout-host)
-content/                der Inhalt (Markdown, kein Code)
-  pages/*.md            jede Datei = eine Route (/<dateiname>)
-  modules/*.md          wiederverwendbare Snippets mit {{ platzhaltern }}
-  themes/*.md           Theme-Presets
-  theme.md              aktive Theme-Auswahl
-games/                  eigenständige Spiele/Bibliotheken, kennen die Runtime nicht
-  flippout/             das Spiel (+ itch/ mit Deploy-Zip und Seitentexten)
-  gamestyle/            Grafikstil-Bibliothek
-docs/                   framework.md (Vertrag), archive/ (alter Prototyp)
-tools/                  Entwicklerwerkzeuge (VS-Code-Extension server-sidebar)
+app.py                  entry point (starts src/backend/server.py)
+src/                    the runtime (code)
+  backend/              data & routes – no HTML markup except the Markdown renderer
+    paths.py            central paths and URL prefixes (/static, /games)
+    content.py          frontmatter, Markdown renderer, @module expansion, load/save pages
+    theme.py            theme MD -> CSS variables
+    server.py           http.server, routing, static files, POST /apps
+  frontend/             presentation as Python functions (strings in, HTML string out)
+    shell.py            page shell (head, sidebar, main)
+    workspace.py        start page (tile grid)
+    components/         one .py per component (markup only): tile, modal, new_app_form
+  static/               base CSS plus per-component CSS/JS (tile, modal, flippout-host)
+content/                the content (Markdown, no code)
+  pages/*.md            each file = one route (/<filename>)
+  modules/*.md          reusable snippets with {{ placeholders }}
+  themes/*.md           theme presets
+  theme.md              active theme selection
+games/                  standalone games/libraries, they do not know the runtime
+  flippout/             the game (+ itch/ with deploy zip and page texts)
+  gamestyle/            graphics style library
+docs/                   framework.md (contract), archive/ (old prototype)
+tools/                  developer tools (VS Code extension server-sidebar)
 ```
 
-Faustregel: **src** = Code, **content** = Markdown, **games** = austauschbare Fremdmodule. Abhängigkeiten laufen nur in eine Richtung: content -> games/src, src -> nichts.
+Rule of thumb: **src** = code, **content** = Markdown, **games** = swappable foreign modules. Dependencies point one way only: content -> games/src, src -> nothing.
 
-### Request-Fluss
+### Request flow
 
 ```
 Browser ──GET /breakout──> server.Handler.do_GET
-                         ├─ /static/*, /games/*  -> Datei ausliefern (Pfad-Check gegen ROOT)
-                         └─ sonst render_page():
-                              content.get_page(slug)      content/pages/breakout.md lesen, Frontmatter trennen
-                              content.app_content(...)    Markdown -> HTML, app:golf -> content/modules/golf.md
-                              theme.load_theme()          theme.md über themes/<name>.md legen
-                              frontend.shell(...)         alles in den Rahmen setzen
+                             ├─ /static/*, /games/*  -> serve file (path check against the base dir)
+                             └─ otherwise render_page():
+                                  content.get_page(slug)      read content/pages/breakout.md, split frontmatter
+                                  content.app_content(...)    Markdown -> HTML, app:golf -> content/modules/golf.md
+                                  theme.load_theme()          layer theme.md over themes/<name>.md
+                                  frontend.shell(...)         put everything into the shell
 ```
 
-`/` (index) rendert statt einer Seite den Workspace: `content.list_pages()` liefert alle Seiten, `frontend.workspace` baut daraus Kacheln.
+`/` (index) renders the workspace instead of a page: `content.list_pages()` returns all pages and `frontend.workspace` builds tiles from them.
 
-### Wichtige Konzepte
+### Key concepts
 
-- **Seiten = Routen.** `content/pages/foo.md` ist automatisch `/foo` und erscheint in der Sidebar und als Kachel. Sortierung: `index` zuerst, dann `order` (Frontmatter), dann Titel.
-- **Module.** `content/modules/<name>.md` ist ein HTML-Template mit `{{ key }}`-Platzhaltern (Werte werden HTML-escaped). Aufruf in einer Seite:
+- **Pages = routes.** `content/pages/foo.md` is automatically `/foo` and shows up in the sidebar and as a tile. Order: `index` first, then `order` (frontmatter), then title.
+- **Modules.** `content/modules/<name>.md` is an HTML template with `{{ key }}` placeholders (values are HTML-escaped). Use in a page:
 
   ```md
   @stats
-  label: Fortschritt
+  label: Progress
   value: 72%
   change: +8%
   @end
   ```
 
-  oder einzeilig: `@card title="Hallo" text="Welt"`.
-- **Minimaler Markdown-Renderer** (`content.render`): Überschriften, Listen, Absätze, `**fett**`, `` `code` ``. Absichtlich klein; Eingaben werden mit `html.escape` behandelt.
-- **Komponenten kennen kein Backend.** Eine Komponente ist eine Funktion, die Strings bekommt und Markup zurückgibt; ihr CSS/JS liegt in `static/components/`. Dadurch lassen sich Komponenten in andere Projekte kopieren.
-- **Themes.** `theme.md` wählt ein Preset (`theme: aqua`), Werte darin überschreiben dessen Tokens. `theme.py` macht daraus CSS-Variablen (`--bg`, `--primary`, `--radius` …) am `<body>`. Neues Theme = neue Datei in `content/themes/`.
-- **Neue Mini-App aus der UI.** Das Modal „Neue Mini-App" schickt `POST /apps`; `content.save_page` validiert den Slug (`[a-z0-9-]+`) und schreibt die `.md` nach `pages/`.
-- **Sicherheit (Prototyp).** Server bindet nur an `127.0.0.1`; statische Auslieferung prüft, dass der Pfad unter `ROOT` bleibt. Nicht für den Betrieb im Netz gedacht.
+  or on one line: `@card title="Hello" text="World"`.
+- **Minimal Markdown renderer** (`content.render`): headings, lists, paragraphs, `**bold**`, `` `code` ``. Intentionally small; input goes through `html.escape`.
+- **Components know no backend.** A component is a function that takes strings and returns markup; its CSS/JS lives in `src/static/components/`. That makes components copyable to other projects.
+- **Themes.** `content/theme.md` picks a preset (`theme: aqua`); values in it override that preset's tokens. `src/backend/theme.py` turns them into CSS variables (`--bg`, `--primary`, `--radius` …) on `<body>`. New theme = new file in `content/themes/`.
+- **New mini-app from the UI.** The "New mini-app" modal sends `POST /apps`; `content.save_page` validates the slug (`[a-z0-9-]+`) and writes the `.md` into `content/pages/`.
+- **Security (prototype).** The server binds to `127.0.0.1` only; static serving checks that the path stays inside its base directory. Not meant to be exposed to a network.
 
 ## Flipp-Out (`games/flippout/`)
 
-Breakout, bei dem ein biegsamer Balken den Ball lädt, spannt und schlägt – durch 10 Welten (Western, Vaporwave, Dungeon, Golfplatz …) mit Bossen, Shop und Minigolf-Modus. Drei Dateien, keine Abhängigkeiten, kein Build; das Spiel kennt die Host-App nicht.
+Breakout where a flexible bar charges, tensions and hits the ball – through 10 worlds (Western, Vaporwave, Dungeon, Golf course …) with bosses, a shop and a mini-golf mode. Three files, no dependencies, no build; the game does not know the host app.
 
 ```html
 <div data-flippout data-mode="breakout" data-label="Flipp-Out"></div>
@@ -105,44 +105,47 @@ Breakout, bei dem ein biegsamer Balken den Ball lädt, spannt und schlägt – d
 <script src="games/flippout/flippout.js"></script>
 ```
 
-`data-mode`: `breakout` | `golf`. Alternativ per Code: `Flippout.mount(el, {mode, label})`.
+`data-mode`: `breakout` | `golf`. Or via code: `Flippout.mount(el, {mode, label})`.
 
-### Architektur von `flippout.js`
+**Language:** the game is English by default. The **DE/EN** button in the game header switches the language (saved in `localStorage.golfLang`; the page reloads, progress is saved first).
 
-Eine einzige IIFE (~1500 Zeilen), bewusst ohne Module-System, damit sie als eine Datei einbettbar ist.
+### Architecture of `flippout.js`
 
-- **Einbettung:** `mount()` setzt ein im Skript eingebettetes HTML-Template (`TPL`) in den Container und ruft `start(game)`. `auto()` mountet alle `[data-flippout]`-Elemente.
-- **Festes Render-Format:** Gezeichnet wird auf ein 300×225-Canvas (4:3); die sichtbare Größe regelt CSS mit scharfer Pixel-Skalierung. Alle Grafik ist eigener Pixel-Code (`box`, `disc`, 3×5-Bitmap-Font in `txt`) in einer 16-Farben-Palette im Amiga-Stil – keine Bilddateien.
-- **Game-Loop:** `requestAnimationFrame` + Akkumulator, die Logik läuft mit festen ~60 Schritten/s (`step()`), `draw()` rendert einmal pro Frame. Dadurch ist die Physik unabhängig von der Bildrate.
-- **Zustandsmaschine:** `state` (u. a. Titel, Weltkarte, Abschlag, Spiel, Shop, Look) steuert, was `step()` und `draw()` tun.
-- **Prozedurale Level:** `layout()` baut das Spielfeld jede Runde neu aus einem Seed (`rnd()` ist ein linearer Kongruenzgenerator) und der Breite; `makeBricks()` platziert Steine aus Mustern (`brickOn`). Gleicher Seed = gleiches Level.
-- **Physik:** Kreis-gegen-Segment-Kollision (`segDist`, `bounce`), Flipper-Balken mit Lade-/Schlagmechanik, Multi-Ball (`split`), Power-ups (`PU`).
-- **Welten & Bosse:** Daten in Tabellen (`LEVELS`, `BOSSES`, `BATK`) – pro Kulisse eigene Palette, Landmarks (`drawLandmark`) und Boss-Angriffsmuster.
-- **Shop & Meta-Spiel:** Upgrades (`ITEMS`), Stile/Qualität/Cheats als Tabs; Kosten- und Stufenlogik in `buy`/`toggle`.
-- **Autopilot/Ambience:** `ambientAI()` spielt selbst und kauft im Shop ein – nützlich als Demo und zum Testen.
-- **Persistenz:** nur `localStorage` (`golfSave_<mode>`, `golfCos`, …) und `sessionStorage`; gespeichert wird bei `pagehide`/`visibilitychange`.
-- **Eingabe:** Pointer-Events mit Pointer-Lock (Klick fängt die Maus, `Esc` gibt sie frei) plus Tastatur (A/D, Pfeile, Leertaste, `B` Shop, `Tab` Autopilot, `F2` Rahmen aus).
-- **Host-Hooks:** `body.golf-bare` (F2) blendet den Rahmen aus; die Host-App kann darauf reagieren. Der Adapter dafür liegt hier in `src/static/components/flippout-host.css` – nicht im Spiel.
+A single IIFE (~1500 lines), deliberately without a module system so it can be embedded as one file.
 
-Mehr: [`games/flippout/README.md`](games/flippout/README.md). Itch.io-Paket und Seitentexte: [`games/flippout/itch/`](games/flippout/itch/).
+- **Embedding:** `mount()` puts a template (built by `tpl()`) into the container and calls `start(game)`. `auto()` mounts every `[data-flippout]` element.
+- **i18n:** all source strings are English and wrapped in `L('...')`. `DE` maps English -> German and is only consulted when the language is German; unknown strings fall back to English. To add a language, extend the dictionary and the `LANG` check.
+- **Fixed render size:** drawing happens on a 300×225 canvas (4:3); CSS scales it with crisp pixels. All graphics are hand-written pixel code (`box`, `disc`, a 3×5 bitmap font in `txt`) in a 16-color Amiga-style palette – no image files.
+- **Game loop:** `requestAnimationFrame` + accumulator; logic runs in fixed ~60 steps/s (`step()`), `draw()` renders once per frame. Physics is independent of the frame rate.
+- **State machine:** `state` (title, world map, tee, play, shop, look, …) decides what `step()` and `draw()` do.
+- **Procedural levels:** `layout()` rebuilds the playfield every round from a seed (`rnd()` is a linear congruential generator) and the width; `makeBricks()` places bricks from patterns (`brickOn`). Same seed = same level.
+- **Physics:** circle-vs-segment collision (`segDist`, `bounce`), flipper bar with charge/hit mechanics, multi-ball (`split`), power-ups (`PU`).
+- **Worlds & bosses:** data tables (`LEVELS`, `BOSSES`, `BATK`) – each scene has its own palette, landmarks (`drawLandmark`) and boss attack patterns.
+- **Shop & meta game:** upgrades (`ITEMS`), styles/quality/cheats as tabs; cost and tier logic in `buy`/`toggle`.
+- **Autopilot/Ambience:** `ambientAI()` plays by itself and shops – useful as a demo and for testing.
+- **Persistence:** `localStorage` only (`golfSave_<mode>`, `golfCos`, `golfLang`, …) and `sessionStorage`; saved on `pagehide`/`visibilitychange`.
+- **Input:** pointer events with pointer lock (click captures the mouse, `Esc` releases it) plus keyboard (A/D, arrows, Space, `B` shop, `Tab` autopilot, `F2` hide frame).
+- **Host hooks:** `body.golf-bare` (F2) hides the frame; the host app can react to it. The adapter lives in `src/static/components/flippout-host.css` – not in the game.
+
+More: [`games/flippout/README.md`](games/flippout/README.md). itch.io package and page texts: [`games/flippout/itch/`](games/flippout/itch/).
 
 ## gamestyle (`games/gamestyle/`)
 
-Wiederverwendbare Grafikstil-Bibliothek für Spiele: Design-Tokens, Themes und feste logische Auflösung mit ganzzahliger Skalierung (`GameStyle.screen(el)`, `toLogical(event)`). Die Themes werden aus `content/themes/*.md` generiert (`python3 games/gamestyle/build.py`) – die MD-Themes bleiben die einzige Quelle, `build.py` nutzt dafür dieselbe Token-Logik wie `src/backend/theme.py`. Details: [`games/gamestyle/README.md`](games/gamestyle/README.md).
+Reusable graphics-style library for games: design tokens, themes and a fixed logical resolution with integer scaling (`GameStyle.screen(el)`, `toLogical(event)`). The themes are generated from `content/themes/*.md` (`python3 games/gamestyle/build.py`) – the MD themes stay the single source, and `build.py` uses the same token logic as `src/backend/theme.py`. Details: [`games/gamestyle/README.md`](games/gamestyle/README.md).
 
-## Eigenes Spiel/Modul ergänzen
+## Adding your own game/module
 
-1. Spiel als eigenständigen Ordner in `games/<name>/` anlegen (JS + CSS, mountbar über ein `data-`-Attribut).
-2. Einbinde-Snippet als `content/modules/<name>.md` schreiben (siehe `content/modules/golf.md`).
-3. In `src/backend/content.py:app_content` das `app:`-Mapping ergänzen.
-4. Seite `content/pages/<name>.md` mit `app: <name>` anlegen.
+1. Put the game in its own folder `games/<name>/` (JS + CSS, mountable via a `data-` attribute).
+2. Write the embed snippet as `content/modules/<name>.md` (see `content/modules/golf.md`).
+3. Extend the `app:` mapping in `src/backend/content.py:app_content`.
+4. Create a page `content/pages/<name>.md` with `app: <name>`.
 
-## Philosophie
+## Philosophy
 
-- Eine Datei pro Sache, lesbar ohne Tooling.
-- Format statt Framework: Markdown + Frontmatter + Platzhalter.
-- Komponenten und Spiele sind austauschbar und kennen ihren Host nicht.
+- One file per thing, readable without tooling.
+- Format over framework: Markdown + frontmatter + placeholders.
+- Components and games are swappable and do not know their host.
 
-## Lizenz
+## License
 
-MIT, siehe [`LICENSE`](LICENSE).
+MIT, see [`LICENSE`](LICENSE).

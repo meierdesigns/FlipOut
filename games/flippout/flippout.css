@@ -1,4 +1,4 @@
-/* Flipp-Out: Spiel-Styles (unabhaengig von der Host-Anwendung) */
+/* Flipp-Out: game styles (independent of the host application) */
 .amiga{width:100%;max-width:none;min-height:calc(100vh - 16px);display:flex;flex-direction:column;margin:0;padding:3px;background:#aaa;border:3px solid;border-color:#fff #555 #555 #fff;font-family:'Courier New',monospace;box-shadow:none!important;border-radius:0!important}
 .amiga-bar{display:flex;justify-content:flex-start;align-items:center;padding:3px 6px;background:#05a;color:#fff;font-weight:700;font-size:13px}
 .amiga-view{position:relative;flex:1;align-items:center;margin-top:3px;background:#000;display:flex;justify-content:center}.amiga-screen{touch-action:none;display:block;width:min(100%,calc((100vh - var(--off)) * 4 / 3));height:auto;aspect-ratio:4/3;image-rendering:pixelated;background:#000;margin-top:3px;outline:none}
@@ -12,7 +12,7 @@
 .amiga{position:relative}
 .amiga-fab{display:none;position:absolute;top:14px;left:6px;z-index:30;opacity:0;transition:opacity .15s;background:#000a;color:#fff;border:1px solid #fff8;font:700 14px/1 system-ui,sans-serif;padding:4px 8px;cursor:pointer;border-radius:4px}
 .amiga-hot{display:none;position:absolute;left:0;top:0;bottom:0;width:max(90px,calc((100% - min(100%,calc((100vh - var(--off)) * 4 / 3))) / 2))}
-.amiga-screen{position:relative;z-index:1}  /* Spielfeld liegt ueber der Hover-Zone: nur der Rand links loest den Button aus */  /* Rand links neben dem Spielfeld */
+.amiga-screen{position:relative;z-index:1}  /* playfield sits above the hover zone: only the left edge triggers the button */
 body.golf-bare .amiga-hot{display:block}
 .amiga:has(.amiga-hot:hover) .amiga-fab,.amiga-fab:hover,.amiga-fab:focus{opacity:1}
 @media(hover:none){.amiga-fab{opacity:.35}}
@@ -40,9 +40,10 @@ body.golf-bare .amiga-pad{background:transparent;margin:0;padding:6px}
 .amiga-view.q-vhs::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(transparent 0 46%,rgba(255,255,255,.1) 50%,transparent 54%) 0 0/100% 200%;animation:vhsb 4s linear infinite}
 @keyframes vhsb{from{background-position:0 0}to{background-position:0 200%}}
 .amiga-view.q-crt .amiga-screen{filter:contrast(1.1) saturate(1.2) brightness(1.08)}
-/* Rahmen ums Spielfeld: direkt am Canvas (box-shadow = kein Layout-Einfluss), auch im Bare-Modus */
+/* frame around the playfield: directly on the canvas (box-shadow = no layout impact), also in bare mode */
 .amiga-view,body.golf-bare .amiga-view{border:0;box-shadow:none;padding:18px;background:#111}
 .amiga-screen{box-shadow:0 0 0 3px #000,0 0 0 9px #05a,0 0 0 12px #fff,0 0 0 15px #000,0 0 22px 15px #05a8}
 .amiga{--off:100px}
 @media(pointer:coarse){.amiga{--off:170px}}
 body.golf-bare .amiga{--off:50px}
+.amiga-lang{order:-1;margin:0 8px 0 0;background:none;border:1px solid #fff8;color:inherit;font:700 11px/1 system-ui,sans-serif;padding:3px 6px;cursor:pointer;border-radius:3px}

@@ -1,9 +1,9 @@
-"""Komponente: Modal (<dialog>) + Oeffner-Button. CSS/JS: static/components/modal.css, modal.js"""
+"""Component: modal (<dialog>) + opener button. CSS/JS: static/components/modal.css, modal.js"""
 import html
 
 def modal(dom_id, title, eyebrow, body_html):
     return (f'<dialog id="{dom_id}" class="snippet-panel" data-modal><div class="panel-heading"><div><p class="eyebrow">{html.escape(eyebrow)}</p>'
-            f'<h2>{html.escape(title)}</h2></div><button type="button" class="modal-close" data-modal-close aria-label="Schliessen">✕</button></div>'
+            f'<h2>{html.escape(title)}</h2></div><button type="button" class="modal-close" data-modal-close aria-label="Close">✕</button></div>'
             f'{body_html}</dialog>')
 
 def modal_trigger(dom_id, label, sub=""):

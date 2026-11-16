@@ -1,10 +1,10 @@
-/* gamestyle – wiederverwendbarer Grafikstil. Zuerst ein themes/<name>.css laden, dann diese Datei.
-   Benoetigt keine Runtime. Klasse theme-<name> auf <body> (optional fx-scanlines, fx-glow). */
+/* gamestyle – reusable graphics style. Load a themes/<name>.css first, then this file.
+   Needs no runtime. Class theme-<name> on <body> (optional fx-scanlines, fx-glow). */
 :root{
   --font-body:system-ui,sans-serif;--font-heading:var(--font-body);
   --bg:#f6f7f9;--surface:#fff;--text:#20242a;--primary:#16804a;--accent:#fc0;--border-color:#d7dbe0;
   --radius:12px;--border-width:1px;--gap:16px;--padding:22px;--shadow:0 8px 24px #00000014;
-  /* Aufloesung: logische Spielflaeche, wird ganzzahlig hochskaliert (siehe gamestyle.js) */
+  /* Resolution: logical play area, scaled up by integer factors (see gamestyle.js) */
   --res-w:320;--res-h:240;--pixelated:auto;--scale:1;
 }
 *{box-sizing:border-box}
@@ -21,7 +21,7 @@ body.fx-scanlines::after{content:"";position:fixed;inset:0;pointer-events:none;z
 .gs-hud strong{font-size:1.6em}
 .gs-message{color:var(--primary);font-weight:700}
 
-/* Spielflaeche: feste logische Aufloesung, skaliert per transform (Layout-Groesse = Pixel*Scale) */
+/* play area: fixed logical resolution, scaled via transform (layout size = pixels * scale) */
 .gs-screen{position:relative;margin:0 auto;overflow:hidden;background:var(--bg);
   width:calc(var(--res-w) * var(--scale) * 1px);height:calc(var(--res-h) * var(--scale) * 1px);
   border:var(--border-width) solid var(--border-color);border-radius:var(--radius);box-shadow:var(--shadow)}

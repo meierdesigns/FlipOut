@@ -1,4 +1,4 @@
-"""Backend: HTTP-Server und Routen. Setzt Daten (backend.*) und Darstellung (frontend.*) zusammen."""
+"""Backend: HTTP server and routes. Combines data (backend.*) and presentation (frontend.*)."""
 import html, re
 from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
 from urllib.parse import parse_qs

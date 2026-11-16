@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
-/* Flipp-Out-Look: App-Kachel wie eine Shop-Kachel des Spiels (Amiga-Palette, Pixelschrift, blinkender Fokusrahmen) */
+/* Flipp-Out look: app tile like a shop tile of the game (Amiga palette, pixel font, blinking focus frame) */
 .app-tile,body.theme-aqua .app-tile{--fo-bg:#444;--fo-hi:#888;--fo-lo:#222200;--fo-gold:#ffdd00;--fo-blue:#0055aa;--fo-sky:#00aaff;
   position:relative;display:flex;flex-direction:column;min-height:0;padding:0 0 14px;cursor:pointer;color:var(--fo-gold);font-family:Silkscreen,ui-monospace,"Courier New",monospace;
   background:var(--fo-bg);border:0;border-radius:0;outline:2px solid #000;outline-offset:0;image-rendering:pixelated;transition:none;
@@ -22,7 +22,7 @@ body .app-tile .tile-launch,body.theme-aqua .app-tile .tile-launch{align-self:fl
 @keyframes fo-arrow{0%{transform:translate(0,0)}100%{transform:translate(3px,0)}}
 @media (prefers-reduced-motion:reduce){.app-tile:hover,.app-tile:focus-within,.app-tile:hover .tile-launch span{animation:none}.app-tile:active{transform:none}}
 
-/* Kachel als ein zusammenhaengender Knopf: oben Bloecke, Ball in der Mitte, unten der Balken */
+/* Tile as one connected button: bricks on top, ball in the middle, bar at the bottom */
 .app-tile::before,body.theme-aqua .app-tile::before{display:none}
 .app-tile .tile-mark{display:none}
 .tile-art{position:relative;height:96px;margin:6px 6px 14px;overflow:hidden;background:#000;
@@ -47,7 +47,7 @@ body .app-tile .tile-launch,body.theme-aqua .app-tile .tile-launch{align-self:fl
 @keyframes fo-bricks{0%{filter:none}50%{filter:brightness(1.35)}}
 @media (prefers-reduced-motion:reduce){.app-tile:hover .t-ball,.app-tile:hover .t-bar,.app-tile:hover .t-bricks{animation:none}}
 
-/* Perspektive: Spielfeld kippt nach hinten, Bloecke stehen hinten als Waende, Ball wirft Schatten auf den Boden */
+/* Perspective: playfield tilts back, bricks stand at the back as walls, ball casts a shadow on the floor */
 .tile-art{perspective:240px;perspective-origin:50% 0%;height:110px}
 .t-stage{position:absolute;left:0;right:0;top:0;height:170px;transform-origin:50% 0;transform:rotateX(48deg);transform-style:preserve-3d;
   background:repeating-linear-gradient(90deg,#0000 0 27px,#0055aa88 27px 28px),repeating-linear-gradient(0deg,#0000 0 19px,#0055aa88 19px 20px),linear-gradient(#001a33,#002a55)}
@@ -60,7 +60,7 @@ body .app-tile .tile-launch,body.theme-aqua .app-tile .tile-launch{align-self:fl
 @keyframes fo-ball3{0%{transform:translate3d(0,0,14px)}25%{transform:translate3d(36px,-40px,30px)}50%{transform:translate3d(72px,0,14px)}75%{transform:translate3d(36px,-40px,30px)}100%{transform:translate3d(0,0,14px)}}
 
 
-/* Info-Knopf: nur bei Hover/Fokus sichtbar, oeffnet das Info-Modal */
+/* Info button: only visible on hover/focus, opens the info modal */
 .info-btn{position:absolute;top:12px;right:12px;z-index:3;width:24px;height:24px;padding:0;background:#000;color:#ffdd00;border:0;font:700 12px Silkscreen,monospace;cursor:pointer;
   box-shadow:inset 2px 2px 0 #888,inset -2px -2px 0 #222200,2px 2px 0 #000;opacity:0;pointer-events:none}
 .app-tile:hover .info-btn,.app-tile:focus-within .info-btn,.info-btn:focus-visible{opacity:1;pointer-events:auto}

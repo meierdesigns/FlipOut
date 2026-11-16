@@ -1,4 +1,4 @@
-"""Backend: Theme laden und als CSS-Variablen ausgeben."""
+"""Backend: load theme and emit it as CSS variables."""
 import html
 from .paths import THEME_FILE, THEMES
 from .content import frontmatter

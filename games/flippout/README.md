@@ -1,22 +1,25 @@
 # Flipp-Out
 
-Breakout im Flipper-Stil: Ein biegsamer Balken lädt, spannt und schlägt den Ball; durch 10 Welten (Western, Vaporwave, Dungeon, Golfplatz …) mit eigenem Look, Bossen und Shop. Auch als Minigolf-Variante spielbar.
+Breakout with a pinball feel: a flexible bar charges, tensions and hits the ball through 10 worlds (Western, Vaporwave, Dungeon, Golf course …), each with its own look, bosses and a shop. Also playable as a mini-golf variant.
 
-Eigenstaendiges Spiel Keine Abhaengigkeiten, kein Build, kennt die Host-App nicht.
+Standalone game. No dependencies, no build, does not know the host app.
 
 ## Standalone
-`games/flippout/index.html` im Browser oeffnen (oder `python3 -m http.server` im Ordner).
+Open `games/flippout/index.html` in a browser (or run `python3 -m http.server` in the folder).
 
-## Einbinden
+## Embed
 ```html
 <div data-flippout data-mode="breakout" data-label="Flipp-Out"></div>
 <link rel="stylesheet" href="games/flippout/flippout.css">
 <script src="games/flippout/flippout.js"></script>
 ```
-`data-mode`: `breakout` | `golf`. Oder per Code: `Flippout.mount(el, {mode, label})`.
+`data-mode`: `breakout` | `golf`. Or via code: `Flippout.mount(el, {mode, label})`.
 
-## Host-Hooks (optional)
-- `body.golf-bare` (F2) blendet den Rahmen aus; die Host-App kann darauf reagieren (z.B. Sidebar ausblenden).
-- Speicherstand/Einstellungen: `localStorage` (`golf*`) / `sessionStorage`.
+## Language
+English by default. The **DE/EN** button in the header switches to German and back (saved in `localStorage.golfLang`).
 
-In L4UNCHAPP wird das Spiel nur ueber das Modul `content/modules/golf.md` geladen (Adapter: `src/static/components/flippout-host.css`).
+## Host hooks (optional)
+- `body.golf-bare` (F2) hides the frame; the host app can react to it (e.g. hide the sidebar).
+- Save game/settings: `localStorage` (`golf*`) / `sessionStorage`.
+
+In MD•APP the game is only loaded through the module `content/modules/golf.md` (adapter: `src/static/components/flippout-host.css`).

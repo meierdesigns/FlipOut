@@ -1,4 +1,4 @@
-/* Modal zum Einfuegen: Hintergrund wird abgedunkelt */
+/* Insert modal: background is dimmed */
 dialog.snippet-panel{width:min(760px,calc(100vw - 32px));max-height:calc(100vh - 48px);margin:auto;overflow:auto;padding:var(--padding);color:var(--text)}
 dialog.snippet-panel:not([open]){display:none}
 dialog.snippet-panel::backdrop{background:rgba(4,6,14,.72);backdrop-filter:blur(2px)}

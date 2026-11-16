@@ -68,7 +68,7 @@ body.theme-aqua .empty-state{border-radius:8px}
 /* Spiel als Aqua-Fenster */
 body.theme-aqua .amiga{background:#ececec;border:1px solid #777;border-radius:8px!important;box-shadow:0 14px 34px #0006!important;padding:0;font-family:var(--font-body);overflow:hidden}
 body.theme-aqua .amiga-bar{display:flex;align-items:center;padding:0 10px;height:24px;background:linear-gradient(#ececec,#c4c4c4);border-bottom:1px solid #8e8e8e;color:#222;font:700 12px var(--font-body);text-shadow:0 1px #fff}
-/* Aqua + Spiel: Titelleiste laeuft ueber die ganze Fensterbreite (auch ueber der Sidebar), die Sidebar beginnt darunter */
+/* Aqua + game: title bar spans the full window width (also above the sidebar), the sidebar starts below it */
 body.theme-aqua:has(.amiga) .amiga-bar{position:fixed;top:0;left:0;right:0;z-index:60;border-radius:0}
 body.theme-aqua:has(.amiga) main{padding-top:calc(24px + 18px)}
 @media(min-width:701px){body.theme-aqua:has(.amiga) aside{top:24px;height:calc(100vh - 24px)}}
@@ -80,5 +80,5 @@ body.theme-aqua .amiga-pad button{border-radius:16px;border:1px solid #2a5ea8;co
 body.theme-aqua .amiga-pad button:active{background:linear-gradient(#2a72cf,#1f5db0 50%,#1a4f9a 51%,#2f6fc4);border-color:#1a3e7a}
 body.theme-aqua .amiga-help{margin:0;padding:6px 12px 10px;color:#555;font:11px var(--font-body);text-align:center}
 
-/* App-Kachel: echte Card, komplett klickbar, nichts zum Aufklappen */
+/* App tile: real card, fully clickable, nothing to expand */
 .app-tile{position:relative;display:flex;flex-direction:column;transition:transform .12s ease,box-shadow .12s ease}.app-tile:hover{transform:translateY(-2px)}.app-tile .tile-launch{margin-top:18px}.app-tile .tile-launch::after{content:"";position:absolute;inset:0;border-radius:inherit}.app-tile:focus-within{outline:2px solid var(--primary);outline-offset:2px}

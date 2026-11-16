@@ -1,4 +1,4 @@
-"""Backend: Markdown-Inhalte (Frontmatter, Module, Rendering, Seiten)."""
+"""Backend: Markdown content (frontmatter, modules, rendering, pages)."""
 import html, re
 from .paths import PAGES, MODULES
 
@@ -98,14 +98,14 @@ def app_content(meta, src):
     return content
 
 def list_pages():
-    """Alle Seiten als Dict(slug,title,desc,meta,src), sortiert (index, order, Titel)."""
+    """All pages as dict(slug,title,desc,meta,src), sorted (index, order, title)."""
     out = []
     for f in PAGES.glob("*.md"):
         meta, src = frontmatter(f.read_text())
         title = meta.get("title", f.stem.replace("-", " ").title())
         desc = meta.get("desc") or next((l.strip() for l in src.splitlines() if l.strip() and not l.startswith("@")), "MD mini app")
         out.append({"slug": f.stem, "title": title, "desc": desc, "meta": meta, "src": src, "components": used_components(meta, src)})
-    def key(p):  # index zuerst, dann nach `order` (Frontmatter, Standard 100), dann Titel
+    def key(p):  # index first, then by `order` (frontmatter, default 100), then title
         try: order = int(p["meta"].get("order", 100))
         except ValueError: order = 100
         return (p["slug"] != "index", order, p["title"].lower())
@@ -119,13 +119,13 @@ def get_page(slug):
     return {"slug": f.stem, "meta": meta, "src": src}
 
 def save_page(title, slug, snippet):
-    """Legt eine Seite an. Wirft ValueError bei ungueltiger Eingabe."""
+    """Creates a page. Raises ValueError on invalid input."""
     if not title or not re.fullmatch(r"[a-z0-9-]+", slug) or not snippet:
         raise ValueError("Title, slug and snippet are required")
     (PAGES / f"{slug}.md").write_text(snippet if snippet.startswith("---") else f"---\ntitle: {title}\n---\n\n{snippet}\n")
 
 def used_components(meta, src):
-    """Verwendete Komponenten einer Seite: @module-Direktiven + eingebaute App (app:)."""
+    """Components used by a page: @module directives + built-in app (app:)."""
     names = []
     if meta.get("app"):
         names.append(meta["app"] + (f" ({meta['mode']})" if meta.get("mode") else ""))

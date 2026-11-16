@@ -1,5 +1,5 @@
-/* gamestyle.js – Aufloesung & Skalierung. Kein Build, keine Abhaengigkeiten.
-   <div class="gs-screen"><canvas class="gs-stage" ...></div>  oder  <div class="gs-stage">DOM-Spiel</div>
+/* gamestyle.js – resolution & scaling. No build, no dependencies.
+   <div class="gs-screen"><canvas class="gs-stage" ...></div> or <div class="gs-stage">DOM-Spiel</div>
    const s = GameStyle.screen(el, {width:320, height:240, integer:true, fill:.95}); s.ctx -> 2D-Context */
 (function (g) {
   function screen(el, o) {
@@ -12,7 +12,7 @@
     el.style.setProperty('--res-w', W); el.style.setProperty('--res-h', H);
     let ctx = null;
     if (stage && stage.tagName === 'CANVAS') {
-      stage.width = W; stage.height = H;               // Backbuffer = logische Aufloesung
+      stage.width = W; stage.height = H;               // backbuffer = logical resolution
       ctx = stage.getContext('2d'); ctx.imageSmoothingEnabled = false;
     }
     function fit() {

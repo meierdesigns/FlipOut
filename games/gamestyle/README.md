@@ -1,9 +1,9 @@
 # gamestyle
 
-Wiederverwendbarer Grafikstil für Spiele: Design-Tokens, Themes, Komponenten und feste Spielauflösung mit scharfer Skalierung. Kein Build, keine Runtime nötig.
+Reusable graphics style for games: design tokens, themes, components and a fixed game resolution with crisp scaling. No build, no runtime needed.
 
-## In einem anderen Projekt nutzen
-Ordner `gamestyle/` kopieren (oder per Symlink einbinden), dann:
+## Use in another project
+Copy the `gamestyle/` folder (or symlink it), then:
 
 ```html
 <link rel="stylesheet" href="gamestyle/themes/amiga.css">
@@ -14,16 +14,16 @@ Ordner `gamestyle/` kopieren (oder per Symlink einbinden), dann:
 <script>const s = GameStyle.screen(document.querySelector('.gs-screen'));  // s.ctx, s.toLogical(e)</script>
 ```
 
-Theme wechseln = andere `themes/<name>.css` und `theme-<name>`-Klasse. Siehe `demo.html`.
+Switch theme = load another `themes/<name>.css` and use the `theme-<name>` class. See `demo.html`.
 
-## Auflösung
-- Jedes Theme setzt `--res-w`/`--res-h` (z. B. amiga 320×256, arcade 256×224, monochrome 160×144) und `--pixelated`.
-- Du zeichnest in der logischen Auflösung; `gamestyle.js` skaliert ganzzahlig (`integer:false` für glatt) und passt bei Resize an.
-- `toLogical(event)` rechnet Mausposition in Spielpixel um.
-- Überschreiben: `GameStyle.screen(el, {width, height})` oder `.gs-crisp` / `.gs-smooth` am `.gs-screen`.
+## Resolution
+- Each theme sets `--res-w`/`--res-h` (e.g. amiga 320×256, arcade 256×224, monochrome 160×144) and `--pixelated`.
+- You draw in the logical resolution; `gamestyle.js` scales by integer factors (`integer:false` for smooth) and adapts on resize.
+- `toLogical(event)` converts the mouse position to game pixels.
+- Override: `GameStyle.screen(el, {width, height})` or `.gs-crisp` / `.gs-smooth` on `.gs-screen`.
 
 ## Tokens
 `--bg --surface --text --primary --accent --border-color --radius --border-width --gap --padding --shadow --font-body --font-heading`
 
-## Quelle
-Die Themes in `content/themes/*.md` bleiben die einzige Quelle (L4UNCHAPP nutzt sie direkt). Nach Änderungen: `python3 games/gamestyle/build.py`. Auflösungen pro Theme stehen in `build.py` (`RES`).
+## Source
+The themes in `content/themes/*.md` remain the single source (MD•APP uses them directly). After changes run `python3 games/gamestyle/build.py`. Per-theme resolutions are in `build.py` (`RES`).

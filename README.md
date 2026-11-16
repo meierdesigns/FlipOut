@@ -19,3 +19,6 @@ Eigenstaendiges Spiel Keine Abhaengigkeiten, kein Build, kennt die Host-App nich
 - `body.golf-bare` (F2) blendet den Rahmen aus; die Host-App kann darauf reagieren (z.B. Sidebar ausblenden).
 - Speicherstand/Einstellungen: `localStorage` (`golf*`) / `sessionStorage`.
 
+
+## Lizenz
+MIT, siehe `LICENSE`.

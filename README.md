@@ -1,4 +1,4 @@
-# L4UNCHAPP
+# MD•APP
 
 A tiny Markdown-native application runtime for mini-apps.
 
@@ -41,6 +41,3 @@ The runtime reads `app: golf` and embeds the Flipp-Out game via `modules/golf.md
 The MD file stays declarative; HTML and JavaScript are not needed in the page.
 
 This prototype intentionally avoids React, build tooling, a database and a large component framework.
-
-## Lizenz
-MIT, siehe `LICENSE`.

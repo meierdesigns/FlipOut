@@ -56,7 +56,6 @@ games/                  standalone games/libraries, they do not know the runtime
   flippout/             the game (+ itch/ with deploy zip and page texts)
   gamestyle/            graphics style library
 docs/                   framework.md (contract), archive/ (old prototype)
-tools/                  developer tools (VS Code extension server-sidebar)
 ```
 
 Rule of thumb: **src** = code, **content** = Markdown, **games** = swappable foreign modules. Dependencies point one way only: content -> games/src, src -> nothing.

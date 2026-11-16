@@ -1,0 +1,48 @@
+/* Flipp-Out: Spiel-Styles (unabhaengig von der Host-Anwendung) */
+.amiga{width:100%;max-width:none;min-height:calc(100vh - 16px);display:flex;flex-direction:column;margin:0;padding:3px;background:#aaa;border:3px solid;border-color:#fff #555 #555 #fff;font-family:'Courier New',monospace;box-shadow:none!important;border-radius:0!important}
+.amiga-bar{display:flex;justify-content:flex-start;align-items:center;padding:3px 6px;background:#05a;color:#fff;font-weight:700;font-size:13px}
+.amiga-view{position:relative;flex:1;align-items:center;margin-top:3px;background:#000;display:flex;justify-content:center}.amiga-screen{touch-action:none;display:block;width:min(100%,calc((100vh - var(--off)) * 4 / 3));height:auto;aspect-ratio:4/3;image-rendering:pixelated;background:#000;margin-top:3px;outline:none}
+.amiga-pad{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;margin-top:3px}
+.amiga-pad button{font:700 13px 'Courier New',monospace;padding:clamp(12px,3vh,26px) 2px;background:#aaa;color:#000;border:2px solid;border-color:#fff #555 #555 #fff;border-radius:0;touch-action:none}
+.amiga-pad button:active{border-color:#555 #fff #fff #555;background:#f80}
+.amiga-pad button{font-size:clamp(10px,2.6vw,13px)}.amiga-help{margin:4px 0 0;font-size:11px;color:#000}
+.amiga-title{margin-right:auto}
+.tl{display:none}
+.amiga-bare{order:-1;margin:0 8px 0 0;background:none;border:1px solid #fff8;color:inherit;font:700 13px/1 system-ui,sans-serif;padding:2px 6px;cursor:pointer;border-radius:3px}
+.amiga{position:relative}
+.amiga-fab{display:none;position:absolute;top:14px;left:6px;z-index:30;opacity:0;transition:opacity .15s;background:#000a;color:#fff;border:1px solid #fff8;font:700 14px/1 system-ui,sans-serif;padding:4px 8px;cursor:pointer;border-radius:4px}
+.amiga-hot{display:none;position:absolute;left:0;top:0;bottom:0;width:max(90px,calc((100% - min(100%,calc((100vh - var(--off)) * 4 / 3))) / 2))}
+.amiga-screen{position:relative;z-index:1}  /* Spielfeld liegt ueber der Hover-Zone: nur der Rand links loest den Button aus */  /* Rand links neben dem Spielfeld */
+body.golf-bare .amiga-hot{display:block}
+.amiga:has(.amiga-hot:hover) .amiga-fab,.amiga-fab:hover,.amiga-fab:focus{opacity:1}
+@media(hover:none){.amiga-fab{opacity:.35}}
+body.golf-bare .amiga{padding:0!important;border:0!important;background:var(--bd,#000)!important;box-shadow:none!important;border-radius:0!important;min-height:100vh;--off:10px}
+@media(pointer:coarse){body.golf-bare .amiga{--off:90px}}
+body.golf-bare .amiga-bar,body.golf-bare .amiga-help{display:none!important}
+body.golf-bare .amiga-fab{display:block}
+body.golf-bare .amiga-pad{background:transparent;margin:0;padding:6px}
+@media(pointer:fine) and (hover:hover){.amiga .amiga-pad{display:none}}
+.amiga{--off:60px}
+@media(pointer:coarse){.amiga{--off:130px}}
+.amiga-info{position:relative;margin-left:auto;cursor:help;outline:none;font-size:15px;line-height:1}
+.amiga-tip{display:none;position:absolute;right:-4px;top:22px;z-index:20;width:min(320px,80vw);padding:8px 10px;background:#ffffe1;color:#222;border:1px solid #777;border-radius:4px;box-shadow:0 4px 12px #0005;font:400 12px/1.45 system-ui,sans-serif;text-align:left;white-space:normal;text-shadow:none}
+.amiga-info:hover .amiga-tip,.amiga-info:focus .amiga-tip{display:block}
+.amiga-view{position:relative}
+.amiga-view.q-soft .amiga-screen{image-rendering:auto}
+.amiga-view.q-bloom .amiga-screen{image-rendering:auto;filter:saturate(1.35) contrast(1.08) drop-shadow(0 0 5px rgba(255,255,255,.45))}
+.amiga-view.q-crt::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.28) 0 1px,transparent 1px 3px),radial-gradient(ellipse at center,transparent 55%,rgba(0,0,0,.55) 100%)}
+.amiga-view.q-psx .amiga-screen{filter:contrast(1.12) saturate(.8);animation:psxw .9s steps(2) infinite}
+@keyframes psxw{0%{transform:translate(0,0)}50%{transform:translate(.5px,-.5px)}100%{transform:translate(0,0)}}
+.amiga-view.q-psx::after{content:"";position:absolute;inset:0;pointer-events:none;background-image:repeating-conic-gradient(rgba(0,0,0,.16) 0 25%,transparent 0 50%);background-size:4px 4px}
+.amiga-view.q-lcd .amiga-screen{filter:contrast(1.05)}
+.amiga-view.q-lcd::after{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(0,0,0,.2) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.2) 1px,transparent 1px);background-size:3px 3px}
+.amiga-view.q-vhs .amiga-screen{filter:saturate(1.3) contrast(1.05) drop-shadow(2px 0 0 rgba(255,0,0,.35)) drop-shadow(-2px 0 0 rgba(0,255,255,.35))}
+.amiga-view.q-vhs::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(transparent 0 46%,rgba(255,255,255,.1) 50%,transparent 54%) 0 0/100% 200%;animation:vhsb 4s linear infinite}
+@keyframes vhsb{from{background-position:0 0}to{background-position:0 200%}}
+.amiga-view.q-crt .amiga-screen{filter:contrast(1.1) saturate(1.2) brightness(1.08)}
+/* Rahmen ums Spielfeld: direkt am Canvas (box-shadow = kein Layout-Einfluss), auch im Bare-Modus */
+.amiga-view,body.golf-bare .amiga-view{border:0;box-shadow:none;padding:18px;background:#111}
+.amiga-screen{box-shadow:0 0 0 3px #000,0 0 0 9px #05a,0 0 0 12px #fff,0 0 0 15px #000,0 0 22px 15px #05a8}
+.amiga{--off:100px}
+@media(pointer:coarse){.amiga{--off:170px}}
+body.golf-bare .amiga{--off:50px}

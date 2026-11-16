@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Erzeugt gamestyle/themes/*.css und gamestyle/gamestyle.css aus <L4UNCHAPP>/themes/*.md.
+"""Erzeugt gamestyle/themes/*.css und gamestyle/gamestyle.css aus content/themes/*.md.
 Die MD-Themes bleiben die einzige Quelle. Aufruf: python3 gamestyle/build.py"""
 from pathlib import Path
 import html, re, sys
 HERE = Path(__file__).parent
 ROOT = HERE.parents[1]
-sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(ROOT / "src"))
 from backend.content import frontmatter
 from backend.theme import theme_values, theme_css  # gleiche Token-Logik wie L4UNCHAPP
 
@@ -14,7 +14,7 @@ RES = {"amiga": (320, 256), "retro": (320, 240), "arcade": (256, 224), "win95": 
        "terminal": (640, 400), "cyberpunk": (480, 270), "monochrome": (160, 144)}
 PIXEL_FONTS = {"pixel", "terminal"}
 
-for src in sorted((ROOT / "themes").glob("*.md")):
+for src in sorted((ROOT / "content" / "themes").glob("*.md")):
     name = src.stem
     v = theme_values(frontmatter(src.read_text())[1])
     vars_ = html.unescape(theme_css(v))  # theme_css escaped fuer HTML-Attribute, hier brauchen wir reines CSS

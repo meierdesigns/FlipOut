@@ -1,6 +1,6 @@
 """Backend: Theme laden und als CSS-Variablen ausgeben."""
 import html
-from .paths import ROOT, THEMES
+from .paths import THEME_FILE, THEMES
 from .content import frontmatter
 
 def theme_values(src):
@@ -21,7 +21,7 @@ def theme_values(src):
     return values
 
 def load_theme():
-    active = ROOT / "theme.md"
+    active = THEME_FILE
     active_meta, active_src = frontmatter(active.read_text() if active.exists() else "")
     name = active_meta.get("theme", "modern")
     preset = THEMES / f"{name}.md"

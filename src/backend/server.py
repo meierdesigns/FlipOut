@@ -2,7 +2,7 @@
 import html, re
 from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
 from urllib.parse import parse_qs
-from .paths import ROOT
+from .paths import STATIC_ROUTES
 from . import content, theme as themes
 from frontend.shell import shell
 from frontend.workspace import workspace
@@ -37,11 +37,13 @@ class Handler(BaseHTTPRequestHandler):
         self.send_response(303); self.send_header("Location", "/"); self.end_headers()
 
     def do_GET(self):
-        if self.path.startswith(("/static/", "/apps/")):
-            f = (ROOT / self.path.split("?")[0].lstrip("/")).resolve()
-            if f.is_file() and ROOT in f.parents:
-                ctype = {".js": "application/javascript", ".css": "text/css", ".html": "text/html; charset=utf-8"}.get(f.suffix, "application/octet-stream")
-                self.send_response(200); self.send_header("Content-Type", ctype); self.end_headers(); self.wfile.write(f.read_bytes()); return
+        url = self.path.split("?")[0]
+        for prefix, base in STATIC_ROUTES.items():
+            if url.startswith(prefix):
+                f = (base / url[len(prefix):]).resolve()
+                if f.is_file() and base.resolve() in f.parents:
+                    ctype = {".js": "application/javascript", ".css": "text/css", ".html": "text/html; charset=utf-8"}.get(f.suffix, "application/octet-stream")
+                    self.send_response(200); self.send_header("Content-Type", ctype); self.end_headers(); self.wfile.write(f.read_bytes()); return
         body, status = render_page(self.path.split("?")[0])
         self.send_response(status); self.send_header("Content-Type", "text/html; charset=utf-8"); self.end_headers(); self.wfile.write(body.encode())
 

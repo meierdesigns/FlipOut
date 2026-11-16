@@ -26,4 +26,4 @@ Theme wechseln = andere `themes/<name>.css` und `theme-<name>`-Klasse. Siehe `de
 `--bg --surface --text --primary --accent --border-color --radius --border-width --gap --padding --shadow --font-body --font-heading`
 
 ## Quelle
-Die Themes in `<L4UNCHAPP>/themes/*.md` bleiben die einzige Quelle (L4UNCHAPP nutzt sie direkt). Nach Änderungen: `python3 apps/gamestyle/build.py`. Auflösungen pro Theme stehen in `build.py` (`RES`).
+Die Themes in `content/themes/*.md` bleiben die einzige Quelle (L4UNCHAPP nutzt sie direkt). Nach Änderungen: `python3 games/gamestyle/build.py`. Auflösungen pro Theme stehen in `build.py` (`RES`).

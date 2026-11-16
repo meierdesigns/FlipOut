@@ -1,10 +1,10 @@
 # MD•APP Framework
 
 ## Pages
-`pages/*.md` automatically become routes.
+`content/pages/*.md` automatically become routes.
 
 ## Modules
-`modules/*.md` automatically become reusable UI snippets.
+`content/modules/*.md` automatically become reusable UI snippets.
 
 ## Built-in applications
 Pages can declare a runtime application in frontmatter:

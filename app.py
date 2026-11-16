@@ -1,5 +1,6 @@
-"""Einstiegspunkt: python3 app.py [port]. Backend in backend/, Frontend in frontend/ + static/."""
+"""Einstiegspunkt: python3 app.py [port]. Code in src/ (backend, frontend, static), Inhalt in content/, Spiele in games/."""
 import os, sys
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "src"))
 from backend.server import run
 
 if __name__ == "__main__":

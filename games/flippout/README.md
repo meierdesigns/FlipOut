@@ -28,4 +28,4 @@ English by default. The **DE/EN** button in the header switches to German and ba
 In MD•APP the game is only loaded through the module `content/modules/golf.md` (adapter: `src/static/components/flippout-host.css`).
 
 ## Release (itch.io)
-Version lives in `VERSION`. Bump it, then `python3 games/flippout/itch/build.py` builds `itch/flippout_<version>.zip` (and removes older zips). Tag the release: `git tag v<version>`.
+Version lives in `VERSION`. Bump it, then `python3 games/flippout/itch/build.py` builds `itch/flippout_<version>.zip` (older zips are moved to `itch/archive/`). Tag the release: `git tag v<version>`.

@@ -120,10 +120,13 @@ A single IIFE (~1500 lines), deliberately without a module system so it can be e
 - **Procedural levels:** `layout()` rebuilds the playfield every round from a seed (`rnd()` is a linear congruential generator) and the width; `makeBricks()` places bricks from patterns (`brickOn`). Same seed = same level.
 - **Physics:** circle-vs-segment collision (`segDist`, `bounce`), flipper bar with charge/hit mechanics, multi-ball (`split`), power-ups (`PU`).
 - **Worlds & bosses:** data tables (`LEVELS`, `BOSSES`, `BATK`) – each scene has its own palette, landmarks (`drawLandmark`) and boss attack patterns.
+- **Portals & pads:** `layout()` places portal pairs anywhere in the field (`ptSets`); some stages use temporary portals that cycle through several pairs (open → blink → closed → announced by a ghost ring + `PORTAL OPENING`).
+- **Styles on the map:** map terrain and landmarks are painted with free colors and remapped to the active style palette (`qcol`, `qCanvas`), except in the default Amiga style.
+- **Tutorial:** four stages with Professor Pixel (`TSAY`, `drawBubble`); the current stage survives F5 (`sessionStorage.golfTut_*`) and starting it keeps the existing save. Speech bubbles fade when something is behind them.
 - **Shop & meta game:** upgrades (`ITEMS`), styles/quality/cheats as tabs; cost and tier logic in `buy`/`toggle`.
 - **Autopilot/Ambience:** `ambientAI()` plays by itself and shops – useful as a demo and for testing.
 - **Persistence:** `localStorage` only (`golfSave_<mode>`, `golfCos`, `golfLang`, …) and `sessionStorage`; saved on `pagehide`/`visibilitychange`.
-- **Input:** pointer events with pointer lock (click captures the mouse, `Esc` releases it) plus keyboard (A/D, arrows, Space, `B` shop, `Tab` autopilot, `F2` hide frame).
+- **Input:** pointer events with pointer lock (click captures the mouse, `Esc` releases it) plus keyboard (A/D and arrows = aim direction, Space, `B` shop, `Tab` autopilot, `F2` hide frame).
 - **Host hooks:** `body.golf-bare` (F2) hides the frame; the host app can react to it. The adapter lives in `src/static/components/flippout-host.css` – not in the game.
 
 More: [`games/flippout/README.md`](games/flippout/README.md). itch.io package and page texts: [`games/flippout/itch/`](games/flippout/itch/).

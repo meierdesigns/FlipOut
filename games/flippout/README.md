@@ -15,6 +15,9 @@ Open `games/flippout/index.html` in a browser (or run `python3 -m http.server` i
 ```
 `data-mode`: `breakout` | `golf`. Or via code: `Flippout.mount(el, {mode, label})`.
 
+## Controls
+Mouse: aim at the tee, move the bar in play, hold click to charge a hit. Keyboard: **A/D or arrows** = flight direction / bar, **Space** = charge and release, `B` shop, `Tab` autopilot, `F2` hide frame, `H` tutorial help.
+
 ## Language
 English by default. The **DE/EN** button in the header switches to German and back (saved in `localStorage.golfLang`).
 

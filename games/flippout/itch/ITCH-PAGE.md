@@ -39,6 +39,7 @@ Tags: breakout, arcade, pinball, minigolf, retro, singleplayer, mouse-only, no-i
 | Tee shot (golf) | Aim with mouse, hold click/Space, release |
 | Shop | B (buy: 1 / 2 or click) |
 | Autopilot / ambience | Tab |
+| Fullscreen (⛶ in header) | Click; Esc exits (hides frame while fullscreen) |
 | Hide frame | F2 |
 
 ## Community / Settings

@@ -130,17 +130,23 @@
     if(tutHelpT>0) tutHelpI=(tutHelpI+1)%all.length; else tutHelpI=state==='tee'?0:Math.min(all.length-1,S.tee.length);
     tutHelpTxt=L(all[tutHelpI].s); tutHelpT=600; }
   function tutSay(){ return tutHelpT>0?tutHelpTxt:null; }
-  function drawTeacher(){ var tx=4, ty=160+Math.round(Math.sin(tick*0.07)*1), talk=!!tutSay(), R=function(a,b,w,h,c){ box(tx+a,ty+b,w,h,c); };
-    R(-1,29,6,3,0); R(9,29,6,3,0); R(0,22,4,8,12); R(10,22,4,8,12); // shoes + legs
-    R(1,7,12,16,1); R(1,7,1,16,11); R(12,7,1,16,11); R(6,7,2,12,7); R(6,8,2,6,2); // lab coat, lapels, red tie
-    R(-2,9,3,9,1); // left arm
-    if(talk){ R(13,10,5,3,1); R(17,4,1,10,10); R(16,3,3,2,4); } // talking: right arm with pointer stick
-    else { var kp2=((tick>>4)%5===0)?1:0, kyy=-15+Math.round(Math.sin(tick*0.1)*1)+kp2; R(13,2,3,9,1); R(13,0,4,3,13); // idle: arm raised, hand holds up a keyboard key H
+  function drawTeacher(){ var tx=4, ty=160+Math.round(Math.sin(tick*0.07)*1), talk=!!tutSay(), R=function(a,b,w,h,c){ if(typeof c==='string'){ g.fillStyle=qcol(c); g.fillRect(tx+a,ty+b,w,h); } else box(tx+a,ty+b,w,h,c); };
+    var SK='#e8c8ac', SKD='#c29c7c', SU='#16161a', SUL='#30303a', SH='#ececec', GR='#a8a8a8';
+    // old butler: bald, grey hair at the sides, thin glasses, black suit
+    R(-1,30,7,3,'#0a0a0a'); R(8,30,7,3,'#0a0a0a'); R(0,31,4,1,'#2a2a2e'); R(9,31,4,1,'#2a2a2e'); R(1,23,5,8,'#101013'); R(8,23,5,8,'#101013'); R(6,24,2,5,'#08080a'); // shoes, trousers
+    R(-1,8,16,3,SU); R(0,10,14,14,SU); R(0,21,14,3,'#0e0e11'); R(0,8,3,1,SUL); R(11,8,3,1,SUL); R(3,9,1,10,SUL); R(10,9,1,10,SUL); R(4,18,1,2,SUL); R(9,18,1,2,SUL); // jacket with lapels
+    R(5,9,4,2,SH); R(6,11,2,2,SH); R(6,10,2,8,'#26262c'); R(5,20,1,1,'#58585e'); R(8,20,1,1,'#58585e'); // shirt collar, tie, buttons
+    R(-3,10,3,11,SU); R(-3,10,1,11,SUL); R(-3,20,3,1,SH); R(-3,21,3,3,SK); R(-3,23,3,1,SKD); // left arm, cuff, hand
+    if(talk){ R(14,11,5,3,SU); R(14,11,5,1,SUL); R(19,10,3,3,SK); R(21,9,1,1,SK); R(19,12,3,1,SKD); } // talking: arm stretched out, open hand
+    else { var kp2=((tick>>4)%5===0)?1:0, kyy=-15+Math.round(Math.sin(tick*0.1)*1)+kp2; R(14,2,3,9,SU); R(14,2,1,9,SUL); R(14,1,3,1,SH); R(14,-2,4,3,SK); R(14,0,4,1,SKD); // idle: arm raised, hand holds up a keyboard key H
       R(11,kyy,12,12,0); R(12,kyy+1,10,9,kp2?11:1); R(12,kyy+10,10,1,11); R(13,kyy+2,8,1,1); txt('H',tx+15,kyy+ty+4,0); R(11,kyy+(kp2?2:0),12,1,0); if((tick>>5)&1) { R(10,kyy-1,14,1,4); R(10,kyy+12,14,1,4); R(10,kyy-1,1,14,4); R(23,kyy-1,1,14,4); } } // key pulses and glows
-    R(2,-1,10,8,13); R(1,1,1,5,11); R(12,1,1,5,11); R(2,-1,10,2,11); // head, grey hair
-    R(3,2,3,3,1); R(8,2,3,3,1); R(4,3,1,1,0); R(9,3,1,1,0); R(6,3,2,1,0); // glasses
-    R(5,6,4,talk&&((tick>>2)&1)?2:1,2); // mouth moves while talking
-    R(-1,-4,16,2,0); R(2,-6,10,3,0); R(13,-4,1,6,4); } // mortarboard + tassel
+    R(5,7,4,2,SKD); // neck
+    R(4,-3,6,1,SK); R(3,-2,8,1,SK); R(2,-1,10,6,SK); R(3,5,8,1,SK); R(4,6,6,1,SK); R(2,-1,1,4,'#f2dcc6'); R(11,1,1,4,SKD); // bald head, rounded
+    R(1,1,2,4,GR); R(11,1,2,4,GR); R(1,0,1,1,GR); R(12,0,1,1,GR); R(1,5,2,1,GR); R(11,5,2,1,GR); // grey hair at the sides
+    R(3,1,3,1,GR); R(8,1,3,1,GR); // eyebrows
+    R(3,2,3,3,'#c8d4de'); R(8,2,3,3,'#c8d4de'); R(4,3,1,1,'#101820'); R(9,3,1,1,'#101820'); R(4,2,1,1,'#f4fbff'); R(9,2,1,1,'#f4fbff'); R(6,3,2,1,'#c8d4de'); // thin glasses
+    R(6,4,2,2,SKD); R(5,6,4,1,'#8a5a4a'); if(talk&&((tick>>2)&1)) R(5,6,4,2,'#5a2a2a'); // nose, mouth moves while talking
+    R(4,6,1,1,GR); R(9,6,1,1,GR); R(5,7,4,1,GR); } // little grey beard at the chin
   var bubA=1;
   function drawBubble(str){ var words=str.split(' '), lines=[], cur='', i; for(i=0;i<words.length;i++){ if((cur+' '+words[i]).trim().length>24){ lines.push(cur); cur=words[i]; } else cur=(cur+' '+words[i]).trim(); } if(cur) lines.push(cur);
     var mw=0; lines.forEach(function(l){ mw=Math.max(mw,l.length); }); var w=mw*4+8, h=lines.length*8+4, bx=22, by=160-8-h-3;
@@ -219,6 +225,9 @@
   function secCfg(){ return (DEVH&&DEVH.secrets&&DEVH.secrets())||window.FLIPPOUT_SECRETS||{}; } // {tab:{stage:1..N,obs:'bumper'|'block'|'brick'}}
   function bgFor(sc){ var m=secCfg().bgmap; return (m&&m[sc])||sc; }
   function anyTab(){ return [0,1,2,3,4].some(tabVis); }
+  var stageUnlock=1; try{ stageUnlock=Math.max(1,+localStorage['golfUnlock_'+mode]||1); }catch(e){} // highest stage number that can be picked (a stage is unlocked by clearing the one before)
+  function unlockedStages(){ return (DEVH&&DEVH.showAll&&DEVH.showAll())?LEVELS.length:Math.min(LEVELS.length,stageUnlock); }
+  function unlockStage(n){ n=Math.min(LEVELS.length,n); if(n>stageUnlock){ stageUnlock=n; try{ localStorage['golfUnlock_'+mode]=n; }catch(e){} } }
   function tabVis(t){ return !!tabsOpen[t]||!!(DEVH&&DEVH.showAll&&DEVH.showAll()); } // every shop tab (UPS too) stays hidden until its secret was found; without any tab the shop is closed
   var bgOpen={}; try{ bgOpen=JSON.parse(localStorage.golfBgs||'{}')||{}; }catch(e){}
   function bgVis(sc){ return true; } // (backgrounds can no longer be locked: only shop tabs are secrets)
@@ -242,7 +251,7 @@
   // ---- cache progress: level, shop state, gold and upgrades survive a reload ----
   function saveGame(){ if(tut||(mapPick&&state==='map')||(state==='shop'&&shopFrom==='pickup')) return; if(state==='title'||state==='look'||(ambient&&ambFull)) return; if(shopFrom==='title'&&!loadSave()) return;
     try{ localStorage['golfSave_'+mode]=JSON.stringify({lv:lvNum(),gold:gold,score:score,lives:lives,best:bestLv,loop:loopG,sling:sling,chgT:chgT,lenT:lenT,powT:powT,poolU:poolU,goldU:goldU,luckU:luckU,ballU:ballU,upO:upO,shop:state==='shop'&&shopFrom!=='title',tab:shopTab,sel:sel}); }catch(e){} }
-  function applySave(sv){ level=sv.lv; hole=sv.lv; bestLv=Math.max(sv.best||0,sv.lv); loopG=sv.loop||null; gold=sv.gold||0; score=sv.score||0; lives=sv.lives||3; sling=sv.sling||0; chgT=sv.chgT||0; lenT=sv.lenT||0; powT=sv.powT||0; poolU=sv.poolU||0; goldU=sv.goldU||0; luckU=sv.luckU||0; ballU=sv.ballU||0; upO=(sv.upO||[]).concat([0,0,0,0,0,0,0,0]).slice(0,8); if(sv.ballU===undefined) upO[7]=0; [sling,chgT,lenT,powT,poolU,goldU,luckU,ballU].forEach(function(v,k){ upO[k]=Math.max(upO[k]||0,v); }); }
+  function applySave(sv){ level=sv.lv; hole=sv.lv; bestLv=Math.max(sv.best||0,sv.lv); unlockStage(bestLv>LEVELS.length?LEVELS.length:bestLv); /* a running save keeps its stages unlocked */ loopG=sv.loop||null; gold=sv.gold||0; score=sv.score||0; lives=sv.lives||3; sling=sv.sling||0; chgT=sv.chgT||0; lenT=sv.lenT||0; powT=sv.powT||0; poolU=sv.poolU||0; goldU=sv.goldU||0; luckU=sv.luckU||0; ballU=sv.ballU||0; upO=(sv.upO||[]).concat([0,0,0,0,0,0,0,0]).slice(0,8); if(sv.ballU===undefined) upO[7]=0; [sling,chgT,lenT,powT,poolU,goldU,luckU,ballU].forEach(function(v,k){ upO[k]=Math.max(upO[k]||0,v); }); }
   function loadSave(){ try{ return JSON.parse(localStorage['golfSave_'+mode]||'null'); }catch(e){ return null; } }
   function clearSave(){ try{ localStorage.removeItem('golfSave_'+mode); }catch(e){} }
   function closeShop(){ if(state!=='shop') return;
@@ -261,14 +270,14 @@
   try{ if(navigator.keyboard&&navigator.keyboard.lock) cv.addEventListener('pointerdown',function(){ if(document.fullscreenElement) navigator.keyboard.lock(['ShiftLeft','ShiftRight','AltLeft','AltRight']).catch(function(){}); }); }catch(e){} window.addEventListener('blur',function(){ shiftDown=false; });
   function resetShop(){ own={amiga:1,sharp:1}; cheat={}; actv={style:'amiga',qual:'sharp'}; setStyle('amiga'); setQual('sharp'); saveCos(); msg=L('SHOP RESET'); msgT=90; } // restore bought styles, graphics and cheats
   function menuItems(){ var sv=loadSave(), out=[]; if(sv&&sv.lv) out.push({ic:0,t:L('CONTINUE - ')+(mode==='golf'?L('HOLE '):'LEVEL ')+sv.lv,f:continueGame});
-    out.push({ic:1,t:L('NEW GAME'),f:function(){ if(shiftDown) resetShop(); mapPick=true; mapNote=''; mapSel=0; mapScroll=0; mapFollow=true; mapT=0; mapAnim=false; state='map'; }}); if(DEVH) out.push({ic:2,t:L('VIEW STAGES'),f:function(){ pickMode=false; lookStage(1); }}); /* the stage viewer / editor is dev mode only */ if(cheat.ambience) out.push({ic:3,t:L('AMBIENCE MODE'),f:startAmbient}); // bought in the CHEAT tab of the shop
+    out.push({ic:1,t:L('NEW GAME'),f:function(){ if(shiftDown) resetShop(); mapPick=true; mapNote=''; mapSel=0; mapScroll=0; mapFollow=false; mapPgT=0; mapRestPg=0; mapRestApply=true; tutSel=0; /* the map opens on the tutorial section */ mapT=0; mapAnim=false; state='map'; }}); if(DEVH) out.push({ic:2,t:L('VIEW STAGES'),f:function(){ pickMode=false; lookStage(1); }}); /* the stage viewer / editor is dev mode only */ if(cheat.ambience) out.push({ic:3,t:L('AMBIENCE MODE'),f:startAmbient}); // bought in the CHEAT tab of the shop
     out.push({ic:3,t:L('SHOP AND STYLES'),f:function(){ openShop('title'); }}); return out; }
   var pickMode=false, mapPick=false, mapSel=0, mapRestPg=-1, mapRestApply=false, tutBX=-1, tutSel=0; // mapRestPg: page restored after F5; tutSel: selected bubble on the tutorial map page
   var lastPick=0, mapNote='', backR=null;
   try{ lastPick=Math.max(0,(+localStorage['golfPick_'+mode])||0); }catch(e){}
   try{ loopPref=localStorage['golfLoop_'+mode]==='1'; }catch(e){}
   function toggleLoop(){ loopPref=!loopPref; try{ localStorage['golfLoop_'+mode]=loopPref?'1':'0'; }catch(e){} }
-  function startPick(i){ mapPick=false; mapNote=''; lastPick=i; try{ localStorage['golfPick_'+mode]=i; }catch(e){} startLv=i+1; init(); tabsOpen={}; tabsSave(); /* new run: every secret shop tab is locked again */ state='tee';
+  function startPick(i){ if(i>=unlockedStages()){ mapNote=L('LOCKED - CLEAR THE STAGE BEFORE'); mapNoteT=150; return; } mapPick=false; mapNote=''; lastPick=i; try{ localStorage['golfPick_'+mode]=i; }catch(e){} startLv=i+1; init(); tabsOpen={}; tabsSave(); /* new run: every secret shop tab is locked again */ state='tee';
     loopG=null; if(loopPref){ var gr=mapLayout().groups[mapLayout().gi[i]]; loopG={from:gr.from,to:gr.to}; } saveGame(); } // stage cluster loop: after the boss the same cluster starts over
   var overT=0, overSel=0, overIdx=0, overScore=0, overR={}; // game-over screen
   function overRetry(){ startPick(overIdx); }
@@ -393,6 +402,7 @@
   function vicGo(shop){ if(state!=='victory') return; snapBg(); if(vicBuild) vicBuild(); vicBuild=null; if(shop){ transPend=true; openShop(); } else startTrans(); }
   function winLevel(){ // stage cleared: first victory animation (ball + bar), then winApply() -> shop
     if(ambient){ winApply(); return; }
+    if(!tut) unlockStage(((lvNum()-1)%LEVELS.length)+2); /* clearing a stage unlocks the next one */
     state='win'; winT=WINLEN; winBoss=!!LV().boss; ball.vx=ball.vy=0; extras=[]; bshots=[]; stunT=0; shake=10; msgT=0;
     for(var wk=0;wk<4;wk++) burst(ball.x+(wk-1.5)*14,ball.y-6,6,[1,2,3,4][wk]); }
   function winApply(){ // score, build next level, open shop
@@ -603,12 +613,54 @@
   function qCanvas(cv){ if(actv.style==='amiga') return; var cx=cv.getContext('2d'), im=cx.getImageData(0,0,cv.width,cv.height), d=im.data, pal=C.filter(function(h){ return typeof h==='string'&&h.length===7&&h.charAt(0)==='#'; }).map(rgbOf), memo={}, i, k, key, bi, bd, dd;
     for(i=0;i<d.length;i+=4){ if(d[i+3]<8) continue; key=(d[i]<<16)|(d[i+1]<<8)|d[i+2]; bi=memo[key]; if(bi===undefined){ bd=1e9; bi=0; for(k=0;k<pal.length;k++){ dd=(pal[k][0]-d[i])*(pal[k][0]-d[i])+(pal[k][1]-d[i+1])*(pal[k][1]-d[i+1])+(pal[k][2]-d[i+2])*(pal[k][2]-d[i+2]); if(dd<bd){ bd=dd; bi=k; } } memo[key]=bi; } d[i]=pal[bi][0]; d[i+1]=pal[bi][1]; d[i+2]=pal[bi][2]; d[i+3]=255; }
     cx.putImageData(im,0,0); }
+  // ===== houses: shaded pixel art (roof tiles, planks, framed windows, door with step, chimney); R(dx,dy,w,h,color) draws relative to the house centre / ground =====
+  function houseArt(R,o){ var w=o.w, h=o.h, x0=-(w>>1), rh=o.rh, ov=o.ov===undefined?1:o.ov, i, j;
+    R(x0,-h,w,h,o.wall); R(x0,-h,1,h,o.wallL); R(x0+w-1,-h,1,h,o.wallD); R(x0+w-2,-h,1,h,o.wallD);
+    if(o.planks) for(j=2;j<h-1;j+=o.planks) R(x0+1,-h+j,w-3,1,o.plank);
+    R(x0-1,-2,w+2,2,o.base||o.wallD); R(x0-1,-2,w+2,1,o.stone||o.wallD);
+    if(o.chim){ R(o.chim.x,-h-rh-o.chim.h+1,3,o.chim.h+rh-1,o.stone); R(o.chim.x,-h-rh-o.chim.h+1,1,o.chim.h+rh-1,o.trim); R(o.chim.x-1,-h-rh-o.chim.h,5,1,o.roofD); }
+    for(i=0;i<rh;i++){ var rw=w+2*ov-2*i; if(rw<2) break; var rx=-(rw>>1), ry=-h-1-i; R(rx,ry,rw,1,(i&1)?o.roofL:o.roof); if(i&1) R(rx,ry,(rw>>1),1,o.roofL); else R(rx+(rw>>1),ry,rw-(rw>>1),1,o.roofD); }
+    R(-((w+2*ov)>>1),-h,w+2*ov,1,o.roofD); R(-((w+2*ov)>>1),-h-1,w+2*ov,1,o.roof);
+    (o.win||[]).forEach(function(q){ R(q.x-1,q.y-1,q.w+2,q.h+2,o.trim); R(q.x,q.y,q.w,q.h,o.glow); R(q.x,q.y,q.w,1,o.glowL); R(q.x,q.y,1,q.h,o.glowL); if(q.w>=4) R(q.x+(q.w>>1),q.y,1,q.h,o.trim); if(q.h>=4) R(q.x,q.y+(q.h>>1),q.w,1,o.trim); R(q.x-1,q.y+q.h+1,q.w+2,1,o.wallD); });
+    if(o.door){ var d=o.door; R(d.x-1,-d.h-2,d.w+2,d.h+1,o.trim); R(d.x,-d.h-1,d.w,d.h-1,o.doorc); R(d.x,-d.h-1,1,d.h-1,o.doorL||o.doorc); R(d.x+d.w-2,-(d.h>>1)-1,1,1,o.glowL); R(d.x-1,-2,d.w+2,1,o.stone||o.wallD); } }
+  function saloonArt(R,o){ var w=o.w, h=o.h, ph=o.ph, x0=-(w>>1), j;
+    R(x0,-h,w,h,o.wall); R(x0,-h,1,h,o.wallL); R(x0+w-2,-h,2,h,o.wallD);
+    for(j=2;j<h-1;j+=o.planks) R(x0+1,-h+j,w-3,1,o.plank);
+    R(x0-1,-h-ph,w+2,ph,o.wall); R(x0-1,-h-ph,1,ph,o.wallL); R(x0+w,-h-ph,1,ph,o.wallD); // false front
+    R(x0-2,-h-ph-2,w+4,2,o.roofD); R(x0-2,-h-ph-2,w+4,1,o.roof);
+    var sx=x0+2, sw=w-4, sy=-h-ph+2, sh=ph-5; R(sx-1,sy-1,sw+2,sh+2,o.trim); R(sx,sy,sw,sh,o.sign); for(j=1;j<sh-1;j+=2) R(sx+2,sy+j,sw-4,1,o.letters); R(sx,sy,sw,1,o.signL);
+    R(x0-2,-h+3,w+4,2,o.roof); R(x0-2,-h+5,w+4,1,o.roofD); R(x0-1,-h+6,2,h-6,o.wallD); R(x0+w-1,-h+6,2,h-6,o.wallD); // porch roof + posts
+    (o.win||[]).forEach(function(q){ R(q.x-1,q.y-1,q.w+2,q.h+2,o.trim); R(q.x,q.y,q.w,q.h,o.glow); R(q.x,q.y,q.w,1,o.glowL); R(q.x+(q.w>>1),q.y,1,q.h,o.trim); });
+    var dx=-3; R(dx-1,-o.dh-1,8,o.dh+1,o.trim); R(dx,-o.dh,3,o.dh-3,o.doorc); R(dx+3,-o.dh,3,o.dh-3,o.doorc); R(dx,-o.dh,3,1,o.doorL); R(dx+3,-o.dh,3,1,o.doorL); // batwing doors
+    R(x0-2,-2,w+4,2,o.stone); }
+  var HC_DORF={wall:'#c98a52',wallL:'#e3ad74',wallD:'#8a5630',plank:'#aa7140',planks:3,roof:'#b8402f',roofL:'#d85d44',roofD:'#7a2a1f',trim:'#f3e6c8',glow:'#ffd868',glowL:'#fff3b8',doorc:'#5a3418',doorL:'#7a4a28',stone:'#8e867c'};
+  var HC_SALOON={wall:'#b87a45',wallL:'#d99d65',wallD:'#7a4a28',plank:'#9a6234',planks:3,roof:'#6a4426',roofD:'#3c2514',trim:'#f1deb0',sign:'#f2dfa6',signL:'#fff1c6',letters:'#8a3a22',glow:'#ffd868',glowL:'#fff3b8',doorc:'#4a2a14',doorL:'#6a3e20',stone:'#8e867c'};
+  // ===== tutorial wall screens: a looping demo of charging the bar (hold = bowl bends + meter fills, release = ball shoots up and breaks a brick) =====
+  function tutScreen(x,y,label,kind){ var SW=120, SH=76, t=tick%300, tens=0, held=false, rel=0;
+    box(x-3,y-3,SW+6,SH+6,12); box(x-3,y-3,SW+6,1,11); box(x-3,y-3,1,SH+6,11); box(x-3,y+SH+2,SW+6,1,0); box(x+SW+2,y-3,1,SH+6,0); box(x,y,SW,SH,15); box(x+SW/2-10,y+SH+3,20,2,12); box(x+SW/2-16,y+SH+5,32,1,0); // monitor + stand
+    txt(label,x+4,y+3,8); txt(L('HOW TO CHARGE'),x+SW-4-L('HOW TO CHARGE').length*4,y+3,11);
+    if(t>=40&&t<170){ tens=(t-40)/130; held=true; } else if(t>=170&&t<184){ rel=(t-170)/14; }
+    var cxm=x+80, by=y+58, bulge=held?-tens*9:(rel>0?2*(1-rel):0), col=held?(tens>0.7?2:(tens>0.35?4:14)):1, i, u, yy;
+    // input icon: mouse (left button lights up) or the space bar (is pressed down)
+    if(kind==='m'){ box(x+9,y+24,14,22,11); box(x+10,y+25,12,20,12); box(x+15,y+25,1,8,0); box(x+10,y+33,12,1,0); if(held) box(x+10,y+25,5,8,2); else box(x+10,y+25,5,8,13); }
+    else { var pd=held?1:0; box(x+5,y+30+pd,30,9,11); box(x+6,y+31+pd,28,7,held?7:12); txt('SPACE',x+9,y+33+pd,1); box(x+5,y+39,30,1,0); }
+    txt(held?L('HOLD'):(t<40?L('AIM'):(t<200?L('LET GO!'):L('BOOM'))),x+6,y+50,held?4:(t<40?11:14));
+    // bricks at the top of the demo
+    for(i=0;i<5;i++){ var gone=t>=204&&(i===2), bx2=cxm-24+i*11; if(!gone) box(bx2,y+20,9,4,i===2?4:2); else if(t<226) box(bx2+((t-204)>>1)%3,y+20+((t-204)>>2),2,2,4); }
+    // bar (bowl while charging, snaps up on release) + ball
+    for(i=-30;i<=30;i++){ u=i/30; yy=Math.round(by-bulge*(1-u*u)); box(cxm+i,yy,1,2,col); }
+    var ballY=by-4-(bulge<0?-bulge*1:bulge*0.5);
+    if(t>=170){ var lt=t-170; if(lt<34){ ballY=by-4-lt*0.95; for(i=1;i<7;i++) box(cxm,ballY+i*3,1,1,(i<4)?1:11); } else ballY=y+30+Math.min(24,(lt-34)*0.6); }
+    disc(cxm,Math.round(ballY),2,1); box(cxm-1,Math.round(ballY)-1,1,1,11);
+    box(cxm-30,y+SH-7,60,4,12); box(cxm-29,y+SH-6,Math.floor(58*tens),2,col); txt(Math.round(tens*100)+'%',cxm+33,y+SH-7,col); }
+  function drawTutScreens(){ g.globalAlpha=0.8; tutScreen(14,86,L('MOUSE'),'m'); tutScreen(166,86,L('KEYBOARD'),'s'); g.globalAlpha=1; }
   function drawLandmark(sc,x,y,k){ g.save(); g.translate(x|0,y|0); g.scale(k,k);
     function R(c,a,b,w,h){ g.fillStyle=qcol(c); g.fillRect(a,b,w,h); }
     function C(c,cx2,cy2,r){ g.fillStyle=qcol(c); for(var yy=-r;yy<=r;yy++){ var xx=Math.round(Math.sqrt(r*r-yy*yy)); g.fillRect(cx2-xx,cy2+yy,xx*2+1,1); } }
     function T(c,cx2,top,hh){ g.fillStyle=qcol(c); for(var r2=0;r2<hh;r2++) g.fillRect(cx2-r2,top+r2,r2*2+1,1); }
     R('rgba(0,0,0,0.3)',-14,-2,30,3); // ground shadow
-    if(sc==='western'){ R('#a8683a',-14,-14,22,14); R('#7a4a26',8,-14,6,14); R('#8a4f2a',-14,-24,28,10); R('#f0d090',-9,-22,18,6); R('#5a3a1e',-7,-20,14,1); R('#5a3a1e',-5,-18,10,1); R('#6a3a1c',-16,-14,32,2); R('#4a2a14',-3,-10,6,10); R('#ffe090',-11,-11,5,4); R('#ffe090',5,-11,5,4); R('#d8a060',-14,-26,28,2); }
+    var HR=function(dx,dy,w,h,c){ R(c,dx+(HRX||0),dy,w,h); }, HRX=0;
+    if(sc==='western'){ saloonArt(HR,Object.assign({w:30,h:16,ph:10,dh:10,win:[{x:-12,y:-12,w:5,h:5},{x:8,y:-12,w:5,h:5}]},HC_SALOON)); }
     else if(sc==='city'){ R('#6a6aa8',-8,-42,14,42); R('#46467a',6,-40,6,40); R('#9a9ad8',-8,-42,14,2); R('#9a9ad8',-1,-48,2,6); for(var wy=-38;wy<-4;wy+=5) for(var wx=-6;wx<4;wx+=4) R((wx+wy)&2?'#ffdd33':'#3a3a66',wx,wy,2,3); R('#e03a3a',-1,-50,2,2); }
     else if(sc==='flight'){ R('#cfd4dc',-3,-32,6,32); R('#8a8f98',3,-30,3,30); R('#e03a3a',-11,-40,22,3); R('#8ad0ff',-10,-37,20,6); R('#4a8ab0',-10,-32,20,1); R('#fff',-1,-48,2,8); R('#e03a3a',-1,-50,2,2); R('#888',-9,-4,18,4); R('#fff',-14,-6,3,2); }
     else if(sc==='dream'){ R('#fff',-16,-8,32,8); R('#e8e0ff',-12,-10,24,2); R('#ffd1f0',-12,-26,7,18); R('#ffd1f0',5,-26,7,18); R('#ffb3de',-4,-32,8,24); T('#ff6ad5',-8,-34,8); T('#ff6ad5',8,-34,8); T('#ff3d9a',0,-42,9); R('#fffb96',-1,-46,1,5); R('#8795e8',-2,-16,4,8); R('#fff',-18,-4,6,4); R('#fff',12,-5,7,5); }
@@ -616,9 +668,9 @@
     else if(sc==='vapor'){ R('#f0e8ff',-16,-4,32,4); R('#d8c8f0',-14,-6,28,2); for(var cc=-12;cc<=8;cc+=7){ R('#f0e8ff',cc,-28,4,22); R('#b9a8d8',cc+3,-28,1,22); R('#fff',cc-1,-30,6,2); } T('#f0e8ff',0,-38,14); R('#ff71ce',-14,-30,28,2); C('#fffb96',0,-34,2); }
     else if(sc==='moon'){ R('#6a7090',-15,-14,30,14); R('#4a5070',9,-14,6,14); R('#7a80a0',-18,-28,9,28); R('#7a80a0',9,-28,9,28); R('#8a90b0',-4,-22,8,22); for(var bx=-18;bx<18;bx+=4) if(bx<-9||bx>7) R('#7a80a0',bx,-31,2,3); R('#ffdd66',-15,-22,2,4); R('#ffdd66',13,-22,2,4); R('#0a0a1a',-2,-8,4,8); T('#e8e8d0',0,-30,3); R('#e8e8d0',0,-34,1,5); }
     else if(sc==='dungeon'){ R('#4a4a52',-13,-30,26,30); R('#363640',9,-30,4,30); for(var by=-28;by<-2;by+=6) R('#2a2a32',-13,by,26,1); for(var bx2=-13;bx2<13;bx2+=6) R('#4a4a52',bx2,-34,4,4); R('#0a0a0a',-5,-14,10,14); C('#0a0a0a',0,-14,5); R('#ffb030',-11,-20,2,4); R('#ff5a1a',-11,-22,2,2); R('#ffb030',9,-20,2,4); R('#ff5a1a',9,-22,2,2); R('#d8d8c8',-1,-26,2,2); }
-    else if(sc==='train'){ R('#c8503c',-10,-12,20,12); R('#585868',-12,-15,24,3); R('#585868',-6,-19,12,4); R('#f0f0f0',-7,-9,4,4); R('#f0f0f0',3,-9,4,4); R('#5a3818',-2,-7,4,7); R('#ffe050',-6,-8,2,2); R('#ffe050',4,-8,2,2); }
+    else if(sc==='train'){ houseArt(HR,{w:26,h:13,rh:7,ov:1,wall:'#b04a3c',wallL:'#cf6a58',wallD:'#7a2e24',plank:'#8e382c',planks:3,roof:'#5a5e70',roofL:'#747890',roofD:'#383a48',trim:'#e8dcc0',glow:'#ffe070',glowL:'#fff6c0',doorc:'#4a2c14',doorL:'#6a4224',stone:'#8e867c',chim:{x:-9,h:4},win:[{x:-11,y:-10,w:4,h:5},{x:7,y:-10,w:4,h:5},{x:-2,y:-10,w:4,h:3}],door:{x:-2,w:5,h:7}}); }
     else if(sc==='cozy'){ C('#f2e6d0',0,-14,12); R('#f2e6d0',-8,-4,16,4); R('#d8c8a8',4,-22,6,14); R('#f2e6d0',-4,-28,8,4); C('#f2e6d0',0,-30,2); R('#f2e6d0',11,-20,7,3); R('#f2e6d0',-18,-18,3,10); R('#f2e6d0',-16,-18,5,2); R('#f2e6d0',-16,-10,5,2); R('#e07a7a',-4,-14,2,2); R('#e07a7a',3,-12,2,2); R('#e8e0d0',-2,-36,1,3); R('#e8e0d0',2,-38,1,4); }
-    else if(sc==='golf'){ R('#f2e6d0',-14,-14,20,14); R('#c8bca0',6,-14,5,14); R('#c03a3a',-16,-18,24,4); R('#8a2a2a',8,-18,5,4); R('#6a9ac8',-10,-11,5,5); R('#4a2a14',-2,-9,5,9); R('#fff',14,-34,1,34); R('#e03a3a',15,-34,7,5); R('#fff',-18,-3,3,3); }
+    else if(sc==='golf'){ HRX=-3; houseArt(HR,{w:24,h:12,rh:7,ov:2,wall:'#f2e6d0',wallL:'#fffaf0',wallD:'#bfb190',plank:'#e0d3b8',planks:4,roof:'#c03a3a',roofL:'#dd5555',roofD:'#7c2222',trim:'#ffffff',glow:'#9ccbf0',glowL:'#d8efff',doorc:'#5a3418',doorL:'#7a4a28',stone:'#9a9080',chim:{x:5,h:4},win:[{x:-9,y:-9,w:4,h:5},{x:4,y:-9,w:4,h:5}],door:{x:-2,w:5,h:8}}); HRX=0; R('#fff',16,-36,1,36); R('#e03a3a',17,-36,8,5); R('#b02a2a',17,-32,8,1); }
     g.restore(); }
   function restyle(){ var sv=seed; seed=bgSeed; renderScene(); seed=sv; }
   // Background sprites: objects with their own canvas that scroll with the world and move rigidly with the parallax of the plane they stand on (base = ground y)
@@ -1084,6 +1136,7 @@
   cv.addEventListener('pointermove',dragTo);
   cv.addEventListener('wheel',function(e){ if(state==='look'&&devList){ e.preventDefault(); if(devDd) return; devListScroll+=Math.max(-20,Math.min(20,e.deltaY*(e.deltaMode===1?7:0.3))); /* proportional: a trackpad sends many small events */ return; } if(state==='map'){ e.preventDefault(); if(tick-mapWheelT>6){ mapWheelT=tick; mapPage((e.deltaY+e.deltaX)>0?1:-1); } return; } if(state==='shop'){ e.preventDefault(); shopPageTo(shopPg+(e.deltaY+e.deltaX)*(e.deltaMode===1?0.35:1/110)); } },{passive:false});
   cv.addEventListener('contextmenu',function(e){ e.preventDefault(); });
+  window.addEventListener('contextmenu',function(e){ if(locked()||(e.target&&e.target.closest&&e.target.closest('[data-golf-game]'))) e.preventDefault(); },true); // right click in the game never opens the browser menu (not even with the mouse locked)
   // ===== Pause menu (Esc in tee/play): game freezes, menu is overlaid =====
   document.addEventListener('pointerlockchange',function(){ if(!locked()&&!paused&&!ambient&&(state==='play'||state==='tee'||state==='capt')) setPause(true); }); // browser eats Esc while the mouse is locked and only releases the lock: that opens the pause menu
   function setPause(v){ paused=v; pauseSel=0; pauseView=0; pauseR=[]; if(v){ K.l=K.r=K.s=K.g=K.ml=K.mr=0; if(document.exitPointerLock&&locked()) document.exitPointerLock(); } else { lastPX=null; lockSkip=5; } }
@@ -1128,6 +1181,7 @@
   cv.addEventListener('pointerdown',function(e){ var inMenu=paused||state==='victory'||state==='win'||state==='over'||state==='title'||state==='map'||state==='shop'||state==='look';
     if(inMenu&&!(ambient&&!(state==='shop'&&!ambFull))&&e.pointerType==='mouse'&&e.button!==0){ track(e); if(e.button===2) menuBack(); return; } // menus: only the left button confirms, right button goes back
     if(paused){ track(e); var pi2=pauseItems(); for(var pq=0;pq<pi2.length;pq++) if(hit(pauseR[pq])){ pauseSel=pq; pi2[pq].f(); break; } return; } if(state==='victory'){ for(var vq2=0;vq2<3;vq2++) if(hit(vicR[vq2])){ vicSel=vq2; vicAct(vq2); return; } return; } if(state==='win'){ if(winT<WINLEN-45) winT=1; return; } if(ambient&&!(state==='shop'&&!ambFull)){ if(ambFull) exitToTitle(); else toggleAuto(); return; } if(state==='look'){ dragTo(e); var N4=LEVELS.length; if(lookBackR&&hit(lookBackR)){ exitToTitle(); return; } if(lookViewR&&hit(lookViewR)){ toggleLookView(); return; } if(lookGoR&&hit(lookGoR)){ startLv=lookIdx; startNew(); return; } for(var ldi=0;ldi<lookDevR.length;ldi++) if(hit(lookDevR[ldi])){ if(lookDevR[ldi].drag){ devDragPend={r:lookDevR[ldi],drag:lookDevR[ldi].drag,x:mx,y:my}; devDragOn=false; return; } lookDevR[ldi].f(); return; } var lg2=lkGeo(); if(DEVH&&DEVH.set&&mx>=lg2.x&&mx<=lg2.x+W*lg2.s&&my>=lg2.y&&my<=lg2.y+H*lg2.s){ devSel=devPick((mx-lg2.x)/lg2.s,(my-lg2.y)/lg2.s); return; } /* dev: click an obstacle to select it */ lookStage(bgJump(mx<W/2?-1:1)); return; }
+    if(e.button===2) e.preventDefault();
     shiftDown=e.shiftKey; if(e.pointerType==='mouse'&&!locked()&&(state==='tee'||state==='play')&&cv.requestPointerLock){ try{ var pr=cv.requestPointerLock(); if(pr&&pr.catch) pr.catch(function(){}); }catch(x){} cv.focus(); return; } /* first click only captures the mouse (bar), no hit/charge */ dragTo(e); cv.focus();
     if(state==='over'){ if(overT>40){ if(hit(overR.retry)) overRetry(); else if(hit(overR.map)) overMap(); } return; }
     if(state==='title'){ if(hit(menuR.trash)){ trashClick(); return; } var mi2=menuItems(); for(var q2=0;q2<mi2.length;q2++) if(hit(menuR['m'+q2])){ menuSel=q2; mi2[q2].f(); return; } return; }
@@ -1555,10 +1609,10 @@
     lay.groups.forEach(function(gr,gi){ if(gr.tut) return; var m=gr.to-gr.from+1; for(i=gr.from;i<=gr.to;i++){ lay.gi[i]=gi; lay.x[i]=gi*W+34+(m>1?(W-68)*(i-gr.from)/(m-1):(W-68)/2); } });
     return (mapLay=lay); }
   // landmarks per stage (pixel icons above the world map node); (x,b) = center/bottom
-  function LM(nm,x0,b0){ var x=0, b=0, R=function(dx,dy,w,h,c){ box(x+dx,b+dy,w,h,c); }, D=function(dx,dy,r,c){ disc(x+dx,b+dy,r,c); };
+  function LM(nm,x0,b0){ var x=0, b=0, LR=function(dx,dy,w,h,c){ if(typeof c==='string'){ g.fillStyle=qcol(c); g.fillRect(dx,dy,w,h); } else box(dx,dy,w,h,c); }, R=function(dx,dy,w,h,c){ box(x+dx,b+dy,w,h,c); }, D=function(dx,dy,r,c){ disc(x+dx,b+dy,r,c); };
     var F={
-      DORF:function(){ R(-6,-9,12,9,1); R(-7,-11,14,2,2); R(-2,-5,4,5,10); R(-1,-18,3,7,1); R(-1,-21,1,3,4); R(-3,-19,5,1,4); },
-      SALOON:function(){ R(-8,-10,16,10,10); R(-9,-13,18,3,12); R(-5,-7,3,3,4); R(2,-7,3,3,4); R(-2,-5,4,5,0); R(-6,-16,12,3,3); },
+      DORF:function(){ houseArt(LR,Object.assign({w:20,h:11,rh:7,ov:1,chim:{x:5,h:4},win:[{x:-8,y:-8,w:4,h:4},{x:4,y:-8,w:4,h:4}],door:{x:-2,w:4,h:8}},HC_DORF)); },
+      SALOON:function(){ saloonArt(LR,Object.assign({w:26,h:13,ph:9,dh:9,win:[{x:-10,y:-10,w:4,h:4},{x:7,y:-10,w:4,h:4}]},HC_SALOON)); },
       WILDWEST:function(){ R(-2,-16,4,16,5); R(-6,-12,3,2,5); R(-6,-12,2,6,5); R(3,-9,3,2,5); R(5,-13,2,6,5); },
       BANDITENKOENIG:function(){ R(-9,-5,18,3,10); R(-5,-13,10,8,10); R(-5,-8,10,2,2); R(-9,-3,18,1,3); },
       NEONGITTER:function(){ for(var i=0;i<14;i++){ R(-i/2|0,-i-1,((i/2)|0)*2+1,1,(i%3)?13:14); } R(-7,0,15,1,14); R(0,-14,1,14,14); },
@@ -1598,7 +1652,7 @@
       GREEN:function(){ R(-9,-1,19,2,5); R(-1,-16,1,15,1); R(0,-16,6,4,2); R(-4,-1,9,1,0); },
       GREENKEEPER:function(){ R(-9,-6,19,5,5); R(-6,-12,12,4,4); R(-8,-8,16,2,4); R(-6,-2,3,3,0); R(4,-2,3,3,0); R(7,-14,1,9,10); }
     };
-    var f=F[nm]; if(f){ g.save(); g.translate(x0|0,b0|0); g.scale(2,2); f(); g.restore(); } }
+    var f=F[nm]; if(f){ var fs=(nm==='DORF'||nm==='SALOON')?1:2; /* the houses are drawn in finer detail (1 pixel instead of 2) */ g.save(); g.translate(x0|0,b0|0); g.scale(fs,fs); f(); g.restore(); } }
   function bossLM(sc,x,y){ var sb=boss, sbs=bshots; boss={x:0,y:0,w:44,h:28,sc:sc,hp:2,hp0:2,mouth:0}; bshots=[]; g.save(); g.translate(x|0,y|0); g.scale(0.9,0.9); try{ drawBoss(); }catch(e){} g.restore(); boss=sb; bshots=sbs; } // boss sprite as landmark of the boss stage
   var padFl={pl:0,pr:0}; // click animation of the page arrows (remaining frames)
   var MAPSP=46, mapScroll=0, mapFollow=true, mapPgT=0, mapR={}, mapSelFor=-1, mapWheelT=0;
@@ -1743,10 +1797,13 @@
     backR=null; if(mapPick){ backR={x:W-62,y:4,w:50,h:12}; bevel(backR.x,backR.y,backR.w,backR.h,hit(backR)?7:12,hit(backR)?8:11,15); txt(L('BACK'),backR.x+11,backR.y+4,1); if(mapNote) txtS(mapNote,mtx,6,2,1); else if(lastPick>=0) txt(L('LAST: STAGE ')+(lastPick+1),mtx,7,11); } if(mapPick){ loopR={x:W-62-4-70,y:4,w:70,h:12}; var lh=hit(loopR); bevel(loopR.x,loopR.y,loopR.w,loopR.h,lh?7:12,lh?8:11,15); box(loopR.x+3,loopR.y+3,7,7,0); box(loopR.x+4,loopR.y+4,5,5,loopPref?4:15); if(loopPref){ box(loopR.x+5,loopR.y+6,1,1,0); box(loopR.x+6,loopR.y+7,1,1,0); box(loopR.x+7,loopR.y+5,1,1,0); } txt('CLUSTER LOOP',loopR.x+13,loopR.y+4,loopPref?4:1); } else { loopR=null; var rt=L('ROUND ')+lap, rx0=W-14-rt.length*4; txtS(rt,rx0,6,1,1); if(loopG) txt('LOOP',rx0-24,7,8); }
     var shN=mapSh(108); g.save(); g.translate(shN,0);
     for(i=0;i<LEVELS.length-1;i++){ if(nodeX(i+1)-sc0<-4||nodeX(i)-sc0>W+4) continue; for(k=0;k<=12;k++){ var f=k/12; box(nodeX(i)-sc0+(nodeX(i+1)-nodeX(i))*f,nodeY(i)+(nodeY(i+1)-nodeY(i))*f,2,2,(mapPick?false:i<sMax)?4:11); } }
+    var secSt={}, cfgS=secCfg(); TABN.forEach(function(nm,t){ if(cfgS[t]&&cfgS[t].stage&&!tabsOpen[t]) secSt[+cfgS[t].stage]=true; });
     for(i=0;i<LEVELS.length;i++){ var lv=LEVELS[i], x=(nodeX(i)-sc0)|0, y=nodeY(i)|0, done=mapPick?false:(i<=sMax&&i!==mapSel), cur=i===mapSel, hovN=mouseIn&&i===nodeAt(); if(x<-14||x>W+14) continue;
-      var nr=lv.boss?10:8; if(lv.boss) bossLM(lv.scene,x,y-nr-22); else LM(lv.name,x,y-nr-4); if(lv.boss){ disc(x,y,nr+3,2); txt('BOSS',x-8,y+nr+5,2); } if(hovN){ disc(x,y,nr+3,(tick>>2)&1?4:1); disc(x,y,nr+2,0); disc(x,y,nr+1,0); } disc(x,y,nr+1,0); disc(x,y,nr,hovN?4:(done?SCC[lv.scene]:(cur?4:(mapPick?SCC[lv.scene]:12))));
+      var nr=lv.boss?10:8, lk=mapPick&&i>=unlockedStages(); if(lk) g.globalAlpha=0.28; if(lv.boss) bossLM(lv.scene,x,y-nr-22); else LM(lv.name,x,y-nr-4); g.globalAlpha=1; if(lv.boss){ disc(x,y,nr+3,lk?12:2); txt('BOSS',x-8,y+nr+5,lk?11:2); } if(hovN){ disc(x,y,nr+3,(tick>>2)&1?4:1); disc(x,y,nr+2,0); disc(x,y,nr+1,0); } disc(x,y,nr+1,0); disc(x,y,nr,lk?(hovN?11:12):(hovN?4:(done?SCC[lv.scene]:(cur?4:(mapPick?SCC[lv.scene]:12)))));
       if(done){ box(x-3,y,2,2,0); box(x-1,y+2,2,2,0); box(x+1,y,2,2,0); box(x+3,y-2,2,2,0); }
-      else txt(String(i+1),x-(i>=9?3:1),y-2,cur?0:(mapPick?0:11));
+      else txt(String(i+1),x-(i>=9?3:1),y-2,lk?11:(cur?0:(mapPick?0:11)));
+      if(lk){ box(x-2,y+nr+3,5,4,11); box(x-1,y+nr+1,3,2,11); box(x,y+nr+4,1,2,12); } // padlock under a locked stage
+      if(secSt[i+1]&&!lk){ disc(x+nr,y-nr,5,0); disc(x+nr,y-nr,4,((tick>>4)&1)?4:3); txt('?',x+nr-1,y-nr-2,0); } // a locked secret shop tab hides in this stage
       if(cur){ var pr=9+Math.round(Math.sin(tick*0.15)*1.5); for(k=0;k<14;k++){ var an=k*0.449; box(x+Math.round(Math.cos(an)*(pr+3)),y+Math.round(Math.sin(an)*(pr+3)),1,1,(tick>>3)&1?4:1); } } }
     if(pkNow){ var thv=mouseIn?tutNodeAt():-1; for(k=0;k<3;k++) for(var fk=0;fk<=12;fk++){ var ff=fk/12; box(tnx(k)-sc0+(tnx(k+1)-tnx(k))*ff,nodeY(k)+(nodeY(k+1)-nodeY(k))*ff,2,2,4); }
       for(k=0;k<4;k++){ var tx3=(tnx(k)-sc0)|0, ty3=nodeY(k)|0; if(tx3<-14||tx3>W+14) continue; var tsel=(thv>=0?thv:tutSel)===k&&pgNow===0; if(thv===k) tutSel=k; if(tsel){ var tpr=9+Math.round(Math.sin(tick*0.15)*1.5); for(var tkk=0;tkk<14;tkk++){ var tan=tkk*0.449; box(tx3+Math.round(Math.cos(tan)*(tpr+3)),ty3+Math.round(Math.sin(tan)*(tpr+3)),1,1,(tick>>3)&1?4:1); } } disc(tx3,ty3,9,0); disc(tx3,ty3,8,tsel?4:5); txt('T'+(k+1),tx3-3,ty3-2,0); }
@@ -1944,7 +2001,7 @@
     // parallax only where the scene is a side view with sky + horizon + ground (read from paintScene): vapor, dream, moon, golf.
     // Top-down scenes (western, city, flight, dungeon, forest) and the frontal tea room (cozy) are flat: background stays still
     var inLook=state==='look', flatBg=flatFor(scene); // viewer: choose flat map or horizon + parallax for every scene
-    var ptx=((locked()||((inLook||state==='map')&&mouseIn)))?(mx-cx)/cx*18:0; pxo+=(ptx-pxo)*0.08;
+    var ptx=((locked()||((inLook||state==='map')&&mouseIn)))?(mx-cx)/cx*(tut?6:18):0; /* tutorial stages: a much calmer parallax */ pxo+=(ptx-pxo)*0.08;
     function pxAt(y){ if(scene==='cozy'){ var hzc=H-36; return y<hzc?pxo*0.3:pxo*(0.3+0.9*(y-hzc)/(H-hzc)); } if(flatBg) return pxo*0.3; var hzp=H*({vapor:0.5,golf:0.42,dream:0.82,moon:0.78}[scene]||0.5); return y<=hzp?0:pxo*(y-hzp)/(H-hzp); } // only the ground below the horizon moves, strongest at the bottom
     var tE=1, bgOffV=bgOff; if(state==='trans'){ var tq0=transT/TRANS_LEN; tE=1-(1-tq0)*(1-tq0); }
     if(state==='trans'){ if(prevSceneN===scene){ bgOffV=Math.round(prevOff+(bgOff-prevOff)*tE); g.drawImage(renderScene.wc,-bgOffV,0); drawSprites(g,bgc,bgOffV,0,false); } else { bgOffV=bgOff-Math.round((1-tE)*W); g.drawImage(bgPrevC,-Math.round(tE*W),0); g.drawImage(bgc,Math.round((1-tE)*W),0); drawSprites(g,bgc,bgc.spOff,Math.round((1-tE)*W),false); } }
@@ -1958,6 +2015,7 @@
     macDX=macSp?Math.round(pxAt(macSp.base))-Math.round(pxAt(H*0.3)):0; g.save(); if(state==='trans'&&prevSceneN!==scene){ g.beginPath(); g.rect(Math.round((1-tE)*W),0,W,H); g.clip(); } g.translate((state==='trans'?0:Math.round(pxAt(H*0.3)))-bgOffV,0); var wS0=W; W=BGW; bgAnim(); W=wS0; g.restore();
     if(scene==='cozy'&&state!=='trans'){ // tea room: the room moves flat, the floor in perspective; the view outside (sky, moon) stays; only the window bars move with the room
       var cwx=BGW-78-bgOff, cwy=26, cso=Math.round(pxAt(cwy+30)); g.save(); g.beginPath(); g.rect(cwx+3,cwy+3,50,58); g.clip(); g.drawImage(bgc,0,0); box(cwx+27+cso,cwy+3,2,58,10); box(cwx+3,cwy+31,50,2,10); g.restore(); }
+    if(tut===1&&state!=='title') drawTutScreens(); // big wall screens that show how to charge the bar
     box(0,0,W,4,12); box(0,0,4,H,12); box(W-4,0,4,H,12);
     box(0,0,W,1,11); box(0,0,1,H,11); box(W-1,0,1,H,11);
     g.save(); if(tE<1) g.translate(Math.round((1-tE)*W),0); // new stage slides in from the right
@@ -1999,7 +2057,9 @@
     // trampoline bar
     (function(){ var c=cx+co, L=fl[0].len/2, y0=fl[0].py, col=state==='win'?[4,3,1][(tick>>2)%3]:(ocT>0)?(tick&1?1:14):(stunT>0&&((tick>>2)&1))?2:(chV>0.7?2:(chV>0.35?4:3));
       if(tut){ // tutorial: the bar is a serving tray (silver, raised rim, two handles); behaviour unchanged
-        for(var x=-L;x<=L;x++){ var u=x/L, y=y0-bulge*(1-u*u); box(c+x-1,y-1,3,1,1); box(c+x-1,y,3,2,11); box(c+x-1,y+2,3,1,12); if(Math.abs(x)<L*0.45) box(c+x-1,y,3,1,col); }
+        for(var x=-L;x<=L;x++){ var u=x/L, y=y0-bulge*(1-u*u), ax=Math.abs(x); // tray tilted towards the viewer: far rim (shorter), the inner surface, the near rim and its shadow
+          if(ax<=L-4) box(c+x-1,y-3,3,1,1); if(ax<=L-2) box(c+x-1,y-2,3,1,12); box(c+x-1,y-1,3,2,ax<L*0.45?col:11); box(c+x-1,y+1,3,1,1); box(c+x-1,y+2,3,1,12); box(c+x-1,y+3,3,1,0); }
+        for(var tx2=-L+3;tx2<=L-3;tx2+=9){ var tu=tx2/L, ty2=y0-bulge*(1-tu*tu); box(c+tx2,ty2-1,2,1,1); } // little glints on the silver
         var ye=y0; box(c-L-1,ye-3,3,4,1); box(c-L-1,ye-3,1,4,11); box(c+L-1,ye-3,3,4,1); box(c+L+1,ye-3,1,4,11);
         box(c-L-5,ye-1,4,3,11); box(c-L-4,ye,2,1,15); box(c+L+2,ye-1,4,3,11); box(c+L+3,ye,2,1,15); }
       else {
@@ -2039,7 +2099,12 @@
     txt(mode==='golf'?L('HOLE ')+hole:'LEVEL '+level,3,2,1); if(mode==='golf') txt(L('STR ')+strokes,(cx-10)|0,2,4); else { var nh=Math.max(0,lives), shown=Math.min(nh,5), hx0=((cx-(shown*9-2)/2)|0); for(var hi=0;hi<shown;hi++) for(var hy=0;hy<6;hy++) for(var hxx=0;hxx<7;hxx++) if(HEART[hy][hxx]==='1') box(hx0+hi*9+hxx,2+hy,1,1,2); if(nh>5) txt('+'+(nh-5),hx0+5*9,3,2); } // lives as heart icons txt(String(score).padStart(5,'0'),W-42,2,1); if(loopG) txt('LOOP',3,9,8);
     var pk=[]; for(var hk in pw) if(pw[hk]>0) pk.push(hk); var hx=Math.round(cx-pk.length*9+1); pk.forEach(function(k2){ drawPuRing(k2,hx,H-19,pw[k2]/PU[k2].d); hx+=18; }); // status effects at the bottom center
     var gx=W-46-String(gold).length*4-8; disc(gx,5,3,4); box(gx-1,4,2,2,3); txt(String(gold),gx+6,2,4); // gold piece instead of G
-    if(state==='play'&&heldAny()){ [mainBall].concat(extras).filter(function(b){ return b.held; }).forEach(function(hb){ var pw2=Math.max(0.15,chV), pa2=Math.max(-1.3,Math.min(1.3,aim+(hb.ca||0))); aimLine(hb.x,hb.y,pa2,Math.min(1,pw2),9,true); }); } // trajectory of every ball stuck on the bar
+    if(state==='play'&&heldAny()){ [mainBall].concat(extras).filter(function(b){ return b.held; }).forEach(function(hb){ var pw2=Math.max(0.15,chV), pa2=Math.max(-1.3,Math.min(1.3,aim+(hb.ca||0))); aimLine(hb.x,hb.y,pa2,Math.min(1,pw2),9,true); });
+      // where two trajectories cross, a crosshair marks the point
+      var hbs=[mainBall].concat(extras).filter(function(b){ return b.held; }), rays=hbs.map(function(hb){ var an=Math.max(-1.3,Math.min(1.3,aim+(hb.ca||0))); return {x:hb.x,y:hb.y,dx:Math.sin(an),dy:-Math.cos(an),len:launchSp(Math.min(1,Math.max(0.15,chV)))*60}; });
+      for(var ra=0;ra<rays.length;ra++) for(var rb=ra+1;rb<rays.length;rb++){ var A=rays[ra], B=rays[rb], den=A.dx*B.dy-A.dy*B.dx; if(Math.abs(den)<0.02) continue; var ex=B.x-A.x, ey=B.y-A.y, ta=(ex*B.dy-ey*B.dx)/den, tb=(ex*A.dy-ey*A.dx)/den;
+        if(ta>8&&tb>8&&ta<A.len&&tb<B.len){ var ix=Math.round(A.x+A.dx*ta), iy=Math.round(A.y+A.dy*ta); if(ix>4&&ix<W-4&&iy>14&&iy<H-4){ var cc=(tick>>2)&1?4:2, rr=5; for(var an2=0;an2<16;an2++) box(Math.round(ix+Math.cos(an2*0.3927)*rr),Math.round(iy+Math.sin(an2*0.3927)*rr),1,1,cc);
+          box(ix-9,iy,5,1,cc); box(ix+5,iy,5,1,cc); box(ix,iy-9,1,5,cc); box(ix,iy+5,1,5,cc); box(ix-1,iy-1,3,3,0); box(ix,iy,1,1,1); } } } } // trajectory of every ball stuck on the bar
     if(locked()&&state!=='play'&&state!=='capt'){ drawCursor(); }
     if(state==='look') g.restore();
     if(tut&&tutSay()&&(state==='tee'||state==='play')) drawBubble(tutSay()); // speech bubble above all game objects
@@ -2052,7 +2117,7 @@
       g.save(); g.beginPath(); g.rect(mx0,0,mwid,9); g.clip(); box(mx0,0,mwid,9,7); if(mw<=mwid) txt(msg,mx0+((mwid-mw)>>1),2,mc); else txt(msg,mx0+mwid-(((tick*0.9)|0)%(mw+mwid)),2,mc); g.restore(); }
   }
   // 3x5 pixel font
-  var F={'0':'111101101101111','1':'010110010010111','2':'111001111100111','3':'111001111001111','4':'101101111001001','5':'111100111001111','6':'111100111101111','7':'111001001001001','8':'111101111101111','9':'111101111001111',
+  var F={'?':'111001011000010','0':'111101101101111','1':'010110010010111','2':'111001111100111','3':'111001111001111','4':'101101111001001','5':'111100111001111','6':'111100111101111','7':'111001001001001','8':'111101111101111','9':'111101111001111',
   'A':'111101111101101','B':'110101110101110','C':'111100100100111','D':'110101101101110','E':'111100110100111','F':'111100110100100','G':'111100101101111','H':'101101111101101','I':'111010010010111','J':'001001001101111','K':'101101110101101','L':'100100100100111','M':'101111111101101','N':'110101101101101','O':'111101101101111','P':'111101111100100','Q':'111101101111001','R':'110101110101101','S':'111100111001111','T':'111010010010010','U':'101101101101111','V':'101101101101010','W':'101101111111101','X':'101101010101101','Y':'101101010010010','Z':'111001010100111','+':'000010111010000','!':'010010010000010',':':'000010000010000','·':'000000010000000','.':'000000000000010',' ':'000000000000000','-':'000000111000000'};
   function txt(s,x,y,c){ s=String(s).toUpperCase(); x=Math.round(x); y=Math.round(y); g.fillStyle=C[c]; // whole pixels only: fractional positions blur the glyphs
     for(var i=0;i<s.length;i++){ var gl=F[s[i]]||F[' ']; for(var p=0;p<15;p++) if(gl[p]==='1') g.fillRect(x+i*4+(p%3),y+((p/3)|0),1,1); } }

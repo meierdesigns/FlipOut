@@ -43,7 +43,7 @@ src/                    the runtime (code)
     theme.py            theme MD -> CSS variables
     server.py           http.server, routing, static files, POST /apps
   frontend/             presentation as Python functions (strings in, HTML string out)
-    shell.py            page shell (head, sidebar, main)
+    shell.py            page shell (header bar with home, menu dropdown and fullscreen, main)
     workspace.py        start page (tile grid)
     components/         one .py per component (markup only): tile, modal, new_app_form
   static/               base CSS plus per-component CSS/JS (tile, modal, flippout-host)

@@ -6,9 +6,9 @@
 (function(){
   // ---- i18n: source strings are English; DE maps English -> German (only used when LANG==='de') ----
   var LANG='en'; try{ LANG=localStorage.golfLang==='de'?'de':'en'; }catch(e){}
-  var DE={"PORTAL OPENING":"PORTAL OEFFNET SICH","   Q E SWITCHES TABS - ARROWS LEFT RIGHT FLIP PAGES - STYLES AND GRAPHICS ARE SAVED - KEY B OPENS THE SHOP AT THE TEE   ":"   Q E WECHSELT DIE REITER - PFEILE LINKS RECHTS BLAETTERN - STYLES UND GRAFIK BLEIBEN GESPEICHERT - TASTE B OEFFNET DEN SHOP AUF DEM ABSCHLAG   ","  SHAPE: ":"  FORM: "," BOUGHT":" GEKAUFT"," GOLD - YOU HAVE ":" GOLD - DU HAST "," OBSTACLES":" HINDERNISSE"," OF ":" VON "," OF 3":" VON 3"," SELECT":" WAEHLEN"," TIER ":" STUFE "," TIER 1":" STUFE 1","+1 LIFE":"+1 LEBEN","+10 PIXELS":"+10 PIXEL","+10 SECONDS":"+10 SEKUNDEN","+100 PERCENT":"+100 PROZENT","+15 SECONDS":"+15 SEKUNDEN","+20 PIXELS":"+20 PIXEL","+25 PERCENT":"+25 PROZENT","+30 PIXELS":"+30 PIXEL","+5 SECONDS":"+5 SEKUNDEN","+50 PERCENT":"+50 PROZENT","+500 POINTS":"+500 PUNKTE","1 LIFE":"1 LEBEN","8 BRIGHT COLORS":"8 HELLE FARBEN","ACTIVE":"AKTIV","ADVENTURE FOREST":"ABENTEUERWALD","AMBER MONITOR":"BERNSTEIN MONITOR","AMBIENCE - ESC = BACK":"AMBIENCE - ESC = ZURUECK","AMBIENCE MODE":"AMBIENCE MODUS","ANY NUMBER OF TIMES":"BELIEBIG OFT","ARKANOID MEETS PINBALL":"ARKANOID TRIFFT FLIPPER","ARROWS = PICK LEVEL":"PFEILE = LEVEL WAEHLEN","ARROWS AND ENTER - OR MOUSE":"PFEILE UND ENTER - ODER MAUS","AUTO POINTS":"AUTO PUNKTE","AUTOPILOT - NO SCORE - TAB = OFF":"AUTOPILOT - OHNE PUNKTE - TAB = AUS","AUTOPILOT - SCORING - TAB = OFF":"AUTOPILOT - PUNKTE ZAEHLEN - TAB = AUS","AUTOPILOT COUNTS POINTS":"AUTOPILOT ZAEHLT PUNKTE","AUTOPILOT OFF":"AUTOPILOT AUS","AUTOPILOT ON - TAB = OFF":"AUTOPILOT AN - TAB = AUS","AUTOPILOT: NEW LEVEL":"AUTOPILOT: LEVEL NEU","BACK":"ZURUECK","BACK TO GAME - NEXT LEVEL":"ZURUECK INS SPIEL - NAECHSTES LEVEL","BALL ALWAYS CHARGED":"BALL IMMER GELADEN","BALL CHARGE":"BALL LADUNG","BALL IN SLOW-MO":"BALL IN SLOW MOTION","BALL IS 20 PERCENT FASTER":"BALL IST 20 PROZENT SCHNELLER","BALL IS HUGE":"BALL IST RIESIG","BALL LOST":"BALL VERLOREN","BALL NEVER FALLS":"BALL FAELLT NIE","BALL SAVED":"BALL GERETTET","BALL SAVER":"BALL RETTER","BALL STAGGERS AROUND DRUNK":"BALL TORKELT BESOFFEN HERUM","BANDIT KING":"BANDITENKOENIG","BAR LENGTH":"BALKEN LAENGE","BLACK AND WHITE":"SCHWARZ WEISS","BLUEPRINT":"BLAUPAUSE","BONUS POINTS":"BONUS PUNKTE","BOSS DEFEATED!":"BOSS BESIEGT!","BOSS DEFEATED! +500":"BOSS BESIEGT! +500","BOSS FIGHT - DEFEAT THE ENEMY ABOVE":"BOSSKAMPF - BESIEGE DEN GEGNER OBEN","BOSSES HAVE DOUBLE HP":"BOSSE HABEN DOPPELT SO VIEL HP","BOUGHT":"GEKAUFT","BRICK SHAPE: ":"STEINFORM: ","CALC":"RECHNER","CALCULATOR LCD":"TASCHENRECHNER LCD","CANDY CLOUDS":"ZUCKERWOLKEN","CHARGED!":"AUFGELADEN!","CHEAT - ON AND OFF ANYTIME":"CHEAT - JEDERZEIT AN UND AUS","CLICK AGAIN = DELETE SAVE":"NOCHMAL KLICKEN = SPIELSTAND LOESCHEN","CLICK BUBBLE OR ENTER = START":"BLASE ANKLICKEN ODER ENTER = START","CLOUD DRAGON":"WOLKENDRACHE","CLOUDS":"WOLKEN","COLD BLUE":"KALTES BLAU","COLOR PALETTE - SWITCH ANYTIME":"FARBPALETTE - JEDERZEIT WECHSELN","COLOR TRAIL BEHIND BALL":"BUNTE SPUR HINTER DEM BALL","COLORS CHANGE WILDLY":"FARBEN WECHSELN WILD","COMMODORE COLORS":"COMMODORE FARBEN","CONTINUE":"WEITER","CONTINUE - ":"WEITER - ","CONTINUE - SPACE":"WEITER - LEERTASTE","CONTINUE IN ":"WEITER IN ","COOKIE BAKERY":"KEKSBACKSTUBE","CRISP PIXELS":"SCHARFE PIXEL","CRYPT":"GRUFT","CURRENTLY ACTIVE":"GERADE AKTIV","CYAN MAGENTA WHITE":"CYAN MAGENTA WEISS","DIFFICULTY":"SCHWIERIGKEIT","DISCO MODE":"DISCO MODUS","DISPLAY - SWITCH ANYTIME":"DARSTELLUNG - JEDERZEIT WECHSELN","DITHER AND WOBBLE":"DITHER UND WACKELN","DREAM":"TRAUM","DREAM ISLE":"TRAUMINSEL","DREAMLAND":"TRAUMLAND","DRUID":"DRUIDE","DRUNK BALL":"BETRUNKENER BALL","DUNGEON":"KERKER","DYNAMITE":"DYNAMIT","HUGE":"RIESIG","BIG":"GROSS","SMALL":"KLEIN","FINE":"FEIN","NORMAL":"NORMAL","BRICKS: ":"STEINE: ","BOSS FIGHT":"BOSSKAMPF","LOCKED":"GESPERRT","SETTINGS":"EINSTELLUNGEN","MOUSE SPEED ":"MAUSTEMPO ","SCREEN SHAKE ":"BILDSCHUETTELN ","FULLSCREEN ":"VOLLBILD ","LANGUAGE ":"SPRACHE ","ON":"AN","OFF":"AUS","BACK":"ZURUECK","ESC = BACK":"ESC = ZURUECK","PAUSED":"PAUSE","RESUME":"WEITER","MAIN MENU":"HAUPTMENUE","ESC = RESUME":"ESC = WEITER","BALL SIZE":"BALLGROESSE","SMALLER BALL":"KLEINERER BALL","EVEN SMALLER":"NOCH KLEINER","TINIEST BALL":"WINZIGSTER BALL","CHARGED RELEASE KICKS BALL UP":"VOLL GELADEN LOSLASSEN KICKT KUGEL HOCH","EARTHQUAKE":"ERDBEBEN","ELF PATH":"ELFENPFAD","EMBERS AND FIRE":"GLUT UND FEUER","ENDLESS POOLS":"POOLS ENDLOS","ENERGY x":"ENERGIE x","ENTER = BACK TO TIER 1":"ENTER = ZURUECK AUF STUFE 1","ENTER = BUY FOR ":"ENTER = KAUFEN FUER ","ENTER = SELECT":"ENTER = AUSWAEHLEN","ENTER = TIER ":"ENTER = STUFE ","ENTER = TRIP: ":"ENTER = REISE: ","ENTER = TURN OFF":"ENTER = AUSSCHALTEN","ENTER = TURN ON":"ENTER = EINSCHALTEN","EVEN MORE":"NOCH MEHR","EVERY DRAIN SAVED":"JEDER ABFLUSS GERETTET","EXTRA LIFE":"EXTRA LEBEN","FAR NUDGE SPACEBAR":"FERNSTOSS LEERTASTE","FARTHER AND OFTEN":"WEITER UND OFT","FINE BRICKS":"FEINE STEINE","FIREPLACE ROOM":"KAMINZIMMER","FLIGHT":"FLUG","FLIGHT SIM":"FLUGSIM","FLOOR POOLS":"BODEN POOLS","FLOOR POOLS ALWAYS ON":"BODEN-POOLS IMMER AN","FOREST":"WALD","FOREST CLEARING":"WALDLICHTUNG","FOUR GREEN SHADES":"VIER GRUENTOENE","GIANT BALL":"RIESENBALL","GLOWING COLORS":"LEUCHTENDE FARBEN","GLOWING HALO":"LEUCHTENDER SCHEIN","GOLD RUSH":"GOLDRAUSCH","GOLD X3":"GOLD MAL 3","GOLF COURSE":"GOLFPLATZ","GRAPHICS":"GRAFIK","GRAVITY FLIPPED - BALL FALLS UP":"SCHWERKRAFT UMGEDREHT - BALL FAELLT NACH OBEN","GREEN CODE":"GRUENER CODE","GREY 90S CONSOLE":"GRAUE 90ER KONSOLE","HALF GOLD ONLY":"NUR HALBES GOLD","HARDER - POINTS +25 PERCENT":"SCHWERER - PUNKTE +25 PROZENT","HARDER TENSION":"HAERTER SPANNEN","HERO DUNGEON":"HELDENKERKER","HIGH-RISE":"HOCHHAUS","HIT POWER":"SCHLAGKRAFT","HOLE ":"LOCH ","HOLE! +150":"LOCH! +150","HOLED! +":"EINGELOCHT! +","ICE":"EIS","INFINITE LIVES":"ENDLOS LEBEN","KICK AND CHARGE":"KICK UND LADUNG","KNIGHT CASTLE":"RITTERBURG","L = CLUSTER LOOP ON/OFF":"L = CLUSTER LOOP AN/AUS","LAST: STAGE ":"ZULETZT: STAGE ","LASTS LONGER":"HAELT LAENGER","LASTS LONGEST":"HAELT AM LAENGSTEN","LEFT RIGHT UP DOWN: BACKGROUND - ENTER = START":"PFEILE: HINTERGRUND - ENTER = START","LEFT RIGHT UP DOWN: BACKGROUND - ESC = BACK":"PFEILE: HINTERGRUND - ESC ZURUECK","LEVEL JUMP":"LEVEL SPRUNG","LEVEL SKIPPED":"LEVEL UEBERSPRUNGEN","LOCKED":"GESPERRT","LONG FLIPPER":"FLIPPER LANG","LONGER":"LAENGER","LOTS OF CAPSULES":"VIELE KAPSELN","MAP SELECT":"MAP AUSWAHL","MARBLE BUST":"MARMORBUESTE","MAX POWER":"MAXIMALE KRAFT","MAXED OUT":"AUSGEBAUT","MEGA BALL ALWAYS ON":"MEGA BALL IMMER AN","MEGA DURATION":"MEGA DAUER","MINIGOLF MEETS PINBALL":"MINIGOLF TRIFFT FLIPPER","MOON":"MOND","MOON HILL":"MONDHUEGEL","MOON MODE":"MOND MODUS","MOONSTONE":"MONDSTEIN","MORE CAPSULES":"MEHR KAPSELN","NEAR CHARGES MORE":"NAEHE LAEDT MEHR","8 PURE TV COLORS":"8 REINE TV FARBEN","NOT ENOUGH GOLD - ENTER = OFF":"ZU WENIG GOLD - ENTER = AUS","VIEW: FLAT":"ANSICHT: FLACH","VIEW: HORIZON":"ANSICHT: HORIZONT","LOW POLY AND JITTER":"LOW POLY UND WACKELN","TUTORIAL":"TUTORIAL","SKIP":"SKIP","AIM WITH MOUSE - HOLD CLICK, RELEASE":"ZIELE MIT DER MAUS - KLICK HALTEN, LOSLASSEN","MOVE THE BAR - BREAK ALL BRICKS":"BEWEGE DEN BALKEN - ZERSTOERE ALLE STEINE","BUMPERS GIVE GOLD AND CHARGE":"BUMPER GEBEN GOLD UND LADUNG","FAST BAR = HARD HIT - TRAMPOLINES BOUNCE":"SCHNELLER BALKEN = HARTER SCHLAG - TRAMPOLINE","WELCOME, RECRUIT! I AM PROFESSOR PIXEL.":"WILLKOMMEN, REKRUT! ICH BIN PROFESSOR PIXEL.","AIM WITH THE MOUSE. HOLD CLICK, THEN LET GO TO LAUNCH.":"ZIELE MIT DER MAUS. KLICK HALTEN, DANN LOSLASSEN ZUM ABSCHUSS.","TIP: SHOOT THE SKIP BLOCK AT THE TOP RIGHT TO LEAVE EARLY.":"TIPP: SCHIESS AUF DEN SKIP BLOCK OBEN RECHTS, UM FRUEHER ZU GEHEN.","GOOD SHOT! KEEP THE BALL IN PLAY WITH THE BAR.":"GUTER SCHUSS! HALTE DEN BALL MIT DEM BALKEN IM SPIEL.","BREAK ALL THE BRICKS TO CLEAR THE STAGE.":"ZERSTOERE ALLE STEINE, UM DIE STAGE ZU SCHAFFEN.","BUMPERS GIVE GOLD AND CHARGE YOUR BALL.":"BUMPER GEBEN GOLD UND LADEN DEINEN BALL AUF.","A GLOWING BALL IS FAST. HIT BUMPERS TO CHARGE IT!":"EIN LEUCHTENDER BALL IST SCHNELL. TRIFF BUMPER ZUM AUFLADEN!","GOLD BUYS UPGRADES IN THE SHOP LATER.":"MIT GOLD KAUFST DU SPAETER UPGRADES IM SHOP.","TRAMPOLINES BOUNCE THE BALL BACK UP.":"TRAMPOLINE SCHLEUDERN DEN BALL WIEDER NACH OBEN.","MOVE THE BAR FAST WHEN YOU HIT THE BALL FOR A HARDER STRIKE.":"BEWEGE DEN BALKEN SCHNELL BEIM TREFFEN FUER EINEN HAERTEREN SCHLAG.","HOLD CLICK TO CHARGE A SMASH, RELEASE TO STRIKE.":"KLICK HALTEN LAEDT EINEN SMASH, LOSLASSEN SCHLAEGT ZU.","POWER-UP CAPSULES DROP FROM BROKEN BRICKS.":"POWER UP KAPSELN FALLEN AUS ZERBROCHENEN STEINEN.","CATCH THEM WITH THE BAR TO GET POWER-UPS.":"FANGE SIE MIT DEM BALKEN FUER POWER UPS.","YOU ARE READY. GOOD LUCK OUT THERE!":"DU BIST BEREIT. VIEL GLUECK DA DRAUSSEN!","PRESS H FOR HELP":"H DRUECKEN FUER HILFE","NEON GRID":"NEONGITTER","NEW GAME":"NEUES SPIEL","NEW:   ":"NEU:   ","NEXT LEVEL INSTANTLY":"NAECHSTES LEVEL SOFORT","NO GRAVITY":"KEINE SCHWERKRAFT","NO LIFE LOSS":"KEIN LEBENSVERLUST","NOT BOUGHT":"NICHT GEKAUFT","NOT ENOUGH GOLD - ENTER = TIER 1":"ZU WENIG GOLD - ENTER = STUFE 1","NOT ENOUGH GOLD - NEEDS ":"ZU WENIG GOLD - BRAUCHT ","NOW: ":"JETZT: ","OFF":"AUS","OLD PHOTO":"ALTES FOTO","ON":"AN","ONE-TIME ACTION":"EINMALIGE AKTION","ONLY ONE LIFE PER ROUND":"NUR EIN LEBEN PRO RUNDE","ORIGINAL 16 COLORS":"ORIGINAL 16 FARBEN","OUT! +1 STROKE":"AUS! +1 SCHLAG","PAGE ":"SEITE ","PALM BEACH":"PALMENSTRAND","PARACHUTE":"FALLSCHIRM","PERK LUCK":"PERK GLUECK","PERMANENT ENERGY":"DAUERENERGIE","PICK":"WAHL","PINK AND TEAL":"ROSA UND TUERKIS","PIXEL GRID":"PIXELGITTER","POINTS X2":"PUNKTE X2","POOL TIME":"POOL ZEIT","POVERTY":"ARMUT","RAINBOW":"REGENBOGEN","RED ON BLACK":"ROT AUF SCHWARZ","RED RAILS":"ROTE BANDEN","ROBOT TOWER":"ROBOTURM","ROUND ":"RUNDE ","ROUND DONE: ":"RUNDE FERTIG: ","SAVE DELETED":"SPIELSTAND GELOESCHT","SCENE: ":"KULISSE: ","SCORE ":"PUNKTE ","SCREEN SHAKES CONSTANTLY":"BILDSCHIRM WACKELT STAENDIG","SHARP":"SCHARF","SHOP AND STYLES":"SHOP UND STYLES","SHOP RESET":"SHOP ZURUECKGESETZT","SKELETON LORD":"SKELETTLORD","SLOW":"LANGSAM","SLOW MOTION":"ZEITLUPE","SMALL BALL":"KLEINER BALL","SMALLER BRICKS - MORE ROWS":"KLEINERE STEINE - MEHR REIHEN","SMOOTH PIXELS":"GLATTE PIXEL","SOFT":"WEICH","SPACE = CONTINUE":"LEERTASTE = WEITER","SPACE OR CLICK = START":"LEERTASTE ODER KLICK = START","SPACE OR ENTER":"LEERTASTE ODER ENTER","STAGE CLEARED!":"STAGE GESCHAFFT!","STAR GROVE":"STERNENHAIN","START STAGE":"STARTSTAGE","START STAGE ":"STARTSTAGE ","STONE CIRCLE":"STEINKREIS","STR ":"SCH ","STRONGER":"STAERKER","STRONGER BAR":"STAERKERER BALKEN","SUNSET":"SONNENUNTERGANG","SUNSET GRADIENT":"ABENDROT VERLAUF","SWALLOWED!":"VERSCHLUCKT!","TAPE DISTORTION":"BANDVERZERRUNG","TEA":"TEE","TEA ROOM":"TEESTUBE","TEA TABLE":"TEETISCH","TEAPOT":"TEEKANNE","TEE OFF":"ABSCHLAG","TIER ":"STUFE ","TINY BALL":"WINZIG BALL","TOWN":"STADT","TREASURE TEMPLE":"SCHATZTEMPEL","TREASURY":"SCHATZKAMMER","TREE SPIRIT":"BAUMGEIST","TRIP COSTS ":"REISE KOSTET ","TRIPLE GOLD":"DREIFACHES GOLD","TUBE WITH SCANLINES":"BILDROEHRE MIT ZEILEN","VIEW STAGES":"STAGES ANSEHEN","VILLAGE":"DORF","WESTERN VILLAGE":"WESTERN DORF","WHITE ON BLUE":"WEISS AUF BLAU","WILD WEST":"WILDWEST","WORLD MAP":"WELTKARTE","Fullscreen (Esc exits)":"Vollbild (Esc beendet)","Fullscreen":"Vollbild","Frame off/on (F2)":"Rahmen aus/ein (F2)","Hide frame":"Rahmen ausblenden","Show frame (F2)":"Rahmen einblenden (F2)","HIT":"SCHLAG","Language / Sprache":"Language / Sprache","B = Shop \u00b7 Tab = Autopilot/Ambience on/off \u00b7 Click captures the mouse (Esc = release) \u00b7 Mouse = aim (tee), in play = move bar \u00b7 Hold left/right click = charge hit, release = strike \u00b7 Hold left click/Space = charge power, release = tee shot \u00b7 \u25c0 \u25b6 or A/D as alternative \u00b7 Golden (glowing) bumpers give gold when hit \u00b7 after each level buy red rails (key 1) and more ball charge (key 2) in the shop \u2013 or by click \u00b7 Bumpers, planes, houses & small trampolines break after several hits and give bonus points \u00b7 SPACE: hold = charge power/bar, release = strike \u00b7 Shift+Space in play = nudge upward (Ghost Shot)":"B = Shop \u00b7 Tab = Autopilot/Ambience an/aus \u00b7 Klick f\u00e4ngt die Maus (Esc = loslassen) \u00b7 Maus = zielen (Abschlag), im Spiel = Balken verschieben \u00b7 Linksklick/Rechtsklick halten = Schlag laden, loslassen = schlagen \u00b7 Linksklick/Leertaste halten = Kraft aufladen, loslassen = Abschlag \u00b7 \u25c0 \u25b6 oder A/D alternativ \u00b7 Goldene (leuchtende) Bumper geben bei Treffern Gold \u00b7 nach jedem Level kaufst du im Shop die roten Banden (Taste 1) und mehr Ball-Ladung (Taste 2) \u2013 oder per Klick \u00b7 Bumper, Flugzeuge, H\u00e4user & kleine Trampoline gehen nach mehreren Treffern kaputt und geben Bonuspunkte \u00b7 LEERTASTE: halten = Kraft/Balken laden, loslassen = Schlag \u00b7 Shift+Leertaste im Spiel = Stups nach oben (Ghost Shot)"};
+  var DE={"PORTAL OPENING":"PORTAL OEFFNET SICH","   Q E SWITCHES TABS - ARROWS LEFT RIGHT FLIP PAGES - STYLES AND GRAPHICS ARE SAVED - KEY B OPENS THE SHOP AT THE TEE   ":"   Q E WECHSELT DIE REITER - PFEILE LINKS RECHTS BLAETTERN - STYLES UND GRAFIK BLEIBEN GESPEICHERT - TASTE B OEFFNET DEN SHOP AUF DEM ABSCHLAG   ","  SHAPE: ":"  FORM: "," BOUGHT":" GEKAUFT"," GOLD - YOU HAVE ":" GOLD - DU HAST "," OBSTACLES":" HINDERNISSE"," OF ":" VON "," OF 3":" VON 3"," SELECT":" WAEHLEN"," TIER ":" STUFE "," TIER 1":" STUFE 1","+1 LIFE":"+1 LEBEN","+10 PIXELS":"+10 PIXEL","+10 SECONDS":"+10 SEKUNDEN","+100 PERCENT":"+100 PROZENT","+15 SECONDS":"+15 SEKUNDEN","+20 PIXELS":"+20 PIXEL","+25 PERCENT":"+25 PROZENT","+30 PIXELS":"+30 PIXEL","+5 SECONDS":"+5 SEKUNDEN","+50 PERCENT":"+50 PROZENT","+500 POINTS":"+500 PUNKTE","1 LIFE":"1 LEBEN","8 BRIGHT COLORS":"8 HELLE FARBEN","ACTIVE":"AKTIV","ADVENTURE FOREST":"ABENTEUERWALD","AMBER MONITOR":"BERNSTEIN MONITOR","AMBIENCE - ESC = BACK":"AMBIENCE - ESC = ZURUECK","AMBIENCE MODE":"AMBIENCE MODUS","ANY NUMBER OF TIMES":"BELIEBIG OFT","ARKANOID MEETS PINBALL":"ARKANOID TRIFFT FLIPPER","ARROWS = PICK LEVEL":"PFEILE = LEVEL WAEHLEN","ARROWS AND ENTER - OR MOUSE":"PFEILE UND ENTER - ODER MAUS","AUTO POINTS":"AUTO PUNKTE","AUTOPILOT - NO SCORE - TAB = OFF":"AUTOPILOT - OHNE PUNKTE - TAB = AUS","AUTOPILOT - SCORING - TAB = OFF":"AUTOPILOT - PUNKTE ZAEHLEN - TAB = AUS","AUTOPILOT COUNTS POINTS":"AUTOPILOT ZAEHLT PUNKTE","AUTOPILOT OFF":"AUTOPILOT AUS","AUTOPILOT ON - TAB = OFF":"AUTOPILOT AN - TAB = AUS","AUTOPILOT: NEW LEVEL":"AUTOPILOT: LEVEL NEU","BACK":"ZURUECK","BACK TO GAME - NEXT LEVEL":"ZURUECK INS SPIEL - NAECHSTES LEVEL","BALL ALWAYS CHARGED":"BALL IMMER GELADEN","BALL CHARGE":"BALL LADUNG","BALL IN SLOW-MO":"BALL IN SLOW MOTION","BALL IS 20 PERCENT FASTER":"BALL IST 20 PROZENT SCHNELLER","BALL IS HUGE":"BALL IST RIESIG","BALL LOST":"BALL VERLOREN","BALL NEVER FALLS":"BALL FAELLT NIE","BALL SAVED":"BALL GERETTET","BALL SAVER":"BALL RETTER","BALL STAGGERS AROUND DRUNK":"BALL TORKELT BESOFFEN HERUM","BANDIT KING":"BANDITENKOENIG","BAR LENGTH":"BALKEN LAENGE","BLACK AND WHITE":"SCHWARZ WEISS","BLUEPRINT":"BLAUPAUSE","BONUS POINTS":"BONUS PUNKTE","BOSS DEFEATED!":"BOSS BESIEGT!","BOSS DEFEATED! +500":"BOSS BESIEGT! +500","BOSS FIGHT - DEFEAT THE ENEMY ABOVE":"BOSSKAMPF - BESIEGE DEN GEGNER OBEN","BOSSES HAVE DOUBLE HP":"BOSSE HABEN DOPPELT SO VIEL HP","BOUGHT":"GEKAUFT","BRICK SHAPE: ":"STEINFORM: ","CALC":"RECHNER","CALCULATOR LCD":"TASCHENRECHNER LCD","CANDY CLOUDS":"ZUCKERWOLKEN","CHARGED!":"AUFGELADEN!","CHEAT - ON AND OFF ANYTIME":"CHEAT - JEDERZEIT AN UND AUS","CLICK AGAIN = DELETE SAVE":"NOCHMAL KLICKEN = SPIELSTAND LOESCHEN","CLICK BUBBLE OR ENTER = START":"BLASE ANKLICKEN ODER ENTER = START","CLOUD DRAGON":"WOLKENDRACHE","CLOUDS":"WOLKEN","COLD BLUE":"KALTES BLAU","COLOR PALETTE - SWITCH ANYTIME":"FARBPALETTE - JEDERZEIT WECHSELN","COLOR TRAIL BEHIND BALL":"BUNTE SPUR HINTER DEM BALL","COLORS CHANGE WILDLY":"FARBEN WECHSELN WILD","COMMODORE COLORS":"COMMODORE FARBEN","CONTINUE":"WEITER","CONTINUE - ":"WEITER - ","CONTINUE - SPACE":"WEITER - LEERTASTE","CONTINUE IN ":"WEITER IN ","COOKIE BAKERY":"KEKSBACKSTUBE","CRISP PIXELS":"SCHARFE PIXEL","CRYPT":"GRUFT","CURRENTLY ACTIVE":"GERADE AKTIV","CYAN MAGENTA WHITE":"CYAN MAGENTA WEISS","DIFFICULTY":"SCHWIERIGKEIT","DISCO MODE":"DISCO MODUS","DISPLAY - SWITCH ANYTIME":"DARSTELLUNG - JEDERZEIT WECHSELN","DITHER AND WOBBLE":"DITHER UND WACKELN","DREAM":"TRAUM","DREAM ISLE":"TRAUMINSEL","DREAMLAND":"TRAUMLAND","DRUID":"DRUIDE","DRUNK BALL":"BETRUNKENER BALL","DUNGEON":"KERKER","DYNAMITE":"DYNAMIT","HUGE":"RIESIG","BIG":"GROSS","SMALL":"KLEIN","FINE":"FEIN","NORMAL":"NORMAL","BRICKS: ":"STEINE: ","BOSS FIGHT":"BOSSKAMPF","LOCKED":"GESPERRT","SETTINGS":"EINSTELLUNGEN","MOUSE SPEED ":"MAUSTEMPO ","SCREEN SHAKE ":"BILDSCHUETTELN ","FULLSCREEN ":"VOLLBILD ","LANGUAGE ":"SPRACHE ","ON":"AN","OFF":"AUS","BACK":"ZURUECK","ESC = BACK":"ESC = ZURUECK","PAUSED":"PAUSE","RESUME":"WEITER","MAIN MENU":"HAUPTMENUE","ESC = RESUME":"ESC = WEITER","BALL SIZE":"BALLGROESSE","SMALLER BALL":"KLEINERER BALL","EVEN SMALLER":"NOCH KLEINER","TINIEST BALL":"WINZIGSTER BALL","CHARGED RELEASE KICKS BALL UP":"VOLL GELADEN LOSLASSEN KICKT KUGEL HOCH","EARTHQUAKE":"ERDBEBEN","ELF PATH":"ELFENPFAD","EMBERS AND FIRE":"GLUT UND FEUER","ENDLESS POOLS":"POOLS ENDLOS","ENERGY x":"ENERGIE x","ENTER = BACK TO TIER 1":"ENTER = ZURUECK AUF STUFE 1","ENTER = BUY FOR ":"ENTER = KAUFEN FUER ","ENTER = SELECT":"ENTER = AUSWAEHLEN","ENTER = TIER ":"ENTER = STUFE ","ENTER = TRIP: ":"ENTER = REISE: ","ENTER = TURN OFF":"ENTER = AUSSCHALTEN","ENTER = TURN ON":"ENTER = EINSCHALTEN","EVEN MORE":"NOCH MEHR","EVERY DRAIN SAVED":"JEDER ABFLUSS GERETTET","EXTRA LIFE":"EXTRA LEBEN","FAR NUDGE SPACEBAR":"FERNSTOSS LEERTASTE","FARTHER AND OFTEN":"WEITER UND OFT","FINE BRICKS":"FEINE STEINE","FIREPLACE ROOM":"KAMINZIMMER","FLIGHT":"FLUG","FLIGHT SIM":"FLUGSIM","FLOOR POOLS":"BODEN POOLS","FLOOR POOLS ALWAYS ON":"BODEN-POOLS IMMER AN","FOREST":"WALD","FOREST CLEARING":"WALDLICHTUNG","FOUR GREEN SHADES":"VIER GRUENTOENE","GIANT BALL":"RIESENBALL","GLOWING COLORS":"LEUCHTENDE FARBEN","GLOWING HALO":"LEUCHTENDER SCHEIN","GOLD RUSH":"GOLDRAUSCH","GOLD X3":"GOLD MAL 3","GOLF COURSE":"GOLFPLATZ","GRAPHICS":"GRAFIK","GRAVITY FLIPPED - BALL FALLS UP":"SCHWERKRAFT UMGEDREHT - BALL FAELLT NACH OBEN","GREEN CODE":"GRUENER CODE","GREY 90S CONSOLE":"GRAUE 90ER KONSOLE","HALF GOLD ONLY":"NUR HALBES GOLD","HARDER - POINTS +25 PERCENT":"SCHWERER - PUNKTE +25 PROZENT","HARDER TENSION":"HAERTER SPANNEN","HERO DUNGEON":"HELDENKERKER","HIGH-RISE":"HOCHHAUS","HIT POWER":"SCHLAGKRAFT","HOLE ":"LOCH ","HOLE! +150":"LOCH! +150","HOLED! +":"EINGELOCHT! +","ICE":"EIS","INFINITE LIVES":"ENDLOS LEBEN","KICK AND CHARGE":"KICK UND LADUNG","KNIGHT CASTLE":"RITTERBURG","L = CLUSTER LOOP ON/OFF":"L = CLUSTER LOOP AN/AUS","LAST: STAGE ":"ZULETZT: STAGE ","LASTS LONGER":"HAELT LAENGER","LASTS LONGEST":"HAELT AM LAENGSTEN","LEFT RIGHT UP DOWN: BACKGROUND - ENTER = START":"PFEILE: HINTERGRUND - ENTER = START","LEFT RIGHT UP DOWN: BACKGROUND - ESC = BACK":"PFEILE: HINTERGRUND - ESC ZURUECK","LEVEL JUMP":"LEVEL SPRUNG","LEVEL SKIPPED":"LEVEL UEBERSPRUNGEN","LOCKED":"GESPERRT","LONG FLIPPER":"FLIPPER LANG","LONGER":"LAENGER","LOTS OF CAPSULES":"VIELE KAPSELN","MAP SELECT":"MAP AUSWAHL","MARBLE BUST":"MARMORBUESTE","MAX POWER":"MAXIMALE KRAFT","MAXED OUT":"AUSGEBAUT","MEGA BALL ALWAYS ON":"MEGA BALL IMMER AN","MEGA DURATION":"MEGA DAUER","MINIGOLF MEETS PINBALL":"MINIGOLF TRIFFT FLIPPER","MOON":"MOND","MOON HILL":"MONDHUEGEL","MOON MODE":"MOND MODUS","MOONSTONE":"MONDSTEIN","MORE CAPSULES":"MEHR KAPSELN","NEAR CHARGES MORE":"NAEHE LAEDT MEHR","8 PURE TV COLORS":"8 REINE TV FARBEN","NOT ENOUGH GOLD - ENTER = OFF":"ZU WENIG GOLD - ENTER = AUS","VIEW: FLAT":"ANSICHT: FLACH","VIEW: HORIZON":"ANSICHT: HORIZONT","LOW POLY AND JITTER":"LOW POLY UND WACKELN","TUTORIAL":"TUTORIAL","SKIP":"SKIP","AIM WITH MOUSE - HOLD CLICK, RELEASE":"ZIELE MIT DER MAUS - KLICK HALTEN, LOSLASSEN","MOVE THE BAR - BREAK ALL BRICKS":"BEWEGE DEN BALKEN - ZERSTOERE ALLE STEINE","BUMPERS GIVE GOLD AND CHARGE":"BUMPER GEBEN GOLD UND LADUNG","FAST BAR = HARD HIT - TRAMPOLINES BOUNCE":"SCHNELLER BALKEN = HARTER SCHLAG - TRAMPOLINE","WELCOME, RECRUIT! I AM PROFESSOR PIXEL.":"WILLKOMMEN, REKRUT! ICH BIN PROFESSOR PIXEL.","AIM WITH THE MOUSE. HOLD CLICK, THEN LET GO TO LAUNCH.":"ZIELE MIT DER MAUS. KLICK HALTEN, DANN LOSLASSEN ZUM ABSCHUSS.","TIP: SHOOT THE SKIP BLOCK AT THE TOP RIGHT TO LEAVE EARLY.":"TIPP: SCHIESS AUF DEN SKIP BLOCK OBEN RECHTS, UM FRUEHER ZU GEHEN.","GOOD SHOT! KEEP THE BALL IN PLAY WITH THE BAR.":"GUTER SCHUSS! HALTE DEN BALL MIT DEM BALKEN IM SPIEL.","BREAK ALL THE BRICKS TO CLEAR THE STAGE.":"ZERSTOERE ALLE STEINE, UM DIE STAGE ZU SCHAFFEN.","BUMPERS GIVE GOLD AND CHARGE YOUR BALL.":"BUMPER GEBEN GOLD UND LADEN DEINEN BALL AUF.","A GLOWING BALL IS FAST. HIT BUMPERS TO CHARGE IT!":"EIN LEUCHTENDER BALL IST SCHNELL. TRIFF BUMPER ZUM AUFLADEN!","GOLD BUYS UPGRADES IN THE SHOP LATER.":"MIT GOLD KAUFST DU SPAETER UPGRADES IM SHOP.","TRAMPOLINES BOUNCE THE BALL BACK UP.":"TRAMPOLINE SCHLEUDERN DEN BALL WIEDER NACH OBEN.","MOVE THE BAR FAST WHEN YOU HIT THE BALL FOR A HARDER STRIKE.":"BEWEGE DEN BALKEN SCHNELL BEIM TREFFEN FUER EINEN HAERTEREN SCHLAG.","HOLD CLICK TO CHARGE A SMASH, RELEASE TO STRIKE.":"KLICK HALTEN LAEDT EINEN SMASH, LOSLASSEN SCHLAEGT ZU.","POWER-UP CAPSULES DROP FROM BROKEN BRICKS.":"POWER UP KAPSELN FALLEN AUS ZERBROCHENEN STEINEN.","CATCH THEM WITH THE BAR TO GET POWER-UPS.":"FANGE SIE MIT DEM BALKEN FUER POWER UPS.","YOU ARE READY. GOOD LUCK OUT THERE!":"DU BIST BEREIT. VIEL GLUECK DA DRAUSSEN!","PRESS H FOR HELP":"H DRUECKEN FUER HILFE","NEON GRID":"NEONGITTER","NEW GAME":"NEUES SPIEL","NEW:   ":"NEU:   ","NEXT LEVEL INSTANTLY":"NAECHSTES LEVEL SOFORT","NO GRAVITY":"KEINE SCHWERKRAFT","NO LIFE LOSS":"KEIN LEBENSVERLUST","NOT BOUGHT":"NICHT GEKAUFT","NOT ENOUGH GOLD - ENTER = TIER 1":"ZU WENIG GOLD - ENTER = STUFE 1","NOT ENOUGH GOLD - NEEDS ":"ZU WENIG GOLD - BRAUCHT ","NOW: ":"JETZT: ","OFF":"AUS","OLD PHOTO":"ALTES FOTO","ON":"AN","ONE-TIME ACTION":"EINMALIGE AKTION","ONLY ONE LIFE PER ROUND":"NUR EIN LEBEN PRO RUNDE","ORIGINAL 16 COLORS":"ORIGINAL 16 FARBEN","OUT! +1 STROKE":"AUS! +1 SCHLAG","PAGE ":"SEITE ","PALM BEACH":"PALMENSTRAND","PARACHUTE":"FALLSCHIRM","PERK LUCK":"PERK GLUECK","PERMANENT ENERGY":"DAUERENERGIE","PICK":"WAHL","PINK AND TEAL":"ROSA UND TUERKIS","PIXEL GRID":"PIXELGITTER","POINTS X2":"PUNKTE X2","POOL TIME":"POOL ZEIT","POVERTY":"ARMUT","RAINBOW":"REGENBOGEN","RED ON BLACK":"ROT AUF SCHWARZ","RED RAILS":"ROTE BANDEN","ROBOT TOWER":"ROBOTURM","ROUND ":"RUNDE ","ROUND DONE: ":"RUNDE FERTIG: ","SAVE DELETED":"SPIELSTAND GELOESCHT","SCENE: ":"KULISSE: ","SCORE ":"PUNKTE ","SCREEN SHAKES CONSTANTLY":"BILDSCHIRM WACKELT STAENDIG","SHARP":"SCHARF","SHOP AND STYLES":"SHOP UND STYLES","SHOP RESET":"SHOP ZURUECKGESETZT","SKELETON LORD":"SKELETTLORD","SLOW":"LANGSAM","SLOW MOTION":"ZEITLUPE","SMALL BALL":"KLEINER BALL","SMALLER BRICKS - MORE ROWS":"KLEINERE STEINE - MEHR REIHEN","SMOOTH PIXELS":"GLATTE PIXEL","SOFT":"WEICH","SPACE = CONTINUE":"LEERTASTE = WEITER","SPACE OR CLICK = START":"LEERTASTE ODER KLICK = START","SPACE OR ENTER":"LEERTASTE ODER ENTER","STAGE CLEARED!":"STAGE GESCHAFFT!","STAR GROVE":"STERNENHAIN","START STAGE":"STARTSTAGE","START STAGE ":"STARTSTAGE ","STONE CIRCLE":"STEINKREIS","STR ":"SCH ","STRONGER":"STAERKER","STRONGER BAR":"STAERKERER BALKEN","SUNSET":"SONNENUNTERGANG","SUNSET GRADIENT":"ABENDROT VERLAUF","SWALLOWED!":"VERSCHLUCKT!","TAPE DISTORTION":"BANDVERZERRUNG","TEA":"TEE","TEA ROOM":"TEESTUBE","TEA TABLE":"TEETISCH","TEAPOT":"TEEKANNE","TEE OFF":"ABSCHLAG","TIER ":"STUFE ","TINY BALL":"WINZIG BALL","TOWN":"STADT","TREASURE TEMPLE":"SCHATZTEMPEL","TREASURY":"SCHATZKAMMER","TREE SPIRIT":"BAUMGEIST","TRIP COSTS ":"REISE KOSTET ","TRIPLE GOLD":"DREIFACHES GOLD","TUBE WITH SCANLINES":"BILDROEHRE MIT ZEILEN","VIEW STAGES":"STAGES ANSEHEN","VILLAGE":"DORF","WESTERN VILLAGE":"WESTERN DORF","WHITE ON BLUE":"WEISS AUF BLAU","WILD WEST":"WILDWEST","WORLD MAP":"WELTKARTE","Fullscreen (Esc exits)":"Vollbild (Esc beendet)","Fullscreen":"Vollbild","Frame off/on (F2)":"Rahmen aus/ein (F2)","Hide frame":"Rahmen ausblenden","Show frame (F2)":"Rahmen einblenden (F2)","HIT":"SCHLAG","Language / Sprache":"Language / Sprache","B = Shop \u00b7 Tab = Autopilot on/off \u00b7 Click captures the mouse (Esc = release) \u00b7 Mouse = aim (tee), in play = move bar \u00b7 Hold left/right click = charge hit, release = strike \u00b7 Hold left click/Space = charge power, release = tee shot \u00b7 \u25c0 \u25b6 or A/D as alternative \u00b7 Golden (glowing) bumpers give gold when hit \u00b7 after each level buy red rails (key 1) and more ball charge (key 2) in the shop \u2013 or by click \u00b7 Bumpers, planes, houses & small trampolines break after several hits and give bonus points \u00b7 SPACE: hold = charge power/bar, release = strike \u00b7 Shift+Space in play = nudge upward (Ghost Shot)":"B = Shop \u00b7 Tab = Autopilot/Ambience an/aus \u00b7 Klick f\u00e4ngt die Maus (Esc = loslassen) \u00b7 Maus = zielen (Abschlag), im Spiel = Balken verschieben \u00b7 Linksklick/Rechtsklick halten = Schlag laden, loslassen = schlagen \u00b7 Linksklick/Leertaste halten = Kraft aufladen, loslassen = Abschlag \u00b7 \u25c0 \u25b6 oder A/D alternativ \u00b7 Goldene (leuchtende) Bumper geben bei Treffern Gold \u00b7 nach jedem Level kaufst du im Shop die roten Banden (Taste 1) und mehr Ball-Ladung (Taste 2) \u2013 oder per Klick \u00b7 Bumper, Flugzeuge, H\u00e4user & kleine Trampoline gehen nach mehreren Treffern kaputt und geben Bonuspunkte \u00b7 LEERTASTE: halten = Kraft/Balken laden, loslassen = Schlag \u00b7 Shift+Leertaste im Spiel = Stups nach oben (Ghost Shot)"};
   function L(s){ return LANG==='de'&&DE[s]!=null?DE[s]:s; }
-  function tpl(){ return "<section class=\"golf-game amiga\" data-golf-game data-mode=\"{{ mode }}\">\n  <div class=\"amiga-bar\"><span class=\"tl\"><b></b><b></b><b class=\"tl-g\" data-bare title=\""+L("Fullscreen (Esc exits)")+"\" role=\"button\" aria-label=\""+L("Fullscreen")+"\"></b></span><span class=\"amiga-title\">{{ label }}</span><button type=\"button\" class=\"amiga-lang\" data-lang title=\"Language / Sprache\" aria-label=\"Language\">"+(LANG==='de'?'EN':'DE')+"</button><button type=\"button\" class=\"amiga-bare\" data-bare title=\""+L("Fullscreen (Esc exits)")+"\" aria-label=\""+L("Fullscreen")+"\">\u26f6</button><span class=\"amiga-info\" tabindex=\"0\">\u24d8<span class=\"amiga-tip\">"+L("B = Shop \u00b7 Tab = Autopilot/Ambience on/off \u00b7 Click captures the mouse (Esc = release) \u00b7 Mouse = aim (tee), in play = move bar \u00b7 Hold left/right click = charge hit, release = strike \u00b7 Hold left click/Space = charge power, release = tee shot \u00b7 \u25c0 \u25b6 or A/D as alternative \u00b7 Golden (glowing) bumpers give gold when hit \u00b7 after each level buy red rails (key 1) and more ball charge (key 2) in the shop \u2013 or by click \u00b7 Bumpers, planes, houses & small trampolines break after several hits and give bonus points \u00b7 SPACE: hold = charge power/bar, release = strike \u00b7 Shift+Space in play = nudge upward (Ghost Shot)")+"</span></span></div>\n  <button type=\"button\" class=\"amiga-fab\" data-bare title=\""+L("Show frame (F2)")+"\" aria-label=\""+L("Show frame (F2)")+"\">\u26f6</button>\n  <div class=\"amiga-view\"><div class=\"amiga-hot\"></div><canvas class=\"amiga-screen\" data-golf-canvas width=\"300\" height=\"225\" tabindex=\"0\"></canvas></div>\n  <div class=\"amiga-pad\">\n    <button type=\"button\" data-k=\"l\">\u25c0 FLIPPER</button>\n    <button type=\"button\" data-k=\"s\">"+L("HIT")+"</button>\n    <button type=\"button\" data-k=\"r\">FLIPPER \u25b6</button>\n  </div>\n</section>"; }
+  function tpl(){ return "<section class=\"golf-game amiga\" data-golf-game data-mode=\"{{ mode }}\">\n  <div class=\"amiga-bar\"><span class=\"tl\"><b></b><b></b><b class=\"tl-g\" data-bare title=\""+L("Fullscreen")+"\" role=\"button\" aria-label=\""+L("Fullscreen")+"\"></b></span><span class=\"amiga-title\">{{ label }}</span><button type=\"button\" class=\"amiga-lang\" data-lang title=\"Language / Sprache\" aria-label=\"Language\">"+(LANG==='de'?'EN':'DE')+"</button><button type=\"button\" class=\"amiga-bare\" data-bare title=\""+L("Fullscreen")+"\" aria-label=\""+L("Fullscreen")+"\">\u26f6</button><span class=\"amiga-info\" tabindex=\"0\">\u24d8<span class=\"amiga-tip\">"+L("B = Shop \u00b7 Tab = Autopilot on/off \u00b7 Click captures the mouse (Esc = release) \u00b7 Mouse = aim (tee), in play = move bar \u00b7 Hold left/right click = charge hit, release = strike \u00b7 Hold left click/Space = charge power, release = tee shot \u00b7 \u25c0 \u25b6 or A/D as alternative \u00b7 Golden (glowing) bumpers give gold when hit \u00b7 after each level buy red rails (key 1) and more ball charge (key 2) in the shop \u2013 or by click \u00b7 Bumpers, planes, houses & small trampolines break after several hits and give bonus points \u00b7 SPACE: hold = charge power/bar, release = strike \u00b7 Shift+Space in play = nudge upward (Ghost Shot)")+"</span></span></div>\n  <button type=\"button\" class=\"amiga-fab\" data-bare title=\""+L("Show frame (F2)")+"\" aria-label=\""+L("Show frame (F2)")+"\">\u26f6</button>\n  <div class=\"amiga-view\"><div class=\"amiga-hot\"></div><canvas class=\"amiga-screen\" data-golf-canvas width=\"300\" height=\"225\" tabindex=\"0\"></canvas></div>\n  <div class=\"amiga-pad\">\n    <button type=\"button\" data-k=\"l\">\u25c0 FLIPPER</button>\n    <button type=\"button\" data-k=\"s\">"+L("HIT")+"</button>\n    <button type=\"button\" data-k=\"r\">FLIPPER \u25b6</button>\n  </div>\n</section>"; }
   function esc(v){ return String(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
   function start(game) {
   var cv = game.querySelector('canvas'), g = cv.getContext('2d');
@@ -194,10 +194,12 @@
     {id:'drunk',n:L('DRUNK BALL'),c:250,d:L('BALL STAGGERS AROUND DRUNK')},{id:'slowmo',n:L('SLOW MOTION'),c:300,d:L('BALL IN SLOW-MO')},
     {id:'trail',n:L('RAINBOW'),c:200,d:L('COLOR TRAIL BEHIND BALL')},{id:'quake',n:L('EARTHQUAKE'),c:150,d:L('SCREEN SHAKES CONSTANTLY')},{id:'disco',n:L('DISCO MODE'),c:250,d:L('COLORS CHANGE WILDLY')},
     {id:'autoscore',n:L('AUTO POINTS'),c:400,d:L('AUTOPILOT COUNTS POINTS')},
+    {id:'ambience',n:L('AMBIENCE MODE'),c:350,d:L('DEMO MODE IN THE TITLE MENU')},
     {id:'skip',n:L('LEVEL JUMP'),c:200,d:L('NEXT LEVEL INSTANTLY'),rep:true}];
   // Difficulties: buy once, then toggle anytime. Each active one gives +25% points
   var DIFFS=[{id:'dlife',n:L('1 LIFE'),c:150,d:L('ONLY ONE LIFE PER ROUND')},{id:'dfast',n:'TURBO BALL',c:200,d:L('BALL IS 20 PERCENT FASTER')},{id:'dboss',n:'BOSS PLUS',c:250,d:L('BOSSES HAVE DOUBLE HP')},
-    {id:'dpoor',n:L('POVERTY'),c:200,d:L('HALF GOLD ONLY')},{id:'dfine',n:L('FINE BRICKS'),c:300,d:L('SMALLER BRICKS - MORE ROWS')}];
+    {id:'dpoor',n:L('POVERTY'),c:200,d:L('HALF GOLD ONLY')},{id:'dfine',n:L('FINE BRICKS'),c:300,d:L('SMALLER BRICKS - MORE ROWS')},
+    {id:'dclash',n:'BALL CLASH',c:250,d:L('BALLS COLLIDE - MORE ENERGY')}];
   function diffN(){ var n=0; DIFFS.forEach(function(d){ if(cheat[d.id]) n++; }); return n; }
   function curList(){ return shopTab===0?ITEMS():(shopTab===1?STYLES:(shopTab===2?QUAL:(shopTab===3?CHEATS:DIFFS))); }
   function activate(i){ var g00=gold; activateCore(i); if(gold<g00&&shopFrom==='auto') shopAutoT=-1; }
@@ -211,15 +213,40 @@
     if(!own[it.id]){ if(gold<it.c) return; gold-=it.c; own[it.id]=1; msg=it.n+L(' BOUGHT'); msgT=90; }
     if(isSt) setStyle(it.id); else setQual(it.id); saveGame(); }
   var shopPg=0, shopPosF=0, shopWheelT=0, shopDrag=false; // shopPg = top visible row (scrollbar instead of pages)
-  function setTab(t){ shopTab=(t+5)%5; sel=0; scrollY=0; shopPg=0; shopPosF=0; if(state==='shop') saveGame(); }
+  // ===== shop tab secrets: tabs stay hidden until a secret obstacle in a configured stage was hit (configured in flippout-secrets.js, editable in the dev mode) =====
+  var TABN=['UPS','LOOK','GFX','CHEAT','HARD'], tabsOpen={}, secObjs=[], DEVH=window.FLIPPOUT_DEV||null;
+  try{ tabsOpen=JSON.parse(localStorage.golfTabs||'{}')||{}; }catch(e){}
+  function secCfg(){ return (DEVH&&DEVH.secrets&&DEVH.secrets())||window.FLIPPOUT_SECRETS||{}; } // {tab:{stage:1..N,obs:'bumper'|'block'|'brick'}}
+  function bgFor(sc){ var m=secCfg().bgmap; return (m&&m[sc])||sc; }
+  function anyTab(){ return [0,1,2,3,4].some(tabVis); }
+  function tabVis(t){ return !!tabsOpen[t]||!!(DEVH&&DEVH.showAll&&DEVH.showAll()); } // every shop tab (UPS too) stays hidden until its secret was found; without any tab the shop is closed
+  var bgOpen={}; try{ bgOpen=JSON.parse(localStorage.golfBgs||'{}')||{}; }catch(e){}
+  function bgVis(sc){ return true; } // (backgrounds can no longer be locked: only shop tabs are secrets)
+  function tabsSave(){ try{ localStorage.golfBgs=JSON.stringify(bgOpen); }catch(e){} try{ localStorage.golfTabs=JSON.stringify(tabsOpen); }catch(e){} }
+  function placeSecrets(){ secObjs=[]; if(tut||mode!=='breakout') return; var cfg=secCfg(), st=((lvNum()-1)%LEVELS.length)+1;
+    for(var t=0;t<5;t++){ var c=cfg[t]; if(!c||+c.stage!==st||tabsOpen[t]) continue; var pools={bumper:bumpers.filter(function(b){ return !b.par; }),block:blocks,brick:bricks,boss:boss?[boss]:[]}, k=c.obs, L1=pools[k]||[]; if(!L1.length){ k='bumper'; L1=pools.bumper; if(!L1.length){ k='block'; L1=pools.block; } if(!L1.length){ k='brick'; L1=pools.brick; } } if(!L1.length) continue;
+      secObjs.push({o:(c.idx!==undefined&&pools[c.obs]&&pools[c.obs][c.idx])?pools[c.obs][c.idx]:L1[(rnd()*L1.length)|0],t:t,k:(c.idx!==undefined&&pools[c.obs]&&pools[c.obs][c.idx])?c.obs:k}); }
+  }
+  function checkSecrets(){ if(state!=='play') return; secObjs.forEach(function(sc){ if(sc.spawned||sc.k==='boss'||(typeof sc.t==='string'?bgOpen[sc.t.slice(3)]:tabsOpen[sc.t])) return; var o=sc.o;
+      if(o.hp<=0||o.dead||(sc.k==='brick'&&bricks.indexOf(o)<0)){ var bx2=o.w?o.x+o.w/2:o.x, by2=o.h?o.y+o.h/2:o.y; spawnShopCap(sc,bx2,by2,false); } }); } // a destroyed container drops a shop pickup
+  function spawnShopCap(sc,x,y,win){ sc.spawned=true; caps.push({k:'SHOP',x:x,y:y,tab:sc.t,win:!!win}); msg=L('SHOP PICKUP!'); msgT=80; shake=Math.max(shake,5); burst(x,y,8,4); }
+  var bossWinPend=false, bossWinT=0, tabNew=-1;
+  function resolveBossWin(){ if(!bossWinPend) return; bossWinPend=false; winLevel(); }
+  function shopPickup(c){ var t=c&&c.tab; if(t===undefined){ return; } // the pickup unlocks the tab / background; a shop tab also pauses the game and shows the shop with the new tab
+    if(typeof t==='string'){ bgOpen[t.slice(3)]=true; tabsSave(); msg=L('BACKGROUND UNLOCKED: ')+(SCN[t.slice(3)]||t.slice(3)); msgT=170; score+=mult()*200; if(c.win) resolveBossWin(); return; }
+    tabsOpen[t]=true; tabsSave(); tabNew=t; score+=mult()*200; shopFrom='pickup'; shopAutoT=-1; state='shop'; shopTab=t; sel=0; scrollY=0; shopPg=0; shopPosF=0; msg=L('NEW SHOP TAB: ')+TABN[t]; msgT=200; if(document.exitPointerLock) document.exitPointerLock(); }
+  function unlockTab(t){ if(typeof t==='string'){ bgOpen[t.slice(3)]=true; tabsSave(); msg=L('SECRET FOUND! BACKGROUND ')+(SCN[t.slice(3)]||t.slice(3))+L(' UNLOCKED'); msgT=170; shake=Math.max(shake,6); score+=mult()*200; burst(cx+co,150,10,4); return; } tabsOpen[t]=true; tabsSave(); msg=L('SECRET FOUND! ')+TABN[t]+L(' TAB UNLOCKED'); msgT=170; shake=Math.max(shake,6); score+=mult()*200; burst(cx+co,150,10,4); }
+  if(DEVH) DEVH.api={levels:function(){ return LEVELS.map(function(l){ return l.name; }); },tabs:TABN,open:function(){ return tabsOpen; },setOpen:function(t,v){ if(v) tabsOpen[t]=true; else delete tabsOpen[t]; tabsSave(); },resetOpen:function(){ tabsOpen={}; tabsSave(); }};
+  function setTab(t){ var dir=(t>shopTab&&t-shopTab<=1)||t-shopTab===-4?1:(t<shopTab?-1:1), n=(t+5)%5, kz=0; while(!tabVis(n)&&kz++<5) n=(n+dir+5)%5; t=n; shopTab=(t+5)%5; sel=0; scrollY=0; shopPg=0; shopPosF=0; if(state==='shop') saveGame(); }
   function shopPageTo(rw){ var N=curList().length, R=Math.max(1,Math.ceil(N/4)); shopPg=Math.max(0,Math.min(Math.max(0,R-2),rw)); if(sel<N){ var rs=sel>>2; var R0=Math.round(shopPg); if(rs<R0) sel=Math.min(N-1,R0*4+sel%4); else if(rs>R0+1) sel=Math.min(N-1,(R0+1)*4+sel%4); shopCol=sel%4; } } // scroll: selection stays inside the visible rows
   // ---- cache progress: level, shop state, gold and upgrades survive a reload ----
-  function saveGame(){ if(tut||(mapPick&&state==='map')) return; if(state==='title'||state==='look'||(ambient&&ambFull)) return; if(shopFrom==='title'&&!loadSave()) return;
+  function saveGame(){ if(tut||(mapPick&&state==='map')||(state==='shop'&&shopFrom==='pickup')) return; if(state==='title'||state==='look'||(ambient&&ambFull)) return; if(shopFrom==='title'&&!loadSave()) return;
     try{ localStorage['golfSave_'+mode]=JSON.stringify({lv:lvNum(),gold:gold,score:score,lives:lives,best:bestLv,loop:loopG,sling:sling,chgT:chgT,lenT:lenT,powT:powT,poolU:poolU,goldU:goldU,luckU:luckU,ballU:ballU,upO:upO,shop:state==='shop'&&shopFrom!=='title',tab:shopTab,sel:sel}); }catch(e){} }
   function applySave(sv){ level=sv.lv; hole=sv.lv; bestLv=Math.max(sv.best||0,sv.lv); loopG=sv.loop||null; gold=sv.gold||0; score=sv.score||0; lives=sv.lives||3; sling=sv.sling||0; chgT=sv.chgT||0; lenT=sv.lenT||0; powT=sv.powT||0; poolU=sv.poolU||0; goldU=sv.goldU||0; luckU=sv.luckU||0; ballU=sv.ballU||0; upO=(sv.upO||[]).concat([0,0,0,0,0,0,0,0]).slice(0,8); if(sv.ballU===undefined) upO[7]=0; [sling,chgT,lenT,powT,poolU,goldU,luckU,ballU].forEach(function(v,k){ upO[k]=Math.max(upO[k]||0,v); }); }
   function loadSave(){ try{ return JSON.parse(localStorage['golfSave_'+mode]||'null'); }catch(e){ return null; } }
   function clearSave(){ try{ localStorage.removeItem('golfSave_'+mode); }catch(e){} }
   function closeShop(){ if(state!=='shop') return;
+    if(shopFrom==='pickup'){ shopFrom='level'; tabNew=-1; state='play'; if(bossWinPend) resolveBossWin(); return; } // pickup shop: the paused level continues
     if(shopFrom==='auto'){ autoRestart(); return; }
     if(shopFrom==='title') state='title'; else if(transPend){ transPend=false; startTrans(); } else state='tee'; // after the shop the next level continues directly (no map in between)
     saveGame(); }
@@ -234,13 +261,14 @@
   try{ if(navigator.keyboard&&navigator.keyboard.lock) cv.addEventListener('pointerdown',function(){ if(document.fullscreenElement) navigator.keyboard.lock(['ShiftLeft','ShiftRight','AltLeft','AltRight']).catch(function(){}); }); }catch(e){} window.addEventListener('blur',function(){ shiftDown=false; });
   function resetShop(){ own={amiga:1,sharp:1}; cheat={}; actv={style:'amiga',qual:'sharp'}; setStyle('amiga'); setQual('sharp'); saveCos(); msg=L('SHOP RESET'); msgT=90; } // restore bought styles, graphics and cheats
   function menuItems(){ var sv=loadSave(), out=[]; if(sv&&sv.lv) out.push({t:L('CONTINUE - ')+(mode==='golf'?L('HOLE '):'LEVEL ')+sv.lv,f:continueGame});
-    out.push({t:L('NEW GAME'),f:function(){ if(shiftDown) resetShop(); mapPick=true; mapNote=''; mapSel=0; mapScroll=0; mapFollow=true; mapT=0; mapAnim=false; state='map'; }}); out.push({t:L('VIEW STAGES'),f:function(){ pickMode=false; lookStage(1); }}); out.push({t:L('AMBIENCE MODE'),f:startAmbient}); out.push({t:L('SHOP AND STYLES'),f:function(){ openShop('title'); }}); return out; }
-  var pickMode=false, mapPick=false, mapSel=0, mapRestPg=-1, tutBX=-1, tutSel=0; // mapRestPg: page restored after F5; tutSel: selected bubble on the tutorial map page
+    out.push({t:L('NEW GAME'),f:function(){ if(shiftDown) resetShop(); mapPick=true; mapNote=''; mapSel=0; mapScroll=0; mapFollow=true; mapT=0; mapAnim=false; state='map'; }}); out.push({t:L('VIEW STAGES'),f:function(){ pickMode=false; lookStage(1); }}); if(cheat.ambience) out.push({t:L('AMBIENCE MODE'),f:startAmbient}); // bought in the CHEAT tab of the shop
+    out.push({t:L('SHOP AND STYLES'),f:function(){ openShop('title'); }}); return out; }
+  var pickMode=false, mapPick=false, mapSel=0, mapRestPg=-1, mapRestApply=false, tutBX=-1, tutSel=0; // mapRestPg: page restored after F5; tutSel: selected bubble on the tutorial map page
   var lastPick=0, mapNote='', backR=null;
   try{ lastPick=Math.max(0,(+localStorage['golfPick_'+mode])||0); }catch(e){}
   try{ loopPref=localStorage['golfLoop_'+mode]==='1'; }catch(e){}
   function toggleLoop(){ loopPref=!loopPref; try{ localStorage['golfLoop_'+mode]=loopPref?'1':'0'; }catch(e){} }
-  function startPick(i){ mapPick=false; mapNote=''; lastPick=i; try{ localStorage['golfPick_'+mode]=i; }catch(e){} startLv=i+1; init(); state='tee';
+  function startPick(i){ mapPick=false; mapNote=''; lastPick=i; try{ localStorage['golfPick_'+mode]=i; }catch(e){} startLv=i+1; init(); tabsOpen={}; tabsSave(); /* new run: every secret shop tab is locked again */ state='tee';
     loopG=null; if(loopPref){ var gr=mapLayout().groups[mapLayout().gi[i]]; loopG={from:gr.from,to:gr.to}; } saveGame(); } // stage cluster loop: after the boss the same cluster starts over
   var overT=0, overSel=0, overIdx=0, overScore=0, overR={}; // game-over screen
   function overRetry(){ startPick(overIdx); }
@@ -257,7 +285,8 @@
   var ambShopT=0;
   function ambShopAI(){ // Ambience: the AI buys upgrades itself; if it buys nothing, the countdown runs on the continue button
     ambShopT++; var N=ITEMS().length, ph=ambShopT%40;
-    if(ph===1){ var best=-1, order=[0,1,3,2,4,5,6];
+    if(ph===1&&!tabVis(0)){ ambPick=-1; sel=N; } /* the UPS tab is still locked: the AI cannot buy */
+    else if(ph===1){ var best=-1, order=[0,1,3,2,4,5,6];
       for(var k=0;k<order.length;k++){ var it=ITEMS()[order[k]], t=it.g(); if(!it.rep&&t>=3) continue; if(gold>=it.c[it.rep?0:t]){ best=order[k]; break; } }
       ambPick=best; sel=best>=0?best:N; }
     else if(ph===22&&ambPick>=0){ buy(ambPick); ambPick=-1; shopAutoT=Math.min(shopAutoT,90); }
@@ -267,17 +296,37 @@
   var apScore=0, apGold=0, apLives=3, shopAutoT=-1, shopAutoMax=1;
   // ================= Boss stages: one boss per scene, flying around at the top =================
   var boss=null, bshots=[], stunT=0;
-  var BOSSES={western:{w:44,h:26,ax:88,sp:0.034,hp:12},vapor:{w:40,h:30,ax:80,sp:0.03,hp:14},city:{w:44,h:28,ax:70,sp:0.028,hp:16},flight:{w:58,h:24,ax:96,sp:0.038,hp:16},
+  var BOSSES={western:{w:44,h:26,ax:88,sp:0.034,hp:12},vapor:{w:36,h:36,ax:80,sp:0.03,hp:14},city:{w:44,h:28,ax:70,sp:0.028,hp:16},flight:{w:58,h:24,ax:96,sp:0.038,hp:16},
     dream:{w:46,h:30,ax:84,sp:0.03,hp:18},forest:{w:46,h:32,ax:76,sp:0.026,hp:20},moon:{w:40,h:34,ax:88,sp:0.034,hp:22},dungeon:{w:44,h:34,ax:80,sp:0.03,hp:24},cozy:{w:48,h:36,ax:82,sp:0.03,hp:20},golf:{w:30,h:30,ax:92,sp:0.036,hp:18}};
   var BATK={western:['aim','fan'],vapor:['beam','aim'],city:['homing','aim'],flight:['bomb','fan'],dream:['wave','aim'],forest:['split','bomb'],moon:['ring','homing'],dungeon:['aim2','beam'],cozy:['wave','homing'],golf:['aim','bomb']};
   var BEAT={vapor:1,dream:1,forest:1}; // these bosses swallow the ball (no damage, they spit it back out charged)
   var BSTUN={aim:70,fan:50,aim2:60,homing:70,bomb:90,wave:60,split:50,ring:40,beam:90};
   function makeBoss(sc){ var d=BOSSES[sc]||BOSSES.western; return {sc:sc,atk:BATK[sc]||['aim'],ai:0,eat:!!BEAT[sc],eatCd:0,mouth:0,x:cx,y:48,w:d.w,h:d.h,hp:d.hp*(cheat.dboss?2:1),hp0:d.hp*(cheat.dboss?2:1),t:(rnd()*6)|0,fl:0,cd:150,ax:Math.min(d.ax,W/2-d.w/2-10),sp:d.sp}; }
-  function updateBoss(){ if(!boss) return; var ph2=boss.hp<=boss.hp0/2, spd=boss.sp*(ph2?1.5:1); boss.t++;
-    boss.x=cx+Math.sin(boss.t*spd)*boss.ax+Math.sin(boss.t*spd*2.3)*8; boss.x=Math.max(boss.w/2+8,Math.min(W-boss.w/2-8,boss.x));
-    boss.y=46+Math.sin(boss.t*spd*1.7)*12+(ph2?Math.sin(boss.t*0.05)*6:0); if(boss.fl>0) boss.fl--;
+  function bossAbility(){ var sc=boss.sc, i, bx=boss.x, by=boss.y+boss.h/2;
+    if(sc==='western'){ boss.dashT=70; msg=L('QUICKDRAW!'); }
+    else if(sc==='vapor'){ boss.sx=40+rnd()*(W-80); boss.fl=10; msg=L('GLITCH!'); burst(bx,boss.y,6,13); }
+    else if(sc==='city'){ boss.shT=170; msg=L('SHIELD ONLINE!'); }
+    else if(sc==='flight'){ for(i=0;i<6;i++) bshots.push({ty:'bomb',x:20+i*((W-40)/5),y:by-8,vx:0,vy:1.9}); msg=L('CARPET BOMBING!'); }
+    else if(sc==='dream'){ boss.wd=rnd()<0.5?-1:1; boss.windT=190; msg=L('GUST OF WIND!'); }
+    else if(sc==='forest'){ for(i=0;i<5;i++) bshots.push({ty:'split',x:bx+(i-2)*10,y:by,vx:(i-2)*0.25,vy:0.9}); msg=L('SPORES!'); }
+    else if(sc==='moon'){ boss.pullT=170; msg=L('GRAVITY PULL!'); }
+    else if(sc==='dungeon'){ for(i=0;i<8;i++){ var a2=i*0.785; bshots.push({ty:'ring',x:bx,y:boss.y,vx:Math.cos(a2)*0.9,vy:Math.sin(a2)*0.9+0.3}); } msg=L('BONE STORM!'); }
+    else if(sc==='cozy'){ boss.fogT=260; msg=L('STEAM!'); }
+    else if(sc==='golf'){ for(i=0;i<7;i++) bshots.push({ty:'aim',x:bx,y:by,vx:(i-3)*0.45,vy:1.5}); msg=L('SPRINKLERS!'); }
+    msgT=70; shake=Math.max(shake,3); }
+  function updateBoss(){ if(!boss) return; if(state==='look'&&DEVH){ boss.x=cx; boss.y=48; return; } // dev viewer: the boss stands still so it can be clicked var ph2=boss.hp<=boss.hp0/2, hr=boss.hp/boss.hp0, spd=boss.sp*0.6*(1+0.8*Math.max(0,Math.min(1,(0.3-hr)/0.3))); boss.t++; // slower base speed; only a badly hurt boss (below 30 percent HP) speeds up, smoothly
+    if(boss.phs===undefined) boss.phs=boss.t*boss.sp; boss.phs+=spd; // phase accumulates, so a speed change never makes the boss jump
+    var tgx=cx+Math.sin(boss.phs)*boss.ax+Math.sin(boss.phs*2.3)*8; if(boss.dashT>0){ boss.dashT--; tgx=ball?ball.x:tgx; } // western dash: rushes at the ball
+    if(boss.sx===undefined) boss.sx=tgx; boss.sx+=(tgx-boss.sx)*(boss.dashT>0?0.07:0.3); boss.x=Math.max(boss.w/2+8,Math.min(W-boss.w/2-8,boss.sx));
+    boss.y=46+Math.sin(boss.phs*1.7)*12+(ph2?Math.sin(boss.t*0.05)*6:0); if(boss.fl>0) boss.fl--;
     if(state==='play'||state==='tee'){ boss.cd--; if(boss.cd<=0){ var ty=boss.atk[boss.ai++%boss.atk.length]; boss.cd=(ph2?150:250)+(ty==='beam'?40:0); bossFire(ty,ph2); } }
     if(boss.mouth>0) boss.mouth--;
+    // ===== each boss has its own special ability (announced by a message) =====
+    ['shT','windT','pullT','fogT'].forEach(function(kt){ if(boss[kt]>0) boss[kt]--; });
+    if(state==='play'){ if(boss.abT===undefined) boss.abT=260+((rnd()*120)|0); if(--boss.abT<=0){ boss.abT=(ph2?380:560)+((rnd()*120)|0); bossAbility(); }
+      var bl3=[ball].concat(extras); if(boss.windT>0) bl3.forEach(function(b){ if(b&&!b.held&&!b.stk) b.vx+=boss.wd*0.03; }); // cloud dragon: gust of wind pushes every ball sideways
+      if(boss.pullT>0) bl3.forEach(function(b){ if(b&&!b.held&&!b.stk){ var dx=boss.x-b.x, dy=boss.y-b.y, dl=Math.hypot(dx,dy)||1; b.vx+=dx/dl*0.05; b.vy+=dy/dl*0.05; } }); // druid: gravity pull towards the boss
+      if(boss.sc==='forest'&&boss.hp<boss.hp0&&tick%300===0){ boss.hp++; boss.fl=6; burst(boss.x,boss.y,4,5); msg=L('TREE SPIRIT HEALS'); msgT=40; } } // tree spirit: regrows HP over time
     var L=fl[0].len/2, px=cx+co;
     bshots=bshots.filter(function(sh){ sh.t=(sh.t||0)+1;
       if(sh.ty==='beam'){ if(sh.t>=40&&sh.t<=58){ if(!sh.hit&&state==='play'&&Math.abs(px-sh.x)<=L+3){ sh.hit=1; stunT=BSTUN.beam; shake=6; burst(sh.x,200,4,2); }
@@ -285,7 +334,9 @@
       if(sh.ty==='homing'){ sh.vx=Math.max(-1.3,Math.min(1.3,sh.vx+(px-sh.x)*0.004)); }
       if(sh.ty==='wave'){ sh.x=sh.x0+Math.sin(sh.y*0.09)*18; } else sh.x+=sh.vx; sh.y+=sh.vy;
       if(sh.ty==='split'&&!sh.sp&&sh.y>110){ bshots.push({ty:'aim',x:sh.x,y:sh.y,vx:-0.8,vy:1.3},{ty:'aim',x:sh.x,y:sh.y,vx:0.8,vy:1.3}); burst(sh.x,sh.y,3,13); return false; }
-      if(sh.y>=196&&sh.y<=206&&Math.abs(sh.x-px)<=L+2&&state==='play'){ drainE(0.4); burst(sh.x,sh.y,4,2); shake=6; return false; }
+      var ub=Math.max(-1,Math.min(1,(sh.x-px)/L)), barY=fl[0].py-bulge*(1-ub*ub); // the bar's curve: bowl or arch
+      if(sh.y>=barY-5&&sh.y<=barY+7&&Math.abs(sh.x-px)<=L+2&&(state==='play'||state==='tee')){ if(((state==='play'&&(chV>0.3||ocT>0))||(teeHeld&&power>0.3))&&stunT<=0){ /* only a charged bar (tension above 30 percent) catches */ burst(sh.x,sh.y,5,[1,4,14][(tick>>1)%3]); score+=mult()*10; shake=Math.max(shake,2); if(state==='play'&&extras.length<6){ var hu0=ub*0.9, hu1=hu0, hk=0; while(hk<14&&(extras.concat([mainBall]).some(function(q){ return q&&q.held&&Math.abs(q.hu-hu1)<0.26; })||Math.abs(hu1)>0.9)){ hk++; hu1=hu0+(hk%2?1:-1)*Math.ceil(hk/2)*0.26; } // each caught shot gets its own free spot in the bowl
+        if(hk<14) extras.push({x:sh.x,y:barY-3,vx:0,vy:0,e:0.6,held:true,hu:Math.max(-0.9,Math.min(0.9,hu1)),caught:1}); } /* caught shot becomes a ball held in the bowl: release to shoot it at the boss */ return false; } /* charging bar (bowl) catches the shot */ drainE(0.4); burst(sh.x,sh.y,4,2); shake=6; return false; } // uncaught: steals energy from the ball
       var shB=null; if(state==='play') [ball].concat(extras).forEach(function(b){ if(!shB&&b&&!b.held&&Math.hypot(b.x-sh.x,b.y-sh.y)<(sh.ty==='bomb'?8:6)) shB=b; });
       if(shB){ shB.e=Math.min(1,(shB.e||0)+0.4); shB.vx*=1.25; shB.vy*=1.25; capB=Math.min(5,Math.max(0,capB)+1.2); burst(sh.x,sh.y,sh.ty==='bomb'?5:3,[1,4,3][(tick>>1)%3]); shake=Math.max(shake,3); score+=mult()*25; return false; } // ball hits an enemy shot: absorbs it, more energy and faster
       return sh.y<H+6&&sh.x>-8&&sh.x<W+8; }); }
@@ -316,7 +367,7 @@
     box(ex-pr,ey-pr,3,1,col); box(ex+pr-2,ey-pr,3,1,col); box(ex-pr,ey+pr,3,1,col); box(ex+pr-2,ey+pr,3,1,col); box(ex-pr,ey-pr,1,3,col); box(ex+pr,ey-pr,1,3,col); box(ex-pr,ey+pr-2,1,3,col); box(ex+pr,ey+pr-2,1,3,col);
     box(ex-1,ey-1,3,3,(tick>>2)&1?1:col); var pt=Math.round(pw*100)+'%'; txt(pt,Math.max(2,Math.min(W-pt.length*4-2,(ex+pr+3)|0)),Math.max(11,Math.min(H-8,(ey-2)|0)),col); }
   function drawCharge(b){ var be=b.e||0; if(be<0.04) return; // charge: glowing rim around the ball, blinks faster with more energy
-    var per=Math.max(3,Math.round(18-15*be)), on=(tick%per)<per*0.6, c=be>0.66?4:(be>0.33?3:8);
+    var per=ocT>0?2:Math.max(3,Math.round(18-15*be)), on=(tick%per)<per*0.6, c=be>0.66?4:(be>0.33?3:8);
     if(!on&&be<0.95) { c=12; }
     var bx0=b.x|0, by0=b.y|0, r=ballR();
     if(be>0.6){ var ga=(be-0.6)/0.4; g.globalAlpha=0.10*ga+0.05*Math.sin(tick*0.25); disc(bx0,by0,Math.ceil(r)+5,c); g.globalAlpha=0.16*ga; disc(bx0,by0,Math.ceil(r)+3,c); g.globalAlpha=1; } // soft glow while the ball is highly charged
@@ -327,14 +378,18 @@
     if(d<R){ if(d>0){ dx/=d; dy/=d; ball.x=qx+dx*R; ball.y=qy+dy*R; } else { dx=0; dy=1; ball.y=by0+boss.h+R; }
       if(boss.eat&&!ball.swal&&tick>=boss.eatCd){ ball.swal=55; boss.eatCd=tick+320; boss.mouth=55; burst(ball.x,ball.y,4,13); shake=4; msg=L('SWALLOWED!'); msgT=40; return; }
       bounce(dx,dy,1.05);
-      if(tick-(ball.bh||-99)>10){ ball.bh=tick; var en=Math.max(0,Math.min(1,ball.e||0)), mul=1+Math.floor(en*2.99); boss.hp-=(pw.M>0?2:1)*mul; if(mul>1){ burst(ball.x,ball.y,2+mul,4); msg=L('ENERGY x')+mul; msgT=30; } if(!pw.F&&!cheat.energy) ball.e=en*0.5; boss.fl=8; score+=mult()*100; addG(10); burst(ball.x,ball.y,3,1); shake=4; drop(boss.x,boss.y+boss.h/2,0.25);
-        if(boss.hp<=0){ var bx=boss.x, by=boss.y; for(var k=0;k<4;k++) burst(bx+(k-1.5)*10,by,8,[1,4,3,2][k]); boss=null; bshots=[]; winLevel(); } } } }
+      if(tick-(ball.bh||-99)>10){ ball.bh=tick; var en=Math.max(0,Math.min(1,ball.e||0)), mul=1+Math.floor(en*2.99); if(boss.shT>0){ mul=0; boss.fl=4; burst(ball.x,ball.y,3,11); msg=L('SHIELDED!'); msgT=30; } boss.hp-=(pw.M>0?2:1)*mul; if(mul>1){ burst(ball.x,ball.y,2+mul,4); msg=L('ENERGY x')+mul; msgT=30; } if(!pw.F&&!cheat.energy) ball.e=en*0.5; boss.fl=8; score+=mult()*100; addG(10); burst(ball.x,ball.y,3,1); shake=4; drop(boss.x,boss.y+boss.h/2,0.25);
+        if(boss.hp<=0&&boss.sc==='dungeon'&&!boss.rev){ boss.rev=1; boss.hp=Math.ceil(boss.hp0*0.35); boss.fl=30; shake=10; msg=L('THE SKELETON LORD RISES AGAIN!'); msgT=100; for(var kr=0;kr<5;kr++) burst(boss.x+(kr-2)*8,boss.y,6,[1,3,11][kr%3]); } /* dungeon boss: revives once */
+        if(boss.hp<=0){ var bx=boss.x, by=boss.y; for(var k=0;k<4;k++) burst(bx+(k-1.5)*10,by,8,[1,4,3,2][k]); var bcont=secObjs.filter(function(sc){ return sc.k==='boss'&&!sc.spawned&&!(typeof sc.t==='string'?bgOpen[sc.t.slice(3)]:tabsOpen[sc.t]); })[0]; boss=null; bshots=[]; if(bcont){ spawnShopCap(bcont,bx,by,true); bossWinPend=true; bossWinT=1500; } else winLevel(); } } } }
   var winT=0, WINLEN=170, winBoss=false;
   // victory overlay (CONTINUE / SHOP) and the pan transition into the next stage
   var vicBuild=null, vicSel=0, vicR=[], transT=0, TRANS_LEN=80, transPend=false, prevSceneN='', prevOff=0, bgPrevC=document.createElement('canvas');
   function vicStart(fn){ if(ambient){ fn(); openShop(); return; } vicBuild=fn; vicSel=0; state='victory'; saveGame(); }
-  function snapBg(){ bgPrevC.width=W; bgPrevC.height=H; var pc=bgPrevC.getContext('2d'); pc.drawImage(bgc,0,0); if(bgc.lm) pc.drawImage(bgc.lm,0,0); prevSceneN=scene; prevOff=bgOff; }
+  function drawSprites(ctx,src,off,dx,par){ (src.sp||[]).forEach(function(sp){ ctx.drawImage(sp.c,Math.round(sp.wx-off+dx)+(par?Math.round(par(sp.base)):0),sp.y); }); }
+  function snapBg(){ bgPrevC.width=W; bgPrevC.height=H; var pc=bgPrevC.getContext('2d'); pc.drawImage(bgc,0,0); if(bgc.lm) pc.drawImage(bgc.lm,0,0); drawSprites(pc,bgc,bgc.spOff,0,false); prevSceneN=scene; prevOff=bgOff; }
   function startTrans(){ transT=0; state='trans'; }
+  function vicMenu(){ if(state!=='victory') return; vicBuild=null; saveGame(); state='title'; menuSel=0; } // third button: back to the main menu (the next stage is already saved)
+  function vicAct(i){ if(i===2) vicMenu(); else vicGo(i===1); }
   function vicGo(shop){ if(state!=='victory') return; snapBg(); if(vicBuild) vicBuild(); vicBuild=null; if(shop){ transPend=true; openShop(); } else startTrans(); }
   function winLevel(){ // stage cleared: first victory animation (ball + bar), then winApply() -> shop
     if(ambient){ winApply(); return; }
@@ -353,11 +408,13 @@
   var ambient=false, ambFull=true, ambT=0, ambTee=0, lookIdx=1;
   function toggleAuto(){ if(ambient){ if(ambFull){ exitToTitle(); } else { ambient=false; K.l=0; K.r=0; shopAutoT=-1; msg=L('AUTOPILOT OFF'); msgT=80; } }
     else if(state==='tee'||state==='play'){ ambient=true; ambFull=false; ambT=0; ambTee=0; apScore=score; apGold=gold; apLives=lives; msg=L('AUTOPILOT ON - TAB = OFF'); msgT=100; } }
-  function exitToTitle(){ ambient=false; var bs=loadSave(); init(true); if(bs&&bs.lv) applySave(bs); state='title'; menuSel=0; }
-  function bgJump(dir){ if(dir>0) return clusterJump(1); var i=lookIdx-1, sc=LEVELS[i].scene; while(i>0&&LEVELS[i-1].scene===sc) i--; return clusterJump(-1,i+1); } // arrows: step through background types only (first stage of each)
-  var lookSaved=0;
-  function lookStage(n){ lookIdx=n; level=n; hole=n; seedN++; layout(); reset(); state='look'; msgT=0; }
   function startAmbient(){ ambient=true; ambFull=true; ambT=0; ambTee=0; init(true); level=hole=1+((Math.random()*LEVELS.length)|0); lives=99; seedN++; layout(); reset(); msg='AMBIENCE - '+LV().name; msgT=160; }
+  function exitToTitle(){ ambient=false; var bs=loadSave(); init(true); if(bs&&bs.lv) applySave(bs); state='title'; menuSel=0; }
+  function bgJump1(dir,cur){ if(dir>0) return clusterJump(1,cur); var i=cur-1, sc=LEVELS[i].scene; while(i>0&&LEVELS[i-1].scene===sc) i--; return clusterJump(-1,i+1); }
+  var devAllStages=false; // dev mode: step through every single stage in the viewer instead of one per background
+  function bgJump(dir){ if(DEVH&&devAllStages) return ((lookIdx-1+dir+LEVELS.length)%LEVELS.length)+1; var n=bgJump1(dir,lookIdx), gz=0; while(!bgVis(LEVELS[n-1].scene)&&gz++<LEVELS.length) n=bgJump1(dir,n); return n; } // locked backgrounds are skipped // arrows: step through background types only (first stage of each)
+  var lookSaved=0;
+  function lookStage(n){ devSel=null; devScSel=null; lookIdx=n; level=n; hole=n; seedN++; layout(); reset(); state='look'; msgT=0; }
   function ambientAI(){ ambT++;
     if(ambFull&&ambT>5400){ ambT=1; level=level%LEVELS.length+1; hole=level; seedN++; layout(); reset(); msg='STAGE '+lvNum()+' '+LV().name; msgT=160; return; }
     K.ml=0; K.mr=0; vco=0; mpend=0; if(ambFull) lives=99;
@@ -380,24 +437,90 @@
   var ambDesc=false, ambStrike=false, ambTx=150, ambTy=40;
   // stage preview for the map tooltip: runs the real layout once per stage (cached) and restores all state afterwards
   var pvCache={};
-  function stagePreview(n){ var key=mode+'|'+n+'|'+W; if(pvCache[key]!==undefined) return pvCache[key]; var rs=renderScene, o={level:level,hole:hole,bumpers:bumpers,holes:holes,blocks:blocks,guides:guides,boss:boss,bshots:bshots,stunT:stunT,seed:seed,scene:scene,bgSeed:bgSeed,bricks:bricks,stickies:stickies,fl:fl,co:co,pwT:pw.T,cx:cx}, res=null;
-    try{ renderScene=function(){}; level=n; hole=n; layout(); res={bumpers:bumpers.filter(function(b){ return !b.par; }),holes:holes,blocks:blocks,guides:guides.slice(4),bricks:bricks,boss:!!boss}; }catch(e){ res=null; }
-    renderScene=rs; level=o.level; hole=o.hole; bumpers=o.bumpers; holes=o.holes; blocks=o.blocks; guides=o.guides; boss=o.boss; bshots=o.bshots; stunT=o.stunT; seed=o.seed; scene=o.scene; bgSeed=o.bgSeed; bricks=o.bricks; stickies=o.stickies; fl=o.fl; co=o.co; pw.T=o.pwT; cx=o.cx; return (pvCache[key]=res); }
+  function stagePreview(n,tn){ var key=mode+'|'+n+'|'+W+'|'+(tn||0), otn=tut; if(pvCache[key]!==undefined) return pvCache[key]; var rs=renderScene, o={level:level,hole:hole,bumpers:bumpers,holes:holes,blocks:blocks,guides:guides,boss:boss,bshots:bshots,stunT:stunT,seed:seed,scene:scene,bgSeed:bgSeed,bricks:bricks,stickies:stickies,fl:fl,co:co,pwT:pw.T,cx:cx,sec:secObjs}, res=null;
+    try{ renderScene=function(){}; if(tn) tut=tn; level=n; hole=n; layout(); res={bumpers:bumpers.filter(function(b){ return !b.par; }),holes:holes,blocks:blocks,guides:guides.slice(4),bricks:bricks,boss:!!boss}; }catch(e){ res=null; }
+    tut=otn; renderScene=rs; level=o.level; hole=o.hole; bumpers=o.bumpers; holes=o.holes; blocks=o.blocks; guides=o.guides; boss=o.boss; bshots=o.bshots; stunT=o.stunT; seed=o.seed; scene=o.scene; bgSeed=o.bgSeed; bricks=o.bricks; stickies=o.stickies; fl=o.fl; co=o.co; pw.T=o.pwT; cx=o.cx; secObjs=o.sec; return (pvCache[key]=res); }
   var lookBackR=null, lookGoR=null, lookViewR=null, lookFlat=false; try{ lookFlat=localStorage.golfLookFlat==='1'; }catch(e){} // viewer: flat map (no movement) or horizon with parallax
   var FLATDEF={western:1,city:1,flight:1,dungeon:1,forest:1,cozy:1}, flatMap={}; try{ flatMap=JSON.parse(localStorage.golfFlatMap||'{}')||{}; }catch(e){}
   function flatFor(sc){ return flatMap[sc]!==undefined?!!flatMap[sc]:!!FLATDEF[sc]; } // parallax setting per background type: flat (still) or horizon (moves)
   function toggleLookView(){ var sc=LEVELS[lookIdx-1].scene; flatMap[sc]=!flatFor(sc); try{ localStorage.golfFlatMap=JSON.stringify(flatMap); }catch(e){} }
+  var lookDevR=[], devBgMode=false, devSel=null, devList=false; // devList: overlay with all stages to jump to
+  // devSel: the obstacle picked by a click in the viewer {k:'bumper'|'block'|'brick', i:index} (layouts are deterministic per stage)
+  function devOutline(o,c){ // exact 1px outline around the obstacle (rect for bricks/blocks/boss, ring for bumpers)
+    if(o.r&&!o.w){ var rr=o.r+2, n=Math.max(16,Math.ceil(rr*3)), a; for(a=0;a<n;a++){ var an=a*6.2832/n; box(Math.floor(o.x+Math.cos(an)*rr),Math.floor(o.y+Math.sin(an)*rr),1,1,c); } return; }
+    var x0=Math.floor(o.sc?o.x-o.w/2:o.x)-1, y0=Math.floor(o.sc?o.y-o.h/2:o.y)-1, w=Math.ceil(o.w)+2, h=Math.ceil(o.h)+2; box(x0,y0,w,1,c); box(x0,y0+h-1,w,1,c); box(x0,y0,1,h,c); box(x0+w-1,y0,1,h,c); }
+  function devBox(o){ return o.sc?{x:o.x,y:o.y,w:o.w/2+3,h:o.h/2+3}:(o.w?{x:o.x+o.w/2,y:o.y+o.h/2,w:o.w/2+3,h:o.h/2+3}:{x:o.x,y:o.y,w:o.r+4,h:o.r+4}); }
+  function devObjs(k){ return k==='boss'?(boss?[boss]:[]):k==='bumper'?bumpers.filter(function(b){ return !b.par; }):(k==='block'?blocks:bricks); }
+  function devPickNear(fx,fy,tol){ var ex=devPick(fx,fy); if(ex) return ex; var best=null, bd=tol+1; ['boss','bumper','block','brick'].forEach(function(k){ devObjs(k).forEach(function(o,i){ var bb=devBox(o), d; if(k==='bumper') d=Math.max(0,Math.hypot(o.x-fx,o.y-fy)-o.r); else { var hw=bb.w-3, hh2=bb.h-3; d=Math.hypot(Math.max(0,Math.abs(fx-bb.x)-hw),Math.max(0,Math.abs(fy-bb.y)-hh2)); } if(d<bd){ bd=d; best={k:k,i:i}; } }); }); return best; } // forgiving drop: the nearest obstacle within tol field pixels
+  function devPick(fx,fy){ var ks=['boss','bumper','block','brick'], a, i, o; for(a=0;a<4;a++){ var arr=devObjs(ks[a]); for(i=0;i<arr.length;i++){ o=arr[i]; if(ks[a]==='boss'?(Math.abs(fx-o.x)<=o.w/2+2&&Math.abs(fy-o.y)<=o.h/2+2):ks[a]==='bumper'?Math.hypot(o.x-fx,o.y-fy)<=o.r+3:(fx>=o.x-2&&fx<=o.x+o.w+2&&fy>=o.y-2&&fy<=o.y+o.h+2)) return {k:ks[a],i:i}; } } return null; }
+  function devRelook(){ layout(); reset(); state='look'; } // re-place the secrets in the viewed stage (same seed)
+  var devDragPend=null, devDragOn=false, devScSel=null, devConfirm=0, devMsg='', devMsgT=0, devListScroll=-1, devOpenSc={}, devDd=null, devUiLast=''; // devDd: open background dropdown of a cluster {sc,y} // devListScroll -1 = jump to the current stage when the list opens
+  try{ var du=JSON.parse(localStorage.golfDevUi||'null'); if(du){ devList=!!du.list; devListScroll=typeof du.scroll==='number'?du.scroll:-1; devOpenSc=du.open||{}; devBgMode=!!du.bg; devAllStages=!!du.all; } }catch(e){} // dev editor UI state (list open, scroll, opened clusters, modes) survives a reload
+  function devUiSave(){ var st=JSON.stringify({list:devList,scroll:devListScroll,open:devOpenSc,bg:devBgMode,all:devAllStages}); if(st!==devUiLast){ devUiLast=st; try{ localStorage.golfDevUi=st; }catch(e){} } }
+  function lkGeo(){ return (DEVH&&DEVH.set)?{x:6,y:32,s:0.62,fx:2,fy:28,fw:194,fh:148}:{x:45,y:32,s:0.7,fx:41,fy:28,fw:218,fh:162}; } // dev mode: smaller field, a settings panel on the right
+  function devDrop(){ var d=devDragPend; if(!d) return; devDragPend=null; var on=devDragOn; devDragOn=false; if(state!=='look') return; if(!on){ d.r.f(); return; } // short press = normal click, real drag = drop onto the obstacle under the cursor
+    var lg=lkGeo(); if(mx>=lg.x&&mx<=lg.x+W*lg.s&&my>=lg.y&&my<=lg.y+H*lg.s){ var pk=devPickNear((mx-lg.x)/lg.s,(my-lg.y)/lg.s,14); if(pk){ devSel=pk; if(d.drag.tab!==undefined) DEVH.set(d.drag.tab,lookIdx,pk.k,pk.i); else DEVH.setBg(lookIdx,pk.k,d.drag.scene,pk.i); devRelook(); devMsg='PLACED: '+(d.drag.label||'')+' IN '+pk.k.toUpperCase()+' '+pk.i; devMsgT=150; } else { devMsg='NO OBSTACLE THERE - DROP IT ONTO ONE'; devMsgT=150; } } else { devMsg='DROP IT ONTO AN OBSTACLE IN THE FIELD'; devMsgT=150; } }
+  function drawLookDev(){ lookDevR=[]; if(!DEVH||!DEVH.set) return; devUiSave(); if(devDragPend&&!devDragOn&&Math.hypot(mx-devDragPend.x,my-devDragPend.y)>4) devDragOn=true; var cfg=secCfg(), ab={bumper:'BMP',block:'BLK',brick:'BRK',boss:'BOSS'}, sn=['UPS','LOOK','GFX','CHEAT','HARD'], PX=198, PW=99, scl=[]; LEVELS.forEach(function(q){ if(scl.indexOf(q.scene)<0) scl.push(q.scene); });
+    function btn(x,y,w,t,col,f,tip,on,drag,bh){ bh=bh||9; var r={x:x,y:y,w:w,h:bh,f:f,tip:tip||'',drag:drag}; lookDevR.push(r); var hh=mouseIn&&hit(r); bevel(x,y,w,bh,on?7:(hh?4:12),on?8:(hh?14:11),on?15:(hh?2:15)); txt(t,x+((w-String(t).length*4)>>1),y+2+((bh-9)>>1),on?1:(hh?0:col)); }
+    function where(o){ return (ab[o.obs]||'')+(o.idx!==undefined?o.idx:''); }
+    bevel(PX-3,28,PW+5,162,12,11,15); txt(L('SECRETS - STAGE ')+lookIdx,PX,31,9);
+    txt('1  CLICK AN OBSTACLE',PX,41,1); txt('   IN THE FIELD',PX,47,1);
+    if(devMsgT>0){ devMsgT--; txt(devMsg,PX+2,54,(tick>>2)&1?2:1); } else txt(devSel?'SELECTED: '+ab[devSel.k]+' '+devSel.i:'NOTHING SELECTED YET',PX+2,54,devSel?14:8);
+    txt('2  DRAG A TAB ONTO AN',PX,64,1); txt('   OBSTACLE (OR CLICK IT)',PX,70,1);
+    TABN.forEach(function(nm,t){ var c=cfg[t], here=c&&+c.stage===lookIdx, lab=sn[t]+': '+(c&&c.stage?(here?where(c):'STAGE '+c.stage):'NOT SET');
+      btn(PX,80+t*11,PW,lab,here?4:(c&&c.stage?8:11),function(){ if(!devSel){ devMsg='CLICK AN OBSTACLE FIRST'; devMsgT=120; return; } if(here&&c.obs===devSel.k&&c.idx===devSel.i) DEVH.set(t,0); else DEVH.set(t,lookIdx,devSel.k,devSel.i); devRelook(); },
+        'HIDE THE '+nm+' TAB IN AN OBSTACLE: DRAG THIS BUTTON ONTO AN OBSTACLE IN THE FIELD (OR SELECT ONE AND CLICK). CLICK ON THE SAME ONE AGAIN = REMOVE. A TAB HAS ONE SECRET IN THE WHOLE GAME',false,{tab:t,label:sn[t]}); });
+    var uy=144; btn(PX,uy,48,'MARK:'+(DEVH.mark()?'ON':'OFF'),DEVH.mark()?4:11,function(){ DEVH.toggle('mark'); },'SHOW WHERE THE SECRETS SIT IN THE FIELD');
+    btn(PX+50,uy,49,'ALL:'+(DEVH.showAll()?'ON':'OFF'),DEVH.showAll()?4:11,function(){ DEVH.toggle('showAll'); },'PREVIEW: SHOW ALL LOCKED SHOP TABS AND BACKGROUNDS IN THE GAME');
+    btn(PX,uy+10,48,'RELOCK',11,function(){ tabsOpen={}; bgOpen={}; tabsSave(); },'LOCK ALL TABS AND BACKGROUNDS AGAIN TO TEST THE UNLOCKING');
+    btn(PX+50,uy+10,49,'EXPORT',14,function(){ var tx=DEVH.exportText(); (navigator.clipboard?navigator.clipboard.writeText(tx):Promise.reject()).then(function(){ alert('Copied. Paste it into flippout-secrets.js'); },function(){ prompt('Copy this into flippout-secrets.js:',tx); }); },'COPY THE SETTINGS. PASTE THEM INTO FLIPPOUT-SECRETS.JS FOR THE RELEASE');
+    var sure=tick<devConfirm;
+    btn(PX,uy+20,48,'RESET STAGE',2,function(){ DEVH.clearStage(lookIdx); devSel=null; devRelook(); },'RESET THIS STAGE: REMOVES ALL SECRETS (SHOP TABS AND BACKGROUND UNLOCKS) HIDDEN IN STAGE '+lookIdx);
+    btn(PX+50,uy+20,49,sure?'SURE? CLICK':'RESET ALL',sure?4:2,function(){ if(tick<devConfirm){ devConfirm=0; DEVH.discard(); flatMap={}; try{ localStorage.removeItem('golfFlatMap'); }catch(e){} devSel=null; devScSel=null; devOpenSc={}; devAllStages=false; devBgMode=false; devRelook(); } else devConfirm=tick+240; },'RESET EVERYTHING YOU CHANGED IN THE STAGE EDITOR (SECRETS, STAGE CLUSTER BACKGROUNDS, FLAT/HORIZON VIEWS, MARK/ALL SWITCHES). CLICK TWICE. UNLOCKED PROGRESS IS KEPT (USE RELOCK)');
+    btn(PX,uy+30,62,devList?'LIST: ON':'STAGE LIST',devList?4:14,function(){ devList=!devList; devListScroll=-1; devDd=null; },'LIST OF ALL STAGES TO JUMP TO. CLUSTERS OPEN / CLOSE, THE DROPDOWN ON THE RIGHT CHOOSES THEIR BACKGROUND',false,null,14);
+    btn(PX+64,uy+30,35,devAllStages?'ARR:ALL':'ARR:BG',devAllStages?4:11,function(){ devAllStages=!devAllStages; },'WHAT THE ARROWS STEP THROUGH: EVERY SINGLE STAGE (ALL) OR ONE STAGE PER BACKGROUND (BG)',false,null,14);
+    if(devList){ var has={}; TABN.forEach(function(nm,t){ if(cfg[t]&&cfg[t].stage) has[cfg[t].stage]=1; }); 
+      var pxl=6, pyl=30, pwl=186, phl=158, curSc=LEVELS[lookIdx-1].scene, items=[], lastSc=null, yy=0, visH=phl-14; // one column, a dropdown per stage cluster (image label = background icon); click selects the cluster and opens/closes it
+      LEVELS.forEach(function(lv2,i){ if(lv2.scene!==lastSc){ lastSc=lv2.scene; items.push({hd:lv2.scene,first:i+1,h:15,y:yy}); yy+=15; } if(devOpenSc[lv2.scene]===undefined?lv2.scene===curSc:devOpenSc[lv2.scene]){ items.push({st:i+1,name:lv2.name,h:7,y:yy}); yy+=7; } });
+      var maxS=Math.max(0,yy-visH), curY=0; items.forEach(function(it){ if(it.st===lookIdx) curY=it.y; });
+      if(devListScroll<0) devListScroll=Math.max(0,curY-((visH/2)|0)); devListScroll=Math.max(0,Math.min(maxS,Math.round(devListScroll)));
+      box(pxl-1,pyl-1,pwl+2,phl+2,1); box(pxl,pyl,pwl,phl,15); txt(L('ALL STAGES')+' ('+LEVELS.length+')   * = SECRET HERE',pxl+4,pyl+3,9);
+      g.save(); g.beginPath(); g.rect(pxl,pyl+13,pwl,visH); g.clip(); var rows=[];
+      var bmap=cfg.bgmap||{};
+      items.forEach(function(it2){ var ry=pyl+13+it2.y-devListScroll; if(ry+it2.h<pyl+13||ry>pyl+13+visH) return; var r={x:pxl+2,y:ry,w:pwl-10,h:it2.h,f:(function(it3){ return function(){ if(it3.hd){ var op=devOpenSc[it3.hd]===undefined?it3.hd===curSc:devOpenSc[it3.hd]; devOpenSc[it3.hd]=!op; } else { devList=false; lookStage(it3.st); } }; })(it2),tip:it2.hd?'CLICK = OPEN / CLOSE THE STAGES OF THIS CLUSTER':''};
+        if(it2.hd){ var eff=bmap[it2.hd]||it2.hd, ddr={x:r.x+100,y:ry+1,w:r.w-102,h:12,f:(function(hs,yy2){ return function(){ devDd={sc:hs,y:yy2}; }; })(it2.hd,ry),tip:'WHICH BACKGROUND THIS STAGE CLUSTER GETS. CLICK = CHOOSE ANOTHER ONE'}; rows.push(ddr); }
+        rows.push(r); var hh=mouseIn&&hit(r);
+        if(it2.hd){ var ex=(devOpenSc[it2.hd]===undefined?it2.hd===curSc:devOpenSc[it2.hd]); box(r.x,ry,r.w,14,hh?14:8); drawSceneIcon(it2.hd,r.x+2,ry+1,18,12); txt((ex?'v ':'> ')+String(SCN[it2.hd]||it2.hd).toUpperCase().slice(0,13),r.x+24,ry+5,0);
+          var ov=bmap[it2.hd]&&bmap[it2.hd]!==it2.hd, dh=mouseIn&&hit(rows[rows.length-2]); box(r.x+100,ry+1,r.w-102,12,ov?4:(dh?12:15)); box(r.x+100,ry+1,r.w-102,1,1); txt(String(SCN[eff]||eff).toUpperCase().slice(0,12),r.x+103,ry+5,ov?0:1); txt('v',r.x+r.w-8,ry+5,ov?0:11); }
+        else { var cur2=it2.st===lookIdx; if(cur2||hh) box(r.x,ry,r.w,6,cur2?2:12); txt((has[it2.st]?'*':' ')+(it2.st<10?' ':'')+it2.st+'  '+String(it2.name).slice(0,28),r.x+14,ry+1,cur2?1:(has[it2.st]?4:11)); } });
+      g.restore();
+      var sbx=pxl+pwl-7, sbh=visH; box(sbx,pyl+13,5,sbh,12); if(maxS>0){ var th=Math.max(6,Math.round(sbh*visH/yy)); box(sbx,pyl+13+Math.round((sbh-th)*devListScroll/maxS),5,th,11); }
+      lookDevR=rows.concat(lookDevR); lookDevR.push({x:sbx,y:pyl+13,w:5,h:sbh,f:function(){ var q=(my-(pyl+13))/sbh; devListScroll=Math.round(q*maxS); }}); lookDevR.push({x:pxl,y:pyl,w:pwl,h:phl,f:function(){}});
+      if(devDd){ var opts=[null].concat(scl), oh=11, dw=112, dx0=pxl+pwl-dw-9, dy0=Math.max(pyl+13,Math.min(pyl+phl-opts.length*oh-3,devDd.y+14)), orows=[]; box(dx0-1,dy0-1,dw+2,opts.length*oh+2,1); box(dx0,dy0,dw,opts.length*oh,15);
+        opts.forEach(function(o3,k){ var r3={x:dx0,y:dy0+k*oh,w:dw,h:oh,f:(function(sc3,cl){ return function(){ DEVH.setBgMap(cl,sc3&&sc3!==cl?sc3:null); devDd=null; devRelook(); }; })(o3,devDd.sc),tip:o3?(SCN[o3]||o3).toUpperCase():'BACK TO THE ORIGINAL BACKGROUND OF THE CLUSTER'}; orows.push(r3); var h3=mouseIn&&hit(r3), cur3=(bmap[devDd.sc]||devDd.sc)===(o3||devDd.sc); if(cur3||h3) box(r3.x,r3.y,dw,oh-1,cur3?2:12);
+          if(o3){ drawSceneIcon(o3,r3.x+2,r3.y+1,14,9); txt(String(SCN[o3]||o3).toUpperCase().slice(0,16),r3.x+20,r3.y+3,cur3?1:11); } else txt('(ORIGINAL)',r3.x+20,r3.y+3,cur3?1:14); });
+        lookDevR=orows.concat([{x:0,y:0,w:W,h:H,f:function(){ devDd=null; }}]); } }
+    if(devDragPend&&devDragOn){ var lgd=lkGeo(), pk2=(mx>=lgd.x&&mx<=lgd.x+W*lgd.s&&my>=lgd.y&&my<=lgd.y+H*lgd.s)?devPickNear((mx-lgd.x)/lgd.s,(my-lgd.y)/lgd.s,14):null;
+      if(pk2){ var ob2=devObjs(pk2.k)[pk2.i]; if(ob2){ var bb3=devBox(ob2), ox=Math.floor(lgd.x+(bb3.x-bb3.w)*lgd.s), oy=Math.floor(lgd.y+(bb3.y-bb3.h)*lgd.s), ow=Math.ceil(bb3.w*2*lgd.s), oh2=Math.ceil(bb3.h*2*lgd.s), gc=(tick>>1)&1?5:14; box(ox,oy,ow,1,gc); box(ox,oy+oh2,ow,1,gc); box(ox,oy,1,oh2,gc); box(ox+ow,oy,1,oh2+1,gc); } }
+      var gl=devDragPend.drag.label||'', gw=gl.length*4+8; var gx6=Math.round(mx+6), gy6=Math.round(my+6); bevel(gx6,gy6,gw,11,pk2?5:7,11,15); txt(gl,gx6+4,gy6+3,1); lookDevR=[]; } // dragging a button: ghost label + the obstacle under the cursor lights up green
+    var tp=''; if(mouseIn&&!devDragOn) for(var tq=0;tq<lookDevR.length;tq++) if(lookDevR[tq].tip&&hit(lookDevR[tq])){ tp=lookDevR[tq].tip; break; }
+    devTipTxt=tp; } // (drawn in drawDevTip, after all buttons)
+  var devTipTxt='';
+  function drawDevTip(){ var tp=devTipTxt; if(tp){ var words=tp.split(' '), lns=[], cur3=''; words.forEach(function(wd){ if((cur3+' '+wd).trim().length>30){ lns.push(cur3); cur3=wd; } else cur3=(cur3+' '+wd).trim(); }); if(cur3) lns.push(cur3);
+      var tw=0; lns.forEach(function(l3){ tw=Math.max(tw,l3.length); }); var bw3=tw*4+8, bh3=lns.length*7+6, bx3=Math.round(Math.max(2,Math.min(W-bw3-2,mx-bw3-4))), by3=Math.round(Math.max(2,Math.min(H-bh3-2,my+8))); bevel(bx3,by3,bw3,bh3,0,11,12); lns.forEach(function(l3,li){ txt(l3,bx3+4,by3+4+li*7,1); }); } } // tooltip of the hovered dev button: drawn last so it lies over everything
   function drawLook(){ var N=LEVELS.length, lv=LEVELS[lookIdx-1], cl=(tick>>4)&1;
-    bevel(8,13,W-16,15,12,11,15); var scl=[]; LEVELS.forEach(function(q){ if(scl.indexOf(q.scene)<0) scl.push(q.scene); }); var t1=pickMode?L('START STAGE ')+lookIdx+L(' OF ')+N+' - '+lv.name:L('BACKGROUND ')+(scl.indexOf(lv.scene)+1)+L(' OF ')+scl.length+' - '+(SCN[lv.scene]||lv.scene); txtS(t1,((W-t1.length*4)/2)|0,18,4,1);
+    bevel(8,13,W-16,15,12,11,15); var scl=[]; LEVELS.forEach(function(q){ if(scl.indexOf(q.scene)<0) scl.push(q.scene); }); var t1=(DEVH&&devAllStages)?L('STAGE ')+lookIdx+'/'+N+' - '+lv.name:pickMode?L('START STAGE ')+lookIdx+L(' OF ')+N+' - '+lv.name:L('BACKGROUND ')+(scl.indexOf(lv.scene)+1)+L(' OF ')+scl.length+' - '+(SCN[bgFor(lv.scene)]||bgFor(lv.scene)); var vwx=26+L(flatFor(lv.scene)?'VIEW: FLAT':'VIEW: HORIZON').length*4+10+8, tx1=Math.max(((W-t1.length*4)/2)|0,vwx); t1=t1.slice(0,Math.max(0,Math.floor((W-24-tx1)/4))); txtS(t1,tx1,18,4,1); // title never runs under the view button or the arrow
     for(var k=0;k<6;k++){ box(14+k,20-k+(k>3?0:0),1,2*k+1-(k>5?0:0)>0?1:1,cl?4:1); }
     for(k=0;k<5;k++){ box(14+k,20-k,1,k*2+1,cl?4:1); box(W-14-k,20-k,1,k*2+1,cl?4:1); }
-    bevel(8,H-34,W-16,24,12,11,15); txt(L('SCENE: ')+(SCN[lv.scene]||lv.scene)+L('  SHAPE: ')+String(lv.pat).toUpperCase(),16,H-30,8);
-    txt(pickMode?L('LEFT RIGHT UP DOWN: BACKGROUND - ENTER = START'):L('LEFT RIGHT UP DOWN: BACKGROUND - ESC = BACK'),16,H-20,cl?4:1);
+    bevel(8,H-34,W-16,24,12,11,15); txt(L('SCENE: ')+(SCN[bgFor(lv.scene)]||bgFor(lv.scene))+L('  SHAPE: ')+String(lv.pat).toUpperCase(),16,H-30,8);
+    txt(pickMode?L('LEFT RIGHT UP DOWN: BACKGROUND - ENTER = START'):L('LEFT RIGHT UP DOWN: BACKGROUND - ESC = BACK').replace('ESC',kLab('back')),16,H-20,cl?4:1);
     var lkF=flatFor(lv.scene), vl=lkF?L('VIEW: FLAT'):L('VIEW: HORIZON'); lookViewR={x:26,y:15,w:vl.length*4+10,h:11}; var vh=mouseIn&&hit(lookViewR); bevel(lookViewR.x,lookViewR.y,lookViewR.w,lookViewR.h,vh?4:15,vh?14:12,vh?2:0); txt(vl,lookViewR.x+5,lookViewR.y+3,vh?0:(lkF?11:4));
-    lookBackR={x:W-62,y:H-32,w:50,h:10}; lookGoR={x:W-116,y:H-32,w:50,h:10}; [[lookBackR,L('BACK')],[lookGoR,'START']].forEach(function(q){ var r=q[0], hh=mouseIn&&hit(r); bevel(r.x,r.y,r.w,r.h,hh?4:12,hh?14:11,hh?2:15); txt(q[1],r.x+((r.w-q[1].length*4)>>1),r.y+3,hh?0:1); }); if(mouseIn) drawCursor(); }
-  function openShop(from){ if(tut) return; if(ambient&&ambFull){ state='shop'; shopFrom='level'; sel=0; shopTab=0; scrollY=0; shopPg=0; shopPosF=0; ambShopT=0; shopAutoT=shopAutoMax=180; return; } if(ambient) ambient=false; shopAutoT=-1; shopFrom=from||'level'; state='shop'; sel=0; shopTab=0; scrollY=0; shopPg=0; shopPosF=0; if(document.exitPointerLock) document.exitPointerLock(); saveGame(); } // shop: release the mouse
+    drawLookDev();
+    lookBackR={x:W-62,y:H-32,w:50,h:10}; lookGoR={x:W-116,y:H-32,w:50,h:10}; [[lookBackR,L('BACK')],[lookGoR,'START']].forEach(function(q){ var r=q[0], hh=mouseIn&&hit(r); bevel(r.x,r.y,r.w,r.h,hh?4:12,hh?14:11,hh?2:15); txt(q[1],r.x+((r.w-q[1].length*4)>>1),r.y+3,hh?0:1); }); if(DEVH) drawDevTip(); if(mouseIn) drawCursor(); }
+  function openShop(from){ if(tut) return; if(ambient&&ambFull){ state='shop'; shopFrom='level'; sel=0; shopTab=0; scrollY=0; shopPg=0; shopPosF=0; ambShopT=0; shopAutoT=shopAutoMax=180; return; } if(ambient) ambient=false; shopAutoT=-1; shopFrom=from||'level'; state='shop'; sel=0; shopTab=0; scrollY=0; shopPg=0; shopPosF=0; if(document.exitPointerLock) document.exitPointerLock(); saveGame();
+    if(DEVH){ var dv=[]; if(DEVH.showAll&&DEVH.showAll()) dv.push('ALL TABS SHOWN (ALL:ON)'); var cfg5=secCfg(), op5=TABN.filter(function(nm,t){ return cfg5[t]&&cfg5[t].stage&&tabsOpen[t]; }); if(op5.length) dv.push('UNLOCKED: '+op5.join(' ')); var lk5=TABN.filter(function(nm,t){ return !tabsOpen[t]; }); dv.push('LOCKED: '+(lk5.join(' ')||'NONE')); msg='DEV '+dv.join(' - '); msgT=240; } } /* dev mode: tells why tabs are visible or hidden */ // shop: release the mouse
   var parts=[], caps=[], pw={E:0,S:0,M:0,X:0,T:0,Y:0,G:0,N:0,F:0,K:0,W:0,H:0}, saver=false;
-  var PU={K:{c:13,t:L('SMALL BALL'),d:900},W:{c:14,t:L('TINY BALL'),d:600},E:{c:8,t:L('LONG FLIPPER'),d:900},S:{c:9,t:L('SLOW'),d:720},M:{c:5,t:'MEGA BALL',d:600},X:{c:4,t:L('POINTS X2'),d:900},T:{c:14,t:L('FLOOR POOLS'),d:900},Y:{c:3,t:L('DYNAMITE'),d:720},G:{c:4,t:L('GOLD RUSH'),d:900},N:{c:9,t:'NEON',d:720},F:{c:14,t:L('PARACHUTE'),d:720},B:{c:3,t:L('BALL SAVER')},P:{c:2,t:L('EXTRA LIFE')},D:{c:14,t:'BALL SPLIT'},H:{c:12,t:'GHOST SHOT',d:900}};
+  var PU={SHOP:{c:4,t:L('SHOP PICKUP')},K:{c:13,t:L('SMALL BALL'),d:900},W:{c:14,t:L('TINY BALL'),d:600},E:{c:8,t:L('LONG FLIPPER'),d:900},S:{c:9,t:L('SLOW'),d:720},M:{c:5,t:'MEGA BALL',d:600},X:{c:4,t:L('POINTS X2'),d:900},T:{c:14,t:L('FLOOR POOLS'),d:900},Y:{c:3,t:L('DYNAMITE'),d:720},G:{c:4,t:L('GOLD RUSH'),d:900},N:{c:9,t:'NEON',d:720},F:{c:14,t:L('PARACHUTE'),d:720},B:{c:3,t:L('BALL SAVER')},P:{c:2,t:L('EXTRA LIFE')},D:{c:14,t:'BALL SPLIT'},H:{c:12,t:'GHOST SHOT',d:900}};
   function mult(){ return (pw.X>0?2:1)*(1+0.25*diffN()); }
   function boom(x,y){ burst(x,y,6,3); shake=5;
     bumpers.forEach(function(b){ if(!b.dead&&Math.hypot(b.x-x,b.y-y)<26+b.r){ b.hp--; b.flash=6; score+=mult()*20; if(b.hp<=0){ b.dead=true; addG(20); score+=mult()*b.pts; drop(b.x,b.y,0.45); burst(b.x,b.y,b.r); } } });
@@ -406,7 +529,7 @@
   function dropCaps(){ caps.forEach(function(c){ c.fast=true; c.vy=1; burst(c.x,c.y,2,2); }); }
   var lastDrop=-999;
   function drop(x,y,p){ if(caps.length>=1||tick-lastDrop<(tut===4?90:300)) return; if(tut===4?rnd()<0.5:rnd()<p*0.25*(1+0.3*luckU)){ lastDrop=tick; var ks='ESMXBPDDDTTKKWHH'+({western:'YYYGG',city:'NNNN',flight:'FFFF',dream:'FFGG',forest:'YYYNN',vapor:'NNFF',moon:'NNGG',dungeon:'YYMM',cozy:'FFGG'}[scene]||''); caps.push({x:x,y:y,k:ks[(rnd()*ks.length)|0]}); } }
-  function collect(k){ var u=PU[k]; msg=u.t; msgT=70; score+=50;
+  function collect(k,cp){ if(k==='SHOP'){ shopPickup(cp); return; } var u=PU[k]; msg=u.t; msgT=70; score+=50;
     if(u.d) pw[k]=u.d+(k==='T'?300*poolU:0); else if(k==='B') saver=true;
     else if(k==='D') split();
     else if(k==='P'){ if(mode==='breakout') lives++; else score+=300; } }
@@ -490,6 +613,10 @@
     else if(sc==='golf'){ R('#f2e6d0',-14,-14,20,14); R('#c8bca0',6,-14,5,14); R('#c03a3a',-16,-18,24,4); R('#8a2a2a',8,-18,5,4); R('#6a9ac8',-10,-11,5,5); R('#4a2a14',-2,-9,5,9); R('#fff',14,-34,1,34); R('#e03a3a',15,-34,7,5); R('#fff',-18,-3,3,3); }
     g.restore(); }
   function restyle(){ var sv=seed; seed=bgSeed; renderScene(); seed=sv; }
+  // Background sprites: objects with their own canvas that scroll with the world and move rigidly with the parallax of the plane they stand on (base = ground y)
+  var bgSprites=[], macSp=null, macDX=0;
+  function addSprite(wx,wy,w,h,base,paint){ var c=document.createElement('canvas'); c.width=w; c.height=h; var gs=g; g=c.getContext('2d'); g.translate(-wx,-wy); paint(); g=gs; var sp={c:c,wx:wx,y:wy,base:base,w:w,h:h}; bgSprites.push(sp); return sp; }
+  function spr(x,y,w,h,base,fn){ x=Math.floor(x); y=Math.floor(y); return addSprite(x-1,y-1,Math.ceil(w)+3,Math.ceil(h)+3,base,fn); } // sprite with a safety margin
   function paintScene(sc,noLM){ // scene background (also for the world map)
     var x,y,i;
     if(sc==='western'){ box(0,0,W,H,10);
@@ -504,7 +631,7 @@
       for(i=0;i<14;i++){ var bx=rnd()*W,by=rnd()*H,bw=8+rnd()*12,bh=8+rnd()*12; box(bx,by,bw,bh,15); box(bx+1,by+1,bw-2,bh-2,12); } }
     else if(sc==='dream'){ box(0,0,W,H,8); // Dreamland: pastel sky with clouds, stars and pink hills
       for(i=0;i<46;i++) box(rnd()*W,rnd()*H,1,1,rnd()<0.5?1:4);
-      for(i=0;i<9;i++){ var wx=rnd()*W, wy=10+rnd()*(H-70), wr=7+rnd()*9; disc(wx|0,wy|0,wr|0,1); disc((wx+wr*0.8)|0,(wy+3)|0,(wr*0.7)|0,1); disc((wx-wr*0.8)|0,(wy+4)|0,(wr*0.6)|0,1); }
+      for(i=0;i<9;i++){ rnd(); rnd(); rnd(); } // (clouds are separate parallax layers now, see drawClouds)
       var ph2=rnd()*6; for(x=0;x<W;x++){ var hy=H-36+Math.sin(x/23+ph2)*8; box(x,hy,1,H-hy,13); box(x,hy,1,2,1); } }
     else if(sc==='vapor'){ var hz=(H*0.5)|0; // Vaporwave in the style of Floral Shoppe covers: pink-teal sky, checkerboard floor, marble bust, pseudo characters
       var skyC=[13,13,13,10,13,14,14,8,14,8];
@@ -513,21 +640,21 @@
         for(x=0;x<W;x+=2){ var u2=(x-cx)/(dd*34+1), chk=((Math.floor(u2)+rowT)&1)===0; box(x,y,2,1,chk?1:14); } }
       // Retro Mac (pixel art 44x49) instead of marble bust: vaporwave classic in the background
       var mcx=((W*0.3)|0)-22, mcy=hz+10-MAC.rows.length; macX=mcx; macY=mcy;
-      MAC.rows.forEach(function(row,ry){ for(var rx=0;rx<row.length;){ var ch=row[rx]; if(ch==='.'){ rx++; continue; } var e=rx; while(e<row.length&&row[e]===ch) e++; g.fillStyle=MAC.cols[parseInt(ch,16)]; g.fillRect(mcx+rx,mcy+ry,e-rx,1); rx=e; } });
+      macSp=addSprite(mcx,mcy,44,MAC.rows.length,hz+10,function(){ MAC.rows.forEach(function(row,ry){ for(var rx=0;rx<row.length;){ var ch=row[rx]; if(ch==='.'){ rx++; continue; } var e=rx; while(e<row.length&&row[e]===ch) e++; g.fillStyle=MAC.cols[parseInt(ch,16)]; g.fillRect(mcx+rx,mcy+ry,e-rx,1); rx=e; } }); });
       // retro window
-      for(i=0;i<2;i++){ var wx2=20+rnd()*(W-90), wy2=hz+14+rnd()*40; box(wx2-1,wy2-1,44,26,0); box(wx2,wy2,42,24,1); box(wx2,wy2,42,6,7); box(wx2+36,wy2+1,4,4,2); box(wx2+4,wy2+10,24,2,11); box(wx2+4,wy2+15,16,2,11); }
+      for(i=0;i<2;i++){ var wx2=Math.floor(20+rnd()*(W-90)), wy2=Math.floor(hz+14+rnd()*40); addSprite(wx2-1,wy2-1,44,26,wy2+24,function(){ box(wx2-1,wy2-1,44,26,0); box(wx2,wy2,42,24,1); box(wx2,wy2,42,6,7); box(wx2+36,wy2+1,4,4,2); box(wx2+4,wy2+10,24,2,11); box(wx2+4,wy2+15,16,2,11); }); }
       // palms
-      for(i=0;i<2;i++){ var ppx=i?W-18:14, ppy=hz-4; box(ppx,ppy-26,2,26,10); for(k=0;k<6;k++){ box(ppx+k*2,ppy-26+((k*k)>>2),4,1,5); box(ppx-k*2,ppy-26+((k*k)>>2),4,1,5); } } }
+      for(i=0;i<2;i++){ var ppx=i?W-18:14, ppy=hz-4; addSprite(ppx-12,ppy-27,30,28,ppy,function(){ box(ppx,ppy-26,2,26,10); for(var k=0;k<6;k++){ box(ppx+k*2,ppy-26+((k*k)>>2),4,1,5); box(ppx-k*2,ppy-26+((k*k)>>2),4,1,5); } }); } }
     else if(sc==='moon'){ // Moonstone: medieval moonlit night with castle, stone circle and fog
       for(y=0;y<H;y++){ var f2=y/H; box(0,y,W,1,f2<0.25?15:(f2<0.55?7:(f2<0.8?9:12))); }
       for(i=0;i<60;i++) box(rnd()*W,rnd()*H*0.6,1,1,rnd()<0.5?1:4);
       var mx0=(W*0.72)|0; disc(mx0,40,22,1); disc(mx0-6,44,4,11); disc(mx0+7,34,3,11); disc(mx0+2,50,2,11);
       for(x=0;x<W;x++){ var hy2=H-46+Math.sin(x/31)*10+Math.sin(x/13)*3; box(x,hy2,1,H-hy2,6); box(x,hy2,1,2,5); }
-      box(18,H-100,10,56,15); box(32,H-88,10,44,15); box(46,H-104,12,60,15); for(i=0;i<4;i++){ box(18+i*3,H-103,2,3,15); box(46+i*3,H-107,2,3,15); } box(21,H-90,3,5,4); box(49,H-96,3,5,4); box(35,H-76,3,5,4);
-      for(i=0;i<5;i++){ var sx=(W*0.3+i*34)|0, sy=(H-50-Math.abs(Math.sin(i*1.3))*8)|0; box(sx,sy-18,8,22,11); box(sx,sy-18,8,2,1); box(sx+2,sy-10,1,1,14); }
+      spr(18,H-107,40,64,H-44,function(){ box(18,H-100,10,56,15); box(32,H-88,10,44,15); box(46,H-104,12,60,15); for(var i=0;i<4;i++){ box(18+i*3,H-103,2,3,15); box(46+i*3,H-107,2,3,15); } box(21,H-90,3,5,4); box(49,H-96,3,5,4); box(35,H-76,3,5,4); });
+      for(i=0;i<5;i++){ var sx=(W*0.3+i*34)|0, sy=(H-50-Math.abs(Math.sin(i*1.3))*8)|0; spr(sx,sy-18,8,22,sy+4,function(){ box(sx,sy-18,8,22,11); box(sx,sy-18,8,2,1); box(sx+2,sy-10,1,1,14); }); }
       for(i=0;i<6;i++){ var fy=H-60+rnd()*50; for(x=0;x<W;x+=3) box(x,fy+Math.sin(x/17+i)*2,3,1,11); } }
     else if(sc==='train'){ var k, row, thz=(H*0.52)|0; box(0,0,W,H,8); // English manor (Croft Manor look): red brick facade with stone quoins, gothic windows, arched oak portal, gravel courtyard, hedges and an obstacle course
-      for(i=0;i<(W/60|0);i++){ var tcx=rnd()*W, tcy=6+rnd()*26; box(tcx,tcy,18+rnd()*14,3,1); box(tcx+3,tcy-2,10,2,1); }
+      for(i=0;i<(W/60|0);i++){ rnd(); rnd(); rnd(); }
       for(x=0;x<W;x++){ var thy=(thz-26+Math.sin(x/45)*5+Math.sin(x/13)*2)|0; box(x,thy,1,thz-thy,6); }
       var gw=function(wx,wy,ww,wh,lit){ disc(wx+ww/2,wy+ww/2,ww/2+2,11); box(wx-2,wy+ww/2,ww+4,wh-ww/2+4,11); disc(wx+ww/2,wy+ww/2,ww/2,lit?4:12); box(wx,wy+ww/2,ww,wh-ww/2,lit?4:12); if(!lit){ for(var q=0;q<5;q++) box(wx+((q*7)%ww),wy+ww/2+((q*11)%(wh-ww/2)),1,1,7); } box(wx+ww/2-1,wy,2,wh,11); box(wx,wy+(wh*0.55|0),ww,1,11); box(wx-3,wy+wh+3,ww+6,2,11); };
       for(var vx=24;vx<W-200;vx+=420){ var Wf=360; // facade
@@ -543,21 +670,21 @@
         gw(ppx+12,8,26,40,true); box(ppx-6,thz-3,64,3,11); box(ppx-10,thz-1,72,2,12);
         for(var pt=0;pt<2;pt++){ var ptx=pt?ppx+62:ppx-14; box(ptx,thz-9,8,9,10); box(ptx,thz-9,8,1,1); disc(ptx+4,thz-15,5,5); disc(ptx+4,thz-17,3,6); } }
       box(0,thz,W,H-thz,10); for(i=0;i<W*(H-thz)/6;i++) box(rnd()*W,thz+rnd()*(H-thz),1,1,[11,12,1,11,10][(rnd()*5)|0]); box(0,thz,W,1,12); box(0,thz+1,W,1,11);
-      for(i=0;i<(W/46|0);i++){ var hx=rnd()*W, hy=thz+10+rnd()*(H-thz-34), hw=26+rnd()*30; box(hx,hy+2,hw,9,0); box(hx,hy,hw,9,6); box(hx,hy,hw,2,5); for(k=2;k<hw-2;k+=5) box(hx+k,hy+4+((k*3)%4),2,1,5); }
-      for(i=0;i<(W/52|0);i++){ var ux=rnd()*W, uy=thz+12+rnd()*(H-thz-36); box(ux,uy,2,11,12); box(ux+28,uy,2,11,12); box(ux,uy+2,30,2,2); box(ux,uy+6,30,2,1); box(ux-1,uy+11,4,1,0); box(ux+27,uy+11,4,1,0); }
-      for(i=0;i<(W/70|0);i++){ var gx=rnd()*W, gy=thz+16+rnd()*(H-thz-40); box(gx,gy+3,1,7,1); box(gx+9,gy+3,1,7,1); box(gx,gy+2,10,1,2); box(gx+1,gy+1,8,1,2); box(gx+3,gy,4,1,2); }
-      for(i=0;i<(W/60|0);i++){ var px=rnd()*W, py=thz+12+rnd()*(H-thz-38); box(px,py+4,2,8,10); disc(px+1,py,6,5); disc(px+1,py-1,4,6); disc(px+1,py-7,3,5); }
-      for(i=0;i<(W/200|0);i++){ var fx=100+rnd()*(W-200), fy=thz+30+rnd()*(H-thz-70); disc(fx,fy,15,11); disc(fx,fy,13,8); box(fx-1,fy-10,3,10,11); disc(fx,fy-11,3,8); }
-      for(i=0;i<(W/90|0);i++){ var bx9=rnd()*W, by9=thz+18+rnd()*(H-thz-44); box(bx9,by9+7,36,3,10); box(bx9+2,by9+10,2,5,10); box(bx9+32,by9+10,2,5,10); box(bx9,by9+6,36,1,11); }
-      box(0,H-18,W,18,6); for(x=0;x<W;x+=6) box(x,H-21,5,4,5); box(0,H-18,W,1,0); }
+      for(i=0;i<(W/46|0);i++){ var hx=Math.floor(rnd()*W), hy=Math.floor(thz+10+rnd()*(H-thz-34)), hw=Math.floor(26+rnd()*30); spr(hx,hy,hw,12,hy+11,function(){ box(hx,hy+2,hw,9,0); box(hx,hy,hw,9,6); box(hx,hy,hw,2,5); for(var k=2;k<hw-2;k+=5) box(hx+k,hy+4+((k*3)%4),2,1,5); }); }
+      for(i=0;i<(W/52|0);i++){ var ux=Math.floor(rnd()*W), uy=Math.floor(thz+12+rnd()*(H-thz-36)); spr(ux-1,uy,32,12,uy+12,function(){ box(ux,uy,2,11,12); box(ux+28,uy,2,11,12); box(ux,uy+2,30,2,2); box(ux,uy+6,30,2,1); box(ux-1,uy+11,4,1,0); box(ux+27,uy+11,4,1,0); }); }
+      for(i=0;i<(W/70|0);i++){ var gx=Math.floor(rnd()*W), gy=Math.floor(thz+16+rnd()*(H-thz-40)); spr(gx,gy,11,11,gy+10,function(){ box(gx,gy+3,1,7,1); box(gx+9,gy+3,1,7,1); box(gx,gy+2,10,1,2); box(gx+1,gy+1,8,1,2); box(gx+3,gy,4,1,2); }); }
+      for(i=0;i<(W/60|0);i++){ var px=Math.floor(rnd()*W), py=Math.floor(thz+12+rnd()*(H-thz-38)); spr(px-6,py-11,14,24,py+12,function(){ box(px,py+4,2,8,10); disc(px+1,py,6,5); disc(px+1,py-1,4,6); disc(px+1,py-7,3,5); }); }
+      for(i=0;i<(W/200|0);i++){ var fx=Math.floor(100+rnd()*(W-200)), fy=Math.floor(thz+30+rnd()*(H-thz-70)); spr(fx-16,fy-16,32,32,fy+15,function(){ disc(fx,fy,15,11); disc(fx,fy,13,8); box(fx-1,fy-10,3,10,11); disc(fx,fy-11,3,8); }); }
+      for(i=0;i<(W/90|0);i++){ var bx9=Math.floor(rnd()*W), by9=Math.floor(thz+18+rnd()*(H-thz-44)); spr(bx9,by9+6,36,10,by9+15,function(){ box(bx9,by9+7,36,3,10); box(bx9+2,by9+10,2,5,10); box(bx9+32,by9+10,2,5,10); box(bx9,by9+6,36,1,11); }); }
+      var hbW=W; spr(0,H-21,hbW,21,H,function(){ box(0,H-18,hbW,18,6); for(var x=0;x<hbW;x+=6) box(x,H-21,5,4,5); box(0,H-18,hbW,1,0); }); }
     else if(sc==='golf'){ box(0,0,W,H,8); // Golf course: sky, hills, mowed stripes, bunker, pond, flags
-      for(i=0;i<5;i++){ var cxl=rnd()*W, cyl=6+rnd()*30; box(cxl,cyl,18+rnd()*14,3,1); box(cxl+3,cyl-2,10,2,1); }
+      for(i=0;i<5;i++){ rnd(); rnd(); rnd(); }
       for(x=0;x<W;x++){ var hy3=(H*0.42+Math.sin(x/37)*9+Math.sin(x/15)*3)|0; box(x,hy3,1,H-hy3,6); }
       for(x=0;x<W;x++){ var hy4=(H*0.55+Math.sin(x/53+1)*7)|0; box(x,hy4,1,H-hy4,5); }
       for(x=0;x<W;x+=16) box(x,(H*0.6)|0,8,H,6);
       for(i=0;i<3;i++){ var bxs=20+rnd()*(W-70), bys=H*0.62+rnd()*H*0.25; disc(bxs,bys,9,4); disc(bxs,bys,7,3); }
       var pxl=W*(0.15+rnd()*0.6), pyl=H*0.78; disc(pxl,pyl,16,14); disc(pxl,pyl,13,8);
-      for(i=0;i<3;i++){ var fxl=30+rnd()*(W-60), fyl=H*0.5+rnd()*H*0.3; box(fxl,fyl-14,1,16,1); box(fxl+1,fyl-14,6,4,2); } }
+      for(i=0;i<3;i++){ var fxl=Math.floor(30+rnd()*(W-60)), fyl=Math.floor(H*0.5+rnd()*H*0.3); spr(fxl,fyl-14,8,16,fyl+2,function(){ box(fxl,fyl-14,1,16,1); box(fxl+1,fyl-14,6,4,2); }); } }
     else if(sc==='cozy'){ // Tea room: striped wallpaper, fireplace, window, shelf with teacups, string lights
       var k; box(0,0,W,H,13); for(x=0;x<W;x+=14) box(x,0,2,H-36,1);
       for(y=14;y<H-40;y+=14) for(x=7;x<W;x+=14) box(x,y,2,2,2);
@@ -605,25 +732,26 @@
   function renderScene(){ // pre-render the background once per round
     // wide world: the background is painted BGW wide once per scene (same seed for all its stages); every stage shows its own slice of it
     var oW=W, g0=g, sSeed=seed, sh0=0; for(var hi0=0;hi0<scene.length;hi0++) sh0=(sh0*31+scene.charCodeAt(hi0))>>>0;
-    var wc=renderScene.wc||(renderScene.wc=document.createElement('canvas')); wc.width=BGW; wc.height=H; seed=((WORLDSEED^sh0)>>>0)||1; W=BGW; g=wc.getContext('2d'); paintScene(scene,true); W=oW; seed=sSeed;
+    var wc=renderScene.wc||(renderScene.wc=document.createElement('canvas')); wc.width=BGW; wc.height=H; seed=((WORLDSEED^sh0)>>>0)||1; W=BGW; g=wc.getContext('2d'); bgSprites=[]; macSp=null; paintScene(scene,true); W=oW; seed=sSeed;
     var LA=tut?TUT:LEVELS, ti0=tut?tut-1:(lvNum()-1)%LEVELS.length, ts0=ti0; while(ts0>0&&LA[ts0-1].scene===LA[ti0].scene) ts0--; var tn0=0; while(ts0+tn0<LA.length&&LA[ts0+tn0].scene===LA[ti0].scene) tn0++;
     bgOff=tn0>1?Math.round((ti0-ts0)*(BGW-W)/(tn0-1)):0; if(macX!==undefined){ macX-=bgOff; if(macX<-40||macX>W) macX=undefined; }
     // tone the scene down: desaturate + darken so game objects stand out clearly (on the wide canvas, so it can be panned later)
     g=wc.getContext('2d'); g.globalCompositeOperation='saturation'; g.fillStyle='rgba(128,128,128,0.5)'; g.fillRect(0,0,BGW,H); g.globalCompositeOperation='source-over';
-    var dkC=scene==='cozy'?'rgba(48,18,10,0.42)':scene==='moon'?'rgba(6,8,20,0.6)':scene==='dungeon'?'rgba(8,6,6,0.66)':scene==='vapor'?'rgba(8,4,24,0.62)':scene==='dream'?'rgba(8,16,24,0.58)':(scene==='forest'?'rgba(6,14,18,0.68)':'rgba(8,16,24,0.74)'); g.fillStyle=dkC; g.fillRect(0,0,BGW,H);
+    var dkC=scene==='cozy'?'rgba(48,18,10,0.42)':scene==='moon'?'rgba(6,8,20,0.6)':scene==='dungeon'?'rgba(8,6,6,0.66)':scene==='vapor'?'rgba(8,4,24,0.62)':scene==='dream'?'rgba(8,16,24,0.58)':(scene==='forest'?'rgba(6,14,18,0.68)':'rgba(8,16,24,0.74)'); dkC=dkC.replace(/([\d.]+)\)$/,function(m,a){ return (+a*0.8).toFixed(3)+')'; }); /* a bit lighter overall */ g.fillStyle=dkC; g.fillRect(0,0,BGW,H);
     bgc.width=W; bgc.height=H; g=bgc.getContext('2d'); g.drawImage(wc,-bgOff,0);
     var vg=g.createRadialGradient(W/2,H/2,H*0.35,W/2,H/2,H*0.85); vg.addColorStop(0,'rgba(0,0,0,0)'); vg.addColorStop(1,'rgba(0,0,0,0.35)'); g.fillStyle=vg; g.fillRect(0,0,W,H);
+    bgSprites.forEach(function(sp){ var gq=sp.c.getContext('2d'); gq.globalCompositeOperation='source-atop'; gq.fillStyle='rgba(128,128,128,0.5)'; gq.fillRect(0,0,sp.w,sp.h); gq.fillStyle=dkC; gq.fillRect(0,0,sp.w,sp.h); gq.globalCompositeOperation='source-over'; }); bgc.sp=bgSprites; bgc.spOff=bgOff; // sprites toned like the background
     var lc=bgc.lm||(bgc.lm=document.createElement('canvas')); lc.width=W; lc.height=H; var gl=lc.getContext('2d'); g=gl; drawLandmark(scene,W-42,(H*0.6)|0,0.9); // landmark on its own layer, toned like the background
     gl.globalCompositeOperation='source-atop'; gl.fillStyle='rgba(128,128,128,0.35)'; gl.fillRect(0,0,W,H); gl.fillStyle=dkC; gl.fillRect(0,0,W,H); gl.globalCompositeOperation='source-over';
     g=g0; }
   // ===== PSX graphics mode: game objects are flat-shaded low-poly meshes with vertex jitter (no pixel sprites) =====
   var psxOn=false;
   function psxShade(hx,f){ var n=parseInt(String(hx).slice(1),16), r=(n>>16)&255, gg=(n>>8)&255, b=n&255; function q(v){ v=f<0?v*(1+f):v+(255-v)*f; return Math.max(0,Math.min(255,Math.round(v))); } return 'rgb('+q(r)+','+q(gg)+','+q(b)+')'; }
-  function psxW(x,y){ return [x+Math.round(Math.sin(tick*0.045+x*0.37+y*0.21)*0.6), y+Math.round(Math.cos(tick*0.04+x*0.19+y*0.33)*0.6)]; } // vertex snapping like the PlayStation GTE
+  function psxW(x,y){ return [x,y]; } // vertices stay put: no wobble (flat-shaded low-poly look only)
   function psxTri(a,b,c,col){ var P=[a,b,c].sort(function(u,v){ return u[1]-v[1]; }), y0=Math.round(P[0][1]), y2=Math.round(P[2][1]); g.fillStyle=col; if(P[2][1]===P[0][1]){ g.fillRect(Math.round(Math.min(a[0],b[0],c[0])),y0,Math.max(1,Math.round(Math.max(a[0],b[0],c[0])-Math.min(a[0],b[0],c[0]))),1); return; }
     for(var y=y0;y<=y2;y++){ var yy=Math.max(P[0][1],Math.min(P[2][1],y+0.5)), xa=P[0][0]+(P[2][0]-P[0][0])*(yy-P[0][1])/(P[2][1]-P[0][1]), xb;
       if(yy<P[1][1]||P[2][1]===P[1][1]) xb=P[1][1]===P[0][1]?P[1][0]:P[0][0]+(P[1][0]-P[0][0])*(yy-P[0][1])/(P[1][1]-P[0][1]); else xb=P[1][0]+(P[2][0]-P[1][0])*(yy-P[1][1])/(P[2][1]-P[1][1]);
-      var xl=Math.round(Math.min(xa,xb)), xr=Math.round(Math.max(xa,xb)); g.fillRect(xl,y,Math.max(1,xr-xl),1); } }
+      var xl=Math.floor(Math.min(xa,xb)), xr=Math.ceil(Math.max(xa,xb)); g.fillRect(xl,y,Math.max(1,xr-xl),1); } }
   function psxQuad(a,b,c,d,col){ psxTri(a,b,c,col); psxTri(a,c,d,col); }
   function psxPrism(x,y,w,h,col,d){ var A=psxW(x,y), B=psxW(x+w,y), Cc=psxW(x+w,y+h), D=psxW(x,y+h), A2=psxW(x+d,y-d), B2=psxW(x+w+d,y-d), C2=psxW(x+w+d,y+h-d), hx=C[col]||'#888888';
     psxQuad(A,B,B2,A2,psxShade(hx,0.35)); psxQuad(B,Cc,C2,B2,psxShade(hx,-0.4)); psxQuad(A,B,Cc,D,hx); } // top (lit), right side (shadow), front face
@@ -698,7 +826,7 @@
       pad(px-ln*Math.cos(a),py-ln*Math.sin(a),px+ln*Math.cos(a),py+ln*Math.sin(a),1.2+rnd()*0.4,3,0.15,3); }
     // bumpers: irregularly distributed, different sizes, sometimes with satellites
     var want=tut?TUT[tut-1].nb:Math.max(2,Math.round(LV().b*W/220*0.6*(mode==='breakout'?({26:1.7,18:1.45,12:1.2,8:1.2,6:1.45}[brickSz().w]||1.2):1))), radii=[5,6,6,7,9,9,12], ymin=mode==='breakout'?46:46, ymaxO=mode==='breakout'?142:168; // breakout: obstacles may reach into the brick wall
-    scene=LV().scene;
+    scene=bgFor(LV().scene); // dev setting / shipped setting: a stage cluster can get another background
     function okAt(x,y,r,skip){
       if(x<18+r||x>W-18-r||y<ymin+r||y>ymaxO-r) return false;
       if(y>150&&Math.abs(x-cx)<16) return false;
@@ -744,12 +872,12 @@
       if(r0>=9&&rnd()<0.25){ var a0=rnd()*6.28, dd=r0+12+am; for(var m=0;m<3;m++){ var aa=a0+m*2.09, sx=x0+Math.cos(aa)*dd, sy=y0+Math.sin(aa)*dd; if(okAt(sx,sy,4,bb)) bumpers.push({x:sx,y:sy,r:4,rr:4,par:bb,an:aa,d:dd,sp:(rnd()<0.5?-1:1)*(0.02+rnd()*0.02),flash:0,hp:1,hp0:1,pts:30}); } }
     }
     bgSeed=seed; renderScene();
-    makeBricks(); makeStickies();
+    makeBricks(); makeStickies(); placeSecrets();
     // seesaw bar: two halves around a shared pivot, rock up left/right
     fl=[{px:cx,py:200,len:60,dir:-1,a:0,rest:0,up:0,av:0}]; // one bar, hinge at the opposite end
     place();
   }
-  var aimKey=false, aimMx=0, aimMy=0, barVel=0, coPrev=0, bulge=0, bulgePrev=0, bv=0, curB=0, tw=0, barSide='l', tiltPrev=0, tilt=0, chSide='l', chV=0, strikeT=0, strikeP=0, strikeDir=1, swingP=0, capB=0, wasHeld=false;
+  var aimKey=false, aimMx=0, aimMy=0, barVel=0, coPrev=0, bulge=0, bulgePrev=0, bv=0, curB=0, tw=0, barSide='l', tiltPrev=0, tilt=0, chSide='l', chV=0, chS=0, ocM=0, ocT=0, ocLast=0, ocTk=0, strikeT=0, strikeP=0, strikeDir=1, swingP=0, capB=0, wasHeld=false;
   function place(){ var lim=Math.max(0,cx-fl[0].len/2-6); co=Math.max(-lim,Math.min(lim,co)); var c=cx+co;
     var hl=fl[0].len/2; fl[0].px=c; fl[0].dir=barSide==='l'?-1:1;
     guides[0].x2=c-hl-2; guides[1].x2=c+hl+2; // pools reach right up to the bar end
@@ -831,7 +959,7 @@
     [-0.5,0.5].forEach(function(d){ extras.push({x:ball.x,y:ball.y,vx:Math.cos(a0+d)*sp,vy:Math.sin(a0+d)*sp,e:ball.e}); }); burst(ball.x,ball.y,4,14); }
   var teeHeld=false, ball, state, aim, power, strokes, score, hole, msg, msgT, tick = 0;
   var mainBall=null;
-  function reset(){ ghostFire=false; gWaves=[]; lastPX=null; chV=0; strikeT=0; wasHeld=false; extras=[]; stuckN=0; bumpHeld=true; ball={x:cx+co,y:172,vx:0,vy:0,e:0}; mainBall=ball; state='tee'; aim=0; power=0; teeHeld=false; }
+  function reset(){ bossWinPend=false; ghostFire=false; gWaves=[]; lastPX=null; chV=0; strikeT=0; wasHeld=false; extras=[]; stuckN=0; bumpHeld=true; ball={x:cx+co,y:172,vx:0,vy:0,e:0}; mainBall=ball; state='tee'; aim=0; power=0; teeHeld=false; }
   var startLv=(location.hash.match(/level=(\d+)/)||[0,1])[1]|0||1; // #level=7 jumps to a level
   function init(first){ loopG=null; extras=[]; gold=0; sling=0; chgT=0; lenT=0; powT=0; poolU=0; goldU=0; luckU=0; ballU=0; upO=[0,0,0,0,0,0,0,0]; pw={E:0,S:0,M:0,X:0,T:0,Y:0,G:0,N:0,F:0,K:0,W:0,H:0}; saver=false; caps=[]; strokes=0; score=0; hole=startLv; bestLv=startLv; lives=cheat.dlife?1:3; level=startLv; seedN++; layout(); msg=(mode==='golf'?L('HOLE ')+hole+' ':'LEVEL '+level+' ')+LV().name+(mode==='golf'?' PAR '+LV().par:''); msgT=140; reset();
     if(!first) clearSave(); }
@@ -841,7 +969,7 @@
   try{ var lk1=+localStorage['golfLook_'+mode]||0; if(!skipTitle&&lk1>0){ pickMode=false; lookStage(Math.min(lk1,LEVELS.length)); lookSaved=lookIdx; } }catch(e){}
   var tutR=0; try{ tutR=skipTitle?0:(+sessionStorage['golfTut_'+mode]||0); if(tutR>0&&tutR<=TUT.length&&mode==='breakout'){ startTutorial(tutR); inGm=true; } else tutR=0; }catch(e){ tutR=0; } // F5 inside the tutorial stays in that tutorial stage
   try{ if(!tutR&&!skipTitle&&sessionStorage['golfIn_'+mode]==='1'&&loadSave()){ continueGame(); if(state!=='shop') startLevel(); inGm=true; } }catch(e){}
-  try{ if(!tutR&&!skipTitle&&sessionStorage['golfMap_'+mode]==='1'){ mapPick=true; mapNote=''; mapSel=Math.max(0,Math.min(LEVELS.length-1,+sessionStorage['golfMapSel_'+mode]||0)); mapScroll=0; mapFollow=true; mapT=0; mapAnim=false; state='map'; inMapPick=true; var rp=sessionStorage['golfMapPg_'+mode]; if(rp!==null&&rp!==undefined&&rp!=='') mapRestPg=+rp; tutSel=Math.max(0,Math.min(3,+sessionStorage['golfTutSel_'+mode]||0)); } }catch(e){} // F5 in the stage selection stays there (page + tutorial bubble too)
+  try{ if(!tutR&&!skipTitle&&sessionStorage['golfMap_'+mode]==='1'){ mapPick=true; mapNote=''; mapSel=Math.max(0,Math.min(LEVELS.length-1,+sessionStorage['golfMapSel_'+mode]||0)); mapScroll=0; mapFollow=true; mapT=0; mapAnim=false; state='map'; inMapPick=true; var rp=sessionStorage['golfMapPg_'+mode]; if(rp!==null&&rp!==undefined&&rp!==''){ mapRestPg=+rp; mapRestApply=true; } tutSel=Math.max(0,Math.min(3,+sessionStorage['golfTutSel_'+mode]||0)); } }catch(e){} // F5 in the stage selection stays there (page + tutorial bubble too)
   try{ var shm=!skipTitle&&sessionStorage['golfShopT_'+mode]; if(shm&&state==='title'){ var shp=shm.split(','); openShop('title'); shopTab=Math.max(0,Math.min(4,+shp[0]||0)); sel=Math.max(0,+shp[1]||0); if(sel>curList().length) sel=0; } }catch(e){} // F5 in the shop opened from the title menu stays in the shop
   if(location.hash.indexOf('shop')>=0){ gold=120; openShop(); } // test helper: #shop
   if(location.hash.indexOf('split')>=0) setTimeout(function(){ state='play'; ball.x=cx; ball.y=150; ball.vx=2; ball.vy=-3; ball.e=1; split(); },500); // test helper: #split
@@ -858,32 +986,32 @@
     game.querySelectorAll('[data-bare]').forEach(function(b){ b.addEventListener('click',function(){ if(fsEl()) exitFull(); else if(b.classList.contains('amiga-bare')) enterFull(); else setBare(!document.body.classList.contains('golf-bare')); }); b.addEventListener('pointerdown',function(e){ e.stopPropagation(); }); });
     window.addEventListener('keydown',function(e){ if(e.key==='F3'){ e.preventDefault(); dbgCol=!dbgCol; } if(e.key==='F2'){ e.preventDefault(); setBare(!document.body.classList.contains('golf-bare')); } });
   })();
-  window.addEventListener('keydown',function(e){
-    if(tut&&(e.key==='h'||e.key==='H')&&!paused&&(state==='tee'||state==='play')){ e.preventDefault(); tutHelp(); return; } // H = ask the teacher
-    if(paused){ var kp=e.key, pi=pauseItems(); e.preventDefault(); if(kp==='Escape'){ if(pauseView){ pauseView=0; pauseSel=0; } else resumeGame(); } else if((kp==='ArrowLeft'||kp==='a'||kp==='A')&&pi[pauseSel]&&pi[pauseSel].l) pi[pauseSel].l(); else if((kp==='ArrowRight'||kp==='d'||kp==='D')&&pi[pauseSel]&&pi[pauseSel].r) pi[pauseSel].r(); else if(kp==='ArrowUp'||kp==='w'||kp==='W') pauseSel=(pauseSel+pi.length-1)%pi.length; else if(kp==='ArrowDown'||kp==='s'||kp==='S') pauseSel=(pauseSel+1)%pi.length; else if(kp==='Enter'||kp===' ') pi[Math.min(pauseSel,pi.length-1)].f(); return; }
-    if(e.key==='Escape'&&!ambient&&(state==='tee'||state==='play'||state==='capt')){ e.preventDefault(); setPause(true); return; }
+  window.addEventListener('keydown',function(e){ var rk=e.key, EK=(e.target&&e.target.matches&&e.target.matches('input,textarea'))?rk:canon(rk);
+    if(tut&&(EK==='h'||EK==='H')&&!paused&&(state==='tee'||state==='play')){ e.preventDefault(); tutHelp(); return; } // H = ask the teacher
+    if(paused){ var kp=EK, pi=pauseItems(); e.preventDefault(); if(pauseView===2&&pauseCap>=0){ if(rk==='Escape') pauseCap=-1; else if(rk!=='Shift'&&rk!=='Control'&&rk!=='Alt'&&rk!=='Meta'){ kAssign(ACT[pauseCap].id,pauseSlot,rk); pauseCap=-1; } return; } if(kIs(kp,'back')){ if(pauseView){ pauseView=pauseView===2?1:0; pauseSel=0; } else resumeGame(); } else if((kp==='ArrowLeft'||kp==='a'||kp==='A')&&pi[pauseSel]&&pi[pauseSel].l) pi[pauseSel].l(); else if((kp==='ArrowRight'||kp==='d'||kp==='D')&&pi[pauseSel]&&pi[pauseSel].r) pi[pauseSel].r(); else if(kp==='ArrowUp'||kp==='w'||kp==='W') pauseSel=(pauseSel+pi.length-1)%pi.length; else if(kp==='ArrowDown'||kp==='s'||kp==='S') pauseSel=(pauseSel+1)%pi.length; else if(kp==='Enter'||kp===' ') pi[Math.min(pauseSel,pi.length-1)].f(); return; }
+    if(kIs(EK,'back')&&!ambient&&(state==='tee'||state==='play'||state==='capt')){ e.preventDefault(); setPause(true); return; }
     if((state==='tee'||state==='play')&&!ambient&&!locked()&&cv.requestPointerLock){ try{ var pk=cv.requestPointerLock(); if(pk&&pk.catch) pk.catch(function(){}); }catch(x){} } // keys can enter play too (Space, map, shop): take the mouse as well
-    if(state==='victory'){ var kv=e.key; if(kv==='ArrowUp'||kv==='ArrowLeft'||kv==='w'||kv==='W'||kv==='a'||kv==='A') vicSel=0; else if(kv==='ArrowDown'||kv==='ArrowRight'||kv==='s'||kv==='S'||kv==='d'||kv==='D') vicSel=1; else if(kv==='b'||kv==='B') vicGo(true); else if(kv==='Enter'||kv===' ') vicGo(vicSel===1); e.preventDefault(); return; }
-    if(state==='win'){ if(winT<WINLEN-45&&(e.key===' '||e.key==='Enter')) winT=1; e.preventDefault(); return; }
-    if(state==='over'){ var ko=e.key; if(ko==='ArrowLeft'||ko==='a'||ko==='A'||ko==='ArrowUp') overSel=0; else if(ko==='ArrowRight'||ko==='d'||ko==='D'||ko==='ArrowDown') overSel=1; else if(overT>40&&(ko==='Enter'||ko===' ')){ if(overSel===0) overRetry(); else overMap(); } else if(overT>40&&(ko==='r'||ko==='R')) overRetry(); else if(overT>40&&(ko==='m'||ko==='M'||ko==='Escape')) overMap(); else return; e.preventDefault(); return; }
-    if(e.key==='Tab'&&(ambient||state==='tee'||state==='play')){ e.preventDefault(); toggleAuto(); return; }
-    if(ambient&&!(state==='shop'&&!ambFull)){ if(e.key==='Escape'){ e.preventDefault(); if(ambFull) exitToTitle(); else toggleAuto(); } return; }
-    if(state==='look'){ var kk3=e.key, N3=LEVELS.length;
+    if(state==='victory'){ var kv=EK; if(kv==='ArrowUp'||kv==='ArrowLeft'||kv==='w'||kv==='W'||kv==='a'||kv==='A') vicSel=Math.max(0,vicSel-1); else if(kv==='ArrowDown'||kv==='ArrowRight'||kv==='s'||kv==='S'||kv==='d'||kv==='D') vicSel=Math.min(2,vicSel+1); else if(kv==='b'||kv==='B') vicGo(true); else if(kv==='Enter'||kv===' ') vicAct(vicSel); e.preventDefault(); return; }
+    if(state==='win'){ if(winT<WINLEN-45&&(EK===' '||EK==='Enter')) winT=1; e.preventDefault(); return; }
+    if(state==='over'){ var ko=EK; if(ko==='ArrowLeft'||ko==='a'||ko==='A'||ko==='ArrowUp') overSel=0; else if(ko==='ArrowRight'||ko==='d'||ko==='D'||ko==='ArrowDown') overSel=1; else if(overT>40&&(ko==='Enter'||ko===' ')){ if(overSel===0) overRetry(); else overMap(); } else if(overT>40&&(ko==='r'||ko==='R')) overRetry(); else if(overT>40&&(ko==='m'||ko==='M')) overMap(); else return; e.preventDefault(); return; }
+    if(kIs(EK,'auto')&&(ambient||state==='tee'||state==='play')){ e.preventDefault(); toggleAuto(); return; }
+    if(ambient&&!(state==='shop'&&!ambFull)){ if(kIs(EK,'back')){ e.preventDefault(); if(ambFull) exitToTitle(); else toggleAuto(); } return; }
+    if(state==='look'){ var kk3=EK, N3=LEVELS.length;
       if(kk3==='ArrowRight'||kk3==='d'||kk3==='D') lookStage(bgJump(1));
       else if(kk3==='ArrowLeft'||kk3==='a'||kk3==='A') lookStage(bgJump(-1));
       else if(kk3==='ArrowDown'||kk3==='s'||kk3==='S') lookStage(bgJump(1));
       else if(kk3==='ArrowUp'||kk3==='w'||kk3==='W') lookStage(bgJump(-1));
       else if(kk3==='Enter'||kk3===' '){ startLv=lookIdx; startNew(); }
       else if(kk3==='v'||kk3==='V') toggleLookView();
-      else if(kk3==='Escape') exitToTitle();
+      else if(kIs(kk3,'back')){ if(devDd) devDd=null; else if(devList) devList=false; else exitToTitle(); }
       else return; e.preventDefault(); return; }
-    if(state==='title'){ var mi=menuItems(), kt=e.key;
+    if(state==='title'){ var mi=menuItems(), kt=EK;
       if(kt==='ArrowDown'||kt==='s'||kt==='S') menuSel=Math.min(mi.length-1,menuSel+1);
       else if(kt==='ArrowUp'||kt==='w'||kt==='W') menuSel=Math.max(0,menuSel-1);
       else if(kt==='Enter'||kt===' ') mi[menuSel].f();
       else if(kt==='Delete'||kt==='Backspace') trashClick();
       else return; e.preventDefault(); return; }
-    if(state==='map'&&mapPick){ var km=e.key, NM=LEVELS.length;
+    if(state==='map'&&mapPick){ var km=EK, NM=LEVELS.length;
       if(mapTK()&&Math.round(mapScroll/W)===0&&!mapFollow){ // tutorial page: keys stay here, Right goes on to the first world, Enter starts the tutorial
         if(km==='ArrowRight'||km==='d'||km==='D'){ if(tutSel<3) tutSel++; else { mapSel=0; mapFollow=true; } e.preventDefault(); return; }
         if(km==='ArrowLeft'||km==='a'||km==='A'){ tutSel=Math.max(0,tutSel-1); e.preventDefault(); return; }
@@ -898,14 +1026,15 @@
       else if(km==='l'||km==='L') toggleLoop();
       else if(km==='PageDown') mapPage(1); else if(km==='PageUp') mapPage(-1);
       else if(km==='Enter'||km===' ') startPick(mapSel);
-      else if(km==='Escape'){ mapPick=false; mapNote=''; state='title'; menuSel=0; }
+      else if(kIs(km,'back')){ mapPick=false; mapNote=''; state='title'; menuSel=0; }
       else return; e.preventDefault(); return; }
-    if(state==='map'){ var kc=e.key, smx=mapSelMax(); 
-    if(kc==='ArrowRight'||kc==='d'||kc==='D'){ mapSel=Math.min(smx,mapSel+1); mapFollow=true; } else if(kc==='ArrowLeft'||kc==='a'||kc==='A'){ mapSel=Math.max(0,mapSel-1); mapFollow=true; } else if(kc==='PageDown'){ mapPage(1); } else if(kc==='PageUp'){ mapPage(-1); } else if(kc==='Enter'||kc===' '){ mapStart(mapSel); } else if(e.key==='Escape'){ state='title'; menuSel=0; } else return; e.preventDefault(); return; }
-    if(state==='tee'&&(e.key==='b'||e.key==='B')){ e.preventDefault(); openShop('tee'); return; }
-    if(state==='tee'&&(e.key==='m'||e.key==='M')){ e.preventDefault(); state='map'; mapT=0; mapAnim=false; return; }
-    if(state==='tee'&&e.key==='Escape'){ saveGame(); state='title'; menuSel=0; return; }
-    if(state==='shop'){ var N=curList().length, kk2=e.key;
+    if(state==='map'){ var kc=EK, smx=mapSelMax(); 
+    if(kc==='ArrowRight'||kc==='d'||kc==='D'){ mapSel=Math.min(smx,mapSel+1); mapFollow=true; } else if(kc==='ArrowLeft'||kc==='a'||kc==='A'){ mapSel=Math.max(0,mapSel-1); mapFollow=true; } else if(kc==='PageDown'){ mapPage(1); } else if(kc==='PageUp'){ mapPage(-1); } else if(kc==='Enter'||kc===' '){ mapStart(mapSel); } else if(kIs(EK,'back')){ state='title'; menuSel=0; } else return; e.preventDefault(); return; }
+    if(state==='tee'&&kIs(EK,'shop')){ e.preventDefault(); openShop('tee'); return; }
+    if(state==='tee'&&(EK==='m'||EK==='M')){ e.preventDefault(); state='map'; mapT=0; mapAnim=false; return; }
+    if(state==='tee'&&kIs(EK,'back')){ saveGame(); state='title'; menuSel=0; return; }
+    if(state==='shop'&&!anyTab()){ if(EK===' '||EK==='Enter'||kIs(EK,'back')) closeShop(); e.preventDefault(); return; } /* shop's closed: only leaving works */
+    if(state==='shop'){ var N=curList().length, kk2=EK;
       if(kk2==='Tab'||kk2==='e'||kk2==='E'||kk2==='PageDown'){ setTab(shopTab+(e.shiftKey&&kk2==='Tab'?-1:1)); }
       else if(kk2==='q'||kk2==='Q'||kk2==='PageUp'){ setTab(shopTab-1); }
       else if(kk2==='ArrowRight'||kk2==='d'||kk2==='D'){ if(sel<N&&sel+1<N) sel++; shopCol=sel%4; }
@@ -913,16 +1042,16 @@
       else if(kk2==='ArrowDown'||kk2==='s'||kk2==='S'){ if(sel<N){ if(sel+4<N) sel+=4; else sel=N; } }
       else if(kk2==='ArrowUp'||kk2==='w'||kk2==='W'){ if(sel>=N){ var t2=(Math.round(shopPg)+1)*4+shopCol; sel=t2<N?t2:Math.min(N-1,Math.round(shopPg)*4+shopCol); } else if(sel>=4) sel-=4; }
       else if(kk2==='Enter'){ if(sel>=N) closeShop(); else activate(sel); }
-      else if(kk2===' '||kk2==='Escape'){ closeShop(); }
+      else if(kk2===' '||kIs(kk2,'back')){ closeShop(); }
       else if(kk2>='1'&&kk2<='8'&&Math.round(shopPg)*4+ +kk2<=N){ sel=Math.round(shopPg)*4+ +kk2-1; activate(sel); }
       else return;
       if(state==='shop') saveGame(); // remember tab and selection, so a reload lands back in the shop
       e.preventDefault(); return; }
-    var k={ArrowLeft:'ml',ArrowRight:'mr',a:'ml',A:'ml',d:'mr',D:'mr',' ':'s'}[e.key]; if(!k||paused) return;
+    var k={ArrowLeft:'ml',ArrowRight:'mr',a:'ml',A:'ml',d:'mr',D:'mr',' ':'s'}[EK]; if(!k||paused) return;
     if(e.target.matches&&e.target.matches('input,textarea')) return;
     e.preventDefault(); if(k==='s'&&e.shiftKey&&state==='play') press('g',1); else press(k,1); }); // Shift+Space in play = nudge (Ghost Shot), Space = charge bar
-  window.addEventListener('keyup',function(e){
-    var k={ArrowLeft:'ml',ArrowRight:'mr',a:'ml',A:'ml',d:'mr',D:'mr',' ':'s'}[e.key]; if(k){ press(k,0); if(k==='s') press('g',0); } });
+  window.addEventListener('keyup',function(e){ var EK=(e.target&&e.target.matches&&e.target.matches('input,textarea'))?e.key:canon(e.key);
+    var k={ArrowLeft:'ml',ArrowRight:'mr',a:'ml',A:'ml',d:'mr',D:'mr',' ':'s'}[EK]; if(k){ press(k,0); if(k==='s') press('g',0); } });
   var mx=cx, my=H*0.45, mouseIn=false;
   var lockSkip=0;
   function locked(){ return document.pointerLockElement===cv; }
@@ -935,7 +1064,7 @@
   function dragTo(e){ var skipMv=lockSkip>0; track(e); // track() counts lockSkip down, so remember it beforehand
     if(paused){ for(var ph=0;ph<pauseR.length;ph++) if(hit(pauseR[ph])) pauseSel=ph; return; }
     if(state==='map'){ var nh=nodeAt(); if(nh>=0&&nh!==mapSel&&(mapPick||nh<=mapSelMax())){ mapSel=nh; } } // hovering only selects: it must not hijack the camera while it scrolls
-    if(state==='victory'){ for(var vq=0;vq<2;vq++) if(hit(vicR[vq])) vicSel=vq; }
+    if(state==='victory'){ for(var vq=0;vq<3;vq++) if(hit(vicR[vq])) vicSel=vq; }
     if(state==='title'){ var mi3=menuItems(); for(var q3=0;q3<mi3.length;q3++) if(hit(menuR['m'+q3])) menuSel=q3; }
     if(state==='shop'){ for(var hi=0;hi<curList().length;hi++) if(hit(shopR['b'+hi])) sel=hi; if(hit(shopR.go)) sel=curList().length; }
     if(!ambient && (state==='play'||(state==='tee'&&!K.s)) && (e.pointerType==='mouse'||(e.buttons&1))){
@@ -945,7 +1074,7 @@
     if(!locked() && (state==='play'||state==='tee') && lastPX!==null && (e.pointerType==='mouse'||(e.buttons&1))){ var rcb=cv.getBoundingClientRect(); mx=Math.max(0,Math.min(W,mx+(e.clientX-lastPX)*W/rcb.width)); my=Math.max(0,Math.min(H,my+(e.clientY-lastPY)*H/rcb.height)); }
     lastPX=(state==='play'||state==='tee')?e.clientX:null; lastPY=(state==='play'||state==='tee')?e.clientY:null; }
   cv.addEventListener('pointermove',dragTo);
-  cv.addEventListener('wheel',function(e){ if(state==='map'){ e.preventDefault(); if(tick-mapWheelT>6){ mapWheelT=tick; mapPage((e.deltaY+e.deltaX)>0?1:-1); } return; } if(state==='shop'){ e.preventDefault(); shopPageTo(shopPg+(e.deltaY+e.deltaX)*(e.deltaMode===1?0.35:1/110)); } },{passive:false});
+  cv.addEventListener('wheel',function(e){ if(state==='look'&&devList){ e.preventDefault(); if(devDd) return; devListScroll+=Math.max(-20,Math.min(20,e.deltaY*(e.deltaMode===1?7:0.3))); /* proportional: a trackpad sends many small events */ return; } if(state==='map'){ e.preventDefault(); if(tick-mapWheelT>6){ mapWheelT=tick; mapPage((e.deltaY+e.deltaX)>0?1:-1); } return; } if(state==='shop'){ e.preventDefault(); shopPageTo(shopPg+(e.deltaY+e.deltaX)*(e.deltaMode===1?0.35:1/110)); } },{passive:false});
   cv.addEventListener('contextmenu',function(e){ e.preventDefault(); });
   // ===== Pause menu (Esc in tee/play): game freezes, menu is overlaid =====
   document.addEventListener('pointerlockchange',function(){ if(!locked()&&!paused&&!ambient&&(state==='play'||state==='tee'||state==='capt')) setPause(true); }); // browser eats Esc while the mouse is locked and only releases the lock: that opens the pause menu
@@ -960,30 +1089,51 @@
         {t:L('SCREEN SHAKE ')+(shakeOn?L('ON'):L('OFF')),f:function(){ shakeOn=!shakeOn; try{ localStorage.golfShake=shakeOn?'1':'0'; }catch(e){} }},
         {t:L('FULLSCREEN ')+(fsOn()?L('ON'):L('OFF')),f:function(){ if(fsOn()){ var ex=document.exitFullscreen||document.webkitExitFullscreen; if(ex) Promise.resolve(ex.call(document)).catch(function(){}); } else { var el=document.documentElement, rq=el.requestFullscreen||el.webkitRequestFullscreen; if(rq) Promise.resolve(rq.call(el)).catch(function(){}); } }},
         {t:L('LANGUAGE ')+(LANG==='de'?'DE':'EN'),f:function(){ saveGame(); try{ localStorage.golfLang=LANG==='de'?'en':'de'; }catch(e){} location.reload(); }},
+        {t:L('KEYS'),f:function(){ pauseView=2; pauseSel=0; pauseCap=-1; pauseSlot=0; }},
         {t:L('BACK'),f:function(){ pauseView=0; pauseSel=0; }}]; }
+    if(pauseView===2){ var kc0=0, kp0=0, ki=[]; // two clustered columns: left = movement + game, right = menus + misc + buttons
+      var ord=['left','right','up','down','fire','ok','back','shop','auto','map','retry','tabn','tabp','pgd','pgu','loop','view','help','del'];
+      ord.forEach(function(id,n){ var a=ACT.filter(function(q){ return q.id===id; })[0], ai=ACT.indexOf(a); if(KCOL[id]!==undefined) kc0=KCOL[id]; if(KPG[id]!==undefined) kp0=KPG[id]; var b=KBND[id];
+        ki.push({c:kc0,pg:kp0,hd:KGRP[id]?L(KGRP[id]):'',nm:L(a.n),k0:kShow(b[0]),k1:kShow(b[1]),ai:ai,key:1,f:function(){ pauseCap=ai; },l:function(){ pauseSlot=0; },r:function(){ pauseSlot=1; }}); });
+      ki.push({c:1,pg:1,hd:'',t:L('RESET KEYS'),f:function(){ ACT.forEach(function(a){ KBND[a.id]=a.d.slice(); }); kbSave(); }}); ki.push({c:1,pg:1,hd:'',t:L('BACK'),f:function(){ pauseView=1; pauseSel=0; pauseCap=-1; }}); return ki; }
     it=[{t:L('RESUME'),f:resumeGame}];
     it.push({t:L('SETTINGS'),f:function(){ pauseView=1; pauseSel=0; }});
     it.push({t:L('MAIN MENU'),f:function(){ setPause(false); saveGame(); state='title'; menuSel=0; }}); return it; }
-  function drawPause(){ var it=pauseItems(), bw=110, bh=14, x=((W-bw)/2)|0, y0=84-((it.length*18)>>1)+10, i; g.fillStyle='rgba(0,0,0,0.65)'; g.fillRect(0,0,W,H);
-    var ttl=pauseView===1?L('SETTINGS'):L('PAUSED'); txtS(ttl,((W-ttl.length*12)/2)|0,y0-30,1,3); pauseR=[];
-    for(i=0;i<it.length;i++){ var yy=y0+i*18, sel=i===pauseSel; pauseR[i]={x:x,y:yy,w:bw,h:bh}; box(x-1,yy-1,bw+2,bh+2,1); box(x,yy,bw,bh,sel?2:0); txt(it[i].t,x+((bw-it[i].t.length*4)>>1),yy+4,1); }
-    var hint=pauseView===1?L('ESC = BACK'):L('ESC = RESUME'); txt(hint,((W-hint.length*4)/2)|0,H-14,11); if(mouseIn) drawCursor(); }
+  function drawKeysView(it){ var bw=140, rh=13, st=18, cx0=[6,154], cy=[40,40], i, ttl=L('KEYS'), pgN=(it[Math.min(pauseSel,it.length-1)]||{}).pg||0; g.fillStyle='rgba(0,0,0,0.7)'; g.fillRect(0,0,W,H); txtS(ttl,((W-ttl.length*12)/2)|0,8,1,3); pauseR=[];
+    txt((pgN+1)+'/2',W-26,10,11); txt(pgN?'<':'>',pgN?W-34:W-14,10,4);
+    for(i=0;i<it.length;i++){ var q=it[i]; if(q.pg!==pgN&&!(q.pg===undefined&&pgN===1)) continue; var c=q.c, x=cx0[c], sel=i===pauseSel; if(q.hd){ if(cy[c]>40) cy[c]+=8; txt(q.hd,x,cy[c],4); cy[c]+=11; } else if(!q.key&&it[i-1]&&it[i-1].key) cy[c]+=10;
+      var y=cy[c]; pauseR[i]={x:x,y:y,w:bw,h:rh}; box(x-1,y-1,bw+2,rh+2,1); box(x,y,bw,rh,sel?2:0);
+      if(q.key){ var cap=pauseCap===q.ai, a0=cap&&pauseSlot===0?'...':q.k0, a1=cap&&pauseSlot===1?'...':q.k1; if(sel&&pauseSlot===0) a0='['+a0+']'; if(sel&&pauseSlot===1) a1='['+a1+']'; var ks=a0+'  '+a1; txt(q.nm,x+5,y+4,1); txt(ks,x+bw-5-ks.length*4,y+4,sel?1:11); }
+      else txt(q.t,x+((bw-q.t.length*4)>>1),y+4,1);
+      cy[c]+=st; }
+    var hint=pauseCap>=0?L('PRESS A KEY - ESC CANCELS'):L('ENTER = CHANGE - LEFT RIGHT = KEY 1 OR 2'); txt(hint,((W-hint.length*4)/2)|0,H-12,11); if(mouseIn) drawCursor(); }
+  function drawPause(){ var it=pauseItems(); if(pauseView===2) return drawKeysView(it); var bw=pauseView===2?160:110, bh=14, x=((W-bw)/2)|0, VIS=9, n0=it.length, st=n0>VIS?Math.max(0,Math.min(n0-VIS,pauseSel-4)):0, nv=Math.min(n0,VIS), y0=84-((nv*18)>>1)+10, i; g.fillStyle='rgba(0,0,0,0.65)'; g.fillRect(0,0,W,H);
+    var ttl=pauseView===2?L('KEYS'):(pauseView===1?L('SETTINGS'):L('PAUSED')); txtS(ttl,((W-ttl.length*12)/2)|0,y0-30,1,3); pauseR=[];
+    for(i=st;i<st+nv;i++){ var yy=y0+(i-st)*18, sel=i===pauseSel; pauseR[i]={x:x,y:yy,w:bw,h:bh}; box(x-1,yy-1,bw+2,bh+2,1); box(x,yy,bw,bh,sel?2:0); txt(it[i].t,x+((bw-it[i].t.length*4)>>1),yy+4,1); }
+    if(st>0) txt('^',(W/2)|0,y0-8,11); if(st+nv<n0) txt('v',(W/2)|0,y0+nv*18-4,11);
+    var hint=(pauseView?L('ESC = BACK'):L('ESC = RESUME')).replace('ESC',kLab('back')); if(pauseView===2) hint=pauseCap>=0?L('PRESS A KEY - ESC CANCELS'):L('ENTER = CHANGE - LEFT RIGHT = KEY 1 OR 2'); txt(hint,((W-hint.length*4)/2)|0,H-14,11); if(mouseIn) drawCursor(); }
   function hit(rc){ return rc&&mx>=rc.x&&mx<=rc.x+rc.w&&my>=rc.y&&my<=rc.y+rc.h; }
-  cv.addEventListener('pointerdown',function(e){ if(paused){ track(e); var pi2=pauseItems(); for(var pq=0;pq<pi2.length;pq++) if(hit(pauseR[pq])){ pauseSel=pq; pi2[pq].f(); break; } return; } if(state==='victory'){ for(var vq2=0;vq2<2;vq2++) if(hit(vicR[vq2])){ vicSel=vq2; vicGo(vq2===1); return; } return; } if(state==='win'){ if(winT<WINLEN-45) winT=1; return; } if(ambient&&!(state==='shop'&&!ambFull)){ if(ambFull) exitToTitle(); else toggleAuto(); return; } if(state==='look'){ dragTo(e); var N4=LEVELS.length; if(lookBackR&&hit(lookBackR)){ exitToTitle(); return; } if(lookViewR&&hit(lookViewR)){ toggleLookView(); return; } if(lookGoR&&hit(lookGoR)){ startLv=lookIdx; startNew(); return; } lookStage(bgJump(mx<W/2?-1:1)); return; }
+  function skyPage(){ var base=mapFollow?Math.round(mapScroll/W):mapPgT; if(mx<W/2){ if(base>0){ mapPage(-1); padFl.pl=14; } } else if(base<mapPages()-1){ mapPage(1); padFl.pr=14; } } // sky: left half = back, right half = forward (left click only)
+  function menuBack(){ if(state==='look'&&devDd){ devDd=null; return; } if(state==='look'&&devList){ devList=false; return; } // right click in menus = cancel / back (left click is always the positive action)
+    if(paused){ if(pauseCap>=0){ pauseCap=-1; return; } if(pauseView){ pauseView=pauseView===2?1:0; pauseSel=0; } else resumeGame(); return; }
+    if(state==='shop') closeShop(); else if(state==='look') exitToTitle(); else if(state==='over'){ if(overT>40) overMap(); } else if(state==='map'){ mapPick=false; mapNote=''; state='title'; menuSel=0; } }
+  cv.addEventListener('pointerdown',function(e){ var inMenu=paused||state==='victory'||state==='win'||state==='over'||state==='title'||state==='map'||state==='shop'||state==='look';
+    if(inMenu&&!(ambient&&!(state==='shop'&&!ambFull))&&e.pointerType==='mouse'&&e.button!==0){ track(e); if(e.button===2) menuBack(); return; } // menus: only the left button confirms, right button goes back
+    if(paused){ track(e); var pi2=pauseItems(); for(var pq=0;pq<pi2.length;pq++) if(hit(pauseR[pq])){ pauseSel=pq; pi2[pq].f(); break; } return; } if(state==='victory'){ for(var vq2=0;vq2<3;vq2++) if(hit(vicR[vq2])){ vicSel=vq2; vicAct(vq2); return; } return; } if(state==='win'){ if(winT<WINLEN-45) winT=1; return; } if(ambient&&!(state==='shop'&&!ambFull)){ if(ambFull) exitToTitle(); else toggleAuto(); return; } if(state==='look'){ dragTo(e); var N4=LEVELS.length; if(lookBackR&&hit(lookBackR)){ exitToTitle(); return; } if(lookViewR&&hit(lookViewR)){ toggleLookView(); return; } if(lookGoR&&hit(lookGoR)){ startLv=lookIdx; startNew(); return; } for(var ldi=0;ldi<lookDevR.length;ldi++) if(hit(lookDevR[ldi])){ if(lookDevR[ldi].drag){ devDragPend={r:lookDevR[ldi],drag:lookDevR[ldi].drag,x:mx,y:my}; devDragOn=false; return; } lookDevR[ldi].f(); return; } var lg2=lkGeo(); if(DEVH&&DEVH.set&&mx>=lg2.x&&mx<=lg2.x+W*lg2.s&&my>=lg2.y&&my<=lg2.y+H*lg2.s){ devSel=devPick((mx-lg2.x)/lg2.s,(my-lg2.y)/lg2.s); return; } /* dev: click an obstacle to select it */ lookStage(bgJump(mx<W/2?-1:1)); return; }
     shiftDown=e.shiftKey; if(e.pointerType==='mouse'&&!locked()&&(state==='tee'||state==='play')&&cv.requestPointerLock){ try{ var pr=cv.requestPointerLock(); if(pr&&pr.catch) pr.catch(function(){}); }catch(x){} cv.focus(); return; } /* first click only captures the mouse (bar), no hit/charge */ dragTo(e); cv.focus();
     if(state==='over'){ if(overT>40){ if(hit(overR.retry)) overRetry(); else if(hit(overR.map)) overMap(); } return; }
     if(state==='title'){ if(hit(menuR.trash)){ trashClick(); return; } var mi2=menuItems(); for(var q2=0;q2<mi2.length;q2++) if(hit(menuR['m'+q2])){ menuSel=q2; mi2[q2].f(); return; } return; }
-    if(state==='map'){ if(e.button===2){ mapPage(1); padFl.pr=14; return; } if(mapPick&&tutNodeAt()>=0){ startTutorial(tutNodeAt()+1); return; } if(mapPick&&mapR.tut&&hit(mapR.tut)){ startTutorial(); return; } if(hit(mapR.pl)){ mapPage(-1); padFl.pl=14; return; } if(hit(mapR.pr)){ mapPage(1); padFl.pr=14; return; } for(var dpi=0;dpi<mapPages();dpi++) if(hit(mapR['d'+dpi])){ mapPgT=dpi; mapFollow=false; return; }
+    if(state==='map'){ if(mapPick&&tutNodeAt()>=0){ startTutorial(tutNodeAt()+1); return; } if(mapPick&&mapR.tut&&hit(mapR.tut)){ startTutorial(); return; } if(hit(mapR.pl)){ mapPage(-1); padFl.pl=14; return; } if(hit(mapR.pr)){ mapPage(1); padFl.pr=14; return; } for(var dpi=0;dpi<mapPages();dpi++) if(hit(mapR['d'+dpi])){ mapPgT=dpi; mapFollow=false; return; }
       if(mapPick&&hit(loopR)){ toggleLoop(); return; }
-      if(mapPick){ if(backR&&hit(backR)){ mapPick=false; mapNote=''; state='title'; menuSel=0; return; } var na=nodeAt(); if(na>=0){ mapSel=na; startPick(na); } else if(my<148){ mapPage(-1); padFl.pl=14; } return; }
-      var nb=nodeAt(); if(nb>=0&&nb<=mapSelMax()){ mapSel=nb; mapStart(nb); return; } startLevel(); return; }
+      if(mapPick){ if(backR&&hit(backR)){ mapPick=false; mapNote=''; state='title'; menuSel=0; return; } var na=nodeAt(); if(na>=0){ mapSel=na; startPick(na); } else if(my>=16&&my<60) skyPage(); return; }
+      var nb=nodeAt(); if(nb>=0&&nb<=mapSelMax()){ mapSel=nb; mapStart(nb); return; } if(nb<0&&my>=16&&my<60){ skyPage(); return; } startLevel(); return; }
     if(state==='shop'){ if(hit(shopR.su)){ shopPageTo(Math.round(shopPg)-1); return; } if(hit(shopR.sd)){ shopPageTo(Math.round(shopPg)+1); return; } if(hit(shopR.st)){ shopDrag=true; return; } for(var ti2=0;ti2<5;ti2++) if(hit(shopR['t'+ti2])){ setTab(ti2); return; } for(var si=0;si<curList().length;si++) if(hit(shopR['b'+si])){ sel=si; activate(si); return; } if(hit(shopR.go)) closeShop(); return; }
     if(state==='tee'){ if(e.button===0){ try{ cv.setPointerCapture(e.pointerId); }catch(x){} press('s',1); } }
     else { press(e.button===2?'r':'l',1); } });
-  function up(e){ if(e.button===0||e.pointerType!=='mouse') press('s',0); if(e.button===2) press('r',0); else if(e.button===0){ press('l',0); } else { press('l',0); press('r',0); } } // only releasing the left button triggers the shot
+  function up(e){ devDrop(); if(e.button===0||e.pointerType!=='mouse') press('s',0); if(e.button===2) press('r',0); else if(e.button===0){ press('l',0); } else { press('l',0); press('r',0); } } // only releasing the left button triggers the shot
   cv.addEventListener('pointerup',up);
   // also detect release when the mouse leaves the field while charging or pointer lock kicks in
-  window.addEventListener('pointerup',function(e){ shopDrag=false; if(e.button===0&&state==='tee') press('s',0); });
+  window.addEventListener('pointerup',function(e){ devDrop(); shopDrag=false; if(e.button===0&&state==='tee') press('s',0); });
   window.addEventListener('mouseup',function(e){ if(e.button===0&&state==='tee') press('s',0); });
   window.addEventListener('blur',function(){ teeHeld=false; press('s',0); press('l',0); press('r',0); });
   cv.addEventListener('pointercancel',function(){ teeHeld=false; press('s',0); press('l',0); press('r',0); });
@@ -996,8 +1146,25 @@
     var l=ball.x-o.x, r=o.x+o.w-ball.x, t=ball.y-o.y, b=o.y+o.h-ball.y, m=Math.min(l,r,t,b);
     if(m===t){ ball.y=o.y-R; return [0,-1]; } if(m===b){ ball.y=o.y+o.h+R; return [0,1]; }
     if(m===l){ ball.x=o.x-R; return [-1,0]; } ball.x=o.x+o.w+R; return [1,0]; }
-  function bounceRel(nx,ny,rest,o){ var ovx=(o.pvx||0)/BALL_SPEED, ovy=(o.pvy||0)/BALL_SPEED, d=(ball.vx-ovx)*nx+(ball.vy-ovy)*ny; if(d<0){ ball.vx-=(1+rest)*d*nx; ball.vy-=(1+rest)*d*ny; } } // reflection relative to a moving obstacle: it hands over its own motion
-  function bounce(nx,ny,rest){ var d=ball.vx*nx+ball.vy*ny; if(d<0){ ball.vx-=(1+rest)*d*nx; ball.vy-=(1+rest)*d*ny; } }
+  function bounceRel(nx,ny,rest,o){ var ovx=(o.pvx||0)/BALL_SPEED, ovy=(o.pvy||0)/BALL_SPEED, d=(ball.vx-ovx)*nx+(ball.vy-ovy)*ny; if(d<0){ ball.imp=tick; ball.vx-=(1+rest)*d*nx; ball.vy-=(1+rest)*d*ny; } } // reflection relative to a moving obstacle: it hands over its own motion
+  function bounce(nx,ny,rest){ var d=ball.vx*nx+ball.vy*ny; if(d<0){ ball.imp=tick; ball.vx-=(1+rest)*d*nx; ball.vy-=(1+rest)*d*ny; } }
+  // configurable shortcuts (Settings > Keys): every keyboard action has up to two keys. Raw keys are translated ONCE per event (canon) into the canonical key the game logic knows
+  var ACT=[{id:'left',n:'MOVE LEFT',d:['a','ArrowLeft'],o:'ArrowLeft'},{id:'right',n:'MOVE RIGHT',d:['d','ArrowRight'],o:'ArrowRight'},{id:'up',n:'MOVE UP',d:['w','ArrowUp'],o:'ArrowUp'},{id:'down',n:'MOVE DOWN',d:['s','ArrowDown'],o:'ArrowDown'},
+    {id:'fire',n:'CHARGE FIRE',d:[' ',''],o:' '},{id:'ok',n:'CONFIRM',d:['Enter',''],o:'Enter'},{id:'back',n:'PAUSE BACK',d:['p',''],o:'p'},{id:'shop',n:'SHOP',d:['b',''],o:'b'},{id:'auto',n:'AUTOPILOT',d:['Tab',''],o:'Tab'},
+    {id:'map',n:'MAP',d:['m',''],o:'m'},{id:'retry',n:'RETRY',d:['r',''],o:'r'},{id:'tabn',n:'TAB NEXT',d:['e',''],o:'e'},{id:'tabp',n:'TAB PREV',d:['q',''],o:'q'},{id:'pgd',n:'PAGE DOWN',d:['PageDown',''],o:'PageDown'},{id:'pgu',n:'PAGE UP',d:['PageUp',''],o:'PageUp'},
+    {id:'loop',n:'CLUSTER LOOP',d:['l',''],o:'l'},{id:'view',n:'VIEW MODE',d:['v',''],o:'v'},{id:'help',n:'TEACHER HELP',d:['h',''],o:'h'},{id:'del',n:'DELETE SAVE',d:['Delete','Backspace'],o:'Delete'}];
+  var KGRP={left:'MOVEMENT',fire:'ACTIONS',back:'GAME',tabn:'MENUS',help:'MISC'}, KCOL={left:0,fire:0,back:1,tabn:0,help:1}, KPG={left:0,back:0,tabn:1,help:1}, KBND={}, KOUT={}, pauseCap=-1, pauseSlot=0;
+  ACT.forEach(function(a){ KBND[a.id]=a.d.slice(); KOUT[a.id]=a.o; });
+  try{ var kbs=JSON.parse(localStorage.golfKeys2||'null'); if(kbs) ACT.forEach(function(a){ if(Array.isArray(kbs[a.id])) KBND[a.id]=[String(kbs[a.id][0]||''),String(kbs[a.id][1]||'')]; }); }catch(e){}
+  function kbSave(){ try{ localStorage.golfKeys2=JSON.stringify(KBND); }catch(e){} }
+  function kNorm(k){ return k&&k.length===1?k.toLowerCase():k; }
+  function canon(k){ var n=kNorm(k), i, m; for(i=0;i<ACT.length;i++) if(KBND[ACT[i].id].indexOf(n)>=0&&n) return ACT[i].o;
+    for(i=0;i<ACT.length;i++) if(ACT[i].d.indexOf(n)>=0&&n) return '\u0000'; // a default key of an action that was rebound: no longer does anything
+    return k; }
+  function kIs(k,a){ return k===KOUT[a]; }
+  function kShow(k){ return !k?'-':({' ':'SPACE',ArrowLeft:'LEFT',ArrowRight:'RIGHT',ArrowUp:'UP',ArrowDown:'DOWN'}[k]||k).toUpperCase(); }
+  function kLab(a){ return kShow(KBND[a][0]||KBND[a][1]); }
+  function kAssign(id,slot,raw){ var n=kNorm(raw); ACT.forEach(function(a){ KBND[a.id]=KBND[a.id].map(function(v,si){ return (v===n&&!(a.id===id&&si===slot))?'':v; }); }); KBND[id][slot]=n; kbSave(); }
   var mdy=0, manualCh=false, paused=false, pauseSel=0, pauseR=[], pauseView=0, msens=1, shakeOn=true, gWaves=[], dbgCol=false, ghostFire=false, pxo=0, ghostT=0, ghostX=0, ghostY=0, inGm=false, bdrK=null, coS=0, macX, macY, mpend=0; // mpend = mouse movement the bar could not follow yet (speed cap)
   // Super Game Boy frame: the black area around the playfield gets its own pattern per level scene
   var BORD={
@@ -1014,11 +1181,11 @@
     golf:'repeating-linear-gradient(90deg,#1f6a2a 0 20px,#267a32 20px 40px)'};
   function setBorder(){ var k=state==='title'?(tbShow||''):(LV().scene||''); if(k===bdrK) return; bdrK=k; var bg=BORD[k]||'#000'; // whole play area incl. the region above/below the field
     view.style.background=bg; game.style.setProperty('--bd',bg); }
-  var tutMem=-1, shopMem=null, inMapPick=false; var discoOn=false; function step(){ try{ var lk0=state==='look'?lookIdx:0; if(lk0!==lookSaved){ lookSaved=lk0; if(lk0) localStorage['golfLook_'+mode]=lk0; else localStorage.removeItem('golfLook_'+mode); } }catch(e){} if(cheat.disco){ discoOn=true; if(tick%6===0){ var t0=C[2]; C[2]=C[3]; C[3]=C[4]; C[4]=C[5]; C[5]=C[8]; C[8]=C[9]; C[9]=C[13]; C[13]=C[14]; C[14]=t0; } } else if(discoOn){ discoOn=false; C=paletteFor(actv.style).slice(); } stepCore(); apGuard(); setBorder(); if(tut&&state==='title') tut=0; try{ var tv=tut&&state!=='map'?tut:0; if(tv!==tutMem){ tutMem=tv; sessionStorage['golfTut_'+mode]=tv; } }catch(e){} if(tut&&state==='play'&&skipT>0) skipT--; if(tut&&state==='tee') tutTeeT++; else if(tut&&state==='play') tutPlayT++; if(tutHelpT>0) tutHelpT--; try{ var shk=(state==='shop'&&shopFrom==='title')?shopTab+','+sel:''; if(shk!==shopMem){ shopMem=shk; sessionStorage['golfShopT_'+mode]=shk; } }catch(e){} var mp=state==='map'&&mapPick; if(mp!==inMapPick){ inMapPick=mp; try{ sessionStorage['golfMap_'+mode]=mp?'1':'0'; }catch(e){} } if(mp){ try{ sessionStorage['golfMapSel_'+mode]=mapSel; sessionStorage['golfMapPg_'+mode]=Math.round(mapScroll/W); sessionStorage['golfTutSel_'+mode]=tutSel; }catch(e){} } var ig=!ambient&&(state==='tee'||state==='play'||(state==='shop'&&shopFrom!=='title')); if(ig!==inGm&&(ig||state==='title'||state==='map')){ inGm=ig; try{ sessionStorage['golfIn_'+mode]=ig?'1':'0'; }catch(e){} } } // remembers: refresh during play restarts the level
+  var tutMem=-1, shopMem=null, inMapPick=false; var discoOn=false; function step(){ try{ var lk0=state==='look'?lookIdx:0; if(lk0!==lookSaved){ lookSaved=lk0; if(lk0) localStorage['golfLook_'+mode]=lk0; else localStorage.removeItem('golfLook_'+mode); } }catch(e){} if(cheat.disco){ discoOn=true; if(tick%6===0){ var t0=C[2]; C[2]=C[3]; C[3]=C[4]; C[4]=C[5]; C[5]=C[8]; C[8]=C[9]; C[9]=C[13]; C[13]=C[14]; C[14]=t0; } } else if(discoOn){ discoOn=false; C=paletteFor(actv.style).slice(); } stepCore(); checkSecrets(); if(bossWinPend&&state==='play'&&--bossWinT<=0) resolveBossWin(); apGuard(); setBorder(); if(tut&&state==='title') tut=0; try{ var tv=tut&&state!=='map'?tut:0; if(tv!==tutMem){ tutMem=tv; sessionStorage['golfTut_'+mode]=tv; } }catch(e){} if(tut&&state==='play'&&skipT>0) skipT--; if(tut&&state==='tee') tutTeeT++; else if(tut&&state==='play') tutPlayT++; if(tutHelpT>0) tutHelpT--; try{ var shk=(state==='shop'&&shopFrom==='title')?shopTab+','+sel:''; if(shk!==shopMem){ shopMem=shk; sessionStorage['golfShopT_'+mode]=shk; } }catch(e){} var mp=state==='map'&&mapPick; if(mp!==inMapPick){ inMapPick=mp; try{ sessionStorage['golfMap_'+mode]=mp?'1':'0'; }catch(e){} } if(mp){ try{ sessionStorage['golfMapSel_'+mode]=mapSel; if(mapT>2&&!mapRestApply) sessionStorage['golfMapPg_'+mode]=Math.round(mapScroll/W); /* not before the restored page was applied, else F5 overwrites it with page 0 */ sessionStorage['golfTutSel_'+mode]=tutSel; }catch(e){} } var ig=!ambient&&(state==='tee'||state==='play'||(state==='shop'&&shopFrom!=='title')); if(ig!==inGm&&(ig||state==='title'||state==='map')){ inGm=ig; try{ sessionStorage['golfIn_'+mode]=ig?'1':'0'; }catch(e){} } } // remembers: refresh during play restarts the level
   function stepCore(){
     if(paused) return;
     if(state==='victory'){ tick++; return; } if(state==='trans'){ tick++; transT++; if(transT>=TRANS_LEN){ state='tee'; saveGame(); } return; }
-    if(state==='title'||state==='map'){ tick++; mapT++; if(state==='map'&&mapT<=2&&mapRestPg<0) mapScroll=mapCenter(mapPick?mapSel:(lvNum()-1)%LEVELS.length); return; }
+    if(state==='title'||state==='map'){ tick++; mapT++; if(state==='map'&&mapT<=2&&mapRestPg<0&&!mapRestApply) mapScroll=mapCenter(mapPick?mapSel:(lvNum()-1)%LEVELS.length); return; }
     if(state==='over'){ tick++; overT++; return; }
     if(state==='look'){ tick++; moveBumpers(); updateBoss(); return; }
     if(ambient) ambientAI();
@@ -1038,9 +1205,9 @@
     guides[0].off=guides[1].off=pw.T<=0&&!cheat.pools; if(cheat.saver) saver=true; if(cheat.mega) pw.M=Math.max(pw.M,2); // floor pools only temporarily active
     fl.forEach(function(f){ f.len=60+10*lenT+(pw.E>0?28:0); });
     caps.forEach(function(c){ if(c.fast){ c.vy+=0.45; c.y+=c.vy; c.x+=(c.x<cx?-0.15:0.15); } else c.y+=0.55; // after a loss capsules fall away faster and can no longer be collected
-      if(c.fast){ if(c.y>H+8) c.dead=true; return; }
-      if((c.y>=192&&c.y<=208&&c.x>=cx+co-48&&c.x<=cx+co+48)||(state==='play'&&Math.hypot(ball.x-c.x,ball.y-c.y)<7)){ collect(c.k); c.dead=true; burst(c.x,c.y,3); }
-      else if(c.y>H+4) c.dead=true; });
+      if(c.fast){ if(c.y>H+8){ c.dead=true; if(c.k==='SHOP'&&c.win) resolveBossWin(); } return; }
+      if((c.y>=192&&c.y<=208&&c.x>=cx+co-48&&c.x<=cx+co+48)||(state==='play'&&Math.hypot(ball.x-c.x,ball.y-c.y)<7)){ collect(c.k,c); c.dead=true; burst(c.x,c.y,3); }
+      else if(c.y>H+4){ c.dead=true; if(c.k==='SHOP'&&c.win) resolveBossWin(); } });
     caps=caps.filter(function(c){ return !c.dead; });
     // arrow keys accelerate the bar (inertia), without a key it brakes gently
     if(state==='play'&&heldAny()){ var kd2=((K.mr||(K.s&&K.r))?1:0)-((K.ml||(K.s&&K.l))?1:0); if(kd2) aim=Math.max(-1.2,Math.min(1.2,aim+kd2*0.03)); }
@@ -1052,12 +1219,14 @@
     coS=coPrev; var ddc=co-coPrev; if(Math.abs(ddc)>9){ var stpB=ddc>0?9:-9; mpend=Math.max(-30,Math.min(30,mpend+ddc-stpB)); co=coPrev+stpB; place(); } // bar max. 9px/frame: fast mouse jerks must not jump through the ball, the excess is followed later
     if(Math.abs(co)>=limB-0.01&&mpend*co>0) mpend=0; // at the rail: don't keep movement that can't be used
     barVel=co-coPrev; coPrev=co;
+    // overcharge: shaking the bar quickly back and forth fills a meter; when full the bar is overcharged for a few seconds
+    if(state==='play'||state==='tee'){ if(Math.abs(barVel)>1){ var ocSg=barVel>0?1:-1; if(ocLast&&ocSg!==ocLast&&tick-ocTk<24) ocM=Math.min(1,ocM+0.16); ocLast=ocSg; ocTk=tick; } /* direction change of a fast movement, counted within 24 ticks of the previous fast move */ ocM=Math.max(0,ocM-0.005); if(ocT>0) ocT--; else if(ocM>=0.95){ ocT=420; ocM=0; msg=L('OVERCHARGED!'); msgT=70; shake=Math.max(shake,4); burst(cx+co,fl[0].py,8,14); } } else { ocM=0; ocT=0; }
     // trampoline bar: both ends fixed, the middle bends upward. Hold key = charge, release = hit
     if(stunT>0) stunT--;
     var kh=(K.l||K.r||(K.s&&state==='play'))&&stunT<=0, tt=0, kk=0.2, wmax=1.2, told=bulge;
     if(state!=='tee'){
-      if(kh){ if(strikeT>0){ strikeT=0; chV=0; } if(Math.abs(mdy)>0.5) manualCh=true; if(manualCh) chV=Math.max(0,Math.min(1,chV+mdy*msens*0.006)); else chV=Math.min(1,chV+0.022); mdy=0; wasHeld=true; tt=-14*chV; } // charging: middle bulges downward (bowl)
-      else { manualCh=false; mdy=0; }
+      if(kh){ if(strikeT>0){ strikeT=0; chV=0; } if(Math.abs(mdy)>0.5) manualCh=true; if(manualCh) chS=Math.max(-1,Math.min(1,chS+mdy*msens*0.006)); else chS=(chS<0?-1:1)*Math.min(1,Math.abs(chS)+0.022); chV=Math.abs(chS); mdy=0; wasHeld=true; tt=-14*chS; } /* signed: mouse down = bowl, mouse up = arch; tension is the magnitude */ // charging: middle bulges downward (bowl)
+      else { manualCh=false; mdy=0; chS=0; }
       if(!kh&&wasHeld){ wasHeld=false; ghostFire=Math.max(0.15,chV); var fullC=chV>=0.99; strikeP=Math.max(0.15,chV); strikeT=12; chV=0; capB=2*strikeP*(1+0.25*powT)+(fullC?1.5:0); /* full tension: faster ball */ }
       if(strikeT>0){ strikeT--; tt=6+16*strikeP; kk=0.4; wmax=(2+3*strikeP)*(1+0.12*powT); swingP=strikeP; } else swingP=0;
     } else { chV=0; wasHeld=false; // tee: bar bends downward while charging, snaps up on launch
@@ -1075,7 +1244,13 @@
       return;
     }
     phys(true);
-    extras.forEach(function(ex){ if(state!=='play') return; ball=ex; phys(false); }); ball=mainBall; // reset() in the extra-ball pass must not replace the main ball
+    extras.forEach(function(ex){ if(state!=='play') return; ball=ex; var pvx=ex.vx, pvy=ex.vy, wasH=ex.held; phys(false);
+      if(ex.caught&&!wasH&&!ex.held&&!ex.dead&&ex.imp===tick){ ex.dead=true; burst(ex.x,ex.y,5,[2,4,1][(tick>>1)%3]); shake=Math.max(shake,2); } /* a caught shot breaks only on a real hit (boss or obstacle), boss damage is dealt first */ }); ball=mainBall;
+    if(cheat.dclash&&state==='play'&&extras.length){ // hard upgrade: balls collide with each other (elastic) and charge each other up
+      var cb=[mainBall].concat(extras), cr=ballR()*2+1, ci, cj; for(ci=0;ci<cb.length;ci++) for(cj=ci+1;cj<cb.length;cj++){ var A=cb[ci], B=cb[cj]; if(!A||!B||A.held||B.held) continue;
+        var dx=B.x-A.x, dy=B.y-A.y, dd=Math.hypot(dx,dy); if(dd>=cr||dd<0.01) continue; var nx=dx/dd, ny=dy/dd, rv=(A.vx-B.vx)*nx+(A.vy-B.vy)*ny; if(rv<=0) continue; // only when approaching
+        A.vx-=rv*nx; A.vy-=rv*ny; B.vx+=rv*nx; B.vy+=rv*ny; var ov=(cr-dd)/2; A.x-=nx*ov; A.y-=ny*ov; B.x+=nx*ov; B.y+=ny*ov;
+        A.e=Math.min(1,(A.e||0)+0.25); B.e=Math.min(1,(B.e||0)+0.25); burst((A.x+B.x)/2,(A.y+B.y)/2,3,[1,4,14][(tick>>1)%3]); shake=Math.max(shake,2); score+=mult()*15; } } // reset() in the extra-ball pass must not replace the main ball
     extras=extras.filter(function(q){ return !q.dead; });
   }
   function heldAny(){ return !!(mainBall&&mainBall.held)||extras.some(function(b){ return b.held; }); }
@@ -1085,7 +1260,7 @@
     for(var j=0;j<N;j++){
       var u1=-1+2*j/N, u2=-1+2*(j+1)/N, x1=c+u1*L, y1=y0-curB*(1-u1*u1), x2=c+u2*L, y2=y0-curB*(1-u2*u2);
       var dx=x2-x1, dy=y2-y1, l2=dx*dx+dy*dy||1, t=Math.max(0,Math.min(1,((ball.x-x1)*dx+(ball.y-y1)*dy)/l2)), qx=x1+dx*t, qy=y1+dy*t, ex=ball.x-qx, ey=ball.y-qy, d=Math.hypot(ex,ey);
-      if(d<R+th+1&&d>0){ ball.hc=0; var nx=ex/d, ny=ey/d; ball.x=qx+nx*(R+th+1); ball.y=qy+ny*(R+th+1);
+      if(d<R+th+1&&d>0){ ball.hc=0; ball.imp=tick; if(ocT>0&&mode==='breakout') ball.e=1; /* overcharged bar: full energy on contact */ var nx=ex/d, ny=ey/d; ball.x=qx+nx*(R+th+1); ball.y=qy+ny*(R+th+1);
         var uu=(qx-c)/L, vsy=-bv*(1-uu*uu), rx=ball.vx, ry=ball.vy-vsy, dn=rx*nx+ry*ny;
         if(bowl&&chV>0.3&&(K.l||K.r||K.s)&&!ball.held&&!ball.stk&&state==='play'){ if(!heldAny()) aim=0; ball.held=true; ball.hu=Math.max(-0.9,Math.min(0.9,uu)); ball.vx=ball.vy=0; burst(ball.x,ball.y,2,4); return; } // tensioned bar: ball sticks to the bowl
         var rolling=false;
@@ -1100,7 +1275,7 @@
         ball.vx=rx; ball.vy=ry+vsy;
         var wk=bowl?0:(curB<0?Math.max(0,1+curB/1.2):Math.max(0,1-Math.abs(curB)/8)); // tensioned (bowl): no arcade angle, only real physics of the curvature // straight bar: bounce angle as in the original
         if(wk>0&&dn<0&&ny<-0.5){ var spk=Math.max(Math.hypot(ball.vx,ball.vy),3.4)*(1+(flingF()-1)*0.5)*(1+Math.min(0.9,Math.abs(barVel)*0.22)), ang=uu*1.1+Math.max(-0.8,Math.min(0.8,barVel*0.14)); // fast sideways bar movement (slicing the ball): much more speed and a steeper angle // contact point on the bar + bar movement
-          ball.vx=ball.vx*(1-wk)+Math.sin(ang)*spk*wk; ball.vy=ball.vy*(1-wk)-Math.cos(ang)*spk*wk; ball.rt=0; if(mode==='breakout') ball.e=Math.min(1,(ball.e||0)+0.15+Math.min(0.85,Math.abs(barVel)*0.25)); } // faster bar = more energy
+          ball.vx=ball.vx*(1-wk)+Math.sin(ang)*spk*wk; ball.vy=ball.vy*(1-wk)-Math.cos(ang)*spk*wk; ball.rt=0; if(ocT>0&&tick-(ball.oct||-99)>20){ ball.oct=tick; ball.vx*=1.7; ball.vy*=1.7; } if(mode==='breakout') ball.e=Math.min(1,(ball.e||0)+0.15+Math.min(0.85,Math.abs(barVel)*0.25)); } // faster bar = more energy
         if(!bowl&&dn<0&&ny<-0.3&&Math.abs(barVel)>0.4){ var gtx=-ny, gty=nx, gvt=ball.vx*gtx+ball.vy*gty, gk=Math.min(0.7,(0.2+Math.abs(barVel)*0.06)*(1+Math.min(0.7,Math.abs(curB)/5))), gd=(barVel*gtx*1.6-gvt)*gk; ball.vx+=gtx*gd; ball.vy+=gty*gd; } // grip along the CURVED surface: the bar drags the ball along its tangent; more curvature = more grip and the ball follows the curve up/down
         if(-vsy>1.2&&tick-(ball.kt||-99)>18){ ball.kt=tick; var fullK=swingP>=0.97, kq=(swingP*3.2*(1-uu*uu)+1.2)*flingF()*(fullK?1.3:1); ball.vx+=nx*kq; ball.vy+=ny*kq; // kick along the surface normal: angle follows the curvature
          
@@ -1111,7 +1286,7 @@
     if(ball.swal>0){ if(!boss){ ball.swal=0; } else { ball.swal--; ball.x=boss.x; ball.y=boss.y; ball.vx=ball.vy=0;
       if(ball.swal<=0){ var ta=Math.PI/2-Math.max(-0.9,Math.min(0.9,Math.atan2(W*(0.3+rnd()*0.4)-boss.x,100))); ball.vx=Math.cos(ta)*7.5; ball.vy=Math.sin(ta)*7.5; ball.e=1; ball.bh=tick+30; boss.fl=8; burst(boss.x,boss.y+boss.h/2,6,3); shake=6; msg=L('CHARGED!'); msgT=40; } return; } }
     if(ball.held){ if(state!=='play'){ ball.held=false; } else if((K.l||K.r||K.s)&&stunT<=0){ var uh=ball.hu; ball.x=cx+co+uh*fl[0].len/2; ball.y=fl[0].py-curB*(1-uh*uh)-ballR()-3; ball.vx=ball.vy=0; ball.ca=Math.max(-1,Math.min(1,Math.atan(2*curB*uh/(fl[0].len/2)))); return; }
-      else { ball.held=false; var spL=launchSp(Math.max(0.15,strikeP)), anL=Math.max(-1.3,Math.min(1.3,aim+(ball.ca||0))); ball.vx=Math.sin(anL)*spL; ball.vy=-Math.cos(anL)*spL; ball.e=1; ball.nb=true; burst(ball.x,ball.y,3,4); shake=2; return; } } // release: ball flies in the set direction
+      else { ball.held=false; var spL=launchSp(Math.max(0.15,strikeP))*(ocT>0?1.7:1), anL=Math.max(-1.3,Math.min(1.3,aim+(ball.ca||0))); ball.vx=Math.sin(anL)*spL; ball.vy=-Math.cos(anL)*spL; ball.e=1; ball.nb=true; burst(ball.x,ball.y,3,4); shake=2; return; } } // release: ball flies in the set direction
     if(ball.stk){ if(--ball.stT<=0) releaseSticky(ball,ball.stk); return; }   // sticks to the block: waits briefly, then splits
     if(pw.F>0||cheat.energy){ ball.e=1; }
     if(cheat.drunk) ball.vx+=Math.sin(tick*0.09+ball.y*0.05)*0.07; // stagger
@@ -1132,7 +1307,7 @@
     if(bumpCd>0) bumpCd--;
     var gFire=ghostFire; ghostFire=false; var gOn=pw.H>0||cheat.ghost;
     if((gFire||(K.g && !bumpHeld)) && bumpCd<=0 && gOn){ gWaves.push({x:cx+co,y:fl[0].py-4,w:fl[0].len,hit:[],p:(typeof gFire==='number'&&gFire>0)?Math.min(1,gFire):1}); burst(cx+co,fl[0].py-4,3,14); shake=2; bumpCd=30; } // Ghost Shot: a wave rises from the bar and kicks every ball it touches upward
-    gWaves.forEach(function(w){ caps.forEach(function(c){ if(!c.dead&&Math.abs(c.x-w.x)<w.w/2+7&&Math.abs(c.y-w.y)<10){ collect(c.k); c.dead=true; burst(c.x,c.y,3); } }); }); // the wave also picks up perk capsules
+    gWaves.forEach(function(w){ caps.forEach(function(c){ if(!c.dead&&Math.abs(c.x-w.x)<w.w/2+7&&Math.abs(c.y-w.y)<10){ collect(c.k,c); c.dead=true; burst(c.x,c.y,3); } }); }); // the wave also picks up perk capsules
     gWaves.forEach(function(w){ w.y-=5; }); gWaves=gWaves.filter(function(w){ return w.y>6; });
     bumpHeld=!!K.g;
     // anti-stuck: if the ball stays in the same area for long, it gets a random nudge
@@ -1204,7 +1379,7 @@
     }
     if(main&&co!==coF){ co=coF; place(); }
   }
-  function txtS(str,x,y,c,sc){ str=String(str).toUpperCase(); g.fillStyle=C[c];
+  function txtS(str,x,y,c,sc){ str=String(str).toUpperCase(); x=Math.round(x); y=Math.round(y); g.fillStyle=C[c];
     for(var i=0;i<str.length;i++){ var gl=F[str[i]]||F[' ']; for(var p=0;p<15;p++) if(gl[p]==='1') g.fillRect(x+i*4*sc+(p%3)*sc,y+((p/3)|0)*sc,sc,sc); } }
   function bevel(x,y,w,h,fill,hi,lo){ box(x-1,y-1,w+2,h+2,0); box(x,y,w,h,fill); box(x,y,w,1,hi); box(x,y,1,h,hi); box(x,y+h-1,w,1,lo); box(x+w-1,y,1,h,lo); }
   var HEART=['0110110','1111111','1111111','0111110','0011100','0001000'];
@@ -1240,6 +1415,7 @@
       else if(id==='dfast'){ disc(x+11,y+11,5,1); for(var q4=0;q4<3;q4++) box(x+1,y+7+q4*4,6-q4,1,4); disc(x+14,y+11,2,4); }
       else if(id==='dboss'){ disc(x+11,y+10,7,0); disc(x+11,y+10,6,1); box(x+7,y+8,3,3,0); box(x+13,y+8,3,3,0); box(x+9,y+14,5,2,0); box(x+6,y+17,11,2,1); }
       else if(id==='dpoor'){ disc(x+11,y+11,8,12); disc(x+11,y+11,6,11); box(x+5,y+10,13,2,2); }
+      else if(id==='dclash'){ disc(x+7,y+11,4,1); disc(x+15,y+11,4,14); box(x+10,y+9,3,1,4); box(x+10,y+13,3,1,4); box(x+11,y+5,1,3,4); box(x+11,y+15,1,3,4); }
       else { for(var a4=0;a4<6;a4++) for(var b4=0;b4<4;b4++) box(x+2+a4*3,y+3+b4*4,2,2,(a4+b4)%2?14:3); } }
     else if(kind===1){ var pl=paletteFor(id); for(var q=0;q<16;q++) box(x+1+(q%4)*5,y+1+((q/4)|0)*5,5,5,0), box(x+2+(q%4)*5,y+2+((q/4)|0)*5,4,4,15), (function(c){ g.fillStyle=pl[c]; g.fillRect(x+2+(c%4)*5,y+2+((c/4)|0)*5,4,4); })(q); }
     else if(id==='sharp'){ for(var a1=0;a1<4;a1++) for(var b1=0;b1<4;b1++) box(x+2+a1*5,y+2+b1*5,5,5,(a1+b1)%2?12:1); }
@@ -1267,8 +1443,16 @@
     for(var rv=0;rv<2;rv++) for(var rw=0;rw<2;rw++) box(px+3+rv*(PW-9),py+1+rw*188,3,3,1);
     txtS('SHOP',px+7,py+3,4,2); box(px+42,py+1,44,16,12); box(px+42,py+1,41,15,0); box(px+44,py+3,37,11,15); for(var sl=0;sl<11;sl+=2) box(px+44,py+3+sl,37,1,0); var gs=gold<1000?String(gold):(gold<10000?(Math.floor(gold/100)/10)+'K':Math.floor(gold/1000)+'K'); txtS(gs,px+70-gs.length*4,py+6,4,1); { var cxx=px+77, cs=Math.abs(Math.cos(tick*0.04)); for(var cy2=-3;cy2<=3;cy2++){ var hw=Math.round(Math.sqrt(10-cy2*cy2)*cs); box(cxx-hw,py+8+cy2,hw*2+1,1,4); } }
     // tabs
-    ['UPS','LOOK','GFX','CHEAT','HARD'].forEach(function(nm,ti){ var tw3=35, tx=px+89+ti*38, ty=py+1; shopR['t'+ti]={x:tx,y:ty,w:tw3,h:16}; var hv=hit(shopR['t'+ti])&&shopTab!==ti;
+    if(!tabVis(shopTab)){ for(var fv=0;fv<5;fv++) if(tabVis(fv)){ shopTab=fv; sel=0; break; } }
+    var vTabs=0; TABN.forEach(function(nm,ti){ shopR['t'+ti]=null; if(!tabVis(ti)) return; var tw3=35, tx=px+89+(vTabs++)*38, ty=py+1; shopR['t'+ti]={x:tx,y:ty,w:tw3,h:16}; if(ti===tabNew&&((tick>>3)&1)){ box(tx,ty-5,tw3,4,4); txt('NEW',tx+((tw3-12)>>1),ty-4,0); } var hv=hit(shopR['t'+ti])&&shopTab!==ti;
       bevel(tx,ty,tw3,16,shopTab===ti?7:(hv?12:15),shopTab===ti?8:(hv?11:12),shopTab===ti?15:0); var tcol=shopTab===ti?1:(hv?4:11), cw=10+3+nm.length*4, ox0=tx+((tw3-cw)>>1); TABIC[ti].forEach(function(row,ry){ for(var rx=0;rx<7;rx++) if(row[rx]!=='.') box(ox0+((rx*3)>>1),ty+3+((ry*3)>>1),(((rx+1)*3)>>1)-((rx*3)>>1),(((ry+1)*3)>>1)-((ry*3)>>1),ti===1&&shopTab!==1?11:(ti===1?({a:2,b:4,c:5,d:8}[row[rx]]||tcol):tcol)); }); txt(nm,ox0+13,ty+5,tcol); });
+    if(vTabs===0){ // shop's closed: no tab found yet
+      var iwc=PW-14, sgx=cx|0, sgy=py+34, bob=Math.round(Math.sin(tick*0.04)*1.5);
+      box(sgx-50,py+18,2,sgy-py-18+bob,11); box(sgx+48,py+18,2,sgy-py-18+bob,11); box(sgx-52,py+18,6,3,12); box(sgx+46,py+18,6,3,12); // chains
+      bevel(sgx-70,sgy+bob,140,40,2,3,6); txtS("SHOP'S",sgx-((6*8)>>1),sgy+7+bob,1,2); txtS('CLOSED',sgx-((6*8)>>1),sgy+22+bob,1,2);
+      [L('THE SHELVES ARE EMPTY.'),L('FIND SECRET SHOP KEYS IN THE STAGES'),L('TO OPEN THE FIRST TAB.')].forEach(function(ln,li){ txt(ln,sgx-((ln.length*4)>>1),py+88+li*9,li===0?8:11); });
+      var gyc=py+160; shopR.go={x:px+7,y:gyc,w:iwc,h:16}; bevel(px+7,gyc,iwc,16,7,8,6); if((tick>>3)&1) box(px+6,gyc-1,iwc+2,1,4); var wlc=L('BACK TO THE GAME - SPACE'); txtS(wlc,px+((PW-wlc.length*4)/2)|0,gyc+5,0,1);
+      if(mouseIn){ drawCursor(); } return; }
     py+=12;
     // pages: 8 entries per page (4x2), flip left/right with smooth sliding
     var R=Math.max(1,Math.ceil(N/4)), maxTop=Math.max(0,R-2), VY=py+13, VH=102, TX=px+275;
@@ -1276,7 +1460,7 @@
     if(shopDrag&&maxTop>0){ var thH0=Math.max(10,Math.round(84*2/R)); shopPg=Math.max(0,Math.min(maxTop,(my-(VY+9)-thH0/2)/(84-thH0)*maxTop)); if(sel<N) shopPageTo(shopPg); }
     shopPosF+=(shopPg-shopPosF)*0.35; if(Math.abs(shopPg-shopPosF)<0.005) shopPosF=shopPg;
     g.save(); g.beginPath(); g.rect(px+4,VY,PW-8,VH); g.clip();
-    for(var gi=0;gi<N;gi++){ var gx=px+7+(gi%4)*64, gy2=Math.round(py+15+((gi>>2)-shopPosF)*45); if(gy2>VY+VH||gy2+42<VY) continue; if(shopTab===0) shopTile(gi,gx,gy2,list[gi]); else cosTile(gi,gx,gy2,list[gi]); }
+    for(var gi=0;gi<N;gi++){ var gx=px+7+(gi%4)*64, gy2=Math.round(py+15+((gi>>2)-shopPosF)*45+Math.min(1,shopPosF)*7); if(gy2>VY+VH||gy2+42<VY) continue; /* when scrolled, the row above peeks in at the top */ if(shopTab===0) shopTile(gi,gx,gy2,list[gi]); else cosTile(gi,gx,gy2,list[gi]); }
     g.restore();
     for(var di=0;di<N;di++){ var rb=shopR['b'+di]; if(!rb) continue; if(shopPosF!==shopPg||rb.y<VY||rb.y+rb.h>VY+VH){ var ty0=Math.max(rb.y,VY), ty1=Math.min(rb.y+rb.h,VY+VH); if(shopPosF!==shopPg||ty1-ty0<=0) delete shopR['b'+di]; else { rb.y=ty0; rb.h=ty1-ty0; } } }
     // scrollbar: up/down buttons, track, draggable thumb (only if the list is longer than two rows)
@@ -1313,13 +1497,26 @@
   var tbC=[document.createElement('canvas'),document.createElement('canvas')], tbCur=0, tbT=0, tbScene='', tbShow='', tbSc=['',''], TBLEN=300, TBFADE=70;
   function tbRender(ci){ var cv2=tbC[ci], oB=bgc, oS=scene, oSeed=seed, oMx=macX, oMy=macY, ss=[]; LEVELS.forEach(function(l){ if(ss.indexOf(l.scene)<0) ss.push(l.scene); });
     var pick=ss[(Math.random()*ss.length)|0]; if(pick===tbScene&&ss.length>1) pick=ss[(ss.indexOf(pick)+1+((Math.random()*(ss.length-1))|0))%ss.length];
-    bgc=cv2; scene=pick; seed=(Math.random()*4e9)>>>0; renderScene(); cv2.getContext('2d').drawImage(cv2.lm,0,0); bgc=oB; scene=oS; seed=oSeed; macX=oMx; macY=oMy; tbSc[ci]=pick; tbScene=pick; return pick; }
+    bgc=cv2; scene=pick; seed=(Math.random()*4e9)>>>0; renderScene(); cv2.bo=bgOff; bgc=oB; /* layers (landmark, sprites) stay separate so the title can move them with parallax */ scene=oS; seed=oSeed; macX=oMx; macY=oMy; tbSc[ci]=pick; tbScene=pick; return pick; }
+  var CLD={dream:{c:'#ffe6f8',a:0.55,y1:150},golf:{c:'#ffffff',a:0.45,y1:80},train:{c:'#ffffff',a:0.45,y1:70},western:{c:'#ffffff',a:0.32,y1:110},flight:{c:'#ffffff',a:0.4,y1:150},city:{c:'#cfd8ff',a:0.2,y1:100}};
+  function drawClouds(sc,po,t){ // three cloud layers: far ones are small, slow and barely follow the mouse, near ones are big, faster and move most
+    var cf=CLD[sc]; if(!cf) return; [{n:4,s:0.05,pf:0.3,y0:6,y1:cf.y1*0.45,sz:0.7,a:0.55},{n:4,s:0.11,pf:0.6,y0:cf.y1*0.2,y1:cf.y1*0.75,sz:1,a:0.8},{n:3,s:0.2,pf:1,y0:cf.y1*0.4,y1:cf.y1,sz:1.4,a:1}].forEach(function(ly,li){ for(var i=0;i<ly.n;i++){
+      var sd=li*13+i, span=W+90, x=((hsh(sd+1)*span+t*ly.s+po*ly.pf*3)%span+span)%span-45, y=ly.y0+hsh(sd+9)*(ly.y1-ly.y0), w=(18+hsh(sd+21)*22)*ly.sz; g.globalAlpha=cf.a*ly.a; g.fillStyle=cf.c;
+      var xi=Math.round(x), yi=Math.round(y), wi=Math.round(w); g.fillRect(xi,yi,wi,3); g.fillRect(xi+3,yi-2,Math.round(wi*0.6),2); g.fillRect(xi+2,yi+3,wi-4,2); g.fillRect(xi+Math.round(wi*0.25),yi-3,Math.round(wi*0.3),1); } }); g.globalAlpha=1; }
+  var titlePo=0;
+  function bgPxAt(sc,y,po){ if(sc==='cozy'){ var hzc=H-36; return y<hzc?po*0.3:po*(0.3+0.9*(y-hzc)/(H-hzc)); } if(flatFor(sc)) return po*0.3; var hzp=H*({vapor:0.5,golf:0.42,dream:0.82,moon:0.78}[sc]||0.5); return y<=hzp?0:po*(y-hzp)/(H-hzp); } // parallax of a background plane for a given scene
+  function drawBgLayers(src,sc,po){ // background strips in perspective, the landmark and the sprites move rigidly with their own plane
+    if(Math.abs(po)<0.05){ g.drawImage(src,0,0); drawClouds(sc,po,tbT); if(src.lm) g.drawImage(src.lm,0,0); drawSprites(g,src,src.spOff,0,false); return; }
+    for(var ys=0;ys<H;ys+=3){ var so=Math.round(bgPxAt(sc,ys+1.5,po)); g.drawImage(src,0,ys,W,3,so,ys,W,3); if(so>0) g.drawImage(src,0,ys,1,3,0,ys,so,3); else if(so<0) g.drawImage(src,W-1,ys,1,3,W+so,ys,-so,3); }
+    drawClouds(sc,po,tbT); if(src.lm) g.drawImage(src.lm,Math.round(bgPxAt(sc,H*0.6,po)),0); drawSprites(g,src,src.spOff,0,function(b){ return bgPxAt(sc,b,po); }); }
   function titleBack(){ if(!tbT&&!tbScene){ tbScene=tbRender(0); tbRender(1); }
     tbT++; var ph=tbT%TBLEN, nxt=1-tbCur, al=0;
     if(ph===1) tbRender(nxt); // prepare next scene (random)
     if(ph>TBLEN-TBFADE) al=(ph-(TBLEN-TBFADE))/TBFADE;
     if(ph===0){ tbCur=nxt; al=0; }
-    g.drawImage(tbC[tbCur],0,0); if(al>0){ g.globalAlpha=al; g.drawImage(tbC[nxt],0,0); g.globalAlpha=1; }
+    var tpt=mouseIn?(mx-cx)/cx*18:Math.sin(tbT*0.012)*9; titlePo+=(tpt-titlePo)*0.06; // mouse parallax, a slow sway without the mouse
+    drawBgLayers(tbC[tbCur],tbSc[tbCur],titlePo); if(al>0){ g.globalAlpha=al; drawBgLayers(tbC[nxt],tbSc[nxt],titlePo); g.globalAlpha=1; }
+    var sS=scene, wS=W, mdx=macDX; scene=tbSc[tbCur]; W=BGW; macDX=0; g.save(); g.translate(Math.round(bgPxAt(scene,H*0.3,titlePo))-(tbC[tbCur].bo||0),0); try{ bgAnim(); }catch(e){} g.restore(); W=wS; scene=sS; macDX=mdx; // animated sky details (stars, clouds, sparks) of the shown scene
     tbShow=tbSc[al>0.5?nxt:tbCur]; g.fillStyle='rgba(0,0,0,0.38)'; g.fillRect(0,0,W,H); }
   function bars(){ box(0,0,W,H,15);
     for(var si=0;si<90;si++){ var sx=(si*73)%W, sy=(si*131)%H; box(sx,sy,1,1,((si+(tick>>4))%5===0)?1:12); }
@@ -1525,7 +1722,7 @@
     if(!mapPick&&mapSel>sMax) mapSel=sMax;
     var idx=mapPick?mapSel:cur0, n=(mapPick?0:(lap-1)*N0)+mapSel+1; if(mapPick) lap=1;
     // camera: page by page. Follows the selection, page arrows / dots / wheel flip freely
-    if(mapT<=1){ if(mapRestPg>=0){ mapScroll=mapRestPg*W; mapFollow=false; mapPgT=mapRestPg; } else { mapScroll=mapCenter(mapSel); mapFollow=true; } } else mapRestPg=-1;
+    if(mapRestApply&&mapRestPg>=0){ mapScroll=mapRestPg*W; mapFollow=false; mapPgT=mapRestPg; mapRestApply=false; mapT=1; } /* restore applies on the first drawn frame, even if several ticks ran before it */ else if(mapT<=1){ if(mapRestPg>=0){ mapScroll=mapRestPg*W; mapFollow=false; mapPgT=mapRestPg; } else { mapScroll=mapCenter(mapSel); mapFollow=true; } } else mapRestPg=-1;
     var camT=mapFollow?mapCenter(mapSel):mapPgT*W; mapScroll+=(camT-mapScroll)*0.2; if(Math.abs(camT-mapScroll)<0.5) mapScroll=camT;
     mapScroll=Math.max(0,Math.min(mM,mapScroll)); var sc0=mapScroll|0, pgNow=Math.round(mapScroll/W);
     { var WWm=mapC.width, plm=Math.round(sc0/W)*W, setl=Math.abs(sc0-plm)<1; for(var ym=0;ym<H;ym+=3){ var som=ym+1.5<82?0:mapSh(ym+1.5), sxm=Math.max(0,Math.min(WWm-W,sc0-som)); var dxm=sxm-sc0+som; g.drawImage(mapC,sxm,ym,W,3,dxm,ym,W,3); if(setl&&som){ var bl=plm-sc0+som+1, br=plm+W-sc0+som-1; if(bl>0) g.drawImage(mapC,plm+3,ym,1,3,0,ym,bl,3); if(br<W) g.drawImage(mapC,plm+W-4,ym,1,3,br,ym,W-br,3); } } } // settled on a page: the neighbour page never shows, the page edge is stretched instead // horizon steady, ground in perspective
@@ -1551,8 +1748,10 @@
     box((ax|0)-3,(ay|0)-12,7,1,12); disc(ax|0,((ay-14-hop)|0),3,1); box((ax|0)-1,((ay-15-hop)|0),1,1,11);
     g.restore();
     mapR={}; var NP=mapPages();
-    if(pgNow>0){ mapR.pl={x:2,y:30,w:16,h:108}; var fl1=padFl.pl; if(fl1>0) padFl.pl--; var o1=-Math.round(Math.sin(fl1/14*Math.PI)*4); padBtn(2,30,16,108,hit(mapR.pl)||fl1>0); for(k=0;k<5;k++) box(8+k+o1,84-k,1,2*k+1,(tick>>3)&1?4:1); }
-    if(pgNow<NP-1){ mapR.pr={x:W-18,y:30,w:16,h:108}; var fl2=padFl.pr; if(fl2>0) padFl.pr--; var o2=Math.round(Math.sin(fl2/14*Math.PI)*4); padBtn(W-18,30,16,108,hit(mapR.pr)||fl2>0); for(k=0;k<5;k++) box(W-8-k+o2,84-k,1,2*k+1,(tick>>3)&1?4:1); }
+    var skyH=-1; if(mouseIn&&my>=16&&my<60&&nodeAt()<0&&tutNodeAt()<0&&!(mapR.tut&&hit(mapR.tut))&&!(backR&&hit(backR))&&!(loopR&&hit(loopR))) skyH=mx<W/2?0:1; // hovering the sky: highlight that half + its arrow button
+    if(skyH===0&&pgNow>0){ g.globalAlpha=0.14; box(0,16,W/2,44,1); g.globalAlpha=1; } else if(skyH===1&&pgNow<NP-1){ g.globalAlpha=0.14; box(W/2,16,W/2,44,1); g.globalAlpha=1; }
+    if(pgNow>0){ mapR.pl={x:2,y:30,w:16,h:108}; var fl1=padFl.pl; if(fl1>0) padFl.pl--; var o1=-Math.round(Math.sin(fl1/14*Math.PI)*4); padBtn(2,30,16,108,hit(mapR.pl)||skyH===0||fl1>0); for(k=0;k<5;k++) box(8+k+o1,84-k,1,2*k+1,(tick>>3)&1?4:1); }
+    if(pgNow<NP-1){ mapR.pr={x:W-18,y:30,w:16,h:108}; var fl2=padFl.pr; if(fl2>0) padFl.pr--; var o2=Math.round(Math.sin(fl2/14*Math.PI)*4); padBtn(W-18,30,16,108,hit(mapR.pr)||skyH===1||fl2>0); for(k=0;k<5;k++) box(W-8-k+o2,84-k,1,2*k+1,(tick>>3)&1?4:1); }
     var offT=0, NPx=NP+offT, tw=Math.min(25,((W-8)/NPx-3)|0), th=(tw*3/4)|0, dx0=((W-NPx*(tw+3)+3)/2)|0, dy0=152; // below the level bullets (max. y~138) // cluster buttons with mini preview of the world map
     if(offT){ var hvT=hit({x:dx0-1,y:dy0-1,w:tw+2,h:th+2}); mapR.tut={x:dx0-1,y:dy0-1,w:tw+2,h:th+2}; box(dx0-1,dy0-1,tw+2,th+2,hvT?1:((!tutDone()&&((tick>>4)&1))?4:0)); box(dx0,dy0,tw,th,5); { var qx2=dx0+((tw-7)>>1), qy2=dy0+2; box(qx2+1,qy2,5,2,1); box(qx2+5,qy2+2,2,3,1); box(qx2+3,qy2+5,3,2,1); box(qx2+3,qy2+8,2,2,1); box(qx2+1,qy2+2,2,2,1); } box(dx0,dy0+th-2,tw,2,4); if(hvT) txt(L('TUTORIAL'),dx0,dy0-8,4); } // tutorial cluster ("level 0")
     for(i=0;i<NP;i++){ var bx0=dx0+(i+offT)*(tw+3), gr2=mapLayout().groups[i], lockd=!mapPick&&gr2.from>sMax, hv=false; mapR['d'+i]={x:bx0-1,y:dy0-1,w:tw+2,h:th+2}; hv=hit(mapR['d'+i]);
@@ -1568,7 +1767,12 @@
     var hsz=mode==='breakout'&&!lvv.boss?brickSz(nS):null, hzn=hsz===BSZ.XL?L('HUGE'):hsz===BSZ.L?L('BIG'):hsz===BSZ.S?L('SMALL'):hsz===BSZ.F?L('FINE'):L('NORMAL');
     txt(lvv.boss?L('BOSS FIGHT - DEFEAT THE ENEMY ABOVE'):(mode==='golf'?'PAR '+lvv.par+' - '+lvv.sh.length+L(' OBSTACLES'):L('BRICKS: ')+hzn+' '+String(lvv.pat).toUpperCase()),ix+8,iy+30,lvv.boss?2:11);
     if(!mapPick&&sIdx>sMax) txt(L('LOCKED'),ix+iw-6-24,iy+4,2);
-    { var pv=stagePreview(nS), ps=0.18, pw2=Math.round(W*ps), ph2=34, pox=W-8-pw2, poy=iy+2; bevel(pox-2,iy,pw2+4,37,12,11,15); box(pox,poy,pw2,ph2,15);
+    drawStagePv(stagePreview(nS),iy);
+    if(pkNow&&pgNow===0){ var tj2=mouseIn?tutNodeAt():-1; if(tj2<0) tj2=tutSel; bevel(8,H-52,W-16-62,37,12,11,15); drawStagePv(stagePreview(1,tj2+1),H-52); txtS(TUT[tj2].name,16,H-48,4,1); txt(L('SCENE: ')+(SCN.train||'TRAINING'),16,H-39,8); txt(TUT[tj2].hint,16,H-30,1); txt(L('ARROWS + ENTER OR CLICK = START TUTORIAL'),16,H-21,11); }
+    var hint=mapPick?L('CLICK BUBBLE OR ENTER = START'):(mapSel===cur0?L('SPACE OR CLICK = START'):L('ENTER = TRIP: ')+travelCost(mapSel)+' GOLD'), tk=hint+(mapPick?'   -   '+L('L = CLUSTER LOOP ON/OFF'):(sMax>0?'   -   '+L('ARROWS = PICK LEVEL'):''))+'   -   ', tkW=tk.length*4, tkX=-((tick*0.5)%tkW); // ticker: scrolls right to left, no blinking
+    bevel(4,H-13,W-8,10,15,12,0); g.save(); g.beginPath(); g.rect(5,H-13,W-10,10); g.clip(); for(var tq=tkX;tq<W;tq+=tkW) txt(tk,tq|0,H-11,4); g.restore();
+    if(mouseIn){ drawCursor(); } }
+  function drawStagePv(pv,iy){ var ps=0.18, pw2=Math.round(W*ps), ph2=34, pox=W-8-pw2, poy=iy+2; bevel(pox-2,iy,pw2+4,37,12,11,15); box(pox,poy,pw2,ph2,15);
       if(pv){ var PX=function(v){ return pox+Math.round(v*ps); }, PY=function(v){ return poy+Math.round((v-18)*ps); };
         pv.holes.forEach(function(ho){ disc(PX(ho.x),PY(ho.y),Math.max(1,Math.round(ho.r*ps)),0); });
         pv.bricks.forEach(function(br){ box(PX(br.x),PY(br.y),Math.max(1,Math.round(br.w*ps)),Math.max(1,Math.round(br.h*ps)),br.c); });
@@ -1576,32 +1780,32 @@
         pv.guides.forEach(function(gd){ var gl=Math.max(1,Math.round(Math.hypot(gd.x2-gd.x1,gd.y2-gd.y1)*ps)); for(var gi=0;gi<=gl;gi++) box(PX(gd.x1+(gd.x2-gd.x1)*gi/gl),PY(gd.y1+(gd.y2-gd.y1)*gi/gl),1,1,3); });
         pv.bumpers.forEach(function(bp){ disc(PX(bp.x),PY(bp.y),Math.max(1,Math.round(bp.r*ps)),bp.gild?4:13); });
         if(pv.boss) box(PX(W/2-22),PY(34),Math.round(44*ps),Math.round(28*ps),2); } }
-    if(pkNow&&pgNow===0){ var tj2=mouseIn?tutNodeAt():-1; if(tj2<0) tj2=tutSel; bevel(8,H-52,W-16,37,12,11,15); txtS(TUT[tj2].name,16,H-48,4,1); txt(L('SCENE: ')+(SCN.train||'TRAINING'),16,H-39,8); txt(TUT[tj2].hint,16,H-30,1); txt(L('ARROWS + ENTER OR CLICK = START TUTORIAL'),16,H-21,11); }
-    var hint=mapPick?L('CLICK BUBBLE OR ENTER = START'):(mapSel===cur0?L('SPACE OR CLICK = START'):L('ENTER = TRIP: ')+travelCost(mapSel)+' GOLD'), tk=hint+(mapPick?'   -   '+L('L = CLUSTER LOOP ON/OFF'):(sMax>0?'   -   '+L('ARROWS = PICK LEVEL'):''))+'   -   ', tkW=tk.length*4, tkX=-((tick*0.5)%tkW); // ticker: scrolls right to left, no blinking
-    bevel(4,H-13,W-8,10,15,12,0); g.save(); g.beginPath(); g.rect(5,H-13,W-10,10); g.clip(); for(var tq=tkX;tq<W;tq+=tkW) txt(tk,tq|0,H-11,4); g.restore();
-    if(mouseIn){ drawCursor(); } }
+
   function drawVictory(){ g.fillStyle='rgba(0,0,0,0.6)'; g.fillRect(0,10,W,H-10);
-    var px0=cx-84, py0=52; bevel(px0,py0,168,98,12,11,15);
+    var px0=cx-84, py0=52; bevel(px0,py0,168,118,12,11,15);
     var wt=winBoss?L('BOSS DEFEATED!'):L('STAGE CLEARED!'); txtS(wt,((W-wt.length*8)/2)|0,py0+8,(tick>>3)&1?4:1,2);
     var nx=L('NEXT: ')+(mode==='golf'?L('HOLE '):'LEVEL ')+lvNum()+' - '+LV().name; if(nx.length>40) nx=nx.slice(0,40); txt(nx,((W-nx.length*4)/2)|0,py0+30,8);
     var gl=L('GOLD ')+gold+'   '+L('SCORE ')+score; txt(gl,((W-gl.length*4)/2)|0,py0+39,11);
-    vicR=[]; [L('CONTINUE'),'SHOP'].forEach(function(t,i){ var x=cx-60, y=py0+52+i*20, foc=vicSel===i; vicR[i]={x:x,y:y,w:120,h:15};
+    vicR=[]; [L('CONTINUE'),'SHOP',L('MAIN MENU')].forEach(function(t,i){ var x=cx-60, y=py0+52+i*20, foc=vicSel===i; vicR[i]={x:x,y:y,w:120,h:15};
       if(foc){ box(x-2,y-2,124,19,4); box(x-1,y-1,122,17,0); bevel(x,y,120,15,4,1,11); txtS(t,x+((120-t.length*4)>>1),y+5,0,1); } else { bevel(x,y,120,15,12,11,15); txtS(t,x+((120-t.length*4)>>1),y+5,1,1); } });
     if(mouseIn) drawCursor(); }
   var SHC={aim:[2,4],aim2:[3,1],fan:[3,4],homing:[8,1],bomb:[12,3],wave:[13,1],split:[9,13],ring:[14,1]};
   function drawBoss(){ bshots.forEach(function(sh){
       if(sh.ty==='beam'){ var bx=sh.x|0; if(sh.t<40){ if((sh.t>>2)&1) for(var yy=10;yy<H-20;yy+=6) box(bx,yy,1,3,4); } else { box(bx-3,0,7,H,3); box(bx-1,0,3,H,1); } return; }
       var c=SHC[sh.ty]||[2,4], r=sh.ty==='bomb'?5:3; box(sh.x-r,sh.y-r,r*2+1,r*2+1,0); box(sh.x-r+1,sh.y-r+1,r*2-1,r*2-1,c[0]); box(sh.x-1,sh.y-1,3,3,c[1]); });
+    if(boss&&boss.shT>0){ var sa=(tick>>1)&1?0.5:0.3; g.globalAlpha=sa; disc(boss.x|0,boss.y|0,Math.max(boss.w,boss.h)/2+6,8); g.globalAlpha=1; }
+    if(boss&&boss.fogT>0){ g.globalAlpha=Math.min(0.55,boss.fogT/40)*0.9; g.fillStyle='#f4efe8'; g.fillRect(0,70,W,H-70); g.globalAlpha=1; }
+    if(boss&&boss.windT>0&&((tick&3)===0)) burst(boss.wd>0?4:W-4,70+((tick*37)%140),1,1);
     if(boss&&boss.mouth>0){ var mc=((tick>>2)&1)?13:1, bw=boss.w/2+3, bh=boss.h/2+3; box(boss.x-bw,boss.y-bh,bw*2,1,mc); box(boss.x-bw,boss.y+bh,bw*2,1,mc); box(boss.x-bw,boss.y-bh,1,bh*2,mc); box(boss.x+bw,boss.y-bh,1,bh*2,mc); }
-    if(!boss) return; var x=boss.x|0, y=boss.y|0, sc=boss.sc, i, k, w2, bl=(tick>>3)&1, ph2=boss.hp<=boss.hp0/2;
+    if(!boss) return; var x=boss.x|0, y=boss.y|0, sc=boss.sc, i, k, w2, bl=(tick>>3)&1, ph2=boss.hp<=boss.hp0/2, gm0=g, fo=boss.fl>0&&boss.fl!==undefined&&!boss.noFx; if(fo){ if(!drawBoss.fc) drawBoss.fc=document.createElement('canvas'); drawBoss.fc.width=W; drawBoss.fc.height=H; g=drawBoss.fc.getContext('2d'); } // hit flash: draw the boss on its own layer, tint it, shake it
     if(sc==='western'){ // Bandit King: sombrero, mask, bandolier
       box(x-22,y-8,44,4,0); box(x-22,y-8,44,3,10); box(x-22,y-8,44,1,3); box(x-11,y-18,22,11,0); box(x-10,y-17,20,10,10); box(x-10,y-10,20,2,2);
       box(x-9,y-4,18,14,0); box(x-8,y-3,16,12,3); box(x-8,y,16,4,0); box(x-6,y+1,3,2,1); box(x+3,y+1,3,2,1); box(x-6,y+6,12,2,0); box(x-14,y+10,28,9,0); box(x-13,y+10,26,8,2);
       for(i=0;i<6;i++) box(x-12+i*4,y+12,2,4,4); }
-    else if(sc==='vapor'){ // floating marble bust with sunglasses
-      box(x-16,y+6,32,9,0); box(x-15,y+7,30,8,1); disc(x,y-5,12,0); disc(x,y-5,11,1); disc(x-3,y-7,8,1);
-      for(i=0;i<7;i++) disc(x-11+i*4,y-15+(i%2)*2,3,11); box(x-10,y-8,9,5,0); box(x+1,y-8,9,5,0); box(x-9,y-7,7,3,13); box(x+2,y-7,7,3,13); box(x-1,y-7,3,1,0); box(x+10,y-3,4,6,1); box(x-4,y+3,8,2,11);
-      for(i=0;i<5;i++) box(x-14+i*7,y+17,4,1,bl?14:13); }
+    else if(sc==='vapor'){ // floating marble bust (pixel-art David head), drawn from a character raster
+      var BR=["...........ooccmmoocccmmmo..........","..........occcccmmccccccmmo.........",".......ooooccccccccccccckmmooo......",".....ooccmlcccccckmmccccckkcmmoo....","....occcccllcccccckcmmcccccccmmmo...","...occcccclllccccccccmmccccccccmo...","...occccccmmlcccccccccmkcmmccccmmo..","..olcccccccmkcccccccccccccmmmcccmo..","..olllcccccmlklcccccckccccccmcccmo..","..ollllcccccllllcccclckcccccmmkmmo..",".ooccmmcccccmlllllccllccddddcccmmo..","occccclccccccmldddddddddccckkccccmo.","occccclkcccccmmlkklkkmlllccclccccmo.","lcccccllllccccmmllllmmllllccllcccmo.","llccccmmllkkcccccllllllcclllllllcmo.","llllcccmllllcdcccccccccllllllmmmmo..","mmlllccmmmlldcdcccccccclllllllooo...","omccmmccmmmmmklccccccccllllmlllo....","occcckkcmmoodkdccccccccllllmlllo....","olccccmcccmoodccccccccclllllddo.....","ollcccmcccmookcccccccccllllmkmo.....","ommllmmcccmo.occccccccclllmmmmo.....",".ommmmlllcmoooccccccccclllddddo.....","..oooommmmoccoocclllllllllldmo......","......ooooccccclcmmmmmmmmmmdo.......","........occcccclllmmmmdddddo........","........occcccclldddddmoooo.........","........occcccdddddddddoo...........","........occcccdddddddddddo..........",".......occcccccllllllmmmmmo.........",".......occcccccllllllmmmmmoooo......",".......occcccccllllllmmmmmmcccoooo..","......occccccccllllllmmmmmmccccccco.",".....olllllllllllllllllllllllllllllo","...oollllllllllllllllllllllllllllllo","..ommmmmmmmmmmmmmmmmmmmmmmmmmmmmmmo.",".ommmmmmmmmmmmddddddddddddddddddoo..","..oooooooooooooooooooooooooooooo...."], BC={o:'#150a24',c:'#f3e6d6',l:'#cdbfd3',m:'#9b86b8',d:'#5e4687',k:'#2a1a45'}, bx0=x-18, by0=y-19+(((tick>>4)&1)?0:0);
+      BR.forEach(function(row,ry){ for(var rx=0;rx<row.length;){ var ch=row[rx]; if(ch==='.'){ rx++; continue; } var e=rx; while(e<row.length&&row[e]===ch) e++; g.fillStyle=BC[ch]; g.fillRect(bx0+rx,by0+ry,e-rx,1); rx=e; } });
+      if(bl){ g.fillStyle='#ff71ce'; g.fillRect(bx0+23,by0+13,3,1); } } // eye glints
     else if(sc==='city'){ // robo tower
       box(x-13,y-16,26,16,0); box(x-12,y-15,24,14,12); box(x-12,y-15,24,2,11); box(x-1,y-24,3,8,11); disc(x,y-25,2,bl?2:4);
       box(x-9,y-10,7,5,0); box(x+2,y-10,7,5,0); box(x-8,y-9,5,3,ph2?2:4); box(x+3,y-9,5,3,ph2?2:4);
@@ -1645,11 +1849,12 @@
       disc(x,y-8,10,0); disc(x,y-8,9,1); box(x-6,y-11,5,5,0); box(x+1,y-11,5,5,0); box(x-5,y-10,3,3,ph2?2:15); box(x+2,y-10,3,3,ph2?2:15); box(x-1,y-5,2,3,0); box(x-5,y-1,10,3,0); for(i=0;i<4;i++) box(x-4+i*3,y-1,1,3,1);
       box(x-13,y+3,26,16,0); for(i=0;i<4;i++){ box(x-11,y+5+i*4,22,2,1); } box(x-1,y+3,2,16,0);
       box(x+16,y-14,4,32,0); box(x+17,y-14,2,32,11); box(x+13,y+8,10,4,4); }
-    if(boss.fl>0){ var fx=(x-boss.w/2-2)|0, fy=(y-boss.h/2-2)|0, fw=boss.w+4, fh=boss.h+4, fc=(boss.fl&2)?4:11; box(fx,fy,5,1,fc); box(fx,fy,1,5,fc); box(fx+fw-5,fy,5,1,fc); box(fx+fw-1,fy,1,5,fc); box(fx,fy+fh-1,5,1,fc); box(fx,fy+fh-5,1,5,fc); box(fx+fw-5,fy+fh-1,5,1,fc); box(fx+fw-1,fy+fh-5,1,5,fc); }
+    if(fo){ var gx=g; g=gm0; gx.globalCompositeOperation='source-atop'; gx.fillStyle=(boss.fl&2)?'rgba(255,255,255,0.8)':'rgba(255,70,50,0.6)'; gx.fillRect(0,0,W,H); gx.globalCompositeOperation='source-over'; var jx=boss.fl>3?((boss.fl&1)?2:-2):0; g.drawImage(drawBoss.fc,jx,0); } // flash white/red + short shake instead of the old square
     // health bar
     box(cx-52,12,104,6,0); box(cx-51,13,Math.floor(102*boss.hp/boss.hp0),4,boss.hp/boss.hp0>0.5?5:(boss.hp/boss.hp0>0.25?4:2)); txt('BOSS',cx-80,13,2); }
   function drawPuIcon(k,x,y,bl){ var i;
-    if(k==='E'){ box(x-4,y-1,9,3,8); box(x-5,y-3,1,7,1); box(x+5,y-3,1,7,1); }
+    if(k==='SHOP'){ box(x-4,y-1,9,5,4); box(x-3,y-3,7,2,3); box(x-4,y-1,9,1,1); box(x-1,y+1,3,2,12); box(x-3,y+4,2,1,1); box(x+2,y+4,2,1,1); }
+    else if(k==='E'){ box(x-4,y-1,9,3,8); box(x-5,y-3,1,7,1); box(x+5,y-3,1,7,1); }
     else if(k==='S'){ disc(x,y,3,9); box(x,y-3,1,3,1); box(x,y,3,1,1); }
     else if(k==='M'){ box(x-1,y-4,3,9,5); box(x-4,y-1,9,3,5); disc(x,y,2,1); }
     else if(k==='X'){ disc(x,y,3,4); txt('2',x-1,y-2,0); }
@@ -1686,9 +1891,8 @@
     if(scene==='vapor'){
       for(i=0;i<12;i++){ a=0.5+0.5*Math.sin(t*0.07+i*2.1); if(a<0.55) continue; x=(hsh(i)*W)|0; y=(hsh(i+40)*hz*0.9)|0; var cl=i%2?'#fffb96':'#ff71ce'; dot(x,y,cl,a); dot(x-1,y,cl,a*0.5); dot(x+1,y,cl,a*0.5); dot(x,y-1,cl,a*0.5); dot(x,y+1,cl,a*0.5); }
       var mx1=((W*0.3)|0)-22+15, my1=hz+10-49+10; // (scanline over the Mac screen removed)
-      if((t%150)<8) dot(mx1+5,my1+3,'#c0c4e0',1,3), dot(mx1+13,my1+3,'#c0c4e0',1,3); } // Mac blinks
+      if((t%150)<8) dot(mx1+5+macDX,my1+3,'#c0c4e0',1,3), dot(mx1+13+macDX,my1+3,'#c0c4e0',1,3); } // Mac blinks
     else if(scene==='western'||scene==='flight'||scene==='city'){
-      var sp=scene==='flight'?0.35:0.1; for(i=0;i<4;i++) cloud(i,sp*(0.6+i*0.3),10+i*13,scene==='city'?0.18:0.32);
       if(scene==='city'){ x=(t*0.5)%(W+40)-20; dot(x,16,'#fff',1); dot(x-6,16,(t>>3)&1?'#f33':'#600',1); } }
     else if(scene==='dream'){
       for(i=0;i<9;i++){ y=H-((t*(0.12+hsh(i+3)*0.18)+hsh(i)*H)%H); x=hsh(i+20)*W+Math.sin(t*0.03+i)*4; dot(x,y,i%2?'#ffd1f0':'#fff',0.55,2); } }
@@ -1728,22 +1932,22 @@
     if(locked()&&(paused||state==='title'||state==='map'||state==='shop'||state==='look'||state==='over'||state==='victory')&&document.exitPointerLock) document.exitPointerLock(); // menus always release the mouse
     cv.style.cursor=(locked()||mouseIn)?'none':'crosshair';
     g.setTransform(1,0,0,1,0,shake>0?((shake--%2)&&shakeOn?1:(shakeOn?-1:0)):0);
-    if(state==='look'){ box(0,0,W,H,15); for(var lsi=0;lsi<60;lsi++) box((lsi*73)%W,(lsi*131)%H,1,1,12); bevel(41,28,218,162,12,11,15); box(44,31,212,156,0); g.save(); g.translate(45,32); g.scale(0.7,0.7); g.beginPath(); g.rect(0,0,W,H); g.clip(); } // viewer: whole field framed in a smaller window
+    if(state==='look'){ box(0,0,W,H,15); for(var lsi=0;lsi<60;lsi++) box((lsi*73)%W,(lsi*131)%H,1,1,12); var lg=lkGeo(); bevel(lg.fx,lg.fy,lg.fw,lg.fh,12,11,15); box(lg.fx+3,lg.fy+3,lg.fw-6,lg.fh-6,0); g.save(); g.translate(lg.x,lg.y); g.scale(lg.s,lg.s); g.beginPath(); g.rect(0,0,W,H); g.clip(); } // viewer: whole field framed in a smaller window
     // parallax only where the scene is a side view with sky + horizon + ground (read from paintScene): vapor, dream, moon, golf.
     // Top-down scenes (western, city, flight, dungeon, forest) and the frontal tea room (cozy) are flat: background stays still
     var inLook=state==='look', flatBg=flatFor(scene); // viewer: choose flat map or horizon + parallax for every scene
     var ptx=((locked()||((inLook||state==='map')&&mouseIn)))?(mx-cx)/cx*18:0; pxo+=(ptx-pxo)*0.08;
     function pxAt(y){ if(scene==='cozy'){ var hzc=H-36; return y<hzc?pxo*0.3:pxo*(0.3+0.9*(y-hzc)/(H-hzc)); } if(flatBg) return pxo*0.3; var hzp=H*({vapor:0.5,golf:0.42,dream:0.82,moon:0.78}[scene]||0.5); return y<=hzp?0:pxo*(y-hzp)/(H-hzp); } // only the ground below the horizon moves, strongest at the bottom
     var tE=1, bgOffV=bgOff; if(state==='trans'){ var tq0=transT/TRANS_LEN; tE=1-(1-tq0)*(1-tq0); }
-    if(state==='trans'){ if(prevSceneN===scene){ bgOffV=Math.round(prevOff+(bgOff-prevOff)*tE); g.drawImage(renderScene.wc,-bgOffV,0); } else { bgOffV=bgOff-Math.round((1-tE)*W); g.drawImage(bgPrevC,-Math.round(tE*W),0); g.drawImage(bgc,Math.round((1-tE)*W),0); } }
-    else if(Math.abs(pxo)<0.05){ g.drawImage(bgc,0,0); if(bgc.lm) g.drawImage(bgc.lm,0,0); } else { for(var ys=0;ys<H;ys+=3){ var so=Math.round(pxAt(ys+1.5)); g.drawImage(bgc,0,ys,W,3,so,ys,W,3); if(so>0) g.drawImage(bgc,0,ys,1,3,0,ys,so,3); else if(so<0) g.drawImage(bgc,W-1,ys,1,3,W+so,ys,-so,3); } if(bgc.lm) g.drawImage(bgc.lm,Math.round(pxAt(H*0.6)),0); } // landmark moves rigidly with its base, never distorted
-    if(scene==='vapor'&&macX!==undefined&&state!=='title'&&state!=='trans'){ g.save(); g.translate(Math.round(pxAt(macY+18)),0); // retro Mac flickers: brightness, screen, short line offsets
+    if(state==='trans'){ if(prevSceneN===scene){ bgOffV=Math.round(prevOff+(bgOff-prevOff)*tE); g.drawImage(renderScene.wc,-bgOffV,0); drawSprites(g,bgc,bgOffV,0,false); } else { bgOffV=bgOff-Math.round((1-tE)*W); g.drawImage(bgPrevC,-Math.round(tE*W),0); g.drawImage(bgc,Math.round((1-tE)*W),0); drawSprites(g,bgc,bgc.spOff,Math.round((1-tE)*W),false); } }
+    else if(Math.abs(pxo)<0.05){ g.drawImage(bgc,0,0); drawClouds(scene,pxo,tick); if(bgc.lm) g.drawImage(bgc.lm,0,0); drawSprites(g,bgc,bgc.spOff,0,false); } else { for(var ys=0;ys<H;ys+=3){ var so=Math.round(pxAt(ys+1.5)); g.drawImage(bgc,0,ys,W,3,so,ys,W,3); if(so>0) g.drawImage(bgc,0,ys,1,3,0,ys,so,3); else if(so<0) g.drawImage(bgc,W-1,ys,1,3,W+so,ys,-so,3); } drawClouds(scene,pxo,tick); if(bgc.lm) g.drawImage(bgc.lm,Math.round(pxAt(H*0.6)),0); drawSprites(g,bgc,bgc.spOff,0,pxAt); } // landmark moves rigidly with its base, never distorted
+    if(scene==='vapor'&&macX!==undefined&&state!=='title'&&state!=='trans'){ g.save(); g.translate(Math.round(pxAt(macSp?macSp.base:macY+18)),0); // retro Mac flickers: brightness, screen, short line offsets
       var sx0=macX+15, sy0=macY+10, sw=21, sh=16, hh=((tick*2654435761)>>>0)%100, h2=(((tick>>2)*40503)>>>0)%100; // only the screen flickers, not the case
       if(hh<14){ g.globalAlpha=0.12+hh*0.012; g.fillStyle='#000'; g.fillRect(sx0,sy0,sw,sh); g.globalAlpha=1; }
       else if(hh>94){ g.globalAlpha=0.12; g.fillStyle='#fff'; g.fillRect(sx0,sy0,sw,sh); g.globalAlpha=1; }
-      if(h2<18){ var gy=sy0+((tick*7)%(sh-1)), dx=((tick&1)?2:-2); g.save(); g.beginPath(); g.rect(sx0,sy0,sw,sh); g.clip(); g.drawImage(bgc,sx0,gy,sw,2,sx0+dx,gy,sw,2); g.restore(); }
+      if(h2<18){ var gy=sy0+((tick*7)%(sh-1)), dx=((tick&1)?2:-2); g.save(); g.beginPath(); g.rect(sx0,sy0,sw,sh); g.clip(); if(macSp) g.drawImage(macSp.c,15,gy-macSp.y,sw,2,sx0+dx,gy,sw,2); g.restore(); }
     g.restore(); }
-    g.save(); if(state==='trans'&&prevSceneN!==scene){ g.beginPath(); g.rect(Math.round((1-tE)*W),0,W,H); g.clip(); } g.translate((state==='trans'?0:Math.round(pxAt(H*0.3)))-bgOffV,0); var wS0=W; W=BGW; bgAnim(); W=wS0; g.restore();
+    macDX=macSp?Math.round(pxAt(macSp.base))-Math.round(pxAt(H*0.3)):0; g.save(); if(state==='trans'&&prevSceneN!==scene){ g.beginPath(); g.rect(Math.round((1-tE)*W),0,W,H); g.clip(); } g.translate((state==='trans'?0:Math.round(pxAt(H*0.3)))-bgOffV,0); var wS0=W; W=BGW; bgAnim(); W=wS0; g.restore();
     if(scene==='cozy'&&state!=='trans'){ // tea room: the room moves flat, the floor in perspective; the view outside (sky, moon) stays; only the window bars move with the room
       var cwx=BGW-78-bgOff, cwy=26, cso=Math.round(pxAt(cwy+30)); g.save(); g.beginPath(); g.rect(cwx+3,cwy+3,50,58); g.clip(); g.drawImage(bgc,0,0); box(cwx+27+cso,cwy+3,2,58,10); box(cwx+3,cwy+31,50,2,10); g.restore(); }
     box(0,0,W,4,12); box(0,0,4,H,12); box(W-4,0,4,H,12);
@@ -1779,16 +1983,19 @@
     guides.forEach(function(g2){ if(g2.off) return; var fl2=g2.flash>0; if(fl2) g2.flash--;
       for(var i=0;i<=36;i++){ box(g2.x1+(g2.x2-g2.x1)*i/36, g2.y1+(g2.y2-g2.y1)*i/36, 3,3,fl2?1:(g2.pool&&!cheat.pools&&pw.T<180&&((tick>>3)&1)?12:g2.glow>0?4:(g2.hp<g2.hp0?11:g2.c))); } if(g2.glow>0) g2.glow--; });
     if(chV>0){ var gx0=(cx+co-30)|0; box(gx0,H-9,60,4,12); box(gx0+1,H-8,Math.floor(58*chV),2,chV>0.7?2:(chV>0.35?3:4)); }
+    if(ocM>0||ocT>0){ var og0=(cx+co-30)|0, ov=ocT>0?ocT/420:ocM; box(og0,H-14,60,4,12); box(og0+1,H-13,Math.floor(58*ov),2,ocT>0?(tick&1?1:14):14); }
     if(saver) box(6,H-3,W-12,2,(tick>>2)&1?4:3);
     caps.forEach(drawCap);
+    if(DEVH&&devSel&&state==='look'){ var so=devObjs(devSel.k)[devSel.i]; if(so) devOutline(so,(tick>>2)&1?14:1); } // selected obstacle
+    if(DEVH&&DEVH.mark&&DEVH.mark()) secObjs.forEach(function(sc){ var o=sc.o, mc=(tick>>3)&1?9:13, bb2=devBox(o); devOutline(o,mc); txt(typeof sc.t==='string'?'BG '+sc.t.slice(3).toUpperCase():TABN[sc.t],Math.round(bb2.x-bb2.w),Math.round(bb2.y-bb2.h-7),mc); }); // dev mode: shows where the secrets sit
     // trampoline bar
-    (function(){ var c=cx+co, L=fl[0].len/2, y0=fl[0].py, col=state==='win'?[4,3,1][(tick>>2)%3]:(stunT>0&&((tick>>2)&1))?2:(chV>0.7?2:(chV>0.35?4:3));
+    (function(){ var c=cx+co, L=fl[0].len/2, y0=fl[0].py, col=state==='win'?[4,3,1][(tick>>2)%3]:(ocT>0)?(tick&1?1:14):(stunT>0&&((tick>>2)&1))?2:(chV>0.7?2:(chV>0.35?4:3));
       if(tut){ // tutorial: the bar is a serving tray (silver, raised rim, two handles); behaviour unchanged
         for(var x=-L;x<=L;x++){ var u=x/L, y=y0-bulge*(1-u*u); box(c+x-1,y-1,3,1,1); box(c+x-1,y,3,2,11); box(c+x-1,y+2,3,1,12); if(Math.abs(x)<L*0.45) box(c+x-1,y,3,1,col); }
         var ye=y0; box(c-L-1,ye-3,3,4,1); box(c-L-1,ye-3,1,4,11); box(c+L-1,ye-3,3,4,1); box(c+L+1,ye-3,1,4,11);
         box(c-L-5,ye-1,4,3,11); box(c-L-4,ye,2,1,15); box(c+L+2,ye-1,4,3,11); box(c+L+3,ye,2,1,15); }
       else {
-      for(var x=-L;x<=L;x++){ var u=x/L, y=y0-bulge*(1-u*u); box(c+x-1,y-1,3,4,col); box(c+x-1,y-1,3,1,chV>0?1:4); }
+      for(var x=-L;x<=L;x++){ var u=x/L, y=y0-bulge*(1-u*u); box(c+x-1,y-1,3,4,col); box(c+x-1,y-1,3,1,chV>0?1:4); if(ocT>0&&((tick+x)&7)===0) box(c+x-1,y-3-((tick*3+x)&3),1,2,1); }
       box(c-L-3,y0-2,5,10,12); box(c-L-3,y0-2,5,1,11); box(c+L-2,y0-2,5,10,12); box(c+L-2,y0-2,5,1,11); 
       } })();
     // tee + aim + power
@@ -1811,7 +2018,7 @@
     gWaves.forEach(function(w){ var hw=w.w/2, on=((tick*0.3)|0)&1, c1=on?1:12, c2=on?12:14, th=2+Math.round(w.p*4); // strength = thickness (2..6 px); pulse speed is the same for all
       for(var gx2=-hw;gx2<=hw;gx2+=2) box(w.x+gx2,w.y+((gx2*gx2/(hw*hw+1))*2|0)-((th-2)>>1),2,th,c1); // flat crest, only slightly bent at the ends
       box(w.x-hw+2,w.y+3+((th-2)>>1),w.w-4,1,c2); }); // thin trail
-    extras.forEach(function(e){ drawBallAt(e.x,e.y,14); });
+    extras.forEach(function(e){ if(e.caught&&e.held) disc(e.x|0,e.y|0,Math.ceil(ballR())+1,(tick>>2)&1?4:3); drawBallAt(e.x,e.y,e.caught?2:14); });
     if(state!=='capt'&&state!=='look'&&!(ball.swal>0)){ drawBallAt(ball.x,ball.y,1); }
     g.restore();
     if(state==='win'){ var wx=ball.x|0, wy=ball.y|0, wr=8+((tick>>2)&1), wa;
@@ -1830,7 +2037,7 @@
     if(tut&&tutSay()&&(state==='tee'||state==='play')) drawBubble(tutSay()); // speech bubble above all game objects
     if(state==='shop') drawShop(); else if(state==='title') drawTitle(); else if(state==='map') drawMap(); else if(state==='look') drawLook(); else if(state==='over') drawOver(); else if(state==='victory') drawVictory();
     if(paused) drawPause();
-    if(ambient&&ambFull&&ambT<420) txt(L('AMBIENCE - ESC = BACK'),W-102,13,(tick>>4)&1?1:11);
+    if(ambient&&ambFull&&ambT<420) txt(L('AMBIENCE - ESC = BACK').replace('ESC',kLab('back')),W-102,13,(tick>>4)&1?1:11);
     if(ambient&&!ambFull) txt(cheat.autoscore?L('AUTOPILOT - SCORING - TAB = OFF'):L('AUTOPILOT - NO SCORE - TAB = OFF'),W-(cheat.autoscore?150:142),13,(tick>>4)&1?4:11);
     if(fpops.length&&(state==='tee'||state==='play'||state==='win'||state==='capt')){ fpops.forEach(function(f){ var yy=Math.round(f.y-6-f.t*0.5), xx=Math.max(1,Math.min(W-f.s.length*4-1,Math.round(f.x-f.s.length*2))); if(f.t<34||(f.t>>1)&1){ txt(f.s,xx+1,yy+1,0); txt(f.s,xx,yy,(f.t>>2)&1?4:1); } f.t++; }); fpops=fpops.filter(function(f){ return f.t<48; }); } // rising score numbers, drawn above everything
     if(msgT>0&&state!=='shop'&&state!=='title'&&state!=='map'&&state!=='victory'){ msgT--; var mw=String(msg).length*4, mc=(tick>>3)&1?4:1, mx0=40, mwid=86; // messages appear in the header bar, between level label and hearts
@@ -1839,7 +2046,7 @@
   // 3x5 pixel font
   var F={'0':'111101101101111','1':'010110010010111','2':'111001111100111','3':'111001111001111','4':'101101111001001','5':'111100111001111','6':'111100111101111','7':'111001001001001','8':'111101111101111','9':'111101111001111',
   'A':'111101111101101','B':'110101110101110','C':'111100100100111','D':'110101101101110','E':'111100110100111','F':'111100110100100','G':'111100101101111','H':'101101111101101','I':'111010010010111','J':'001001001101111','K':'101101110101101','L':'100100100100111','M':'101111111101101','N':'110101101101101','O':'111101101101111','P':'111101111100100','Q':'111101101111001','R':'110101110101101','S':'111100111001111','T':'111010010010010','U':'101101101101111','V':'101101101101010','W':'101101111111101','X':'101101010101101','Y':'101101010010010','Z':'111001010100111','+':'000010111010000','!':'010010010000010',':':'000010000010000','·':'000000010000000','.':'000000000000010',' ':'000000000000000','-':'000000111000000'};
-  function txt(s,x,y,c){ s=String(s).toUpperCase(); g.fillStyle=C[c];
+  function txt(s,x,y,c){ s=String(s).toUpperCase(); x=Math.round(x); y=Math.round(y); g.fillStyle=C[c]; // whole pixels only: fractional positions blur the glyphs
     for(var i=0;i<s.length;i++){ var gl=F[s[i]]||F[' ']; for(var p=0;p<15;p++) if(gl[p]==='1') g.fillRect(x+i*4+(p%3),y+((p/3)|0),1,1); } }
   function fit(){ /* format is fixed 4:3, CSS controls the size */ }
   addEventListener('resize',fit); fit();

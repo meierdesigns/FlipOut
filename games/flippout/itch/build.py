@@ -2,7 +2,7 @@
 """Build the itch.io deploy zip: games/flippout/itch/flippout_<VERSION>.zip.
 
 Single source of truth: games/flippout/VERSION. Bump it, run this script, upload the zip.
-Older zips are moved into itch/archive/ so only the current one stays in the itch/ folder.
+The dev mode (flippout-dev.js) is left out of the zip. Older zips are moved into itch/archive/ so only the current one stays in the itch/ folder.
 """
 import glob, os, shutil, zipfile
 
@@ -18,6 +18,10 @@ for old in glob.glob(os.path.join(here, 'flippout_*.zip')):
         shutil.move(old, os.path.join(archive, os.path.basename(old)))
 
 with zipfile.ZipFile(out, 'w', zipfile.ZIP_DEFLATED) as z:
-    for f in ('index.html', 'flippout.js', 'flippout.css', 'LICENSE'):
+    # the dev mode (flippout-dev.js + its script tag) never goes into the deploy zip
+    html = open(os.path.join(game, 'index.html'), encoding='utf-8').read()
+    html = ''.join(l for l in html.splitlines(True) if 'flippout-dev.js' not in l)
+    z.writestr('index.html', html)
+    for f in ('flippout.js', 'flippout-secrets.js', 'flippout.css', 'LICENSE'):
         z.write(os.path.join(game, f), f)
 print('built', out)

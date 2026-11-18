@@ -260,9 +260,9 @@
   window.addEventListener('keyup',function(e){ shiftDown=e.shiftKey; if(e.key==='Shift'||e.key==='Alt'){ if(!(e.target&&e.target.matches&&e.target.matches('input,textarea'))) e.preventDefault(); } }, true); window.addEventListener('blur',function(){ shiftDown=false; });
   try{ if(navigator.keyboard&&navigator.keyboard.lock) cv.addEventListener('pointerdown',function(){ if(document.fullscreenElement) navigator.keyboard.lock(['ShiftLeft','ShiftRight','AltLeft','AltRight']).catch(function(){}); }); }catch(e){} window.addEventListener('blur',function(){ shiftDown=false; });
   function resetShop(){ own={amiga:1,sharp:1}; cheat={}; actv={style:'amiga',qual:'sharp'}; setStyle('amiga'); setQual('sharp'); saveCos(); msg=L('SHOP RESET'); msgT=90; } // restore bought styles, graphics and cheats
-  function menuItems(){ var sv=loadSave(), out=[]; if(sv&&sv.lv) out.push({t:L('CONTINUE - ')+(mode==='golf'?L('HOLE '):'LEVEL ')+sv.lv,f:continueGame});
-    out.push({t:L('NEW GAME'),f:function(){ if(shiftDown) resetShop(); mapPick=true; mapNote=''; mapSel=0; mapScroll=0; mapFollow=true; mapT=0; mapAnim=false; state='map'; }}); out.push({t:L('VIEW STAGES'),f:function(){ pickMode=false; lookStage(1); }}); if(cheat.ambience) out.push({t:L('AMBIENCE MODE'),f:startAmbient}); // bought in the CHEAT tab of the shop
-    out.push({t:L('SHOP AND STYLES'),f:function(){ openShop('title'); }}); return out; }
+  function menuItems(){ var sv=loadSave(), out=[]; if(sv&&sv.lv) out.push({ic:0,t:L('CONTINUE - ')+(mode==='golf'?L('HOLE '):'LEVEL ')+sv.lv,f:continueGame});
+    out.push({ic:1,t:L('NEW GAME'),f:function(){ if(shiftDown) resetShop(); mapPick=true; mapNote=''; mapSel=0; mapScroll=0; mapFollow=true; mapT=0; mapAnim=false; state='map'; }}); if(DEVH) out.push({ic:2,t:L('VIEW STAGES'),f:function(){ pickMode=false; lookStage(1); }}); /* the stage viewer / editor is dev mode only */ if(cheat.ambience) out.push({ic:3,t:L('AMBIENCE MODE'),f:startAmbient}); // bought in the CHEAT tab of the shop
+    out.push({ic:3,t:L('SHOP AND STYLES'),f:function(){ openShop('title'); }}); return out; }
   var pickMode=false, mapPick=false, mapSel=0, mapRestPg=-1, mapRestApply=false, tutBX=-1, tutSel=0; // mapRestPg: page restored after F5; tutSel: selected bubble on the tutorial map page
   var lastPick=0, mapNote='', backR=null;
   try{ lastPick=Math.max(0,(+localStorage['golfPick_'+mode])||0); }catch(e){}
@@ -966,7 +966,7 @@
   init(true);
   var skipTitle=/level=|shop|split/.test(location.hash);
   if(!skipTitle){ var bs=loadSave(); if(bs&&bs.lv) applySave(bs); state='title'; menuSel=0; }
-  try{ var lk1=+localStorage['golfLook_'+mode]||0; if(!skipTitle&&lk1>0){ pickMode=false; lookStage(Math.min(lk1,LEVELS.length)); lookSaved=lookIdx; } }catch(e){}
+  try{ var lk1=+localStorage['golfLook_'+mode]||0; if(DEVH&&!skipTitle&&lk1>0){ pickMode=false; lookStage(Math.min(lk1,LEVELS.length)); lookSaved=lookIdx; } }catch(e){}
   var tutR=0; try{ tutR=skipTitle?0:(+sessionStorage['golfTut_'+mode]||0); if(tutR>0&&tutR<=TUT.length&&mode==='breakout'){ startTutorial(tutR); inGm=true; } else tutR=0; }catch(e){ tutR=0; } // F5 inside the tutorial stays in that tutorial stage
   try{ if(!tutR&&!skipTitle&&sessionStorage['golfIn_'+mode]==='1'&&loadSave()){ continueGame(); if(state!=='shop') startLevel(); inGm=true; } }catch(e){}
   try{ if(!tutR&&!skipTitle&&sessionStorage['golfMap_'+mode]==='1'){ mapPick=true; mapNote=''; mapSel=Math.max(0,Math.min(LEVELS.length-1,+sessionStorage['golfMapSel_'+mode]||0)); mapScroll=0; mapFollow=true; mapT=0; mapAnim=false; state='map'; inMapPick=true; var rp=sessionStorage['golfMapPg_'+mode]; if(rp!==null&&rp!==undefined&&rp!==''){ mapRestPg=+rp; mapRestApply=true; } tutSel=Math.max(0,Math.min(3,+sessionStorage['golfTutSel_'+mode]||0)); } }catch(e){} // F5 in the stage selection stays there (page + tutorial bubble too)
@@ -1531,7 +1531,7 @@
     var svT=loadSave(), hasSv=!!(svT&&svT.lv); if(trashArm>0) trashArm--;
     items.forEach(function(it,i){ var x=cx-80, y=98+i*19, foc=menuSel===i, w0=(i===0&&hasSv)?141:160; menuR['m'+i]={x:x,y:y,w:w0,h:15};
       if(foc){ box(x-2,y-2,w0+4,19,4); box(x-1,y-1,w0+2,17,0); bevel(x,y,w0,15,4,1,11); var ar=((tick>>5)&1)?1:0; box(x-10+ar,y+4,3,7,4); box(x-7+ar,y+5,1,5,4); box(x+w0+7-ar,y+4,3,7,4); box(x+w0+6-ar,y+5,1,5,4); txtS(it.t,x+((w0-it.t.length*4)>>1),y+5,0,1); } else { bevel(x,y,w0,15,12,11,15); txtS(it.t,x+((w0-it.t.length*4)>>1),y+5,1,1); }
-      { var mic=MENUIC[i+(hasSv?0:1)], mcl=foc?0:1; if(mic) mic.forEach(function(row,ry){ for(var rx=0;rx<7;rx++) if(row[rx]==='#') box(x+7+rx,y+4+ry,1,1,mcl); }); }
+      { var mic=MENUIC[it.ic!==undefined?it.ic:i+(hasSv?0:1)], mcl=foc?0:1; if(mic) mic.forEach(function(row,ry){ for(var rx=0;rx<7;rx++) if(row[rx]==='#') box(x+7+rx,y+4+ry,1,1,mcl); }); }
       if(i===0&&hasSv){ var tx=x+145, arm=trashArm>0, th=mouseIn&&hit({x:tx,y:y,w:15,h:15}), tc=arm?2:(th?4:1); menuR.trash={x:tx,y:y,w:15,h:15};
         bevel(tx,y,15,15,arm?2:(th?7:12),arm?8:11,15); if(arm&&(tick>>3)&1) box(tx-1,y-1,17,1,4);
         box(tx+6,y+2,3,1,tc); box(tx+3,y+3,9,1,tc); box(tx+4,y+5,7,1,tc); box(tx+4,y+11,7,1,tc); box(tx+4,y+5,1,7,tc); box(tx+10,y+5,1,7,tc); box(tx+6,y+6,1,5,tc); box(tx+8,y+6,1,5,tc); } });

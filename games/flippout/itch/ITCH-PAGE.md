@@ -3,7 +3,7 @@
 ## Upload
 - File: `flippout-itch.zip` → Kind of project: **HTML** → "This file will be played in the browser" ✓
 - Embed options: viewport **1280 × 720** (or "Auto"), ✓ Fullscreen button, ✗ Mobile friendly (mouse/keyboard required)
-- Note: the game uses pointer lock (click captures the mouse, Esc = release)
+- Note: the game uses pointer lock (click captures the mouse, Esc = release the mouse, P = pause)
 - Language: English by default; the DE/EN button in the game header switches to German
 
 ## Title
@@ -21,11 +21,14 @@ Tags: breakout, arcade, pinball, minigolf, retro, singleplayer, mouse-only, no-i
 
 **Features**
 - 10 worlds with their own look: Western, Vaporwave, Dungeon, Golf course …
-- Bosses at the end of each world
+- Bosses at the end of each world, each with its own special ability; charged bar catches their shots and turns them into balls
+- Overcharge: shake the bar quickly to overcharge it
+- Secret shop tabs: find hidden pickups in the stages to open the shop
 - Shop after every level: red rails, more ball charge and more
 - Golden bumpers give gold
 - Also playable as a **mini-golf variant**
-- Autopilot/ambience mode (Tab)
+- Autopilot (Tab) and a buyable ambience demo mode
+- All keyboard shortcuts can be rebound (Pause > Settings > Keys)
 - English and German (button in the header)
 - No installation, no dependencies – runs right in the browser
 - Save game and settings are stored locally in the browser
@@ -34,11 +37,12 @@ Tags: breakout, arcade, pinball, minigolf, retro, singleplayer, mouse-only, no-i
 | Action | Input |
 |---|---|
 | Capture / release mouse | Click / Esc |
+| Pause / back | P |
 | Move bar | Mouse (or ◀ ▶ / A D) |
 | Charge & hit | Hold left/right click, release |
 | Tee shot (golf) | Aim with mouse, hold click/Space, release |
 | Shop | B (buy: 1 / 2 or click) |
-| Autopilot / ambience | Tab |
+| Autopilot | Tab |
 | Fullscreen (⛶ in header) | Click; Esc exits (hides frame while fullscreen) |
 | Hide frame | F2 |
 

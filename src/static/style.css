@@ -82,3 +82,34 @@ body.theme-aqua .amiga-help{margin:0;padding:6px 12px 10px;color:#555;font:11px 
 
 /* App tile: real card, fully clickable, nothing to expand */
 .app-tile{position:relative;display:flex;flex-direction:column;transition:transform .12s ease,box-shadow .12s ease}.app-tile:hover{transform:translateY(-2px)}.app-tile .tile-launch{margin-top:18px}.app-tile .tile-launch::after{content:"";position:absolute;inset:0;border-radius:inherit}.app-tile:focus-within{outline:2px solid var(--primary);outline-offset:2px}
+
+/* ===== Header bar: Home + burger side by side, the contents live in a dropdown ===== */
+body{display:block}
+aside,html.sb-collapsed aside{position:fixed;top:0;left:0;right:0;width:auto;height:52px;flex:none;flex-direction:row;align-items:center;gap:10px;padding:0 16px;overflow:visible;z-index:50;background:var(--surface)!important;border:0!important;border-bottom:var(--border-width) solid var(--border-color)!important;box-shadow:0 2px 8px #0002!important}
+body.theme-aqua aside{background:linear-gradient(#f3f5f8,#d7dce4)!important;border-bottom:1px solid #8a8f99!important}
+main,.workspace{padding-top:calc(52px + clamp(18px,4vw,48px));padding-left:clamp(18px,4vw,48px)}
+body.theme-aqua:has(.amiga) aside{top:24px;height:44px}
+body.theme-aqua:has(.amiga) main{padding-top:calc(24px + 44px + 18px)}
+#sb-home{flex:none;width:36px;height:32px;display:grid;place-items:center;padding:0;color:var(--text);background:var(--surface);border:2px solid var(--text);border-radius:var(--radius);text-decoration:none}
+#sb-home:hover{background:var(--primary);color:var(--surface)}
+html.sb-collapsed #sb-toggle,#sb-toggle{align-self:center}
+#sb-menu{position:absolute;left:16px;top:calc(100% + 6px);min-width:200px;display:flex;flex-direction:column;gap:6px;padding:14px;background:var(--surface);border:var(--border-width) solid var(--border-color);border-radius:var(--radius);box-shadow:0 10px 26px #0004}
+#sb-menu[hidden]{display:none}
+html.sb-collapsed aside #sb-menu strong,html.sb-collapsed aside #sb-menu a{display:block}
+#sb-menu strong{margin:0 0 6px}
+@media(max-width:700px){aside,html.sb-collapsed aside{position:fixed;flex-direction:row;padding:0 12px}#sb-menu{left:12px}}
+body.theme-aqua #sb-home{background:linear-gradient(#fff,#ddd);border:1px solid #8e8e8e;border-radius:8px;color:#333}
+body.theme-aqua #sb-menu{background:#f3f5f8;border:1px solid #8a8f99;border-radius:8px}
+
+/* Game pages: fit into the viewport below the header bar, no page scroll */
+html:has(.amiga),body:has(.amiga){overflow:hidden;height:100vh}
+body:has(.amiga) main{padding-top:calc(52px + 8px);padding-bottom:8px;padding-left:8px;padding-right:8px;max-width:none}
+body:has(.amiga) .amiga{min-height:0;height:calc(100vh - 52px - 16px)}
+body:has(.amiga) .amiga-screen{width:min(100%,calc((100vh - var(--off) - 52px) * 4 / 3))}
+body.theme-aqua:has(.amiga) main{padding-top:calc(24px + 44px + 8px)}
+body.theme-aqua:has(.amiga) .amiga{height:calc(100vh - 24px - 44px - 16px)}
+body.theme-aqua:has(.amiga) .amiga-screen{width:min(100%,calc((100vh - var(--off) - 68px) * 4 / 3))}
+
+#sb-full{margin-left:auto;flex:none;width:36px;height:32px;padding:0;display:grid;place-items:center;font-size:18px;line-height:1;color:var(--text);background:var(--surface);border:2px solid var(--text);border-radius:var(--radius);cursor:pointer}
+#sb-full:hover{background:var(--primary);color:var(--surface)}
+body.theme-aqua #sb-full{background:linear-gradient(#fff,#ddd);border:1px solid #8e8e8e;border-radius:8px;color:#333}

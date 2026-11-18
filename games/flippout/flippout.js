@@ -314,7 +314,7 @@
     else if(sc==='cozy'){ boss.fogT=260; msg=L('STEAM!'); }
     else if(sc==='golf'){ for(i=0;i<7;i++) bshots.push({ty:'aim',x:bx,y:by,vx:(i-3)*0.45,vy:1.5}); msg=L('SPRINKLERS!'); }
     msgT=70; shake=Math.max(shake,3); }
-  function updateBoss(){ if(!boss) return; if(state==='look'&&DEVH){ boss.x=cx; boss.y=48; return; } // dev viewer: the boss stands still so it can be clicked var ph2=boss.hp<=boss.hp0/2, hr=boss.hp/boss.hp0, spd=boss.sp*0.6*(1+0.8*Math.max(0,Math.min(1,(0.3-hr)/0.3))); boss.t++; // slower base speed; only a badly hurt boss (below 30 percent HP) speeds up, smoothly
+  function updateBoss(){ if(!boss) return; if(state==='look'&&DEVH){ boss.x=cx; boss.y=48; return; } /* dev viewer: the boss stands still so it can be clicked */ var ph2=boss.hp<=boss.hp0/2, hr=boss.hp/boss.hp0, spd=boss.sp*0.6*(1+0.8*Math.max(0,Math.min(1,(0.3-hr)/0.3))); boss.t++; // slower base speed; only a badly hurt boss (below 30 percent HP) speeds up, smoothly
     if(boss.phs===undefined) boss.phs=boss.t*boss.sp; boss.phs+=spd; // phase accumulates, so a speed change never makes the boss jump
     var tgx=cx+Math.sin(boss.phs)*boss.ax+Math.sin(boss.phs*2.3)*8; if(boss.dashT>0){ boss.dashT--; tgx=ball?ball.x:tgx; } // western dash: rushes at the ball
     if(boss.sx===undefined) boss.sx=tgx; boss.sx+=(tgx-boss.sx)*(boss.dashT>0?0.07:0.3); boss.x=Math.max(boss.w/2+8,Math.min(W-boss.w/2-8,boss.sx));
@@ -461,7 +461,7 @@
   function devDrop(){ var d=devDragPend; if(!d) return; devDragPend=null; var on=devDragOn; devDragOn=false; if(state!=='look') return; if(!on){ d.r.f(); return; } // short press = normal click, real drag = drop onto the obstacle under the cursor
     var lg=lkGeo(); if(mx>=lg.x&&mx<=lg.x+W*lg.s&&my>=lg.y&&my<=lg.y+H*lg.s){ var pk=devPickNear((mx-lg.x)/lg.s,(my-lg.y)/lg.s,14); if(pk){ devSel=pk; if(d.drag.tab!==undefined) DEVH.set(d.drag.tab,lookIdx,pk.k,pk.i); else DEVH.setBg(lookIdx,pk.k,d.drag.scene,pk.i); devRelook(); devMsg='PLACED: '+(d.drag.label||'')+' IN '+pk.k.toUpperCase()+' '+pk.i; devMsgT=150; } else { devMsg='NO OBSTACLE THERE - DROP IT ONTO ONE'; devMsgT=150; } } else { devMsg='DROP IT ONTO AN OBSTACLE IN THE FIELD'; devMsgT=150; } }
   function drawLookDev(){ lookDevR=[]; if(!DEVH||!DEVH.set) return; devUiSave(); if(devDragPend&&!devDragOn&&Math.hypot(mx-devDragPend.x,my-devDragPend.y)>4) devDragOn=true; var cfg=secCfg(), ab={bumper:'BMP',block:'BLK',brick:'BRK',boss:'BOSS'}, sn=['UPS','LOOK','GFX','CHEAT','HARD'], PX=198, PW=99, scl=[]; LEVELS.forEach(function(q){ if(scl.indexOf(q.scene)<0) scl.push(q.scene); });
-    function btn(x,y,w,t,col,f,tip,on,drag,bh){ bh=bh||9; var r={x:x,y:y,w:w,h:bh,f:f,tip:tip||'',drag:drag}; lookDevR.push(r); var hh=mouseIn&&hit(r); bevel(x,y,w,bh,on?7:(hh?4:12),on?8:(hh?14:11),on?15:(hh?2:15)); txt(t,x+((w-String(t).length*4)>>1),y+2+((bh-9)>>1),on?1:(hh?0:col)); }
+    function btn(x,y,w,t,col,f,tip,on,drag,bh,thumb){ bh=bh||9; var r={x:x,y:y,w:w,h:bh,f:f,tip:tip||'',drag:drag,thumb:thumb||null}; lookDevR.push(r); var hh=mouseIn&&hit(r); bevel(x,y,w,bh,on?7:(hh?4:12),on?8:(hh?14:11),on?15:(hh?2:15)); txt(t,x+((w-String(t).length*4)>>1),y+2+((bh-9)>>1),on?1:(hh?0:col)); }
     function where(o){ return (ab[o.obs]||'')+(o.idx!==undefined?o.idx:''); }
     bevel(PX-3,28,PW+5,162,12,11,15); txt(L('SECRETS - STAGE ')+lookIdx,PX,31,9);
     txt('1  CLICK AN OBSTACLE',PX,41,1); txt('   IN THE FIELD',PX,47,1);
@@ -469,7 +469,7 @@
     txt('2  DRAG A TAB ONTO AN',PX,64,1); txt('   OBSTACLE (OR CLICK IT)',PX,70,1);
     TABN.forEach(function(nm,t){ var c=cfg[t], here=c&&+c.stage===lookIdx, lab=sn[t]+': '+(c&&c.stage?(here?where(c):'STAGE '+c.stage):'NOT SET');
       btn(PX,80+t*11,PW,lab,here?4:(c&&c.stage?8:11),function(){ if(!devSel){ devMsg='CLICK AN OBSTACLE FIRST'; devMsgT=120; return; } if(here&&c.obs===devSel.k&&c.idx===devSel.i) DEVH.set(t,0); else DEVH.set(t,lookIdx,devSel.k,devSel.i); devRelook(); },
-        'HIDE THE '+nm+' TAB IN AN OBSTACLE: DRAG THIS BUTTON ONTO AN OBSTACLE IN THE FIELD (OR SELECT ONE AND CLICK). CLICK ON THE SAME ONE AGAIN = REMOVE. A TAB HAS ONE SECRET IN THE WHOLE GAME',false,{tab:t,label:sn[t]}); });
+        'HIDE THE '+nm+' TAB IN AN OBSTACLE: DRAG THIS BUTTON ONTO AN OBSTACLE IN THE FIELD (OR SELECT ONE AND CLICK). CLICK ON THE SAME ONE AGAIN = REMOVE. A TAB HAS ONE SECRET IN THE WHOLE GAME',false,{tab:t,label:sn[t]},undefined,(c&&c.stage)?{stage:+c.stage,obs:c.obs,idx:c.idx}:null); });
     var uy=144; btn(PX,uy,48,'MARK:'+(DEVH.mark()?'ON':'OFF'),DEVH.mark()?4:11,function(){ DEVH.toggle('mark'); },'SHOW WHERE THE SECRETS SIT IN THE FIELD');
     btn(PX+50,uy,49,'ALL:'+(DEVH.showAll()?'ON':'OFF'),DEVH.showAll()?4:11,function(){ DEVH.toggle('showAll'); },'PREVIEW: SHOW ALL LOCKED SHOP TABS AND BACKGROUNDS IN THE GAME');
     btn(PX,uy+10,48,'RELOCK',11,function(){ tabsOpen={}; bgOpen={}; tabsSave(); },'LOCK ALL TABS AND BACKGROUNDS AGAIN TO TEST THE UNLOCKING');
@@ -503,11 +503,19 @@
     if(devDragPend&&devDragOn){ var lgd=lkGeo(), pk2=(mx>=lgd.x&&mx<=lgd.x+W*lgd.s&&my>=lgd.y&&my<=lgd.y+H*lgd.s)?devPickNear((mx-lgd.x)/lgd.s,(my-lgd.y)/lgd.s,14):null;
       if(pk2){ var ob2=devObjs(pk2.k)[pk2.i]; if(ob2){ var bb3=devBox(ob2), ox=Math.floor(lgd.x+(bb3.x-bb3.w)*lgd.s), oy=Math.floor(lgd.y+(bb3.y-bb3.h)*lgd.s), ow=Math.ceil(bb3.w*2*lgd.s), oh2=Math.ceil(bb3.h*2*lgd.s), gc=(tick>>1)&1?5:14; box(ox,oy,ow,1,gc); box(ox,oy+oh2,ow,1,gc); box(ox,oy,1,oh2,gc); box(ox+ow,oy,1,oh2+1,gc); } }
       var gl=devDragPend.drag.label||'', gw=gl.length*4+8; var gx6=Math.round(mx+6), gy6=Math.round(my+6); bevel(gx6,gy6,gw,11,pk2?5:7,11,15); txt(gl,gx6+4,gy6+3,1); lookDevR=[]; } // dragging a button: ghost label + the obstacle under the cursor lights up green
-    var tp=''; if(mouseIn&&!devDragOn) for(var tq=0;tq<lookDevR.length;tq++) if(lookDevR[tq].tip&&hit(lookDevR[tq])){ tp=lookDevR[tq].tip; break; }
+    var tp=''; devTipThumb=null; if(mouseIn&&!devDragOn) for(var tq=0;tq<lookDevR.length;tq++) if(lookDevR[tq].tip&&hit(lookDevR[tq])){ tp=lookDevR[tq].tip; devTipThumb=lookDevR[tq].thumb; break; }
     devTipTxt=tp; } // (drawn in drawDevTip, after all buttons)
   var devTipTxt='';
+  var devTipThumb=null;
+  function drawPvMini(pv,x,y,ps,hl){ // small picture of a stage (the same data as the map preview), the obstacle that hides the secret blinks
+    var pw=Math.round(W*ps), ph=Math.round(190*ps); box(x-1,y-1,pw+2,ph+2,11); box(x,y,pw,ph,15); if(!pv) return; var PX=function(v){ return x+Math.round(v*ps); }, PY=function(v){ return y+Math.round((v-18)*ps); }, S=function(v){ return Math.max(1,Math.round(v*ps)); };
+    pv.holes.forEach(function(ho){ disc(PX(ho.x),PY(ho.y),S(ho.r),0); }); pv.bricks.forEach(function(br){ box(PX(br.x),PY(br.y),S(br.w),S(br.h),br.c); }); pv.blocks.forEach(function(bl2){ box(PX(bl2.x),PY(bl2.y),S(bl2.w),S(bl2.h),11); });
+    pv.guides.forEach(function(gd){ var gl=Math.max(1,Math.round(Math.hypot(gd.x2-gd.x1,gd.y2-gd.y1)*ps)); for(var gi=0;gi<=gl;gi++) box(PX(gd.x1+(gd.x2-gd.x1)*gi/gl),PY(gd.y1+(gd.y2-gd.y1)*gi/gl),1,1,3); });
+    pv.bumpers.forEach(function(bp){ disc(PX(bp.x),PY(bp.y),S(bp.r),bp.gild?4:13); }); if(pv.boss) box(PX(W/2-22),PY(34),S(44),S(28),2);
+    if(hl&&((tick>>2)&1)){ var o=null, k=hl.obs; if(k==='boss') o={x:W/2-22,y:34,w:44,h:28}; else { var arr=k==='bumper'?pv.bumpers:(k==='block'?pv.blocks:pv.bricks); o=arr&&arr[hl.idx]; } if(o){ var ox,oy,ow,oh; if(k==='bumper'){ ox=PX(o.x-o.r)-1; oy=PY(o.y-o.r)-1; ow=S(o.r*2)+2; oh=ow; } else { ox=PX(o.x)-1; oy=PY(o.y)-1; ow=S(o.w)+2; oh=S(o.h)+2; } box(ox,oy,ow,1,14); box(ox,oy+oh-1,ow,1,14); box(ox,oy,1,oh,14); box(ox+ow-1,oy,1,oh,14); } } }
   function drawDevTip(){ var tp=devTipTxt; if(tp){ var words=tp.split(' '), lns=[], cur3=''; words.forEach(function(wd){ if((cur3+' '+wd).trim().length>30){ lns.push(cur3); cur3=wd; } else cur3=(cur3+' '+wd).trim(); }); if(cur3) lns.push(cur3);
-      var tw=0; lns.forEach(function(l3){ tw=Math.max(tw,l3.length); }); var bw3=tw*4+8, bh3=lns.length*7+6, bx3=Math.round(Math.max(2,Math.min(W-bw3-2,mx-bw3-4))), by3=Math.round(Math.max(2,Math.min(H-bh3-2,my+8))); bevel(bx3,by3,bw3,bh3,0,11,12); lns.forEach(function(l3,li){ txt(l3,bx3+4,by3+4+li*7,1); }); } } // tooltip of the hovered dev button: drawn last so it lies over everything
+      var th=devTipThumb, ps=0.36, tmw=th?Math.round(W*ps):0, tmh=th?Math.round(190*ps)+10:0, tw=0; lns.forEach(function(l3){ tw=Math.max(tw,l3.length); }); var bw3=Math.max(tw*4,tmw)+8, bh3=lns.length*7+6+tmh, bx3=Math.round(Math.max(2,Math.min(W-bw3-2,mx-bw3-4))), by3=Math.round(Math.max(2,Math.min(H-bh3-2,my+8))); bevel(bx3,by3,bw3,bh3,0,11,12); lns.forEach(function(l3,li){ txt(l3,bx3+4,by3+4+li*7,1); });
+      if(th){ var ty=by3+4+lns.length*7+2; txt(L('STAGE ')+th.stage+' - '+String(LEVELS[th.stage-1].name).slice(0,16),bx3+4,ty,4); drawPvMini(stagePreview(th.stage),bx3+4,ty+8,ps,th); } } } // tooltip of the hovered dev button (with a small picture of the stage): drawn last so it lies over everything
   function drawLook(){ var N=LEVELS.length, lv=LEVELS[lookIdx-1], cl=(tick>>4)&1;
     bevel(8,13,W-16,15,12,11,15); var scl=[]; LEVELS.forEach(function(q){ if(scl.indexOf(q.scene)<0) scl.push(q.scene); }); var t1=(DEVH&&devAllStages)?L('STAGE ')+lookIdx+'/'+N+' - '+lv.name:pickMode?L('START STAGE ')+lookIdx+L(' OF ')+N+' - '+lv.name:L('BACKGROUND ')+(scl.indexOf(lv.scene)+1)+L(' OF ')+scl.length+' - '+(SCN[bgFor(lv.scene)]||bgFor(lv.scene)); var vwx=26+L(flatFor(lv.scene)?'VIEW: FLAT':'VIEW: HORIZON').length*4+10+8, tx1=Math.max(((W-t1.length*4)/2)|0,vwx); t1=t1.slice(0,Math.max(0,Math.floor((W-24-tx1)/4))); txtS(t1,tx1,18,4,1); // title never runs under the view button or the arrow
     for(var k=0;k<6;k++){ box(14+k,20-k+(k>3?0:0),1,2*k+1-(k>5?0:0)>0?1:1,cl?4:1); }
